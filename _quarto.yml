@@ -11,22 +11,7 @@ website:
     collapse-level: 1
     contents:
       - href: index.qmd
-        text: Motivation
-
-      - href: keyFindings.qmd
-        text: Key Findings
-
-      - href: detailedFindings.qmd
-        text: Detailed Findings
-
-      - href: method.qmd
-        text: Method
-
-      - href: summary.qmd
-        text: Summary
-
-      - href: appendix.qmd
-        text: Appendix
+        text: Project Title
 
 format:
   html:
