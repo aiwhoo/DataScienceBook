@@ -1,0 +1,142 @@
+---
+title: "Python & Pandas: Working with Big Data"
+subtitle: "Part 3: Meet Your New Best Friend—Pandas"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Explain the role of the Pandas library in a typical data science workflow.
+*   Utilize the Terminal and `pip` to install external Python packages.
+*   Import libraries using aliases to streamline your code.
+*   Load external CSV files into a Python environment as DataFrames.
+*   Execute fundamental exploration functions (`head`, `shape`, `info`, `describe`) to audit a new dataset.
+
+## Meet Your New Best Friend: Pandas
+
+In data science, **getting data into a usable shape is 80% of the work**. While Python provides the logic, **Pandas** is the library that turns raw, messy data into something you can actually understand, explore, and analyze. Whether you are working with crash records, sales sheets, or scientific measurements, Pandas is a data scientist's best friend.
+
+::: {.callout-note}
+### Library
+A **Library** is like a box of LEGO bricks—ready-made code you snap together to add functionality to your programs rather than building every tool from scratch.
+:::
+
+## Installing and Importing Pandas
+
+Before you can use Pandas, you must fetch it from the internet and bring it into your project environment.
+
+### Step 1: Installation via Terminal
+We use the **Terminal** in PyCharm—a text-based window for direct computer instructions—to talk to **pip**.
+
+::: {.callout-note}
+### pip
+**pip** stands for "Package Installer for Python." Think of it as Python’s own App Store. You tell it what you need, and it fetches and installs everything for you automatically.
+:::
+
+```{mermaid}
+graph LR
+    A[Open Terminal] --> B[Type: pip install pandas]
+    B --> C{pip fetches library}
+    C --> D[Success: Pandas Installed]
+```
+
+### Step 2: Importing into Your Code
+Once installed, you bring Pandas into every Python file with a single line of code using an **alias**.
+
+```python
+# The standard way to load Pandas
+import pandas as pd
+```
+
+::: {.callout-tip}
+### Instructor Insight: Why "pd"?
+The word `import` is the keyword that loads the library, and `pandas` is the name of the tool you installed. We add `as pd` as a **shortcut alias** so you can simply write `pd` instead of "pandas" every time you call a function.
+:::
+
+## Loading Real-World Data
+
+The first step in any analysis is reading your file into Python’s memory. We do this by creating a **variable** to store a **DataFrame**.
+
+::: {.callout-note}
+### DataFrame
+A **DataFrame** is the Pandas function that opens a CSV file and loads it as a structured table—similar to Excel opening a file, but handled entirely through code.
+:::
+
+```python
+# Load the Delaware crash data
+df = pd.read_csv("delaware_crash_data.csv")
+```
+
+```{=html}
+<script>
+(() => {
+    const variable = "df";
+    const functionName = "pd.read_csv()";
+    document.write(`<div style="background-color: #f8f9fa; padding: 15px; border-left: 5px solid #007bff; font-family: monospace;">
+        <strong>Code Logic:</strong><br>
+        1. <strong>${variable}</strong>: A variable that stores your entire dataset—you can name it anything (e.g., records, crash_data).<br>
+        2. <strong>${functionName}</strong>: The specific tool that opens the CSV.<br>
+        3. <strong>File Path</strong>: The text in quotes tells Python exactly where the file lives on your computer.
+    </div>`);
+})();
+</script>
+```
+
+## The Exploration Toolkit: First Steps
+
+Once your data is loaded, a data analyst must immediately **peek inside**. These two commands are the foundation of every exploration workflow.
+
+### 1. The Quick Preview: `df.head()`
+This shows the **first 5 rows** of your dataset. Use it to quickly verify the file loaded correctly and to understand what columns are present before writing analysis code.
+
+### 2. Checking the Scale: `df.shape`
+This returns the **dimensions** of your DataFrame as `(rows, columns)`. It is crucial for knowing if you are working with hundreds or hundreds of thousands of records.
+
+::: {.callout-tip}
+### Instructor Insight: The 10-Second Habit
+Develop the "Good Habit" of always running `df.head()` and `df.shape` right after loading a new dataset. It takes 10 seconds but saves hours of debugging later.
+:::
+
+## Understanding Your Data: Report Cards and Snapshots
+
+To dive deeper, we use functions that audit the quality and types of data we have.
+
+### 3. The Data Report Card: `df.info()`
+This provides a concise summary of your entire DataFrame. Use it to spot missing data and understand whether columns are **numeric** or **text (object)** before you start cleaning. It displays:
+
+*   Total number of rows and columns.
+*   Column names and their **data types** (int, float, object).
+*   Count of **non-null** (non-missing) values per column.
+
+### 4. The Statistics Snapshot: `df.describe()`
+This generates quick summary statistics for **numeric columns**, including the count, mean, standard deviation, min/max values, and percentiles. It is perfect for spotting outliers and understanding data distribution at a glance.
+
+## Case Study: The Delaware Crash Data
+
+When we applied these tools to the Delaware Crash dataset, the results provided a critical data science lesson.
+
+*   **Total Rows:** 539,947.
+*   **True Numeric Columns:** ~0.
+
+**Key Insight:** Even though some columns *look* like numbers (such as weather codes or crash types), they are actually **categorical labels** disguised as digits. 
+
+::: {.callout-tip}
+### Instructor Insight: Why .info() comes first
+Running `.describe()` on categorical data produces misleading or meaningless results. This is why you must use `.info()` first to verify a column's true data type. Because most Delaware crash data columns are categorical, `.describe()` has limited usefulness here.
+:::
+
+## Your Turn: Explore a Dataset
+
+Now it is time to put these five functions to work on your own data. The goal is to discover something real and share your findings.
+
+1.  **Find a Dataset:** Use the Delaware crash data or find a new one with both categorical and numeric columns for richer results.
+2.  **Run the Functions:** Execute `read_csv()`, `head()`, `shape`, `info()`, and `describe()` in order.
+3.  **Share Your Discovery:** What surprised you? What patterns did you notice?
+
+::: {.callout-tip}
+### Pro Tip
+Datasets with true numeric columns (like temperature readings, prices, or test scores) will make `df.describe()` far more informative! You can find these on sites like Kaggle or data.gov.
+:::

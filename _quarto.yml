@@ -13,6 +13,18 @@ website:
       - href: index.qmd
         text: Project Title
 
+      - href: Chapter3/Chapter3-Part1.qmd
+        text: Chapter 3 - Python and Pandas (Part 1)
+
+      - href: Chapter3/Chapter3-Part2.qmd
+        text: Chapter 3 - Python and Pandas (Part 2)
+
+      - href: Chapter3/Chapter3-Part3.qmd
+        text: Chapter 3 - Python and Pandas (Part 3)
+
+      - href: Chapter3/Chapter3-Part4.qmd
+        text: Chapter 3 - Python and Pandas (Part 4)
+
 format:
   html:
     theme:
