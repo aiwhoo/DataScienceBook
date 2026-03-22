@@ -1,3 +1,4 @@
+# Data Science Book {.unnumbered}
 ---
 title: "Project Title"
 ---
@@ -6,7 +7,7 @@ title: "Project Title"
 
 20XX-XX-XX
 
-## Motivation for this Work 
+## Motivation for this Work
 
 Insert a paragraph of the motivation of this work. 
 
