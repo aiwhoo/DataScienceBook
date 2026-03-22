@@ -1,0 +1,116 @@
+---
+title: "Python & Pandas: Working with Big Data"
+subtitle: "Part 2: Getting Started with PyCharm"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Define the role of an Integrated Development Environment (IDE) in software development.
+*   Successfully install and configure PyCharm Community Edition on your operating system.
+*   Create a properly named Python project following industry naming conventions.
+*   Navigate the primary components of the PyCharm interface.
+*   Write and execute your first Python program and interpret console output.
+
+## Python is the Language; PyCharm is the Tool
+
+Now that you understand what Python is, it is time to start writing it. While you can write code in a simple text editor, professional data scientists use a specialized tool called an **IDE**. Think of it like this: if Python is the language you are using to write an essay, PyCharm is the powerful word processor that helps you write faster and with fewer mistakes.
+
+::: {.callout-note}
+### Integrated Development Environment (IDE)
+An **IDE** is a super-powered digital notebook designed specifically for writing, running, and managing code in one centralized location.
+:::
+
+```{mermaid}
+graph TD
+    A[Python: The Language] -->|Requires| B[PyCharm: The IDE]
+    B --> C[Checks Syntax & Spelling]
+    B --> D[One-Click Execution]
+    B --> E[Project Organization]
+```
+
+## Setting Up Your Digital Workshop
+
+To begin, you will need to download PyCharm from the official JetBrains website. PyCharm is a versatile tool built to support both beginners and experts alike.
+
+### Installation Steps
+
+1.  **Choose Your OS:** Select the version compatible with Windows, macOS, or Linux.
+2.  **Pick the Right Version:** Choose the **Community Edition**. It is completely free and perfect for those just starting their journey.
+3.  **Download and Setup:** Follow the installer prompts to complete the setup on your device.
+
+## Creating Your First Project
+
+When you launch PyCharm for the first time, your first task is to create a new project. This is essentially creating the folder where all your work will live.
+
+### Naming and Saving Conventions
+
+You have the freedom to choose your project name, but there are professional standards you should follow. You generally do not need to change the default save location path, but you should be intentional with the name.
+
+::: {.callout-tip}
+### Instructor Insight: The "No Spaces" Rule
+Computers can sometimes get confused by spaces in file names. When naming your project, **never use spaces**. Instead, use **underscores** (e.g., `my_first_project`) or **CamelCase** (e.g., `MyFirstProject`) to keep your files organized and error-free.
+:::
+
+## Navigating the Interface
+
+Once your project is open, you will spend most of your time in two primary areas of the workspace.
+
+```{mermaid}
+graph LR
+    subgraph PyCharm Interface
+    A[Project Panel] --- B[Code Editor]
+    end
+    A -->|Manages| C[.py Files and Folders]
+    B -->|User Input| D[Writing Python Code]
+```
+
+*   **Project Panel:** Located on the left, this shows all your folders and `.py` files.
+*   **Code Editor:** This is the main central area where you type, edit, and refine your Python code.
+
+## Writing and Running Your First Code
+
+To verify your environment is working, we will use the `print()` function to display a message on the screen.
+
+```python
+# Use the print function to display text in the console
+print('hello Python')
+```
+
+```{=html}
+<script>
+(() => {
+    const output = "hello Python";
+    document.write(`<div style="background-color: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace;">
+        <span style="color: #6a9955;"># Simulated Console Output:</span><br>
+        ${output}<br><br>
+        <span style="color: #6a9955;">Process finished with exit code 0</span>
+    </div>`);
+})();
+</script>
+```
+
+### Understanding the Syntax
+
+*   **The Function:** `print()` tells the computer to "show this message".
+*   **The String:** Text placed inside quotes (either `'single'` or `"double"`) is called a **string**.
+*   **The Brackets:** The text you want to display must always go inside the parentheses of the function.
+
+::: {.callout-note}
+### String
+A **String** is a data type used in programming to represent text. In Python, strings are always wrapped in quotation marks.
+:::
+
+## Interpreting the Result
+
+After clicking the **green run button**, PyCharm executes your file and shows the output in the **Run Console** at the bottom of the screen. 
+
+If your code runs successfully, you will see your message followed by the phrase **"Process finished with exit code 0"**. This is the computer's way of confirming that the program ran perfectly with no errors.
+
+::: {.callout-tip}
+### Instructor Insight: The "Thumbs Up"
+Think of "Exit Code 0" as a digital "thumbs up" from your computer. If you see any other number, it means something went wrong, and it’s time to double-check your spelling and syntax!
+:::

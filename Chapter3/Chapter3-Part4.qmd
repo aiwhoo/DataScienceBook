@@ -1,0 +1,142 @@
+---
+title: "Python & Pandas: Working with Big Data"
+subtitle: "Part 4: Filtering Like a Pro"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Explain why programmatic filtering is superior to spreadsheet-based filtering for large datasets.
+*   Execute a multi-step data cleaning sequence to prepare columns for numeric comparison.
+*   Implement data filtering using three professional methods: `.loc`, `.query()`, and bracket notation.
+*   Apply complex conditional logic (AND, NOT EQUAL TO) to pinpoint specific data subsets.
+
+## From Sheets to Code: Why It Matters
+
+Every data scientist’s "superpower" is the ability to ask precise questions of messy, massive datasets. In previous sessions, we utilized Google Sheets for basic filtering, but we quickly discovered its limitations. While a spreadsheet often breaks or slows down when handling millions of rows, Pandas handles them effortlessly.
+
+Once you transition your filters into code, you unlock three major advantages:
+
+1.  **Scalability:** Process millions of rows without crashing.
+2.  **Automation:** Run the same analysis on new data instantly.
+3.  **Reusability:** Share your exact logic with others so they can replicate your results.
+
+```{mermaid}
+graph LR
+    A[Raw Data: 500k+ Rows] --> B{Tool Selection}
+    B -->|Google Sheets| C[Manual / Slow / Crash Risk]
+    B -->|Pandas in Python| D[Automated / Scalable / Robust]
+    style D fill:#28a745,color:#fff
+```
+
+## Step 1: Cleaning the Data First
+
+Before we can filter by specific years or values, our data must be "clean." Raw data often contains formatting quirks—like commas in numbers—that prevent Python from performing mathematical comparisons. 
+
+::: {.callout-note}
+### Data Preparation
+Data Preparation is the process of cleaning and transforming raw data prior to processing and analysis. It often involves reformatting types and handling missing values.
+:::
+
+To prepare our `YEAR` column for filtering, we follow this specific sequence:
+
+1.  **Remove Commas:** Strip characters that prevent numeric interpretation (e.g., "2,021" becomes "2021").
+2.  **Convert to Numbers:** Use `pd.to_numeric()` with `errors='coerce'`. This turns text into numbers and marks unconvertible values as `NaN` (Not a Number).
+3.  **Drop Missing Values:** Delete rows where the `YEAR` is missing to ensure a continuous dataset.
+4.  **Cast to Integer:** Convert the cleaned numbers into whole integers (`int`) so they are ready for comparison.
+
+```{mermaid}
+graph TD
+    Step1[1. .str.replace: Remove Commas] --> Step2[2. pd.to_numeric: Convert to Float/NaN]
+    Step2 --> Step3[3. .dropna: Remove Gaps]
+    Step3 --> Step4[4. .astype: Cast to Integer]
+```
+
+## Step 2: Three Professional Filtering Methods
+
+Pandas provides multiple ways to extract the exact rows you need. While they achieve the same result, each has its own strength.
+
+### Method 1: The `.loc` Approach
+The `.loc` method selects rows and columns based on labels or conditions. It is the "heavy-duty" tool of choice when you need to perform complex selections and specify which columns to keep simultaneously.
+
+```python
+# Filtering for New Castle county and a specific year range
+filtered_df = df.loc[
+    (df["COUNTY NAME"].str.strip() == "New Castle") & 
+    (df["YEAR"] >= 2020) & (df["YEAR"] <= 2024)
+]
+```
+
+::: {.callout-tip}
+### Instructor Insight: Beware Invisible Spaces
+A common "aha!" moment occurs when a filter fails even though the spelling looks correct. Use `.str.strip()` on your column names or values to remove invisible leading or trailing spaces that often hide in raw CSV data!
+:::
+
+### Method 2: The `.query()` Method
+If you prefer code that reads like a plain English sentence, `.query()` is your best friend. It allows you to write filter conditions as a concise string.
+
+```python
+# Using a sentence-like format for readability
+filtered_df = df.query("`COUNTY NAME` == 'New Castle' and YEAR >= 2020 and YEAR <= 2024")
+```
+
+```{=html}
+<script>
+(() => {
+    const method = ".query()";
+    document.write(`<div style="background-color: #f0f4f8; padding: 10px; border-left: 5px solid #007bff; font-family: sans-serif;">
+        <strong>Interactive Logic:</strong> The <code>${method}</code> method is ideal for large datasets because it is concise and highly readable for collaborators.
+    </div>`);
+})();
+</script>
+```
+
+### Method 3: Direct Bracket Notation (Conditionals)
+This is the most direct approach. You write a rule inside square brackets directly on the DataFrame. It is excellent for quick, one-off filters.
+
+```python
+# Matching a specific value
+df[df["COUNTY NAME"] == "New Castle"]
+
+# Excluding specific values using != (Not Equal To)
+df[df["YEAR"] != 2022]
+```
+
+::: {.callout-note}
+### Boolean Masking
+Bracket notation works by creating a **Boolean Mask**—a series of True/False values for every row. Python then only displays the rows marked "True."
+:::
+
+## Comparison and Summary
+
+All three methods return the same filtered result. Your choice depends on your specific needs:
+
+*   Use **`.loc`** when you need both row and column selection together.
+*   Use **`.query()`** when readability and clean syntax are your top priorities.
+*   Use **Conditionals** for quick, direct filtering of rows.
+
+```{mermaid}
+graph TD
+    A[Which Filter to Use?] --> B{.loc}
+    A --> C{.query}
+    A --> D[Conditionals]
+    B --> B1[Labels + Columns]
+    C --> C1[Sentence Readability]
+    D --> D1[Quick + Direct]
+```
+
+## Your Mission: Filter Like a Pro
+
+It is time to test your skills on the Delaware crash dataset or a dataset of your choice.
+
+1.  **Preparation:** Run the cleaning sequence on a numeric-style column (like Year or Cost).
+2.  **Implementation:** Apply the same filter using all three methods: `.loc`, `.query()`, and bracket notation.
+3.  **Validation:** Compare the `.shape` of your original DataFrame versus your filtered one. 
+
+::: {.callout-tip}
+### Bonus Challenge
+How many rows did your filter remove? Use `.shape` to calculate the difference and see if you can spot any interesting patterns in the data that remained!
+:::

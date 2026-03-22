@@ -1,17 +1,19 @@
 project:
-  type: website
+  type: book
   output-dir: docs
 
-website:
+book:
   title: "template"
+  author: "AI Whoo School"
 
-  sidebar:
-    style: "docked"
-    search: true
-    collapse-level: 1
-    contents:
-      - href: index.qmd
-        text: Project Title
+  chapters:
+    - index.qmd
+    - part: "Chapter 3: Python and Pandas"
+      chapters:
+      - Chapter3/Chapter3-Part1.qmd
+      - Chapter3/Chapter3-Part2.qmd
+      - Chapter3/Chapter3-Part3.qmd
+      - Chapter3/Chapter3-Part4.qmd
 
 format:
   html:
