@@ -14,6 +14,12 @@ book:
       - Chapter3/Chapter3-Part2.qmd
       - Chapter3/Chapter3-Part3.qmd
       - Chapter3/Chapter3-Part4.qmd
+    - part: "Chapter 4: ETL in Action"
+      chapters:
+      - Chapter4/Chapter4-Part1.qmd
+      - Chapter4/Chapter4-Part2.qmd
+      - Chapter4/Chapter4-Part3.qmd
+      - Chapter4/Chapter4-Part4.qmd
 
 format:
   html:
