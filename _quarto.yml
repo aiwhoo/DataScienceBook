@@ -20,6 +20,7 @@ book:
       - Chapter4/Chapter4-Part2.qmd
       - Chapter4/Chapter4-Part3.qmd
       - Chapter4/Chapter4-Part4.qmd
+      - Chapter4/Chapter4-Part5.qmd
 
 format:
   html:
