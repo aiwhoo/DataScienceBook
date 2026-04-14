@@ -1,0 +1,105 @@
+---
+title: "Machine Learning in Practice"
+subtitle: "Part 1: Introduction to Machine Learning"
+author: "Technical Instructional Team"
+format: html
+---
+
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+* Define **machine learning**  
+* Explain how models learn from data  
+* Recognize real-world examples of machine learning  
+* Identify key ideas: **prediction types, evaluation, and modeling tools**  
+
+---
+
+This chapter is organized into four parts:
+
+- Introduction to Machine Learning  
+- Regression vs. Classification and Train/Test Split  
+- Building Models with scikit-learn  
+- Comparing Models and Improving Predictions  
+
+## A Prediction Mystery: Can You Guess a Friend's Heart Rate?
+
+Yesterday, you walked **8,000 steps**, while your friend walked **3,000**. Would your heart rates be the same?
+
+Now add more clues: age, gender, distance traveled. The question becomes more interesting—and more accurate.
+
+This is where **machine learning** comes in. Instead of relying on one clue, it uses multiple pieces of information to make better predictions.
+
+::: {.callout-note}
+### A Machine Learning Problem
+A machine learning problem often begins with a question like: *Given several clues, can we predict an outcome?* In this chapter, that outcome is **heart rate**.
+:::
+
+## Teaching a Computer to Solve the Mystery
+
+Machine learning is about **learning from examples**.
+
+Instead of writing rules by hand, we give a computer data and let it find patterns.
+
+Just like you learned to recognize a dog by seeing many examples, a model learns by studying data—and then applies those patterns to new situations.
+
+## What is Machine Learning?
+
+Machine Learning is when computers learn from data to make predictions **without being explicitly programmed for every single scenario**.
+
+That does not mean the computer is “thinking” like a person. It means the computer is finding relationships in data. If those relationships are useful, the model can make a reasonable guess when new data appears.
+
+```{mermaid}
+graph LR
+    A[Examples from Data] --> B[Model Learns Patterns]
+    B --> C[Prediction on New Data]
+```
+
+::: {.callout-tip}
+### Instructor Insight: Learning from Examples
+A machine learning model is only as useful as the examples it learns from. Good data helps models find real patterns instead of random noise.
+:::
+
+## Why Machine Learning? It Is Everywhere.
+
+Machine learning is not a futuristic idea. It is already embedded in many tools people use every day.
+
+*   **TikTok:** Learns from your watch history, likes, and interactions to recommend videos.
+*   **Tesla:** Uses computer vision models to detect pedestrians, lane markings, and obstacles in real time.
+*   **Smart Systems:** Powers recommendation engines, fraud detection systems, and voice assistants.
+
+These systems all rely on the same core idea: use past data to make a smart prediction or decision in the present.
+
+## How Does Machine Learning Work?
+
+This chapter is organized around **three big ideas** that appear in nearly every machine learning project.
+
+### 1. Regression vs. Classification
+What kind of problem are we solving? Are we predicting a **number**, or assigning a **category**?
+
+### 2. Train/Test Split and Overfitting
+How do we teach the computer fairly? We need one set of data for learning and another for honest evaluation.
+
+### 3. Modeling with scikit-learn
+What tool will we use to build the model? In this chapter, we use **scikit-learn**, one of Python’s most important machine learning libraries.
+
+```{mermaid}
+graph TD
+    A[Machine Learning Project] --> B[Task Type]
+    A --> C[Evaluation Strategy]
+    A --> D[Modeling Tool]
+    B --> B1[Regression vs Classification]
+    C --> C1[Train/Test Split + Overfitting]
+    D --> D1[scikit-learn Models]
+```
+
+## Roadmap for Part 1
+
+In this part, we build the foundation for machine learning:
+
+- Understanding prediction types (regression vs. classification)  
+- Learning how to evaluate models (train/test split)  
+- Introducing tools for modeling (scikit-learn)  
+- Exploring more advanced models (decision trees)  
