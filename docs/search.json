@@ -1,33 +1,304 @@
 [
   {
-    "objectID": "keyFindings.html",
-    "href": "keyFindings.html",
-    "title": "Key Findings",
+    "objectID": "Chapter7_part1.html",
+    "href": "Chapter7_part1.html",
+    "title": "Data Storytelling & Insight Presentation",
     "section": "",
-    "text": "This is text about the first key finding.\n\n\n\nFigure 2: Image of a grey cat",
-    "crumbs": [
-      "Key Findings"
-    ]
+    "text": "By the end of this tutorial, you will be able to:\n\nExplain the purpose of data storytelling.\nIdentify the four key elements of an effective data story.\nDescribe why storytelling matters in data science.\nUse AI tools to improve communication and clarity.\nCreate a focused key message for a presentation."
   },
   {
-    "objectID": "keyFindings.html#key-finding-1",
-    "href": "keyFindings.html#key-finding-1",
-    "title": "Key Findings",
+    "objectID": "Chapter7_part1.html#learning-objectives",
+    "href": "Chapter7_part1.html#learning-objectives",
+    "title": "Data Storytelling & Insight Presentation",
     "section": "",
-    "text": "This is text about the first key finding.\n\n\n\nFigure 2: Image of a grey cat",
-    "crumbs": [
-      "Key Findings"
-    ]
+    "text": "By the end of this tutorial, you will be able to:\n\nExplain the purpose of data storytelling.\nIdentify the four key elements of an effective data story.\nDescribe why storytelling matters in data science.\nUse AI tools to improve communication and clarity.\nCreate a focused key message for a presentation."
   },
   {
-    "objectID": "keyFindings.html#key-finding-2",
-    "href": "keyFindings.html#key-finding-2",
-    "title": "Key Findings",
-    "section": "Key Finding 2",
-    "text": "Key Finding 2\nThis is text about the second key finding.\n\n\n\nFigure 3: Bunch of kittens",
-    "crumbs": [
-      "Key Findings"
-    ]
+    "objectID": "Chapter7_part1.html#introduction-beyond-charts",
+    "href": "Chapter7_part1.html#introduction-beyond-charts",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Introduction: Beyond Charts",
+    "text": "Introduction: Beyond Charts\nData science is not only about analyzing information — it is also about communicating it clearly.\nA chart may show patterns, but storytelling explains why those patterns matter. Strong data storytelling helps audiences understand insights, remember important findings, and make better decisions.\n\n\n\n\n\n\nNoteCore Idea\n\n\n\nGood data storytelling combines data, visuals, and narrative to guide audiences toward understanding."
+  },
+  {
+    "objectID": "Chapter7_part1.html#what-is-data-storytelling",
+    "href": "Chapter7_part1.html#what-is-data-storytelling",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "What Is Data Storytelling?",
+    "text": "What Is Data Storytelling?\nData storytelling is the process of combining:\n\nData\nVisual design\nNarrative\n\nTogether, these elements transform raw numbers into meaningful insight.\nInstead of simply presenting charts, a strong presentation explains:\n\nWhat happened\nWhy it matters\nWhat the audience should understand\n\n\n\n\n\n\ngraph LR\nA[Data] --&gt; B[Visuals]\nB --&gt; C[Narrative]\nC --&gt; D[Insight]"
+  },
+  {
+    "objectID": "Chapter7_part1.html#the-four-essential-elements",
+    "href": "Chapter7_part1.html#the-four-essential-elements",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "The Four Essential Elements",
+    "text": "The Four Essential Elements\nEvery effective data story includes four major components.\n\nContext\nProvides background information and explains why the topic matters.\n\n\nNarrative\nGuides the audience through the story logically.\n\n\nData\nSupports the story using evidence, trends, and analysis.\n\n\nVisual Design\nUses charts and layout to make information easier to understand.\n\n\n\n\n\n\nTipThink About It\n\n\n\nA presentation should not force the audience to figure out the message on their own. Your job is to guide them clearly toward the key insight."
+  },
+  {
+    "objectID": "Chapter7_part1.html#why-storytelling-matters",
+    "href": "Chapter7_part1.html#why-storytelling-matters",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Why Storytelling Matters",
+    "text": "Why Storytelling Matters\nStorytelling helps simplify complex ideas and makes information more memorable.\nPeople are more likely to remember a meaningful story than isolated numbers.\n\nExample\nData: * Accident rates increased by 20%\nStory: * Increased commuting patterns may have contributed to more roadway accidents.\nThe second explanation gives context and meaning to the data."
+  },
+  {
+    "objectID": "Chapter7_part1.html#using-ai-tools-for-communication",
+    "href": "Chapter7_part1.html#using-ai-tools-for-communication",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Using AI Tools for Communication",
+    "text": "Using AI Tools for Communication\nAI tools such as ChatGPT can help improve data presentations.\n\nAI Can Help With:\n\nImproving clarity\nRewriting confusing explanations\nMaking language more engaging\nPredicting audience questions\nMatching visuals to the narrative\n\n\n\nExample\n❌ Before: * “This is a line chart.”\n✅ After: * “This chart shows a sharp increase in Friday accidents.”"
+  },
+  {
+    "objectID": "Chapter7_part1.html#activity-define-your-key-message",
+    "href": "Chapter7_part1.html#activity-define-your-key-message",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Activity: Define Your Key Message",
+    "text": "Activity: Define Your Key Message\nBefore building a presentation, identify your most important takeaway.\nAsk yourself:\n\nWhat is the main insight?\nWhy should the audience care?\nWhat should they remember afterward?\n\nA strong presentation usually focuses on one clear message."
+  },
+  {
+    "objectID": "Chapter7_part1.html#final-takeaways",
+    "href": "Chapter7_part1.html#final-takeaways",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Final Takeaways",
+    "text": "Final Takeaways\nIn this lesson, you learned that:\n\nData storytelling combines analysis and communication\nStrong visuals support a clear message\nContext helps audiences understand meaning\nStories make data easier to remember\n\n\n\n\n\n\n\nNoteFinal Thought\n\n\n\nThe goal of data storytelling is not just to show data — it is to help people understand and act on it."
+  },
+  {
+    "objectID": "Chapter1_part1.html",
+    "href": "Chapter1_part1.html",
+    "title": "Chapter 1: What is Data?",
+    "section": "",
+    "text": "Every action leaves a trace. Learning to notice and interpret those traces is one of the first steps in data science."
+  },
+  {
+    "objectID": "Chapter1_part1.html#learning-objectives",
+    "href": "Chapter1_part1.html#learning-objectives",
+    "title": "Chapter 1: What is Data?",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this tutorial, you will be able to:\n\nDefine data and explain why it matters in everyday life.\nDescribe the basic lifecycle of data: collected, stored, and analyzed.\nDistinguish between structured and unstructured data.\nInvestigate how personal digital activity creates measurable patterns.\nReflect critically on the limits, gaps, and possible biases in data."
+  },
+  {
+    "objectID": "Chapter1_part1.html#the-big-question",
+    "href": "Chapter1_part1.html#the-big-question",
+    "title": "Chapter 1: What is Data?",
+    "section": "The Big Question",
+    "text": "The Big Question\nWe hear the word data all the time, but what does it actually mean?\nData is more than numbers on a screen. It includes the traces left behind by the things we do every day.\n\n\n\n\n\n\nImportantThink About It\n\n\n\nIn the last 24 hours, how many digital traces have you left behind?"
+  },
+  {
+    "objectID": "Chapter1_part1.html#data-as-invisible-footprints",
+    "href": "Chapter1_part1.html#data-as-invisible-footprints",
+    "title": "Chapter 1: What is Data?",
+    "section": "Data as Invisible Footprints",
+    "text": "Data as Invisible Footprints\nA useful way to think about data is to imagine it as invisible footprints.\nJust as footprints in wet ground can reveal where someone walked, digital footprints can reveal patterns about how we live.\n\nClicking: Every tap, swipe, or click can be recorded.\nSearching: Every search can reveal a question, need, or curiosity.\nWalking with your phone: Your location may be tracked over time.\nStreaming and messaging: Your choices and communication habits create records.\n\n\n\n\n\n\n\nNoteKey Idea\n\n\n\nYou do not need to be doing something “technical” to create data. Ordinary life already produces a constant stream of information."
+  },
+  {
+    "objectID": "Chapter1_part1.html#the-big-answer",
+    "href": "Chapter1_part1.html#the-big-answer",
+    "title": "Chapter 1: What is Data?",
+    "section": "The Big Answer",
+    "text": "The Big Answer\nAt its core, data is information generated by actions, observations, and interactions.\nA single data point may not say much on its own. But when many data points are combined, patterns begin to emerge.\nFor example:\n\nStep counts can reveal activity level and movement patterns.\nMusic history can reflect habits, preferences, and moods.\nLocation data can show routines and regular destinations.\nText messages can reveal patterns in communication and tone."
+  },
+  {
+    "objectID": "Chapter1_part1.html#the-lifecycle-of-data",
+    "href": "Chapter1_part1.html#the-lifecycle-of-data",
+    "title": "Chapter 1: What is Data?",
+    "section": "The Lifecycle of Data",
+    "text": "The Lifecycle of Data\nData does not simply appear and disappear. It usually moves through a process.\n\n\n\n\n\nflowchart LR\nA[Collected] --&gt; B[Stored] --&gt; C[Analyzed] --&gt; D[Insights and Decisions]\n\n\n\n\n\n\n\nCollected\nData is gathered from phones, apps, websites, sensors, cameras, and other tools.\n\n\nStored\nThat information is kept on devices, in apps, on servers, or in the cloud.\n\n\nAnalyzed\nPeople and computers study the data to find patterns, answer questions, or make decisions.\n\n\n\n\n\n\nTipInstructor Insight\n\n\n\nOne of the most important ideas in data science is that data becomes useful when it is interpreted. Raw information matters, but insight comes from asking good questions."
+  },
+  {
+    "objectID": "Chapter1_part1.html#why-data-matters",
+    "href": "Chapter1_part1.html#why-data-matters",
+    "title": "Chapter 1: What is Data?",
+    "section": "Why Data Matters",
+    "text": "Why Data Matters\nData matters because it helps people understand what is happening and decide what to do next.\n\nIn Business\nCompanies use data to understand customers, improve products, reduce costs, and make better decisions.\n\n\nIn Technology\nApps, recommendations, notifications, and smart tools all rely on data.\n\n\nIn the Wider World\nData helps people study climate change, public health, education, transportation, and many other real-world problems.\n\n\n\n\n\n\nNoteBig Picture\n\n\n\nData is not just about computers. It is about understanding people, behavior, systems, and the world around us."
+  },
+  {
+    "objectID": "Chapter1_part1.html#two-main-types-of-data",
+    "href": "Chapter1_part1.html#two-main-types-of-data",
+    "title": "Chapter 1: What is Data?",
+    "section": "Two Main Types of Data",
+    "text": "Two Main Types of Data\nNot all data looks the same. A helpful starting point in data science is to separate it into two broad categories: structured and unstructured data.\n\nStructured Data\nStructured data is organized, consistent, and easy to sort or analyze.\nExamples include:\n\nStep counts\n\nGPS coordinates\n\nCalendar events\n\nSurvey responses in rows and columns\n\n\n\nUnstructured Data\nUnstructured data does not fit neatly into a table. It is often messier, but also richer in meaning and context.\nExamples include:\n\nPhotos\n\nVideos\n\nAudio recordings\n\nText messages\n\nSocial media posts\n\n\n\n\n\n\n\nNoteStructured vs. Unstructured\n\n\n\nStructured data is often easier for computers to process quickly.\nUnstructured data is harder to organize, but it often captures emotion, context, and real-life complexity."
+  },
+  {
+    "objectID": "Chapter1_part1.html#why-both-types-matter",
+    "href": "Chapter1_part1.html#why-both-types-matter",
+    "title": "Chapter 1: What is Data?",
+    "section": "Why Both Types Matter",
+    "text": "Why Both Types Matter\nEach type of data has strengths.\n\nStructured data makes it easier to count, compare, filter, and graph information.\nUnstructured data helps us understand meaning, tone, context, and human experience.\n\nIn real-world data science, both are important. Together, they provide a fuller picture of what is happening."
+  },
+  {
+    "objectID": "Chapter1_part1.html#roadmap-for-part-1",
+    "href": "Chapter1_part1.html#roadmap-for-part-1",
+    "title": "Chapter 1: What is Data?",
+    "section": "Roadmap for Part 1",
+    "text": "Roadmap for Part 1\nIn this part, we explored the foundations of data:\n\nWhat data is and where it comes from\n\nHow data acts as invisible footprints\n\nThe lifecycle of data\n\nWhy data matters in different fields\n\nThe difference between structured and unstructured data\n\nIn Part 2, you will apply these ideas through hands-on activities using your own data."
+  },
+  {
+    "objectID": "Chapter6_part1.html",
+    "href": "Chapter6_part1.html",
+    "title": "Data Storytelling & Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nConnect the major skills from Chapters 2 through 5 into one complete data science workflow.\nExplain how visualization, Python, preprocessing, and machine learning each support stronger data storytelling.\nIdentify the difference between simply reporting results and communicating a meaningful insight.\nRecognize the three starting questions behind every strong data story: audience, message, and action.\nPrepare to move from technical analysis into a clear, audience-centered presentation."
+  },
+  {
+    "objectID": "Chapter6_part1.html#learning-objectives",
+    "href": "Chapter6_part1.html#learning-objectives",
+    "title": "Data Storytelling & Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nConnect the major skills from Chapters 2 through 5 into one complete data science workflow.\nExplain how visualization, Python, preprocessing, and machine learning each support stronger data storytelling.\nIdentify the difference between simply reporting results and communicating a meaningful insight.\nRecognize the three starting questions behind every strong data story: audience, message, and action.\nPrepare to move from technical analysis into a clear, audience-centered presentation."
+  },
+  {
+    "objectID": "Chapter6_part1.html#warm-up-from-skills-to-story",
+    "href": "Chapter6_part1.html#warm-up-from-skills-to-story",
+    "title": "Data Storytelling & Presentation",
+    "section": "Warm Up: From Skills to Story",
+    "text": "Warm Up: From Skills to Story\nImagine you are a data scientist with one dataset and one chance to tell your audience something important. Your goal is not only to show what is in the dataset, but to help people understand why it matters.\nBefore beginning any data story, ask yourself:\n\nWhat topic or problem does this dataset represent?\nWho needs to understand the results?\nWhat pattern, trend, or comparison might be important?\nWhat should the audience think, understand, or do after seeing the story?\n\nThis is the heart of data storytelling. Data gives us evidence, but storytelling gives that evidence structure, meaning, and purpose.\n\n\n\n\n\n\nTipThink About It\n\n\n\nA chart can show a pattern, but a story explains why that pattern matters. Good data storytelling combines technical accuracy with clear communication."
+  },
+  {
+    "objectID": "Chapter6_part1.html#why-chapter-6-matters",
+    "href": "Chapter6_part1.html#why-chapter-6-matters",
+    "title": "Data Storytelling & Presentation",
+    "section": "Why Chapter 6 Matters",
+    "text": "Why Chapter 6 Matters\nThe earlier chapters gave you individual data science skills. Chapter 6 asks you to combine them. In a real project, these skills do not happen separately. You move back and forth between exploring, cleaning, visualizing, modeling, and explaining.\nA strong data story usually grows from this sequence:\n\n\n\n\n\nflowchart LR\n    A[Question] --&gt; B[Data]\n    B --&gt; C[Cleaning]\n    C --&gt; D[Analysis]\n    D --&gt; E[Visualization]\n    E --&gt; F[Modeling]\n    F --&gt; G[Story]\n    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px\n    style C fill:#fef3c7,stroke:#333,stroke-width:1.5px\n    style E fill:#dcfce7,stroke:#333,stroke-width:1.5px\n    style G fill:#ede9fe,stroke:#333,stroke-width:2px\n\n\n\n\n\n\nThe story is not something you add at the end just to make your project look polished. It should guide your decisions from the beginning: what you analyze, what you visualize, and what you choose to explain."
+  },
+  {
+    "objectID": "Chapter6_part1.html#review-the-data-science-toolkit",
+    "href": "Chapter6_part1.html#review-the-data-science-toolkit",
+    "title": "Data Storytelling & Presentation",
+    "section": "Review: The Data Science Toolkit",
+    "text": "Review: The Data Science Toolkit\nEach previous chapter introduced a different part of the workflow. Together, these skills help you turn raw data into a message that people can understand and use.\n\nChapter 2: Visualizing Clean Data\nChapter 2 focused on using charts to make data easier to interpret. Instead of asking an audience to scan a spreadsheet, we learned how to display patterns visually.\nKey skills included:\n\nExploring datasets from open data sources such as the Delaware Open Data Portal.\nFiltering and organizing data in Google Sheets.\nChoosing chart types based on the question being asked.\nUsing bar charts, line charts, pie charts, and scatter plots.\n\n\n\n\n\n\n\nNoteVisualization Principle\n\n\n\nThe best chart is not always the most complex one. The best chart is the one that makes the message easiest to understand.\n\n\nFor example, if you want to compare accident counts across counties, a bar chart may be clearer than a pie chart. If you want to show how accident counts changed over time, a line chart is usually more appropriate."
+  },
+  {
+    "objectID": "Chapter6_part1.html#chapter-3-python-pandas",
+    "href": "Chapter6_part1.html#chapter-3-python-pandas",
+    "title": "Data Storytelling & Presentation",
+    "section": "Chapter 3: Python & Pandas",
+    "text": "Chapter 3: Python & Pandas\nChapter 3 moved us beyond manual spreadsheet work. Python and Pandas gave us a way to work with larger datasets more efficiently and repeatably.\n\nWhy Python Helps\nPython is useful in data science because it lets you write repeatable instructions. Instead of filtering data manually each time, you can write code that performs the same analysis consistently.\n\n\nCore Pandas Skills\nYou practiced how to:\n\nImport Pandas.\nLoad CSV files with read_csv().\nPreview rows with .head().\nCheck dataset size with .shape.\nFilter rows using .loc, .query(), and Boolean conditions.\n\nimport pandas as pd\n\n# Load a dataset\ndf = pd.read_csv(\"crash_data.csv\")\n\n# Preview the data\ndf.head()\n\n# Check number of rows and columns\ndf.shape\n\n# Filter for one county\nnew_castle = df[df[\"county\"] == \"New Castle\"]\n\n\n\n\n\n\nTipWhy This Matters for Storytelling\n\n\n\nCoding helps you ask better questions. Once your data is loaded into Python, you can quickly test ideas, compare groups, and refine your story based on evidence."
+  },
+  {
+    "objectID": "Chapter6_part1.html#chapter-4-cleaning-preprocessing",
+    "href": "Chapter6_part1.html#chapter-4-cleaning-preprocessing",
+    "title": "Data Storytelling & Presentation",
+    "section": "Chapter 4: Cleaning & Preprocessing",
+    "text": "Chapter 4: Cleaning & Preprocessing\nChapter 4 focused on preparing data so it could be trusted. Raw data often contains missing values, inconsistent formats, duplicates, or categories that need to be transformed before analysis.\n\nThe ETL Pipeline\nA common way to describe this process is ETL:\n\nExtract — collect the data from a source.\nTransform — clean, reshape, encode, or standardize the data.\nLoad — store the prepared data in a usable format.\n\n\n\nCommon Preparation Steps\nYou learned how to work with:\n\nMissing or incomplete values.\nDate and numeric conversions.\nSorting and filtering.\nNormalization.\nGeospatial processing.\nLabel encoding and one-hot encoding.\nMerging datasets.\nGrouping and aggregation.\n\n# Example: convert a date column and group by weekday\ndf[\"crash_date\"] = pd.to_datetime(df[\"crash_date\"])\ndf[\"weekday\"] = df[\"crash_date\"].dt.day_name()\n\nweekday_counts = df.groupby(\"weekday\").size()\n\n\n\n\n\n\nWarningClean Data Builds Trust\n\n\n\nIf the data is messy, the story may be misleading. Strong communication depends on strong preparation."
+  },
+  {
+    "objectID": "Chapter6_part1.html#chapter-5-machine-learning",
+    "href": "Chapter6_part1.html#chapter-5-machine-learning",
+    "title": "Data Storytelling & Presentation",
+    "section": "Chapter 5: Machine Learning",
+    "text": "Chapter 5: Machine Learning\nChapter 5 introduced machine learning as a way to move from describing data to making predictions. In storytelling, a model can help answer questions such as: What might happen next? Which factors seem most important? How well can we predict an outcome?\n\nRegression and Classification\nTwo major types of machine learning problems are:\n\nRegression — predicts a continuous number, such as price, count, or temperature.\nClassification — predicts a category, such as yes/no, high/medium/low, or accident/no accident.\n\n\n\nTrain/Test Split\nYou also learned why models need to be evaluated on data they have not already seen.\n\n\n\n\n\nflowchart TD\n    A[Prepared Data] --&gt; B[Training Set]\n    A --&gt; C[Testing Set]\n    B --&gt; D[Train Model]\n    D --&gt; E[Make Predictions]\n    C --&gt; F[Evaluate Performance]\n    E --&gt; F\n    style A fill:#e0f2fe,stroke:#333,stroke-width:1.5px\n    style F fill:#dcfce7,stroke:#333,stroke-width:1.5px\n\n\n\n\n\n\n\n\nModel Evaluation\nTwo common evaluation metrics were:\n\nMSE — Mean Squared Error, which measures prediction error.\nR² — a measure of how well the model explains variation in the data.\n\n\n\n\n\n\n\nNoteModeling and Storytelling\n\n\n\nA model result is not automatically a story. The story comes from explaining what the model suggests, how reliable it is, and why the result matters to the audience."
+  },
+  {
+    "objectID": "Chapter6_part1.html#from-technical-work-to-communication",
+    "href": "Chapter6_part1.html#from-technical-work-to-communication",
+    "title": "Data Storytelling & Presentation",
+    "section": "From Technical Work to Communication",
+    "text": "From Technical Work to Communication\nAt this point, you have learned the major parts of a data science workflow. Chapter 6 brings these parts together and shifts the focus toward communication.\nA complete data science story should answer four questions:\n\nWhat did you ask?\nThe research question or problem.\nWhat data did you use?\nThe dataset, source, and important columns.\nWhat did you find?\nThe patterns, comparisons, visualizations, and model results.\nWhy does it matter?\nThe key takeaway and its real-world meaning."
+  },
+  {
+    "objectID": "Chapter6_part1.html#mini-example-turning-a-finding-into-a-story",
+    "href": "Chapter6_part1.html#mini-example-turning-a-finding-into-a-story",
+    "title": "Data Storytelling & Presentation",
+    "section": "Mini Example: Turning a Finding into a Story",
+    "text": "Mini Example: Turning a Finding into a Story\nA weak finding might sound like this:\n\nFriday had the highest number of crashes.\n\nThat statement is not wrong, but it is incomplete. A stronger data story adds context:\n\nFriday had the highest number of crashes, which may reflect heavier commuting, weekend travel, and more people on the road at the end of the workweek. This suggests that traffic safety messaging or enforcement may be especially important before Friday evening travel periods.\n\nThe second version is stronger because it connects the data to a possible explanation and a real-world implication."
+  },
+  {
+    "objectID": "Chapter6_part1.html#key-takeaways",
+    "href": "Chapter6_part1.html#key-takeaways",
+    "title": "Data Storytelling & Presentation",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nVisualization helps people see patterns quickly.\nPython and Pandas make analysis more efficient and repeatable.\nCleaning and preprocessing make results more trustworthy.\nMachine learning can support prediction and comparison.\nStorytelling connects the technical work to audience understanding and action.\n\n\n\n\n\n\n\nTipThe Big Idea\n\n\n\nData storytelling is not decoration. It is the process of turning analysis into understanding."
+  },
+  {
+    "objectID": "Chapter6_part1.html#roadmap-for-part-2",
+    "href": "Chapter6_part1.html#roadmap-for-part-2",
+    "title": "Data Storytelling & Presentation",
+    "section": "Roadmap for Part 2",
+    "text": "Roadmap for Part 2\nIn Part 2, you will apply this toolkit to design your own data science project. You will choose a dataset, define a research question, plan your analysis, and begin thinking about how your final results will become a clear presentation."
+  },
+  {
+    "objectID": "Chapter6_part2.html",
+    "href": "Chapter6_part2.html",
+    "title": "Data Storytelling & Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nIdentify the major stages of a complete data science project.\nChoose a dataset that is appropriate for analysis, visualization, and modeling.\nWrite a clear, focused, and testable research question.\nApply data loading, cleaning, analysis, visualization, and modeling in a logical sequence.\nPlan a presentation that communicates one main message clearly and persuasively."
+  },
+  {
+    "objectID": "Chapter6_part2.html#learning-objectives",
+    "href": "Chapter6_part2.html#learning-objectives",
+    "title": "Data Storytelling & Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nIdentify the major stages of a complete data science project.\nChoose a dataset that is appropriate for analysis, visualization, and modeling.\nWrite a clear, focused, and testable research question.\nApply data loading, cleaning, analysis, visualization, and modeling in a logical sequence.\nPlan a presentation that communicates one main message clearly and persuasively."
+  },
+  {
+    "objectID": "Chapter6_part2.html#from-skills-to-application",
+    "href": "Chapter6_part2.html#from-skills-to-application",
+    "title": "Data Storytelling & Presentation",
+    "section": "From Skills to Application",
+    "text": "From Skills to Application\nIn Part 1, we reviewed the tools you have already learned: visualization, Python, Pandas, preprocessing, and machine learning. Now the goal is to use those tools together in one complete project.\nA data science project is not just a collection of charts or code cells. It is a structured process that starts with a question and ends with a message your audience can understand.\n\n\n\n\n\n\nNoteThe Big Idea\n\n\n\nA successful data science project solves a problem from start to finish. It begins with curiosity, moves through evidence, and ends with a clear explanation of what the evidence means."
+  },
+  {
+    "objectID": "Chapter6_part2.html#the-complete-project-roadmap",
+    "href": "Chapter6_part2.html#the-complete-project-roadmap",
+    "title": "Data Storytelling & Presentation",
+    "section": "The Complete Project Roadmap",
+    "text": "The Complete Project Roadmap\nA strong project follows a logical path. Each step builds on the previous one, so skipping steps can weaken the final result.\n\n\n\n\n\nflowchart LR\n    A[Choose Dataset] --&gt; B[Research Question]\n    B --&gt; C[Load Data]\n    C --&gt; D[Clean and Preprocess]\n    D --&gt; E[Analyze and Visualize]\n    E --&gt; F[Build a Model]\n    F --&gt; G[Plan Presentation]\n    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px\n    style D fill:#fef3c7,stroke:#333,stroke-width:1.5px\n    style F fill:#fce7f3,stroke:#333,stroke-width:1.5px\n    style G fill:#ede9fe,stroke:#333,stroke-width:2px"
+  },
+  {
+    "objectID": "Chapter6_part2.html#step-1-choose-a-dataset",
+    "href": "Chapter6_part2.html#step-1-choose-a-dataset",
+    "title": "Data Storytelling & Presentation",
+    "section": "Step 1: Choose a Dataset",
+    "text": "Step 1: Choose a Dataset\nYour dataset is the foundation of the project. A strong dataset gives you enough information to ask meaningful questions and create useful visuals.\n\nWhere to Find Data\nGood sources include:\n\nDelaware.gov and other open data portals.\nPublic datasets related to transportation, health, education, environment, sports, or local events.\nCSV files that can be loaded into Python or Google Sheets.\n\n\n\nWhat Makes a Dataset Useful?\nA useful dataset should have:\n\nEnough rows to reveal patterns.\nEnough columns to support comparisons.\nClear column names.\nValues that can be cleaned and analyzed.\nA topic that is interesting enough to keep you engaged.\n\n\n\n\n\n\n\nTipChoosing with Purpose\n\n\n\nPick a dataset you genuinely care about. Curiosity matters because you will spend time cleaning, exploring, modeling, and explaining the data."
+  },
+  {
+    "objectID": "Chapter6_part2.html#step-2-define-your-research-question",
+    "href": "Chapter6_part2.html#step-2-define-your-research-question",
+    "title": "Data Storytelling & Presentation",
+    "section": "Step 2: Define Your Research Question",
+    "text": "Step 2: Define Your Research Question\nBefore writing code, decide what you want to find out. A research question guides the entire project. It tells you which columns matter, which charts to create, and what kind of model might be useful.\n\nA Strong Research Question Is…\n\nClear — the audience can understand it quickly.\nData-driven — it can be answered using the dataset.\nTestable — you can filter, group, calculate, or model your way toward an answer.\nFocused — it is not too broad or vague.\n\n\n\nExample\nA weak question might be:\n\nWhat is happening with traffic accidents?\n\nA stronger question would be:\n\nDo traffic accidents happen more often on weekends than weekdays?\n\nThe second version is better because it identifies a specific comparison and can be answered with data.\n\n\n\n\n\n\nNoteWhy the Question Matters\n\n\n\nYour research question is like a compass. Without it, your project can become a random collection of charts instead of a focused story."
+  },
+  {
+    "objectID": "Chapter6_part2.html#step-3-load-your-data",
+    "href": "Chapter6_part2.html#step-3-load-your-data",
+    "title": "Data Storytelling & Presentation",
+    "section": "Step 3: Load Your Data",
+    "text": "Step 3: Load Your Data\nOnce you have a dataset and research question, the next step is to load the data into a tool where you can inspect it.\n\nLoading Data in Python\nimport pandas as pd\n\n# Load your CSV file\ndf = pd.read_csv(\"your_file.csv\")\n\n# Preview the first few rows\ndf.head()\n\n\nFirst Checks After Loading\nBefore analyzing anything, make sure the data loaded correctly:\n\nDid the file open without errors?\nAre all expected columns visible?\nDo the column names make sense?\nDo the first few rows look reasonable?\nAre dates, numbers, and categories stored in usable formats?\n\n# Check dataset size\nprint(df.shape)\n\n# Check column names\nprint(df.columns)\n\n# Check data types\nprint(df.dtypes)"
+  },
+  {
+    "objectID": "Chapter6_part2.html#step-4-clean-and-preprocess",
+    "href": "Chapter6_part2.html#step-4-clean-and-preprocess",
+    "title": "Data Storytelling & Presentation",
+    "section": "Step 4: Clean and Preprocess",
+    "text": "Step 4: Clean and Preprocess\nRaw data often contains missing values, inconsistent formats, and columns that need transformation. Cleaning is what makes your analysis trustworthy.\n\nCommon Cleaning Tasks\nYou may need to:\n\nRemove rows with missing or irrelevant values.\nRename unclear columns.\nConvert dates into date/time format.\nConvert numeric columns stored as text.\nRemove duplicate records.\nCreate new columns that help answer your question.\n\n# Example: remove rows with missing values in important columns\ndf_clean = df.dropna(subset=[\"date\", \"county\"])\n\n# Example: convert a date column\ndf_clean[\"date\"] = pd.to_datetime(df_clean[\"date\"])\n\n# Example: create a weekday column\ndf_clean[\"weekday\"] = df_clean[\"date\"].dt.day_name()\n\n\n\n\n\n\nWarningBe Careful\n\n\n\nCleaning decisions affect your results. If you remove rows, change formats, or create new categories, be ready to explain why those choices were reasonable."
+  },
+  {
+    "objectID": "Chapter6_part2.html#step-5-analyze-and-visualize-findings",
+    "href": "Chapter6_part2.html#step-5-analyze-and-visualize-findings",
+    "title": "Data Storytelling & Presentation",
+    "section": "Step 5: Analyze and Visualize Findings",
+    "text": "Step 5: Analyze and Visualize Findings\nAfter cleaning, begin exploring the data. This is where you look for patterns, trends, differences, and possible explanations.\n\nAnalysis Techniques\nUseful analysis steps include:\n\nFiltering rows based on your question.\nGrouping by category.\nCounting records.\nCalculating averages or totals.\nComparing groups.\nLooking for outliers.\n\n# Example: count records by weekday\nweekday_counts = df_clean.groupby(\"weekday\").size().reset_index(name=\"count\")\nweekday_counts\n\n\nChoosing the Right Chart\nDifferent charts answer different kinds of questions:\n\nBar charts compare categories.\nLine charts show trends over time.\nPie charts show proportions, but should be used carefully.\nScatter plots show relationships between two numeric variables.\n\n\n\n\n\n\n\nTipVisualization Rule\n\n\n\nEvery chart should have a job. If a chart does not support your research question or key message, it probably does not belong in the final presentation."
+  },
+  {
+    "objectID": "Chapter6_part2.html#step-6-build-a-prediction-model",
+    "href": "Chapter6_part2.html#step-6-build-a-prediction-model",
+    "title": "Data Storytelling & Presentation",
+    "section": "Step 6: Build a Prediction Model",
+    "text": "Step 6: Build a Prediction Model\nOnce you understand the data, you can build a model that predicts an outcome. The purpose of the model is not only to get a number. The purpose is to test whether patterns in the data can help explain or predict something meaningful.\n\nModel 1: Linear Regression\nLinear Regression is useful when the target variable is numeric, such as price, time, cost, or count.\n\n\nModel 2: Decision Tree\nA Decision Tree makes predictions by splitting the data using a sequence of rules. It is often easier to explain because it works like a set of questions.\n\n\nModel Evaluation\nTwo common evaluation metrics are:\n\nMSE — Mean Squared Error, which measures prediction error.\nR² — a score that explains how much variation the model accounts for.\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error, r2_score\n\nX = df_clean[[\"feature_1\", \"feature_2\"]]\ny = df_clean[\"target\"]\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\n\npredictions = model.predict(X_test)\n\nprint(\"MSE:\", mean_squared_error(y_test, predictions))\nprint(\"R²:\", r2_score(y_test, predictions))\n\n\n\n\n\n\nNoteModeling in Context\n\n\n\nA model does not replace your story. It adds evidence to the story by showing whether your data can support prediction or explanation."
+  },
+  {
+    "objectID": "Chapter6_part2.html#step-7-plan-your-presentation",
+    "href": "Chapter6_part2.html#step-7-plan-your-presentation",
+    "title": "Data Storytelling & Presentation",
+    "section": "Step 7: Plan Your Presentation",
+    "text": "Step 7: Plan Your Presentation\nThe final step is to turn your work into a clear presentation. Your audience does not need to see every cleaning step or every failed chart. They need the path that leads from question to insight.\n\nBuild Around One Key Message\nAsk yourself:\n\nWhat is the single most important takeaway?\nWhy should the audience care?\nWhat evidence supports the takeaway?\nWhat action, decision, or reflection should follow?\n\n\n\nSuggested Presentation Flow\nA strong presentation might follow this structure:\n\nIntroduce the topic and why it matters.\nState the research question.\nDescribe the dataset briefly.\nExplain important cleaning steps.\nShow the most relevant visualizations.\nPresent model results if used.\nEnd with the key message and conclusion."
+  },
+  {
+    "objectID": "Chapter6_part2.html#project-checklist",
+    "href": "Chapter6_part2.html#project-checklist",
+    "title": "Data Storytelling & Presentation",
+    "section": "Project Checklist",
+    "text": "Project Checklist\nBefore finishing your project, confirm that you have:\n\nA dataset that opens correctly.\nA clear research question.\nCleaned and documented data preparation steps.\nAt least one meaningful visualization.\nA model and evaluation results, if required.\nA presentation organized around one clear message.\n\n\n\n\n\n\n\nTipFinal Thought\n\n\n\nA strong project is not the one with the most charts or the most complicated model. A strong project is the one where every step supports the same clear, meaningful story."
   },
   {
     "objectID": "index.html",
@@ -58,5 +329,775 @@
     "crumbs": [
       "Motivation"
     ]
+  },
+  {
+    "objectID": "Chapter5_part3.html",
+    "href": "Chapter5_part3.html",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDefine scikit-learn as a core Python library for machine learning.\nExplain the purpose of Linear Regression as a supervised learning algorithm.\nDistinguish between independent variables (X) and a dependent variable (Y).\nInterpret the meaning of the linear regression formula (y = _0 + _1x).\nEvaluate a model using Mean Squared Error (MSE) and R² Score.\nAnalyze why a model may perform poorly, even when it is implemented correctly."
+  },
+  {
+    "objectID": "Chapter5_part3.html#learning-objectives",
+    "href": "Chapter5_part3.html#learning-objectives",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDefine scikit-learn as a core Python library for machine learning.\nExplain the purpose of Linear Regression as a supervised learning algorithm.\nDistinguish between independent variables (X) and a dependent variable (Y).\nInterpret the meaning of the linear regression formula (y = _0 + _1x).\nEvaluate a model using Mean Squared Error (MSE) and R² Score.\nAnalyze why a model may perform poorly, even when it is implemented correctly."
+  },
+  {
+    "objectID": "Chapter5_part3.html#what-is-scikit-learn",
+    "href": "Chapter5_part3.html#what-is-scikit-learn",
+    "title": "Machine Learning in Practice",
+    "section": "What is scikit-learn?",
+    "text": "What is scikit-learn?\nIn Python, one of the most important tools for machine learning is scikit-learn. It is a powerful, open-source library designed specifically for training models, generating predictions, and evaluating performance.\nscikit-learn is popular because it gives data scientists a consistent set of tools for common machine learning tasks. It also works smoothly with Pandas and NumPy, which makes it a natural fit in the broader data science workflow.\n\n\n\n\n\n\nNotescikit-learn\n\n\n\nscikit-learn is a Python machine learning library that provides ready-to-use tools for building, training, and evaluating models.\n\n\n\n\n\n\n\ngraph LR\n    A[Pandas + NumPy Data] --&gt; B[scikit-learn Model]\n    B --&gt; C[Predictions]\n    B --&gt; D[Evaluation Metrics]"
+  },
+  {
+    "objectID": "Chapter5_part3.html#what-is-linear-regression",
+    "href": "Chapter5_part3.html#what-is-linear-regression",
+    "title": "Machine Learning in Practice",
+    "section": "What is Linear Regression?",
+    "text": "What is Linear Regression?\nA common first model in machine learning is Linear Regression.\nLinear Regression is a supervised learning algorithm that identifies relationships between variables and uses those relationships to make predictions about new data.\nIn simple terms, it tries to fit a line through data in a way that captures the relationship between an input and an output.\n\nWhat Linear Regression Does\n\nFinds relationships: It detects how one variable changes in response to another.\nMakes predictions: It uses the learned pattern to estimate unknown values.\nStarts simply: It provides a useful baseline before trying more complex models.\n\nA real example from this chapter is predicting heart rate from physical activity data."
+  },
+  {
+    "objectID": "Chapter5_part3.html#variables-in-linear-regression",
+    "href": "Chapter5_part3.html#variables-in-linear-regression",
+    "title": "Machine Learning in Practice",
+    "section": "Variables in Linear Regression",
+    "text": "Variables in Linear Regression\nEvery linear regression model depends on two kinds of variables.\n\nIndependent Variables (X)\nThese are the inputs, also called features or predictors. They are the pieces of information you already know.\nExamples include:\n\nSteps taken\nAge\nDistance traveled\n\n\n\nDependent Variable (Y)\nThis is the output, also called the target. It is the value the model tries to predict.\nIn our example, the dependent variable is:\n\nHeart rate\n\nA helpful way to say it is: Y depends on X. Change the inputs, and the output may change too."
+  },
+  {
+    "objectID": "Chapter5_part3.html#breaking-down-the-formula",
+    "href": "Chapter5_part3.html#breaking-down-the-formula",
+    "title": "Machine Learning in Practice",
+    "section": "Breaking Down the Formula",
+    "text": "Breaking Down the Formula\nThe basic form of a linear regression model is:\n[ y = _0 + _1x ]\nEach part of the formula has a meaning:\n\n**(_0) — Intercept:** The value of (y) when (x = 0). This is where the line crosses the y-axis.\n**(_1) — Slope:** How much (y) changes for every one-unit increase in (x).\n\nThe model learns these values from the training data by trying to minimize prediction error.\n\n\n\n\n\n\nTipInstructor Insight: A Model Is Learned, Not Typed\n\n\n\nIn machine learning, we usually do not type the slope and intercept by hand. The algorithm calculates them from the data."
+  },
+  {
+    "objectID": "Chapter5_part3.html#why-use-linear-regression",
+    "href": "Chapter5_part3.html#why-use-linear-regression",
+    "title": "Machine Learning in Practice",
+    "section": "Why Use Linear Regression?",
+    "text": "Why Use Linear Regression?\nLinear Regression is a useful starting point for several reasons:\n\nSimple and Fast: It is easy to implement and computationally lightweight.\nInterpretable: The straight-line relationship is relatively easy to explain.\nGood for Linear Data: It performs well when the relationship between variables is roughly linear.\n\nHowever, it also has limitations:\n\nWeak for Complex Patterns: It struggles when relationships are nonlinear.\nSensitive to Missing Features: Important predictors left out of the model can reduce accuracy.\nLimited Flexibility: Real-world data is often more complicated than a straight line."
+  },
+  {
+    "objectID": "Chapter5_part3.html#hands-on-predicting-heart-rate",
+    "href": "Chapter5_part3.html#hands-on-predicting-heart-rate",
+    "title": "Machine Learning in Practice",
+    "section": "Hands-On: Predicting Heart Rate",
+    "text": "Hands-On: Predicting Heart Rate\nIn this exercise, we build a Linear Regression model to predict a person’s heart rate using real fitness-related data.\nPotential features include:\n\nSteps — a measure of physical activity level.\nGender — a categorical feature that may influence heart rate patterns.\nAge — an important factor in heart rate baselines and ranges.\nDistance — a feature related to effort and exertion.\n\nA typical workflow in scikit-learn looks like this:\nfrom sklearn.linear_model import LinearRegression\n\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\npredictions = model.predict(X_test)"
+  },
+  {
+    "objectID": "Chapter5_part3.html#evaluating-the-model",
+    "href": "Chapter5_part3.html#evaluating-the-model",
+    "title": "Machine Learning in Practice",
+    "section": "Evaluating the Model",
+    "text": "Evaluating the Model\nAfter training a model, we need to measure how well it performed.\nTwo common evaluation metrics are:\n\nMean Squared Error (MSE)\nMSE measures the average squared difference between predicted values and actual values. Lower values are better because they indicate smaller prediction errors.\n\n\nR² Score\nR² measures how much of the variation in the target variable is explained by the model. Higher values are usually better. A negative R² means the model performed worse than a very simple baseline.\nfrom sklearn.metrics import mean_squared_error, r2_score\n\nmse = mean_squared_error(y_test, predictions)\nr2 = r2_score(y_test, predictions)"
+  },
+  {
+    "objectID": "Chapter5_part3.html#reading-the-scatter-plot",
+    "href": "Chapter5_part3.html#reading-the-scatter-plot",
+    "title": "Machine Learning in Practice",
+    "section": "Reading the Scatter Plot",
+    "text": "Reading the Scatter Plot\nA helpful way to visualize model performance is with a scatter plot comparing actual values to predicted values.\n\nBlue dots represent the actual heart rate values.\nA prediction line represents the model’s estimates.\nA large gap between the points and the line signals weak performance.\n\nThis visual check helps confirm what the metrics are already telling us."
+  },
+  {
+    "objectID": "Chapter5_part3.html#what-the-results-revealed",
+    "href": "Chapter5_part3.html#what-the-results-revealed",
+    "title": "Machine Learning in Practice",
+    "section": "What the Results Revealed",
+    "text": "What the Results Revealed\nIn the slide example, the model performed poorly:\n\nMSE: 484\nR²: -1.8\n\nThese results tell us that the model’s predictions were far from the actual values—and that the model performed worse than simply guessing the mean every time.\nWhy might that happen?\n\nSmall dataset: Too few examples make it difficult to learn a reliable pattern.\nModel too simple: Linear Regression cannot capture nonlinear relationships.\nMissing features: Important predictors may not have been included.\n\n\n\n\n\n\n\nNoteFailure Can Be Informative\n\n\n\nA poor model is not wasted effort. In data science, weak results often teach you what kind of model or data you need next."
+  },
+  {
+    "objectID": "Chapter5_part3.html#roadmap-for-part-3",
+    "href": "Chapter5_part3.html#roadmap-for-part-3",
+    "title": "Machine Learning in Practice",
+    "section": "Roadmap for Part 3",
+    "text": "Roadmap for Part 3\nToday we introduced the core Python library for machine learning and built a first predictive model:\n\nscikit-learn: The toolkit for building and evaluating models.\nLinear Regression: A simple baseline model for predicting numeric outcomes.\nModel Evaluation: Using MSE and R² to measure performance.\n\nIn Part 4, we will compare Linear Regression with a Decision Tree and see how a more flexible model can improve predictions."
+  },
+  {
+    "objectID": "Chapter2_part1.html",
+    "href": "Chapter2_part1.html",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "By the end of this chapter, you will be able to:\n\nExplain what data is and why it matters in everyday life.\nIdentify different types of data, including numerical, categorical, time-based, and geographic data.\nUse a real dataset to ask meaningful analytical questions.\nDistinguish between weak questions and strong questions in data analysis.\nConnect questions to the kinds of visuals that may help answer them.\n\nThis chapter is organized into three parts:\n\nPart 1: Understanding data and asking good questions\n\nPart 2: Turning data into charts, graphs, and maps\n\nPart 3: Cleaning, summarizing, and interpreting data"
+  },
+  {
+    "objectID": "Chapter2_part1.html#learning-objectives",
+    "href": "Chapter2_part1.html#learning-objectives",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "By the end of this chapter, you will be able to:\n\nExplain what data is and why it matters in everyday life.\nIdentify different types of data, including numerical, categorical, time-based, and geographic data.\nUse a real dataset to ask meaningful analytical questions.\nDistinguish between weak questions and strong questions in data analysis.\nConnect questions to the kinds of visuals that may help answer them.\n\nThis chapter is organized into three parts:\n\nPart 1: Understanding data and asking good questions\n\nPart 2: Turning data into charts, graphs, and maps\n\nPart 3: Cleaning, summarizing, and interpreting data"
+  },
+  {
+    "objectID": "Chapter2_part1.html#every-day-you-already-use-data",
+    "href": "Chapter2_part1.html#every-day-you-already-use-data",
+    "title": "Data Visualization",
+    "section": "Every Day, You Already Use Data",
+    "text": "Every Day, You Already Use Data\nEven before you study data formally, you already use it every day. You check the weather before leaving the house, glance at the clock to see if you have time for breakfast, or notice traffic patterns during your commute. In each case, you are collecting information, interpreting it, and making a decision.\nOne simple example is the question: Should you bring an umbrella today? To answer it, you might look at the temperature, cloud cover, and chance of rain. That is data-driven decision-making in action.\n\n\n\n\n\n\nNoteThink About It\n\n\n\nWhat is one decision you made this morning based on information you gathered—even informally?"
+  },
+  {
+    "objectID": "Chapter2_part1.html#so-what-exactly-is-data",
+    "href": "Chapter2_part1.html#so-what-exactly-is-data",
+    "title": "Data Visualization",
+    "section": "So… What Exactly Is Data?",
+    "text": "So… What Exactly Is Data?\nData is simply raw information about the world. It can take many forms, including numbers, words, locations, and times. By itself, data is just a collection of facts. It becomes useful when we organize it, analyze it, and look for meaning.\nSome common forms of data include:\n\nNumbers — ages, temperatures, prices, speeds, or anything you can count\nCategories — labels such as rainy, sunny, car, truck, or school subject\nTime — dates, hours, seasons, or changes over time\nLocation — counties, zip codes, states, or GPS coordinates\n\nRaw data does not automatically tell a story. To become meaningful, it must be organized, questioned, and often visualized."
+  },
+  {
+    "objectID": "Chapter2_part1.html#why-does-data-matter",
+    "href": "Chapter2_part1.html#why-does-data-matter",
+    "title": "Data Visualization",
+    "section": "Why Does Data Matter?",
+    "text": "Why Does Data Matter?\nData matters because it helps people make better decisions and discover patterns they might otherwise miss.\n\nMake Predictions: Doctors use patient data to predict health risks. Coaches use statistics to predict outcomes.\nGuide Decisions: Cities use crash data to decide where to add traffic lights. Schools use test scores to improve curriculum.\nReveal Patterns: Stores may notice that umbrella sales rise before storms, even before the forecast changes.\n\nWhen we learn to read data well, we gain the ability to understand the world more clearly."
+  },
+  {
+    "objectID": "Chapter2_part1.html#types-of-data",
+    "href": "Chapter2_part1.html#types-of-data",
+    "title": "Data Visualization",
+    "section": "Types of Data",
+    "text": "Types of Data\nBefore you can analyze or visualize anything, you need to know what kind of data you are working with. Different kinds of data are better suited to different chart types and analytical questions.\nThe four common types we will use throughout this chapter are:\n\nNumerical data\nCategorical data\nTime-based data\nGeographic data\n\n\n\n\n\n\n\nNoteQuick Check\n\n\n\nIs “number of crashes per month” numerical or categorical? Is “city where a crash occurred” time-based or geographic?"
+  },
+  {
+    "objectID": "Chapter2_part1.html#a-real-dataset-delaware-traffic-crashes",
+    "href": "Chapter2_part1.html#a-real-dataset-delaware-traffic-crashes",
+    "title": "Data Visualization",
+    "section": "A Real Dataset: Delaware Traffic Crashes",
+    "text": "A Real Dataset: Delaware Traffic Crashes\nTo make these ideas concrete, we can use a real dataset: the Delaware Traffic Crash Dataset.\nThis public dataset records reported traffic crashes in Delaware and includes a wide range of variables, such as:\n\nDate and time of each crash\nLocation, including county, road name, and GPS\nWeather and road conditions\nNumber of vehicles and injuries involved\nDriver age, seatbelt use, and more\n\nThis dataset is especially useful because it is local, real, and rich in different types of data. It gives us time-based, geographic, categorical, and numerical variables all in one place."
+  },
+  {
+    "objectID": "Chapter2_part1.html#what-can-we-ask-this-data",
+    "href": "Chapter2_part1.html#what-can-we-ask-this-data",
+    "title": "Data Visualization",
+    "section": "What Can We Ask This Data?",
+    "text": "What Can We Ask This Data?\nA dataset becomes powerful when you ask good questions about it. Strong data analysis does not start with a chart—it starts with curiosity.\nFor example, we might ask:\n\nWhen do crashes happen most? Are they more common during rush hour, late at night, or in certain seasons?\nWhere are crashes concentrated? Are some counties, roads, or intersections more dangerous than others?\nWhat factors increase risk? Do weather, speeding, or seatbelt use affect injury severity?\n\nThese are analytical questions because they connect variables and push us toward insight."
+  },
+  {
+    "objectID": "Chapter2_part1.html#good-questions-vs.-bad-questions",
+    "href": "Chapter2_part1.html#good-questions-vs.-bad-questions",
+    "title": "Data Visualization",
+    "section": "Good Questions vs. Bad Questions",
+    "text": "Good Questions vs. Bad Questions\nOne of the most important skills in data analysis is learning to tell the difference between a vague question and a meaningful one.\n\nWeak Questions\nWeak questions are often too broad, too descriptive, or too unfocused.\nExamples include:\n\nWhat is in this dataset?\nMake a chart of the data.\nHow many crashes are there?\nShow me something interesting.\n\n\n\nStrong Questions\nStrong questions connect variables, can be tested with data, and lead to a clear direction for analysis.\nExamples include:\n\nHow does weather affect crash severity?\nWhich hour of day has the most crashes?\nDo teen drivers crash more in certain conditions?\nHas crash frequency changed over time?\n\n\n\n\n\n\n\nTipInstructor Insight\n\n\n\nStrong analytical questions often begin with words like how, does, which, or what is the relationship between."
+  },
+  {
+    "objectID": "Chapter2_part1.html#activity-ask-better-questions",
+    "href": "Chapter2_part1.html#activity-ask-better-questions",
+    "title": "Data Visualization",
+    "section": "Activity: Ask Better Questions",
+    "text": "Activity: Ask Better Questions\nNow it is your turn to practice.\nWorking individually or with a partner:\n\nChoose a Dataset: Use the Delaware crash data, school lunch participation data, local weather data, or another dataset your teacher provides.\nExplore the Variables: Look through the columns and identify the types of data present.\nWrite Two Strong Questions: Make sure each question connects at least two variables and could actually be answered with the data.\nShare and Revise: Discuss your questions with the class and improve them if needed.\n\n\n\n\n\n\n\nNoteBonus Challenge\n\n\n\nFor each question, predict what kind of chart might help answer it: a bar chart, line graph, scatter plot, or map."
+  },
+  {
+    "objectID": "Chapter2_part1.html#roadmap-for-part-1",
+    "href": "Chapter2_part1.html#roadmap-for-part-1",
+    "title": "Data Visualization",
+    "section": "Roadmap for Part 1",
+    "text": "Roadmap for Part 1\nIn this part, we built the foundation for data visualization:\n\nWhat data is\nUnderstanding raw facts, categories, time, and location\nWhy data matters\nUsing data to make decisions and spot patterns\nHow to ask strong questions\nMoving from vague curiosity to testable analysis\n\nIn Part 2, we will turn those questions into charts, graphs, and other visuals."
+  },
+  {
+    "objectID": "Chapter2_part2.html",
+    "href": "Chapter2_part2.html",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "A table full of numbers can be hard to interpret. A clear chart, however, can reveal the same pattern in seconds.\nData visualization is not just about making information look good. It is about making information clear, memorable, and useful.\nGood visuals help us:\n\nSpot patterns that are hard to notice in raw numbers\nSave time by making the main idea easier to grasp\nTell a story by turning data into a message people can understand"
+  },
+  {
+    "objectID": "Chapter2_part2.html#why-visualize-data",
+    "href": "Chapter2_part2.html#why-visualize-data",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "A table full of numbers can be hard to interpret. A clear chart, however, can reveal the same pattern in seconds.\nData visualization is not just about making information look good. It is about making information clear, memorable, and useful.\nGood visuals help us:\n\nSpot patterns that are hard to notice in raw numbers\nSave time by making the main idea easier to grasp\nTell a story by turning data into a message people can understand"
+  },
+  {
+    "objectID": "Chapter2_part2.html#the-chart-selection-rule",
+    "href": "Chapter2_part2.html#the-chart-selection-rule",
+    "title": "Data Visualization",
+    "section": "The Chart Selection Rule",
+    "text": "The Chart Selection Rule\nOne of the most common mistakes in data visualization is choosing the wrong chart type.\nA simple rule helps: start with your question. Ask yourself what you are trying to show, then choose the chart that communicates that idea most clearly.\n\n\n\n\n\n\nNoteGolden Rule\n\n\n\nChoose the chart that answers your question most clearly—not the one that looks the most impressive."
+  },
+  {
+    "objectID": "Chapter2_part2.html#the-bar-chart",
+    "href": "Chapter2_part2.html#the-bar-chart",
+    "title": "Data Visualization",
+    "section": "The Bar Chart",
+    "text": "The Bar Chart\nA bar chart is best for comparing values across categories.\nExamples include:\n\nTest scores across different classes\nSales for different products\nPopulation by city or state\nWins across sports teams\n\nA bar chart makes differences easy to compare because each bar represents a quantity.\n\n\n\n\n\n\nTipBest Use\n\n\n\nThink compare → think bar chart."
+  },
+  {
+    "objectID": "Chapter2_part2.html#the-line-chart",
+    "href": "Chapter2_part2.html#the-line-chart",
+    "title": "Data Visualization",
+    "section": "The Line Chart",
+    "text": "The Line Chart\nA line chart is used to show how something changes over time.\nExamples include:\n\nGPA across several semesters\nDaily temperature over a week\nSocial media followers growing month by month\n\nLine charts are especially useful for showing trends, increases, decreases, and patterns across time.\n\n\n\n\n\n\nTipBest Use\n\n\n\nThink trend or over time → think line chart."
+  },
+  {
+    "objectID": "Chapter2_part2.html#the-pie-chart",
+    "href": "Chapter2_part2.html#the-pie-chart",
+    "title": "Data Visualization",
+    "section": "The Pie Chart",
+    "text": "The Pie Chart\nA pie chart shows how categories make up a whole.\nIt works best when:\n\nThere are five or fewer categories\nThe values add up to 100%\nThe slices are clearly different in size\n\nPie charts can be helpful, but they are often overused.\nAvoid them when:\n\nYou need to compare exact values\nYou have too many categories\nThe slices are very similar in size\n\nIn many cases, a bar chart is easier to read."
+  },
+  {
+    "objectID": "Chapter2_part2.html#the-scatter-plot",
+    "href": "Chapter2_part2.html#the-scatter-plot",
+    "title": "Data Visualization",
+    "section": "The Scatter Plot",
+    "text": "The Scatter Plot\nA scatter plot shows the relationship between two numerical variables.\nExamples include:\n\nHours studied vs. exam score\nTemperature vs. ice cream sales\nHeight vs. shoe size\nSleep hours vs. mood rating\n\nScatter plots help us look for relationships or correlations between variables.\nIf the dots rise together, the relationship may be positive. If they fall, it may be negative. If the dots are scattered randomly, there may be no clear pattern.\n\n\n\n\n\n\nNoteCorrelation Reminder\n\n\n\nCorrelation is not the same as causation. A relationship between two variables does not automatically mean one causes the other."
+  },
+  {
+    "objectID": "Chapter2_part2.html#common-mistakes-in-data-visualization",
+    "href": "Chapter2_part2.html#common-mistakes-in-data-visualization",
+    "title": "Data Visualization",
+    "section": "Common Mistakes in Data Visualization",
+    "text": "Common Mistakes in Data Visualization\nEven good data can be misunderstood if the chart is poorly designed.\nSome common mistakes include:\n\nWrong Chart Type\nUsing a line chart for unrelated categories or a pie chart for trends over time can confuse the reader.\n\n\nToo Much Data\nCrowding too many categories into one chart creates visual clutter and makes the message harder to see.\n\n\nMisleading Scales\nChanging the axis scale can exaggerate or hide differences. Honest scales help people trust what they see.\n\n\n\n\n\n\nImportantWhy Design Choices Matter\n\n\n\nA misleading chart can change how people understand reality. Clear visualization is part of responsible data analysis."
+  },
+  {
+    "objectID": "Chapter2_part2.html#comparing-multiple-variables",
+    "href": "Chapter2_part2.html#comparing-multiple-variables",
+    "title": "Data Visualization",
+    "section": "Comparing Multiple Variables",
+    "text": "Comparing Multiple Variables\nSometimes one chart is not enough. When your data involves several variables at once, you may need more advanced visual strategies.\nExamples include:\n\nGrouped bar charts to compare several categories within each group\nMulti-line charts to compare trends across groups over time\nColor or size encoding in a scatter plot to add more layers of information\n\nThese visuals can be powerful, but they should still remain easy to read."
+  },
+  {
+    "objectID": "Chapter2_part2.html#activity-which-chart-would-you-use",
+    "href": "Chapter2_part2.html#activity-which-chart-would-you-use",
+    "title": "Data Visualization",
+    "section": "Activity: Which Chart Would You Use?",
+    "text": "Activity: Which Chart Would You Use?\nChoose the best chart type for each scenario:\n\nShowing how school lunch participation changed each month\nShowing the percentage of students who prefer each school subject\nExploring the relationship between sleep and GPA\nComparing wins across five sports teams\n\nPossible chart choices include:\n\nBar chart\nLine chart\nPie chart\nScatter plot\n\n\n\n\n\n\n\nTipGoal of the Activity\n\n\n\nDo not just name a chart—explain why it fits the question."
+  },
+  {
+    "objectID": "Chapter2_part2.html#roadmap-for-part-2",
+    "href": "Chapter2_part2.html#roadmap-for-part-2",
+    "title": "Data Visualization",
+    "section": "Roadmap for Part 2",
+    "text": "Roadmap for Part 2\nIn this part, we focused on how to match a question to the right visual:\n\nChoosing chart types\nKnowing when to use bars, lines, pies, and scatter plots\nAvoiding common mistakes\nKeeping charts clear, honest, and readable\nComparing more than one variable\nUsing visuals that show more complex patterns\n\nIn Part 3, we will move from choosing visuals to cleaning, summarizing, and interpreting data."
+  },
+  {
+    "objectID": "Chapter2_part3.html",
+    "href": "Chapter2_part3.html",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "Real-world datasets are often large, messy, and difficult to interpret at first glance. A spreadsheet with hundreds of thousands of rows can feel overwhelming before you even begin asking questions.\nCommon challenges include:\n\nToo many rows to examine manually\nUnnecessary columns that clutter the view\nMissing values or inconsistent formatting\nNo obvious starting point for analysis\n\nThe good news is that analysts almost never study every row at once. Instead, they narrow the data to what is relevant."
+  },
+  {
+    "objectID": "Chapter2_part3.html#the-raw-data-problem",
+    "href": "Chapter2_part3.html#the-raw-data-problem",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "Real-world datasets are often large, messy, and difficult to interpret at first glance. A spreadsheet with hundreds of thousands of rows can feel overwhelming before you even begin asking questions.\nCommon challenges include:\n\nToo many rows to examine manually\nUnnecessary columns that clutter the view\nMissing values or inconsistent formatting\nNo obvious starting point for analysis\n\nThe good news is that analysts almost never study every row at once. Instead, they narrow the data to what is relevant."
+  },
+  {
+    "objectID": "Chapter2_part3.html#why-clean-data-matters",
+    "href": "Chapter2_part3.html#why-clean-data-matters",
+    "title": "Data Visualization",
+    "section": "Why Clean Data Matters",
+    "text": "Why Clean Data Matters\nBefore you analyze data, you need to clean it.\nCleaning helps because it makes analysis:\n\nFaster — smaller, focused datasets are easier to work with\nClearer — patterns are easier to spot when unnecessary information is removed\nMore reliable — summaries and charts are more trustworthy when the data is organized\n\nData cleaning is not extra work. It is the step that makes everything else possible."
+  },
+  {
+    "objectID": "Chapter2_part3.html#simple-cleaning-techniques",
+    "href": "Chapter2_part3.html#simple-cleaning-techniques",
+    "title": "Data Visualization",
+    "section": "Simple Cleaning Techniques",
+    "text": "Simple Cleaning Techniques\nYou do not need advanced coding to begin cleaning data. A spreadsheet is enough for many beginner tasks.\nThree useful techniques are:\n\nFilter rows to show only the records relevant to your question\nRemove or hide extra columns that do not matter for your analysis\nWork with a subset by copying only the rows and columns you need into a new sheet\n\nThese steps reduce clutter and make the dataset easier to understand."
+  },
+  {
+    "objectID": "Chapter2_part3.html#a-real-example-narrowing-down-a-dataset",
+    "href": "Chapter2_part3.html#a-real-example-narrowing-down-a-dataset",
+    "title": "Data Visualization",
+    "section": "A Real Example: Narrowing Down a Dataset",
+    "text": "A Real Example: Narrowing Down a Dataset\nImagine starting with a large traffic crash dataset and gradually focusing it to answer one local question.\nFor example, you might:\n\nFilter by state to keep only Delaware\nFilter by year to keep records from 2020–2024\nFilter by county to focus on New Castle County\n\nA huge dataset becomes much more manageable when it is scoped to a specific place and time."
+  },
+  {
+    "objectID": "Chapter2_part3.html#summarizing-your-data",
+    "href": "Chapter2_part3.html#summarizing-your-data",
+    "title": "Data Visualization",
+    "section": "Summarizing Your Data",
+    "text": "Summarizing Your Data\nOnce your data is clean, the next step is to summarize it.\nInstead of looking at thousands of individual rows, you might want to answer a question like:\n\nWhich day of the week has the most crashes?\n\nThat kind of answer comes from a summary.\nCommon summary methods include:\n\nCounts — how many times something happens\nAverages — what the typical value is\nTotals — the overall sum\nComparisons — how one group differs from another\n\nSummaries make large datasets easier to interpret and prepare them for visualization."
+  },
+  {
+    "objectID": "Chapter2_part3.html#spreadsheet-tools-that-help",
+    "href": "Chapter2_part3.html#spreadsheet-tools-that-help",
+    "title": "Data Visualization",
+    "section": "Spreadsheet Tools That Help",
+    "text": "Spreadsheet Tools That Help\nTwo simple spreadsheet functions are especially useful for beginner analysis.\n\nUNIQUE\nThe =UNIQUE(range) function finds all the distinct values in a column. It helps you quickly see what categories exist in your data.\n\n\nCOUNTIF\nThe =COUNTIF(range, criteria) function counts how many rows match a certain value. It is useful for building quick summary tables.\nTogether, these functions let you list categories and count how often each one appears.\n\n\n\n\n\n\nTipA Helpful Workflow\n\n\n\nUse UNIQUE to generate the list of categories, then use COUNTIF next to each one to count occurrences."
+  },
+  {
+    "objectID": "Chapter2_part3.html#what-is-a-dashboard",
+    "href": "Chapter2_part3.html#what-is-a-dashboard",
+    "title": "Data Visualization",
+    "section": "What Is a Dashboard?",
+    "text": "What Is a Dashboard?\nA dashboard is more than a collection of charts. It is a curated story told with data.\nA strong dashboard usually includes:\n\nMultiple visuals that each show a different angle of the same topic\nConnected context, where the visuals support each other\nOne central question that ties everything together\n\nFor example, a dashboard might be built around the question:\n\nWhere and when do most crashes happen in New Castle County?"
+  },
+  {
+    "objectID": "Chapter2_part3.html#chart-vs.-insight",
+    "href": "Chapter2_part3.html#chart-vs.-insight",
+    "title": "Data Visualization",
+    "section": "Chart vs. Insight",
+    "text": "Chart vs. Insight\nThis is one of the most important ideas in data analysis:\nA chart is a visual display of data.\nAn insight is the meaning you take from that chart.\nFor example:\n\nChart: A bar chart showing crashes by weekday\nInsight: Friday has more crashes than Sunday, possibly because of commuter traffic and end-of-week fatigue\n\nAnyone can make a chart. The real skill is explaining what the chart means.\n\n\n\n\n\n\nNoteAsk the “So What?” Question\n\n\n\nAfter creating a chart, ask: What does this tell someone who did not already know it? The answer is your insight."
+  },
+  {
+    "objectID": "Chapter2_part3.html#final-reflection",
+    "href": "Chapter2_part3.html#final-reflection",
+    "title": "Data Visualization",
+    "section": "Final Reflection",
+    "text": "Final Reflection\nBy this point, you have seen that data analysis is not just about looking at numbers. It involves a process:\n\nStart with raw data\nClean and focus it\nSummarize what matters\nVisualize the patterns\nInterpret the insight\n\nThat process turns raw information into something meaningful and useful."
+  },
+  {
+    "objectID": "Chapter2_part3.html#roadmap-for-part-3",
+    "href": "Chapter2_part3.html#roadmap-for-part-3",
+    "title": "Data Visualization",
+    "section": "Roadmap for Part 3",
+    "text": "Roadmap for Part 3\nIn this part, we focused on how analysts move from raw data to insight:\n\nCleaning data\nReducing clutter and focusing on what matters\nSummarizing data\nUsing counts, averages, totals, and comparisons\nInterpreting visuals\nTurning charts into insights and conclusions\n\nThis chapter has shown that good visualization depends not just on charts, but on the quality of the question, the data, and the interpretation behind it."
+  },
+  {
+    "objectID": "Chapter5_part4.html",
+    "href": "Chapter5_part4.html",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nExplain why Linear Regression may fail on nonlinear data.\nDescribe how a Decision Tree model makes predictions.\nCompare Linear Regression and Decision Trees using MSE and R².\nRecognize why model comparison is essential in practical machine learning.\nBuild and evaluate two models on the same dataset for a fair comparison."
+  },
+  {
+    "objectID": "Chapter5_part4.html#learning-objectives",
+    "href": "Chapter5_part4.html#learning-objectives",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nExplain why Linear Regression may fail on nonlinear data.\nDescribe how a Decision Tree model makes predictions.\nCompare Linear Regression and Decision Trees using MSE and R².\nRecognize why model comparison is essential in practical machine learning.\nBuild and evaluate two models on the same dataset for a fair comparison."
+  },
+  {
+    "objectID": "Chapter5_part4.html#when-linear-regression-falls-short",
+    "href": "Chapter5_part4.html#when-linear-regression-falls-short",
+    "title": "Machine Learning in Practice",
+    "section": "When Linear Regression Falls Short",
+    "text": "When Linear Regression Falls Short\nLinear Regression assumes the relationship between inputs and outputs follows a straight line. That assumption is sometimes useful—but real-world data is often more complicated.\nRelationships in data may be curved, stepped, or highly nonlinear. When that happens, a straight-line model can miss important patterns.\nThis leads to an important question: What kind of model should we try when a line is not enough?"
+  },
+  {
+    "objectID": "Chapter5_part4.html#enter-the-decision-tree",
+    "href": "Chapter5_part4.html#enter-the-decision-tree",
+    "title": "Machine Learning in Practice",
+    "section": "Enter the Decision Tree",
+    "text": "Enter the Decision Tree\nA Decision Tree is a model that makes predictions by asking a series of yes/no questions about the data and splitting observations into branches.\nUnlike Linear Regression, it does not try to fit one straight line across the entire dataset. Instead, it creates decision rules that divide the data into smaller and more specific groups.\n\nWhy Decision Trees Matter\n\nWorks for Regression and Classification: It can predict both numbers and categories.\nHandles Nonlinear Patterns: It adapts more easily to complex relationships.\nEasy to Visualize: The branching structure can often be drawn and interpreted step by step.\n\n\n\n\n\n\n\nNoteDecision Rule\n\n\n\nA Decision Tree makes predictions by repeatedly splitting data based on feature thresholds. Each split creates a new branch in the model.\n\n\n\n\n\n\n\ngraph TD\n    A[Start with Data] --&gt; B{Feature Rule?}\n    B --&gt;|Yes| C[Branch 1]\n    B --&gt;|No| D[Branch 2]\n    C --&gt; E[Prediction]\n    D --&gt; F[Prediction]"
+  },
+  {
+    "objectID": "Chapter5_part4.html#building-a-decision-tree",
+    "href": "Chapter5_part4.html#building-a-decision-tree",
+    "title": "Machine Learning in Practice",
+    "section": "Building a Decision Tree",
+    "text": "Building a Decision Tree\nTo create a fair comparison, we use the same dataset from the Linear Regression example.\nThe workflow is familiar:\n\nLoad and Prepare the Data\nInitialize the Model\nFit the Model\nGenerate Predictions\nEvaluate the Results\n\nA typical scikit-learn workflow looks like this:\nfrom sklearn.tree import DecisionTreeRegressor\n\ntree_model = DecisionTreeRegressor(random_state=42)\ntree_model.fit(X_train, y_train)\ntree_predictions = tree_model.predict(X_test)"
+  },
+  {
+    "objectID": "Chapter5_part4.html#the-results-improved",
+    "href": "Chapter5_part4.html#the-results-improved",
+    "title": "Machine Learning in Practice",
+    "section": "The Results Improved",
+    "text": "The Results Improved\nIn the slide example, the visual results improved. The scatter plot showed the predicted values sitting much closer to the actual values than they did with Linear Regression.\nThat visual “tightening” suggests that the Decision Tree captured the underlying pattern more effectively.\nThe evaluation metrics also improved:\n\nMSE: 82\nR²: 0.52\n\nThese numbers are much stronger than the earlier Linear Regression results."
+  },
+  {
+    "objectID": "Chapter5_part4.html#the-numbers-back-it-up",
+    "href": "Chapter5_part4.html#the-numbers-back-it-up",
+    "title": "Machine Learning in Practice",
+    "section": "The Numbers Back It Up",
+    "text": "The Numbers Back It Up\nWhy do these metrics matter?\n\nLower MSE means the model’s predictions are closer to the true values.\nHigher R² means the model explains more of the variation in the data.\n\nCompared with Linear Regression:\n\nLinear Regression had a higher MSE and a lower R².\nThe Decision Tree had a lower MSE and a higher R².\n\nThat makes the Decision Tree the stronger model for this dataset.\n\n\n\n\n\n\nTipInstructor Insight: One Model Does Not Fit Every Problem\n\n\n\nA model that performs poorly is not a dead end. It is often a sign that the data needs a different modeling approach."
+  },
+  {
+    "objectID": "Chapter5_part4.html#linear-regression-vs.-decision-tree",
+    "href": "Chapter5_part4.html#linear-regression-vs.-decision-tree",
+    "title": "Machine Learning in Practice",
+    "section": "Linear Regression vs. Decision Tree",
+    "text": "Linear Regression vs. Decision Tree\nHere is the big comparison:\n\nLinear Regression\n\nRegression only\nAssumes a linear relationship\nEasier to describe with a formula\n\nDecision Tree\n\nWorks for regression and classification\nHandles nonlinear patterns\nEasier to explain visually with branches\n\n\nFor this chapter’s dataset, the Decision Tree performed better on both major metrics."
+  },
+  {
+    "objectID": "Chapter5_part4.html#activity-build-and-compare-your-own-models",
+    "href": "Chapter5_part4.html#activity-build-and-compare-your-own-models",
+    "title": "Machine Learning in Practice",
+    "section": "Activity: Build and Compare Your Own Models",
+    "text": "Activity: Build and Compare Your Own Models\nNow it is your turn to test both models on the same dataset.\n\nBuild Both Models: Train a Linear Regression model and a Decision Tree model.\nEvaluate with Metrics: Calculate MSE and R² for each one.\nCreate a Scatter Plot: Compare predictions with actual values and look for differences in fit.\n\nThe goal is not just to build a model—it is to learn how to compare models and choose the one that fits the data best."
+  },
+  {
+    "objectID": "Chapter5_part4.html#wrap-up-what-this-chapter-built-toward",
+    "href": "Chapter5_part4.html#wrap-up-what-this-chapter-built-toward",
+    "title": "Machine Learning in Practice",
+    "section": "Wrap-Up: What This Chapter Built Toward",
+    "text": "Wrap-Up: What This Chapter Built Toward\nAcross Chapter 5, you moved through the core structure of an introductory machine learning workflow:\n\nYou learned what machine learning is and why it matters.\nYou distinguished between regression and classification.\nYou used train/test split to evaluate models fairly.\nYou built models with scikit-learn.\nYou compared Linear Regression and Decision Trees using real metrics."
+  },
+  {
+    "objectID": "Chapter5_part4.html#looking-ahead",
+    "href": "Chapter5_part4.html#looking-ahead",
+    "title": "Machine Learning in Practice",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\nThis chapter introduced a powerful idea at the heart of data science: different models reveal different strengths and weaknesses.\nAs you continue, the goal is not just to run code, but to think critically about what your model learned, how well it performed, and why one approach might work better than another."
+  },
+  {
+    "objectID": "Chapter5_part2.html",
+    "href": "Chapter5_part2.html",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDistinguish between regression and classification tasks.\nIdentify whether a dataset column represents a numeric target or a categorical label.\nExplain why a train/test split is necessary for honest model evaluation.\nDefine overfitting and describe several strategies for preventing it.\nUse train_test_split() conceptually as the first step in preparing a machine learning workflow."
+  },
+  {
+    "objectID": "Chapter5_part2.html#learning-objectives",
+    "href": "Chapter5_part2.html#learning-objectives",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDistinguish between regression and classification tasks.\nIdentify whether a dataset column represents a numeric target or a categorical label.\nExplain why a train/test split is necessary for honest model evaluation.\nDefine overfitting and describe several strategies for preventing it.\nUse train_test_split() conceptually as the first step in preparing a machine learning workflow."
+  },
+  {
+    "objectID": "Chapter5_part2.html#quick-recap-where-we-left-off",
+    "href": "Chapter5_part2.html#quick-recap-where-we-left-off",
+    "title": "Machine Learning in Practice",
+    "section": "Quick Recap: Where We Left Off",
+    "text": "Quick Recap: Where We Left Off\nIn Part 1, we introduced machine learning as a way for computers to learn from data and make predictions. We also previewed three major ideas that shape almost every ML project.\nNow we move into the first two of those ideas: task type and evaluation.\n\nPart 1: Introduction to Machine Learning\nPart 2: Regression vs. Classification\nPart 3: Train/Test Split\nPart 4: Building and comparing models\n\nToday’s goal is to close out the discussion of task types and take the first major step toward trustworthy model building."
+  },
+  {
+    "objectID": "Chapter5_part2.html#regression-vs.-classification",
+    "href": "Chapter5_part2.html#regression-vs.-classification",
+    "title": "Machine Learning in Practice",
+    "section": "Regression vs. Classification",
+    "text": "Regression vs. Classification\nOne of the first questions in any machine learning project is simple but essential: What kind of prediction are we making?\n\nRegression\nA regression task predicts a continuous number.\nExamples include:\n\nWhat will a house price be?\nHow many units will a company sell?\nWhat will the temperature be tomorrow?\n\n\n\nClassification\nA classification task predicts a label or category.\nExamples include:\n\nIs this email spam or not?\nIs this tumor benign or malignant?\nWhat animal is in this photo?\n\n\n\n\n\n\n\nNoteTask Type Matters\n\n\n\nBefore choosing a model, you must know whether your target is a number or a category. That decision shapes everything that follows."
+  },
+  {
+    "objectID": "Chapter5_part2.html#activity-spot-the-task-type",
+    "href": "Chapter5_part2.html#activity-spot-the-task-type",
+    "title": "Machine Learning in Practice",
+    "section": "Activity: Spot the Task Type",
+    "text": "Activity: Spot the Task Type\nTo practice this idea, look carefully at the columns in your dataset and ask a simple question:\n\nAm I trying to predict a number, or a category?\n\nWork through these three steps:\n\nFind Regression Columns: Identify columns with numerical outputs worth predicting, such as price, age, or score.\nFind Classification Columns: Identify columns with labels or categories, such as yes/no, type, or species.\nDiscuss with a Partner: Share your choices and explain why each column fits its task type.\n\n\n\n\n\n\n\nTipInstructor Insight: Start with the Target\n\n\n\nA helpful habit is to identify your target column first. Once you know what you want to predict, it becomes easier to decide whether the task is regression or classification."
+  },
+  {
+    "objectID": "Chapter5_part2.html#why-split-your-data",
+    "href": "Chapter5_part2.html#why-split-your-data",
+    "title": "Machine Learning in Practice",
+    "section": "Why Split Your Data?",
+    "text": "Why Split Your Data?\nOnce you know the type of problem you are solving, the next question is: How do you know if your model is actually any good?\nThe answer begins with a train/test split.\nBefore training a model, we divide the dataset into two parts:\n\nTraining Set (~80%) — the portion the model learns from.\nTesting Set (~20%) — the portion reserved for evaluation.\n\nThis separation matters because a model should not be judged on data it has already seen. A strong model should perform well on new, unseen data.\n\n\n\n\n\ngraph LR\n    A[Full Dataset] --&gt; B[Training Set ~80%]\n    A --&gt; C[Testing Set ~20%]\n    B --&gt; D[Model Learns Patterns]\n    C --&gt; E[Model Is Evaluated Honestly]"
+  },
+  {
+    "objectID": "Chapter5_part2.html#what-is-overfitting",
+    "href": "Chapter5_part2.html#what-is-overfitting",
+    "title": "Machine Learning in Practice",
+    "section": "What is Overfitting?",
+    "text": "What is Overfitting?\nA model can appear successful for the wrong reason. Sometimes it does not learn the real pattern in the data—it simply memorizes the training examples.\nThat problem is called overfitting.\n\nOverfitting\nThe model memorizes the training data, including noise and random quirks, instead of learning patterns that generalize.\n\n\nGood Generalization\nThe model captures real patterns and performs well on new, unseen data.\nA useful analogy is a student who memorizes every answer on practice tests. If the real exam looks slightly different, the student struggles. Real understanding matters more than memorization.\n\n\n\n\n\n\nNoteWhy the Test Set Matters\n\n\n\nThe test set helps reveal whether the model learned something useful—or just memorized what it already saw."
+  },
+  {
+    "objectID": "Chapter5_part2.html#best-practices-to-prevent-overfitting",
+    "href": "Chapter5_part2.html#best-practices-to-prevent-overfitting",
+    "title": "Machine Learning in Practice",
+    "section": "Best Practices to Prevent Overfitting",
+    "text": "Best Practices to Prevent Overfitting\nThere is no single magic fix for overfitting, but several strategies help reduce the risk:\n\nUse a Train/Test Split: Always evaluate on data the model has not trained on.\nGet More Data: More examples help the model find real patterns instead of memorizing noise.\nSimplify the Model: Fewer parameters can reduce the model’s tendency to overfit.\nCross-Validation: Test the model across multiple splits for a more reliable estimate of performance."
+  },
+  {
+    "objectID": "Chapter5_part2.html#hands-on-with-scikit-learn",
+    "href": "Chapter5_part2.html#hands-on-with-scikit-learn",
+    "title": "Machine Learning in Practice",
+    "section": "Hands-On with scikit-learn",
+    "text": "Hands-On with scikit-learn\nTo create a train/test split in Python, we commonly use the train_test_split() function from scikit-learn, the machine learning library we will use throughout this chapter.\nIn practice, the workflow looks like this:\n\nChoose your feature column(s), usually called X.\nChoose your target column, usually called y.\nCall train_test_split(X, y, test_size=0.2).\nInspect the shape of each split to confirm the data was divided correctly.\n\nfrom sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n\n\n\n\n\nTipInstructor Insight: Why random_state?\n\n\n\nUsing random_state=42 keeps the split consistent each time you run the code. That makes your results easier to reproduce and compare."
+  },
+  {
+    "objectID": "Chapter5_part2.html#roadmap-for-part-2",
+    "href": "Chapter5_part2.html#roadmap-for-part-2",
+    "title": "Machine Learning in Practice",
+    "section": "Roadmap for Part 2",
+    "text": "Roadmap for Part 2\nToday we focused on two core ideas that every ML project depends on:\n\nRegression vs. Classification: Understanding whether we predict numbers or labels.\nTrain/Test Split: Separating learning from evaluation.\nOverfitting: Recognizing when a model learns the wrong lesson.\n\nIn Part 3, we will begin building a real machine learning model with scikit-learn and Linear Regression."
+  },
+  {
+    "objectID": "Chapter5_part1.html",
+    "href": "Chapter5_part1.html",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDefine machine learning as a process of learning patterns from data.\nExplain how machine learning uses multiple clues, or features, to make predictions.\nIdentify everyday examples of machine learning in apps, transportation, and smart systems.\nDescribe the three big ideas that structure this chapter: task type, evaluation, and modeling tools."
+  },
+  {
+    "objectID": "Chapter5_part1.html#learning-objectives",
+    "href": "Chapter5_part1.html#learning-objectives",
+    "title": "Machine Learning in Practice",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDefine machine learning as a process of learning patterns from data.\nExplain how machine learning uses multiple clues, or features, to make predictions.\nIdentify everyday examples of machine learning in apps, transportation, and smart systems.\nDescribe the three big ideas that structure this chapter: task type, evaluation, and modeling tools."
+  },
+  {
+    "objectID": "Chapter5_part1.html#a-prediction-mystery-can-you-guess-a-friends-heart-rate",
+    "href": "Chapter5_part1.html#a-prediction-mystery-can-you-guess-a-friends-heart-rate",
+    "title": "Machine Learning in Practice",
+    "section": "A Prediction Mystery: Can You Guess a Friend’s Heart Rate?",
+    "text": "A Prediction Mystery: Can You Guess a Friend’s Heart Rate?\nImagine this scenario: yesterday, you walked 8,000 steps, while your friend walked only 3,000. Would your heart rates be the same? Probably not. Now add even more clues: your ages, genders, and how far you traveled. Suddenly, the problem becomes richer—and more interesting.\nThis is exactly the kind of situation where machine learning becomes useful. Instead of relying on a single clue, we use multiple pieces of information to make a smarter prediction.\n\n\n\n\n\n\nNoteA Machine Learning Problem\n\n\n\nA machine learning problem often begins with a question like: Given several clues, can we predict an outcome? In this chapter, that outcome is heart rate."
+  },
+  {
+    "objectID": "Chapter5_part1.html#teaching-a-computer-to-solve-the-mystery",
+    "href": "Chapter5_part1.html#teaching-a-computer-to-solve-the-mystery",
+    "title": "Machine Learning in Practice",
+    "section": "Teaching a Computer to Solve the Mystery",
+    "text": "Teaching a Computer to Solve the Mystery\nAt its core, machine learning is about teaching a computer to learn from examples. Rather than programming every rule by hand, we give the computer data and let it discover patterns for itself.\nThink about how you learned to recognize a dog. Nobody handed you a perfect rulebook. You learned by seeing many examples. Machine learning works in much the same way: the computer studies examples, detects patterns, and uses them to make predictions about new cases it has never seen before."
+  },
+  {
+    "objectID": "Chapter5_part1.html#what-is-machine-learning",
+    "href": "Chapter5_part1.html#what-is-machine-learning",
+    "title": "Machine Learning in Practice",
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\nMachine Learning is when computers learn from data to make predictions without being explicitly programmed for every single scenario.\nThat does not mean the computer is “thinking” like a person. It means the computer is finding relationships in data. If those relationships are useful, the model can make a reasonable guess when new data appears.\n\n\n\n\n\ngraph LR\n    A[Examples from Data] --&gt; B[Model Learns Patterns]\n    B --&gt; C[Prediction on New Data]\n\n\n\n\n\n\n\n\n\n\n\n\nTipInstructor Insight: Learning from Examples\n\n\n\nA machine learning model is only as useful as the examples it learns from. Good data helps models find real patterns instead of random noise."
+  },
+  {
+    "objectID": "Chapter5_part1.html#why-machine-learning-it-is-everywhere.",
+    "href": "Chapter5_part1.html#why-machine-learning-it-is-everywhere.",
+    "title": "Machine Learning in Practice",
+    "section": "Why Machine Learning? It Is Everywhere.",
+    "text": "Why Machine Learning? It Is Everywhere.\nMachine learning is not a futuristic idea. It is already embedded in many tools people use every day.\n\nTikTok: Learns from your watch history, likes, and interactions to recommend videos.\nTesla: Uses computer vision models to detect pedestrians, lane markings, and obstacles in real time.\nSmart Systems: Powers recommendation engines, fraud detection systems, and voice assistants.\n\nThese systems all rely on the same core idea: use past data to make a smart prediction or decision in the present."
+  },
+  {
+    "objectID": "Chapter5_part1.html#how-does-machine-learning-work",
+    "href": "Chapter5_part1.html#how-does-machine-learning-work",
+    "title": "Machine Learning in Practice",
+    "section": "How Does Machine Learning Work?",
+    "text": "How Does Machine Learning Work?\nThis chapter is organized around three big ideas that appear in nearly every machine learning project.\n\n1. Regression vs. Classification\nWhat kind of problem are we solving? Are we predicting a number, or assigning a category?\n\n\n2. Train/Test Split and Overfitting\nHow do we teach the computer fairly? We need one set of data for learning and another for honest evaluation.\n\n\n3. Modeling with scikit-learn\nWhat tool will we use to build the model? In this chapter, we use scikit-learn, one of Python’s most important machine learning libraries.\n\n\n\n\n\ngraph TD\n    A[Machine Learning Project] --&gt; B[Task Type]\n    A --&gt; C[Evaluation Strategy]\n    A --&gt; D[Modeling Tool]\n    B --&gt; B1[Regression vs Classification]\n    C --&gt; C1[Train/Test Split + Overfitting]\n    D --&gt; D1[scikit-learn Models]"
+  },
+  {
+    "objectID": "Chapter5_part1.html#session-overview",
+    "href": "Chapter5_part1.html#session-overview",
+    "title": "Machine Learning in Practice",
+    "section": "Session Overview",
+    "text": "Session Overview\nAcross the four parts of Chapter 5, we move from big ideas to hands-on model building:\n\nPart 1: Introduction to Machine Learning\nPart 2: Regression vs. Classification, Train/Test Split, and Overfitting\nPart 3: scikit-learn and Linear Regression\nPart 4: Decision Trees, model comparison, and improving predictions"
+  },
+  {
+    "objectID": "Chapter5_part1.html#roadmap-for-part-1",
+    "href": "Chapter5_part1.html#roadmap-for-part-1",
+    "title": "Machine Learning in Practice",
+    "section": "Roadmap for Part 1",
+    "text": "Roadmap for Part 1\nToday we established the foundation for the rest of the chapter. Our next steps will move from the idea of machine learning to the practice of building and evaluating models:\n\nRegression vs. Classification: Understanding what kind of prediction problem we are solving.\nTrain/Test Split: Learning how to evaluate models honestly.\nscikit-learn Modeling: Building real models with Python tools.\nDecision Trees: Comparing models and improving predictions."
+  },
+  {
+    "objectID": "Chapter6_part3.html",
+    "href": "Chapter6_part3.html",
+    "title": "Data Storytelling & Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDefine data storytelling and explain how it differs from simply showing results.\nIdentify the four essential elements of a strong data story: context, narrative, data, and visual design.\nTurn technical findings into a clear message for a specific audience.\nUse AI tools thoughtfully to improve clarity, structure, and audience awareness.\nDesign a final presentation that emphasizes insight, relevance, and impact."
+  },
+  {
+    "objectID": "Chapter6_part3.html#learning-objectives",
+    "href": "Chapter6_part3.html#learning-objectives",
+    "title": "Data Storytelling & Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nDefine data storytelling and explain how it differs from simply showing results.\nIdentify the four essential elements of a strong data story: context, narrative, data, and visual design.\nTurn technical findings into a clear message for a specific audience.\nUse AI tools thoughtfully to improve clarity, structure, and audience awareness.\nDesign a final presentation that emphasizes insight, relevance, and impact."
+  },
+  {
+    "objectID": "Chapter6_part3.html#from-project-work-to-storytelling",
+    "href": "Chapter6_part3.html#from-project-work-to-storytelling",
+    "title": "Data Storytelling & Presentation",
+    "section": "From Project Work to Storytelling",
+    "text": "From Project Work to Storytelling\nPart 2 focused on designing a complete data science project. Part 3 focuses on the final step: communicating your results.\nAt this stage, you may have a dataset, charts, summary tables, and model results. But those materials do not automatically create understanding. The audience needs guidance. They need to know what question you asked, what evidence you found, and why the finding matters.\n\n\n\n\n\n\nNoteCore Idea\n\n\n\nData storytelling is the process of guiding an audience from evidence to understanding. The goal is not to show everything you did. The goal is to make the most important insight clear."
+  },
+  {
+    "objectID": "Chapter6_part3.html#what-is-data-storytelling",
+    "href": "Chapter6_part3.html#what-is-data-storytelling",
+    "title": "Data Storytelling & Presentation",
+    "section": "What Is Data Storytelling?",
+    "text": "What Is Data Storytelling?\nData storytelling combines three things:\n\nData — the evidence behind the message.\nVisuals — charts, tables, or graphics that make patterns easier to see.\nNarrative — the explanation that connects the evidence to meaning.\n\nA dataset may contain hundreds of possible details. A story selects the details that matter most and arranges them in a way the audience can follow.\n\n\n\n\n\nflowchart LR\n    A[Data] --&gt; D[Data Story]\n    B[Visuals] --&gt; D\n    C[Narrative] --&gt; D\n    D --&gt; E[Understanding]\n    D --&gt; F[Action]\n    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px\n    style B fill:#dcfce7,stroke:#333,stroke-width:1.5px\n    style C fill:#fef3c7,stroke:#333,stroke-width:1.5px\n    style D fill:#ede9fe,stroke:#333,stroke-width:2px"
+  },
+  {
+    "objectID": "Chapter6_part3.html#the-four-essential-elements",
+    "href": "Chapter6_part3.html#the-four-essential-elements",
+    "title": "Data Storytelling & Presentation",
+    "section": "The Four Essential Elements",
+    "text": "The Four Essential Elements\nA strong data story usually includes four connected elements.\n\n1. Context\nContext explains the situation. It answers:\n\nWhat is the topic?\nWhy should the audience care?\nWhat problem or question are we investigating?\n\nWithout context, the audience may see the chart but not understand why it matters.\n\n\n2. Narrative\nNarrative is the path through the story. It gives the presentation a beginning, middle, and end.\nA simple narrative structure is:\n\nHere is the question.\nHere is the data we used.\nHere is the pattern we found.\nHere is what the pattern means.\nHere is what we should remember or do next.\n\n\n\n3. Data\nThe data is the evidence. It keeps the story grounded and credible. Good data storytelling does not exaggerate or hide uncertainty. It explains what the data supports and what it does not prove.\n\n\n4. Visual Design\nVisual design controls how easily the audience can understand the evidence. A clear visual uses appropriate chart types, readable labels, meaningful titles, and minimal clutter.\n\n\n\n\n\n\nTipDesign Principle\n\n\n\nDo not make the audience work harder than necessary. A chart should make the main point easier to see, not harder."
+  },
+  {
+    "objectID": "Chapter6_part3.html#why-storytelling-matters-in-data-science",
+    "href": "Chapter6_part3.html#why-storytelling-matters-in-data-science",
+    "title": "Data Storytelling & Presentation",
+    "section": "Why Storytelling Matters in Data Science",
+    "text": "Why Storytelling Matters in Data Science\nData science is often technical, but decisions are made by people. Storytelling helps bridge the gap between technical work and human understanding.\nA strong story can:\n\nSimplify complex results.\nHelp the audience remember the main message.\nConnect findings to real-world impact.\nSupport better decisions.\nMake analysis feel relevant rather than abstract.\n\n\nExample: Data vs. Story\nA basic data statement might be:\n\nAccident rates increased by 20%.\n\nA stronger story would be:\n\nAccident rates increased by 20%, especially during heavier commuting periods. This suggests that changes in travel behavior may be affecting road safety and that prevention efforts should focus on high-traffic times.\n\nThe second version does more than report a number. It connects the number to a possible explanation and a practical implication."
+  },
+  {
+    "objectID": "Chapter6_part3.html#turning-findings-into-messages",
+    "href": "Chapter6_part3.html#turning-findings-into-messages",
+    "title": "Data Storytelling & Presentation",
+    "section": "Turning Findings into Messages",
+    "text": "Turning Findings into Messages\nA common mistake is trying to present every result. A better approach is to identify the strongest message and use your evidence to support it.\n\nUse This Formula\n\nOur analysis shows that [main finding], which matters because [real-world meaning].\n\nExamples:\n\nOur analysis shows that crashes are more common on Fridays, which matters because prevention efforts may be most useful before weekend travel begins.\nOur analysis shows that one model predicted outcomes more accurately than another, which matters because model choice affects how much confidence we should place in predictions.\nOur analysis shows that missing data was concentrated in specific fields, which matters because those fields may limit the conclusions we can draw.\n\n\n\n\n\n\n\nNoteStrong Message Test\n\n\n\nIf your audience remembers only one sentence from your presentation, that sentence should be your key message."
+  },
+  {
+    "objectID": "Chapter6_part3.html#choosing-what-to-show",
+    "href": "Chapter6_part3.html#choosing-what-to-show",
+    "title": "Data Storytelling & Presentation",
+    "section": "Choosing What to Show",
+    "text": "Choosing What to Show\nYour final presentation should not include every chart or every line of code. Choose the evidence that best supports the story.\nAsk yourself:\n\nDoes this chart answer the research question?\nDoes this result support the main message?\nIs this detail necessary for the audience to understand the conclusion?\nWould removing this slide make the story weaker?\n\nIf the answer is no, the content may belong in an appendix or may not be needed at all."
+  },
+  {
+    "objectID": "Chapter6_part3.html#slide-design-for-data-stories",
+    "href": "Chapter6_part3.html#slide-design-for-data-stories",
+    "title": "Data Storytelling & Presentation",
+    "section": "Slide Design for Data Stories",
+    "text": "Slide Design for Data Stories\nGood slides help the audience focus. They should not compete with the speaker.\n\nPractical Slide Guidelines\n\nUse one main idea per slide.\nWrite titles that state the takeaway, not just the topic.\nKeep charts large and readable.\nLabel axes clearly.\nAvoid unnecessary decoration.\nUse short text, not full paragraphs.\nExplain what the audience should notice.\n\n\n\nWeak vs. Strong Slide Titles\nA weak title:\n\nBar Chart of Accidents\n\nA stronger title:\n\nFriday Had the Highest Number of Reported Accidents\n\nThe stronger title tells the audience what to look for before they even study the chart."
+  },
+  {
+    "objectID": "Chapter6_part3.html#using-chatgpt-and-ai-tools-thoughtfully",
+    "href": "Chapter6_part3.html#using-chatgpt-and-ai-tools-thoughtfully",
+    "title": "Data Storytelling & Presentation",
+    "section": "Using ChatGPT and AI Tools Thoughtfully",
+    "text": "Using ChatGPT and AI Tools Thoughtfully\nAI tools can help improve communication, but they should not replace your understanding of the data. You are still responsible for accuracy.\n\nHelpful Uses\nYou can use AI to:\n\nImprove wording for clarity.\nMake explanations more concise.\nGenerate possible slide titles.\nPredict audience questions.\nSuggest ways to connect visuals to a narrative.\nRewrite technical findings for a nontechnical audience.\n\n\n\nExample Prompt\nI am presenting a chart showing that Friday has the highest number of traffic crashes.\nHelp me write a clear slide title and a 2-sentence explanation for a general audience.\n\n\nUse AI Carefully\nAlways check that AI-generated explanations match your actual results. Do not let AI invent conclusions, causes, or numbers that are not supported by your data.\n\n\n\n\n\n\nWarningAccuracy First\n\n\n\nAI can improve language, but it cannot verify your analysis unless you give it the correct evidence. The data must lead the story."
+  },
+  {
+    "objectID": "Chapter6_part3.html#activity-define-your-key-message",
+    "href": "Chapter6_part3.html#activity-define-your-key-message",
+    "title": "Data Storytelling & Presentation",
+    "section": "Activity: Define Your Key Message",
+    "text": "Activity: Define Your Key Message\nBefore building your final presentation, complete the following:\n\nWrite your research question.\nIdentify your most important finding.\nWrite a 1–2 sentence key message.\nExplain why your audience should care.\nChoose the one chart that best supports the message.\n\nUse this template:\nMy research question is:\n\nMy main finding is:\n\nMy key message is:\n\nThis matters because:\n\nThe best visual to support this message is:"
+  },
+  {
+    "objectID": "Chapter6_part3.html#final-presentation-flow",
+    "href": "Chapter6_part3.html#final-presentation-flow",
+    "title": "Data Storytelling & Presentation",
+    "section": "Final Presentation Flow",
+    "text": "Final Presentation Flow\nA strong final presentation should feel like a guided journey.\n\n\n\n\n\nflowchart TD\n    A[Hook: Why the topic matters] --&gt; B[Research Question]\n    B --&gt; C[Dataset and Preparation]\n    C --&gt; D[Key Visual Findings]\n    D --&gt; E[Model Results, if used]\n    E --&gt; F[Main Insight]\n    F --&gt; G[Conclusion and Impact]\n    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px\n    style D fill:#dcfce7,stroke:#333,stroke-width:1.5px\n    style F fill:#fef3c7,stroke:#333,stroke-width:1.5px\n    style G fill:#ede9fe,stroke:#333,stroke-width:2px\n\n\n\n\n\n\nThis flow keeps the presentation focused. The audience should never feel like they are watching disconnected charts. Each slide should move them closer to the conclusion."
+  },
+  {
+    "objectID": "Chapter6_part3.html#final-checklist",
+    "href": "Chapter6_part3.html#final-checklist",
+    "title": "Data Storytelling & Presentation",
+    "section": "Final Checklist",
+    "text": "Final Checklist\nBefore presenting, review this checklist:\n\nMy research question is clear.\nI can explain my dataset in simple language.\nI selected only the most important charts.\nMy charts have clear titles and labels.\nMy model results are explained honestly.\nMy key message is easy to remember.\nMy conclusion explains why the findings matter.\nI am prepared to answer questions about my process."
+  },
+  {
+    "objectID": "Chapter6_part3.html#chapter-6-summary",
+    "href": "Chapter6_part3.html#chapter-6-summary",
+    "title": "Data Storytelling & Presentation",
+    "section": "Chapter 6 Summary",
+    "text": "Chapter 6 Summary\nAcross Chapter 6, we moved from skills to project design to storytelling.\n\nPart 1 reviewed the toolkit: visualization, Python, preprocessing, and machine learning.\nPart 2 showed how to design a complete data science project.\nPart 3 focused on communicating findings with clarity and impact.\n\n\n\n\n\n\n\nTipFinal Thought\n\n\n\nThe goal is not to impress the audience with every technical step. The goal is to help them understand the insight, trust the evidence, and remember why it matters."
+  },
+  {
+    "objectID": "Chapter1_part2.html",
+    "href": "Chapter1_part2.html",
+    "title": "Chapter 1: What is Data?",
+    "section": "",
+    "text": "Every action leaves a trace. Learning to notice and interpret those traces is one of the first steps in data science."
+  },
+  {
+    "objectID": "Chapter1_part2.html#from-ideas-to-action",
+    "href": "Chapter1_part2.html#from-ideas-to-action",
+    "title": "Chapter 1: What is Data?",
+    "section": "From Ideas to Action",
+    "text": "From Ideas to Action\nSo far, we have focused on the concept of data. Now it is time to make that idea more concrete.\nThe activities in this chapter help you notice something important: data is everywhere, but patterns are often hidden until you stop and examine them.\n\n\n\n\n\n\nTipYour Goal\n\n\n\nAnalyze your own data and begin developing a sharper, more critical lens for understanding it."
+  },
+  {
+    "objectID": "Chapter1_part2.html#activity-1-log-your-data",
+    "href": "Chapter1_part2.html#activity-1-log-your-data",
+    "title": "Chapter 1: What is Data?",
+    "section": "Activity 1: Log Your Data",
+    "text": "Activity 1: Log Your Data\nPurpose: Understand how ordinary daily actions generate data\nTask: Record everything you did yesterday as completely as possible\nInclude actions such as: - Phone use\n- Walking or travel\n- Music or video streaming\n- Texting or messaging\n- Websites visited\nThen identify: - What kind of data was created\n- Where it was stored (device, app, or cloud)\n\n\nReflection Questions\n\n\nWhat did the data reveal about your habits or routines?\n\nDid anything surprise you about how much data you generate?\n\nIs your data incomplete, limited, or potentially biased?\n\n\n\n\n\n\n\n\nNoteWhy This Matters\n\n\n\nCollecting data is only the first step. Insight comes from asking questions about it."
+  },
+  {
+    "objectID": "Chapter1_part2.html#activity-2-explore-your-google-data",
+    "href": "Chapter1_part2.html#activity-2-explore-your-google-data",
+    "title": "Chapter 1: What is Data?",
+    "section": "Activity 2: Explore Your Google Data",
+    "text": "Activity 2: Explore Your Google Data\nPurpose: Examine how platforms collect detailed records of behavior\nTask: Use Google Takeout to explore your personal data\nLook for categories such as: - Search History — queries you’ve made\n- YouTube Activity — videos watched or searched\n- Location Data — places you’ve visited\nThis activity helps make invisible digital records visible.\n\n\nReflection Questions\n\n\nWhat surprised you the most?\n\nHow detailed was the information?\n\nWho else might find this data useful (advertisers, researchers, companies)?\n\n\n\n\n\n\n\n\nImportantCritical Thinking\n\n\n\nPersonal data is powerful—but it also raises questions about privacy and control."
+  },
+  {
+    "objectID": "Chapter1_part2.html#activity-3-text-message-analysis",
+    "href": "Chapter1_part2.html#activity-3-text-message-analysis",
+    "title": "Chapter 1: What is Data?",
+    "section": "Activity 3: Text Message Analysis",
+    "text": "Activity 3: Text Message Analysis\nPurpose: Explore communication patterns as data\nTask: Choose a recent conversation and analyze it\nMeasure: - Messages sent vs. received\n- Average response time\n- Most common words or emojis\nYou can also use a sentiment analysis tool (e.g., Daniel Soper Sentiment Analyzer) to classify tone: - Positive\n- Neutral\n- Negative\n\n\nReflection Questions\n\n\nWho starts conversations more often?\n\nWhat patterns appear in communication?\n\nWhen might a computer misinterpret tone (sarcasm, humor)?"
+  },
+  {
+    "objectID": "Chapter1_part2.html#activity-4-pose-detection",
+    "href": "Chapter1_part2.html#activity-4-pose-detection",
+    "title": "Chapter 1: What is Data?",
+    "section": "Activity 4: Pose Detection",
+    "text": "Activity 4: Pose Detection\nPurpose: Understand how computers interpret physical movement\nTask: Use a pose detection tool (e.g., MediaPipe Pose)\nObserve how accuracy changes based on: - Movement speed\n- Body position\n- Lighting conditions\n\n\nReflection Questions\n\n\nWhen does pose detection fail?\n\nWhat conditions reduce accuracy?\n\nWhat does this reveal about machine limitations?"
+  },
+  {
+    "objectID": "Chapter1_part2.html#looking-across-all-activities",
+    "href": "Chapter1_part2.html#looking-across-all-activities",
+    "title": "Chapter 1: What is Data?",
+    "section": "Looking Across All Activities",
+    "text": "Looking Across All Activities\nAfter completing all activities, step back and look for patterns:\n\nYour Patterns: What habits or routines became visible?\n\nMachine Misreads: When did tools misinterpret tone or movement?\n\nMissing Data: What parts of your life were not captured well?\n\nBigger Meaning: What does this say about how data represents people?"
+  },
+  {
+    "objectID": "Chapter1_part2.html#key-takeaways",
+    "href": "Chapter1_part2.html#key-takeaways",
+    "title": "Chapter 1: What is Data?",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nData is everywhere. Everyday actions generate information.\n\nEvery action creates traces. Clicking, searching, walking, and messaging all leave records.\n\nPatterns emerge over time. Small data points combine into meaningful insights.\n\nBoth types of data matter. Structured and unstructured data work together.\n\nCritical thinking is essential. Data can be incomplete or misleading if not questioned."
+  },
+  {
+    "objectID": "Chapter1_part2.html#looking-ahead",
+    "href": "Chapter1_part2.html#looking-ahead",
+    "title": "Chapter 1: What is Data?",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\nThis chapter introduces a core idea of data science: our lives are full of data, even when we do not see it.\nIn the chapters ahead, you will learn how to collect, organize, analyze, and question data more carefully."
+  },
+  {
+    "objectID": "Chapter7_part2.html",
+    "href": "Chapter7_part2.html",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nGive constructive feedback on presentations.\nIdentify strengths and weaknesses in communication.\nBuild a focused two-slide presentation.\nRecognize the characteristics of strong data presentations.\nCommunicate insights clearly and effectively."
+  },
+  {
+    "objectID": "Chapter7_part2.html#learning-objectives",
+    "href": "Chapter7_part2.html#learning-objectives",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "",
+    "text": "By the end of this tutorial, you will be able to:\n\nGive constructive feedback on presentations.\nIdentify strengths and weaknesses in communication.\nBuild a focused two-slide presentation.\nRecognize the characteristics of strong data presentations.\nCommunicate insights clearly and effectively."
+  },
+  {
+    "objectID": "Chapter7_part2.html#introduction-from-analysis-to-communication",
+    "href": "Chapter7_part2.html#introduction-from-analysis-to-communication",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Introduction: From Analysis to Communication",
+    "text": "Introduction: From Analysis to Communication\nIn Part 1, we explored the foundations of data storytelling.\nIn this section, we focus on applying those skills through presentation design, peer critique, and communication practice.\nProfessional data scientists do more than analyze data — they also explain findings clearly and effectively.\n\n\n\n\n\n\nNoteThe Big Idea\n\n\n\nStrong presentations improve through feedback, revision, and practice."
+  },
+  {
+    "objectID": "Chapter7_part2.html#peer-critique-giving-helpful-feedback",
+    "href": "Chapter7_part2.html#peer-critique-giving-helpful-feedback",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Peer Critique: Giving Helpful Feedback",
+    "text": "Peer Critique: Giving Helpful Feedback\nWhen reviewing a classmate’s presentation, focus on three important questions.\n\nWhat Is Clear?\nIdentify what works well and what the audience can understand easily.\n\n\nWhat Is Confusing?\nLook for anything that feels unclear, overly technical, or difficult to follow.\n\n\nWhat Could Improve?\nOffer one specific and actionable suggestion.\nGood feedback should help presenters improve clarity and communication.\n\n\n\n\n\nflowchart LR\nA[Presentation] --&gt; B[Feedback]\nB --&gt; C[Revision]\nC --&gt; D[Stronger Communication]"
+  },
+  {
+    "objectID": "Chapter7_part2.html#why-feedback-matters",
+    "href": "Chapter7_part2.html#why-feedback-matters",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Why Feedback Matters",
+    "text": "Why Feedback Matters\nPeer critique helps presenters:\n\nImprove clarity\nIdentify missing explanations\nStrengthen organization\nRefine their message\n\nFresh perspectives often reveal problems the presenter may not notice on their own.\n\n\n\n\n\n\nTipInstructor Insight\n\n\n\nCritique is not about criticism — it is about helping others communicate more effectively."
+  },
+  {
+    "objectID": "Chapter7_part2.html#build-a-two-slide-presentation",
+    "href": "Chapter7_part2.html#build-a-two-slide-presentation",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Build a Two-Slide Presentation",
+    "text": "Build a Two-Slide Presentation\nIn this activity, students create a short presentation using their own research or dataset.\nThe goal is to communicate one clear and meaningful insight."
+  },
+  {
+    "objectID": "Chapter7_part2.html#slide-1-set-the-stage",
+    "href": "Chapter7_part2.html#slide-1-set-the-stage",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Slide 1: Set the Stage",
+    "text": "Slide 1: Set the Stage\nThe first slide introduces the topic and provides context.\n\nInclude:\n\nYour research question\nBrief background information\nWhy the topic matters\n\nThe audience should quickly understand why they should care."
+  },
+  {
+    "objectID": "Chapter7_part2.html#slide-2-deliver-the-insight",
+    "href": "Chapter7_part2.html#slide-2-deliver-the-insight",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Slide 2: Deliver the Insight",
+    "text": "Slide 2: Deliver the Insight\nThe second slide focuses on the main finding.\n\nInclude:\n\nThe most important insight\nA key takeaway\nWhy the finding matters\n\nEvery element on the slide should support one central message."
+  },
+  {
+    "objectID": "Chapter7_part2.html#what-makes-a-strong-presentation",
+    "href": "Chapter7_part2.html#what-makes-a-strong-presentation",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "What Makes a Strong Presentation?",
+    "text": "What Makes a Strong Presentation?\nStrong presentations are:\n\nClear\nThe audience understands the message quickly.\n\n\nFocused\nThe presentation centers around one major idea.\n\n\nInsightful\nThe presentation explains why the findings matter.\n\n\nStory-Driven\nThe visuals and data support a meaningful narrative."
+  },
+  {
+    "objectID": "Chapter7_part2.html#common-mistakes-to-avoid",
+    "href": "Chapter7_part2.html#common-mistakes-to-avoid",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Common Mistakes to Avoid",
+    "text": "Common Mistakes to Avoid\n\nToo Much Information\nOvercrowded slides can confuse audiences.\n\n\nWeak Visual Design\nCharts should be simple and easy to read.\n\n\nNo Clear Message\nEvery presentation should communicate one important takeaway.\n\n\nPresenting Data Without Context\nData alone is not enough — explain why it matters."
+  },
+  {
+    "objectID": "Chapter7_part2.html#professional-presentation-tips",
+    "href": "Chapter7_part2.html#professional-presentation-tips",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Professional Presentation Tips",
+    "text": "Professional Presentation Tips\n\nFocus on One Insight\nIf the audience remembers one thing, what should it be?\n\n\nKeep Visuals Simple\nRemove unnecessary labels, gridlines, and clutter.\n\n\nMake the Message Obvious\nDo not make audiences search for the point.\n\n\nTell a Story\nA strong presentation moves logically from: * Context * Data * Insight * Action\n\n\n\n\n\ngraph TD\nA[Context] --&gt; B[Data]\nB --&gt; C[Insight]\nC --&gt; D[Action]"
+  },
+  {
+    "objectID": "Chapter7_part2.html#final-takeaways",
+    "href": "Chapter7_part2.html#final-takeaways",
+    "title": "Data Storytelling & Insight Presentation",
+    "section": "Final Takeaways",
+    "text": "Final Takeaways\nBy this point, you have practiced:\n\nCommunication\nStorytelling\nPresentation design\nConstructive critique\n\nThese skills are essential in data science because insights only become valuable when audiences can understand them.\n\n\n\n\n\n\nNoteFinal Thought\n\n\n\nGreat data presentations do more than display information — they help audiences understand, remember, and care."
   }
 ]

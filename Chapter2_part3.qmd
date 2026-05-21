@@ -1,0 +1,151 @@
+---
+title: "Data Visualization"
+subtitle: "Part 3: From Data to Insight"
+author: "Technical Instructional Team"
+format: html
+---
+
+## The Raw Data Problem
+
+Real-world datasets are often large, messy, and difficult to interpret at first glance. A spreadsheet with hundreds of thousands of rows can feel overwhelming before you even begin asking questions.
+
+Common challenges include:
+
+*   Too many rows to examine manually
+*   Unnecessary columns that clutter the view
+*   Missing values or inconsistent formatting
+*   No obvious starting point for analysis
+
+The good news is that analysts almost never study every row at once. Instead, they narrow the data to what is relevant.
+
+## Why Clean Data Matters
+
+Before you analyze data, you need to clean it.
+
+Cleaning helps because it makes analysis:
+
+*   **Faster** — smaller, focused datasets are easier to work with
+*   **Clearer** — patterns are easier to spot when unnecessary information is removed
+*   **More reliable** — summaries and charts are more trustworthy when the data is organized
+
+Data cleaning is not extra work. It is the step that makes everything else possible.
+
+## Simple Cleaning Techniques
+
+You do not need advanced coding to begin cleaning data. A spreadsheet is enough for many beginner tasks.
+
+Three useful techniques are:
+
+1.  **Filter rows** to show only the records relevant to your question
+2.  **Remove or hide extra columns** that do not matter for your analysis
+3.  **Work with a subset** by copying only the rows and columns you need into a new sheet
+
+These steps reduce clutter and make the dataset easier to understand.
+
+## A Real Example: Narrowing Down a Dataset
+
+Imagine starting with a large traffic crash dataset and gradually focusing it to answer one local question.
+
+For example, you might:
+
+*   Filter by **state** to keep only Delaware
+*   Filter by **year** to keep records from 2020–2024
+*   Filter by **county** to focus on New Castle County
+
+A huge dataset becomes much more manageable when it is scoped to a specific place and time.
+
+## Summarizing Your Data
+
+Once your data is clean, the next step is to summarize it.
+
+Instead of looking at thousands of individual rows, you might want to answer a question like:
+
+> Which day of the week has the most crashes?
+
+That kind of answer comes from a summary.
+
+Common summary methods include:
+
+*   **Counts** — how many times something happens
+*   **Averages** — what the typical value is
+*   **Totals** — the overall sum
+*   **Comparisons** — how one group differs from another
+
+Summaries make large datasets easier to interpret and prepare them for visualization.
+
+## Spreadsheet Tools That Help
+
+Two simple spreadsheet functions are especially useful for beginner analysis.
+
+### `UNIQUE`
+The `=UNIQUE(range)` function finds all the distinct values in a column. It helps you quickly see what categories exist in your data.
+
+### `COUNTIF`
+The `=COUNTIF(range, criteria)` function counts how many rows match a certain value. It is useful for building quick summary tables.
+
+Together, these functions let you list categories and count how often each one appears.
+
+::: {.callout-tip}
+### A Helpful Workflow
+Use `UNIQUE` to generate the list of categories, then use `COUNTIF` next to each one to count occurrences.
+:::
+
+## What Is a Dashboard?
+
+A dashboard is more than a collection of charts. It is a **curated story told with data**.
+
+A strong dashboard usually includes:
+
+*   Multiple visuals that each show a different angle of the same topic
+*   Connected context, where the visuals support each other
+*   One central question that ties everything together
+
+For example, a dashboard might be built around the question:
+
+> Where and when do most crashes happen in New Castle County?
+
+## Chart vs. Insight
+
+This is one of the most important ideas in data analysis:
+
+A **chart** is a visual display of data.  
+An **insight** is the meaning you take from that chart.
+
+For example:
+
+*   **Chart:** A bar chart showing crashes by weekday
+*   **Insight:** Friday has more crashes than Sunday, possibly because of commuter traffic and end-of-week fatigue
+
+Anyone can make a chart. The real skill is explaining what the chart means.
+
+::: {.callout-note}
+### Ask the “So What?” Question
+After creating a chart, ask: **What does this tell someone who did not already know it?** The answer is your insight.
+:::
+
+## Final Reflection
+
+By this point, you have seen that data analysis is not just about looking at numbers. It involves a process:
+
+*   Start with raw data
+*   Clean and focus it
+*   Summarize what matters
+*   Visualize the patterns
+*   Interpret the insight
+
+That process turns raw information into something meaningful and useful.
+
+## Roadmap for Part 3
+
+In this part, we focused on how analysts move from raw data to insight:
+
+- **Cleaning data**  
+  Reducing clutter and focusing on what matters  
+
+- **Summarizing data**  
+  Using counts, averages, totals, and comparisons  
+
+- **Interpreting visuals**  
+  Turning charts into insights and conclusions  
+
+This chapter has shown that good visualization depends not just on charts, but on the quality of the question, the data, and the interpretation behind it.

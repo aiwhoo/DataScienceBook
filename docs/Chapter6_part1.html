@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Technical Instructional Team">
 
-<title>Project Title – template</title>
+<title>Data Storytelling &amp; Presentation – template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -103,15 +104,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script type="text/javascript">
-window.PlotlyConfig = {MathJaxConfig: 'local'};
-if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-</script>
-<script type="module">import "https://cdn.plot.ly/plotly-3.3.1.min"</script>
-
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -126,7 +121,9 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Motivation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      template
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,7 +150,7 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motivation</span></a>
   </div>
 </li>
@@ -197,8 +194,33 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#motivation-for-this-work" id="toc-motivation-for-this-work" class="nav-link active" data-scroll-target="#motivation-for-this-work">Motivation for this Work</a></li>
-  <li><a href="#this-is-a-subtitle" id="toc-this-is-a-subtitle" class="nav-link" data-scroll-target="#this-is-a-subtitle">This is a subtitle</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#warm-up-from-skills-to-story" id="toc-warm-up-from-skills-to-story" class="nav-link" data-scroll-target="#warm-up-from-skills-to-story">Warm Up: From Skills to Story</a></li>
+  <li><a href="#why-chapter-6-matters" id="toc-why-chapter-6-matters" class="nav-link" data-scroll-target="#why-chapter-6-matters">Why Chapter 6 Matters</a></li>
+  <li><a href="#review-the-data-science-toolkit" id="toc-review-the-data-science-toolkit" class="nav-link" data-scroll-target="#review-the-data-science-toolkit">Review: The Data Science Toolkit</a>
+  <ul class="collapse">
+  <li><a href="#chapter-2-visualizing-clean-data" id="toc-chapter-2-visualizing-clean-data" class="nav-link" data-scroll-target="#chapter-2-visualizing-clean-data">Chapter 2: Visualizing Clean Data</a></li>
+  </ul></li>
+  <li><a href="#chapter-3-python-pandas" id="toc-chapter-3-python-pandas" class="nav-link" data-scroll-target="#chapter-3-python-pandas">Chapter 3: Python &amp; Pandas</a>
+  <ul class="collapse">
+  <li><a href="#why-python-helps" id="toc-why-python-helps" class="nav-link" data-scroll-target="#why-python-helps">Why Python Helps</a></li>
+  <li><a href="#core-pandas-skills" id="toc-core-pandas-skills" class="nav-link" data-scroll-target="#core-pandas-skills">Core Pandas Skills</a></li>
+  </ul></li>
+  <li><a href="#chapter-4-cleaning-preprocessing" id="toc-chapter-4-cleaning-preprocessing" class="nav-link" data-scroll-target="#chapter-4-cleaning-preprocessing">Chapter 4: Cleaning &amp; Preprocessing</a>
+  <ul class="collapse">
+  <li><a href="#the-etl-pipeline" id="toc-the-etl-pipeline" class="nav-link" data-scroll-target="#the-etl-pipeline">The ETL Pipeline</a></li>
+  <li><a href="#common-preparation-steps" id="toc-common-preparation-steps" class="nav-link" data-scroll-target="#common-preparation-steps">Common Preparation Steps</a></li>
+  </ul></li>
+  <li><a href="#chapter-5-machine-learning" id="toc-chapter-5-machine-learning" class="nav-link" data-scroll-target="#chapter-5-machine-learning">Chapter 5: Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#regression-and-classification" id="toc-regression-and-classification" class="nav-link" data-scroll-target="#regression-and-classification">Regression and Classification</a></li>
+  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split">Train/Test Split</a></li>
+  <li><a href="#model-evaluation" id="toc-model-evaluation" class="nav-link" data-scroll-target="#model-evaluation">Model Evaluation</a></li>
+  </ul></li>
+  <li><a href="#from-technical-work-to-communication" id="toc-from-technical-work-to-communication" class="nav-link" data-scroll-target="#from-technical-work-to-communication">From Technical Work to Communication</a></li>
+  <li><a href="#mini-example-turning-a-finding-into-a-story" id="toc-mini-example-turning-a-finding-into-a-story" class="nav-link" data-scroll-target="#mini-example-turning-a-finding-into-a-story">Mini Example: Turning a Finding into a Story</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#roadmap-for-part-2" id="toc-roadmap-for-part-2" class="nav-link" data-scroll-target="#roadmap-for-part-2">Roadmap for Part 2</a></li>
   </ul>
 </nav>
     </div>
@@ -207,13 +229,20 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Title</h1>
+<h1 class="title">Data Storytelling &amp; Presentation</h1>
+<p class="subtitle lead">Part 1: From Skills to Story</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Technical Instructional Team </p>
+          </div>
+  </div>
     
   
     
@@ -224,143 +253,299 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 </header>
 
 
-<p><em>Author, Technology Service Center, University of Delaware</em></p>
-<p>20XX-XX-XX</p>
-<section id="motivation-for-this-work" class="level2">
-<h2 class="anchored" data-anchor-id="motivation-for-this-work">Motivation for this Work</h2>
-<p>Insert a paragraph of the motivation of this work.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+<li>Connect the major skills from Chapters 2 through 5 into one complete data science workflow.</li>
+<li>Explain how visualization, Python, preprocessing, and machine learning each support stronger data storytelling.</li>
+<li>Identify the difference between simply reporting results and communicating a meaningful insight.</li>
+<li>Recognize the three starting questions behind every strong data story: audience, message, and action.</li>
+<li>Prepare to move from technical analysis into a clear, audience-centered presentation.</li>
+</ul>
 </section>
-<section id="this-is-a-subtitle" class="level2">
-<h2 class="anchored" data-anchor-id="this-is-a-subtitle">This is a subtitle</h2>
-<p>This is text.</p>
-<p><a href="https://quarto.org/">Hyperlink to an externel website</a></p>
-<p><a href="keyFindings.html#key-finding-1">Hyperlink to another section</a></p>
-<p>A table is below:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Item</th>
-<th style="text-align: center;">In Stock</th>
-<th style="text-align: right;">Price</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Python Hat</td>
-<td style="text-align: center;">True</td>
-<td style="text-align: right;">23.99</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SQL Hat</td>
-<td style="text-align: center;">True</td>
-<td style="text-align: right;">23.99</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Codecademy Tee</td>
-<td style="text-align: center;">False</td>
-<td style="text-align: right;">19.99</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Codecademy Hoodie</td>
-<td style="text-align: center;">False</td>
-<td style="text-align: right;">42.99</td>
-</tr>
-</tbody>
-</table>
-<p>This is an image:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/cat.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 1: Cat image</figcaption>
-</figure>
+<section id="warm-up-from-skills-to-story" class="level2">
+<h2 class="anchored" data-anchor-id="warm-up-from-skills-to-story">Warm Up: From Skills to Story</h2>
+<p>Imagine you are a data scientist with one dataset and one chance to tell your audience something important. Your goal is not only to show what is in the dataset, but to help people understand why it matters.</p>
+<p>Before beginning any data story, ask yourself:</p>
+<ul>
+<li>What topic or problem does this dataset represent?</li>
+<li>Who needs to understand the results?</li>
+<li>What pattern, trend, or comparison might be important?</li>
+<li>What should the audience think, understand, or do after seeing the story?</li>
+</ul>
+<p>This is the heart of data storytelling. Data gives us evidence, but storytelling gives that evidence structure, meaning, and purpose.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Interactive plot is below:</p>
-<div id="a2aabe2a" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.1.min.js" integrity="sha256-4rD3fugVb/nVJYUv5Ky3v+fYXoouHaBSP20WIJuEiWg=" crossorigin="anonymous"></script>                <div id="5b7fa623-d980-463d-bfbf-6c974b072c41" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5b7fa623-d980-463d-bfbf-6c974b072c41")) {                    Plotly.newPlot(                        "5b7fa623-d980-463d-bfbf-6c974b072c41",                        [{"hovertemplate":"species=setosa\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"setosa","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"setosa","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"AAAAAAAADEAAAAAAAAAIQJqZmZmZmQlAzczMzMzMCEDNzMzMzMwMQDMzMzMzMw9AMzMzMzMzC0AzMzMzMzMLQDMzMzMzMwdAzczMzMzMCECamZmZmZkNQDMzMzMzMwtAAAAAAAAACEAAAAAAAAAIQAAAAAAAABBAmpmZmZmZEUAzMzMzMzMPQAAAAAAAAAxAZmZmZmZmDkBmZmZmZmYOQDMzMzMzMwtAmpmZmZmZDUDNzMzMzMwMQGZmZmZmZgpAMzMzMzMzC0AAAAAAAAAIQDMzMzMzMwtAAAAAAAAADEAzMzMzMzMLQJqZmZmZmQlAzczMzMzMCEAzMzMzMzMLQGZmZmZmZhBAzczMzMzMEEDNzMzMzMwIQJqZmZmZmQlAAAAAAAAADEDNzMzMzMwIQAAAAAAAAAhAMzMzMzMzC0AAAAAAAAAMQGZmZmZmZgJAmpmZmZmZCUAAAAAAAAAMQGZmZmZmZg5AAAAAAAAACEBmZmZmZmYOQJqZmZmZmQlAmpmZmZmZDUBmZmZmZmYKQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"ZmZmZmZmFECamZmZmZkTQM3MzMzMzBJAZmZmZmZmEkAAAAAAAAAUQJqZmZmZmRVAZmZmZmZmEkAAAAAAAAAUQJqZmZmZmRFAmpmZmZmZE0CamZmZmZkVQDMzMzMzMxNAMzMzMzMzE0AzMzMzMzMRQDMzMzMzMxdAzczMzMzMFkCamZmZmZkVQGZmZmZmZhRAzczMzMzMFkBmZmZmZmYUQJqZmZmZmRVAZmZmZmZmFEBmZmZmZmYSQGZmZmZmZhRAMzMzMzMzE0AAAAAAAAAUQAAAAAAAABRAzczMzMzMFEDNzMzMzMwUQM3MzMzMzBJAMzMzMzMzE0CamZmZmZkVQM3MzMzMzBRAAAAAAAAAFkCamZmZmZkTQAAAAAAAABRAAAAAAAAAFkCamZmZmZkTQJqZmZmZmRFAZmZmZmZmFEAAAAAAAAAUQAAAAAAAABJAmpmZmZmZEUAAAAAAAAAUQGZmZmZmZhRAMzMzMzMzE0BmZmZmZmYUQGZmZmZmZhJAMzMzMzMzFUAAAAAAAAAUQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"species=versicolor\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"versicolor","marker":{"color":"#EF553B","symbol":"circle"},"mode":"markers","name":"versicolor","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"mpmZmZmZCUCamZmZmZkJQM3MzMzMzAhAZmZmZmZmAkBmZmZmZmYGQGZmZmZmZgZAZmZmZmZmCkAzMzMzMzMDQDMzMzMzMwdAmpmZmZmZBUAAAAAAAAAAQAAAAAAAAAhAmpmZmZmZAUAzMzMzMzMHQDMzMzMzMwdAzczMzMzMCEAAAAAAAAAIQJqZmZmZmQVAmpmZmZmZAUAAAAAAAAAEQJqZmZmZmQlAZmZmZmZmBkAAAAAAAAAEQGZmZmZmZgZAMzMzMzMzB0AAAAAAAAAIQGZmZmZmZgZAAAAAAAAACEAzMzMzMzMHQM3MzMzMzARAMzMzMzMzA0AzMzMzMzMDQJqZmZmZmQVAmpmZmZmZBUAAAAAAAAAIQDMzMzMzMwtAzczMzMzMCEBmZmZmZmYCQAAAAAAAAAhAAAAAAAAABEDNzMzMzMwEQAAAAAAAAAhAzczMzMzMBEBmZmZmZmYCQJqZmZmZmQVAAAAAAAAACEAzMzMzMzMHQDMzMzMzMwdAAAAAAAAABEBmZmZmZmYGQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAAAAHECamZmZmZkZQJqZmZmZmRtAAAAAAAAAFkAAAAAAAAAaQM3MzMzMzBZAMzMzMzMzGUCamZmZmZkTQGZmZmZmZhpAzczMzMzMFEAAAAAAAAAUQJqZmZmZmRdAAAAAAAAAGEBmZmZmZmYYQGZmZmZmZhZAzczMzMzMGkBmZmZmZmYWQDMzMzMzMxdAzczMzMzMGEBmZmZmZmYWQJqZmZmZmRdAZmZmZmZmGEAzMzMzMzMZQGZmZmZmZhhAmpmZmZmZGUBmZmZmZmYaQDMzMzMzMxtAzczMzMzMGkAAAAAAAAAYQM3MzMzMzBZAAAAAAAAAFkAAAAAAAAAWQDMzMzMzMxdAAAAAAAAAGECamZmZmZkVQAAAAAAAABhAzczMzMzMGkAzMzMzMzMZQGZmZmZmZhZAAAAAAAAAFkAAAAAAAAAWQGZmZmZmZhhAMzMzMzMzF0AAAAAAAAAUQGZmZmZmZhZAzczMzMzMFkDNzMzMzMwWQM3MzMzMzBhAZmZmZmZmFEDNzMzMzMwWQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"species=virginica\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"virginica","marker":{"color":"#00cc96","symbol":"circle"},"mode":"markers","name":"virginica","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"ZmZmZmZmCkCamZmZmZkFQAAAAAAAAAhAMzMzMzMzB0AAAAAAAAAIQAAAAAAAAAhAAAAAAAAABEAzMzMzMzMHQAAAAAAAAARAzczMzMzMDECamZmZmZkJQJqZmZmZmQVAAAAAAAAACEAAAAAAAAAEQGZmZmZmZgZAmpmZmZmZCUAAAAAAAAAIQGZmZmZmZg5AzczMzMzMBECamZmZmZkBQJqZmZmZmQlAZmZmZmZmBkBmZmZmZmYGQJqZmZmZmQVAZmZmZmZmCkCamZmZmZkJQGZmZmZmZgZAAAAAAAAACEBmZmZmZmYGQAAAAAAAAAhAZmZmZmZmBkBmZmZmZmYOQGZmZmZmZgZAZmZmZmZmBkDNzMzMzMwEQAAAAAAAAAhAMzMzMzMzC0DNzMzMzMwIQAAAAAAAAAhAzczMzMzMCEDNzMzMzMwIQM3MzMzMzAhAmpmZmZmZBUCamZmZmZkJQGZmZmZmZgpAAAAAAAAACEAAAAAAAAAEQAAAAAAAAAhAMzMzMzMzC0AAAAAAAAAIQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"MzMzMzMzGUAzMzMzMzMXQGZmZmZmZhxAMzMzMzMzGUAAAAAAAAAaQGZmZmZmZh5AmpmZmZmZE0AzMzMzMzMdQM3MzMzMzBpAzczMzMzMHEAAAAAAAAAaQJqZmZmZmRlAMzMzMzMzG0DNzMzMzMwWQDMzMzMzMxdAmpmZmZmZGUAAAAAAAAAaQM3MzMzMzB5AzczMzMzMHkAAAAAAAAAYQJqZmZmZmRtAZmZmZmZmFkDNzMzMzMweQDMzMzMzMxlAzczMzMzMGkDNzMzMzMwcQM3MzMzMzBhAZmZmZmZmGECamZmZmZkZQM3MzMzMzBxAmpmZmZmZHUCamZmZmZkfQJqZmZmZmRlAMzMzMzMzGUBmZmZmZmYYQM3MzMzMzB5AMzMzMzMzGUCamZmZmZkZQAAAAAAAABhAmpmZmZmZG0DNzMzMzMwaQJqZmZmZmRtAMzMzMzMzF0AzMzMzMzMbQM3MzMzMzBpAzczMzMzMGkAzMzMzMzMZQAAAAAAAABpAzczMzMzMGECamZmZmZkXQA=="},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"sepal_width"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"sepal_length"}},"legend":{"title":{"text":"species"},"tracegroupgap":0},"title":{"text":"Interactive Plotly Scatter"}},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('5b7fa623-d980-463d-bfbf-6c974b072c41');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };            </script>        </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think About It
 </div>
 </div>
-<p>This is a map:</p>
-<iframe src="https://www.google.com/maps/d/embed?mid=1L1EOKHYYIpvG8KEbe4iMEppFlZ598jA&amp;ehbc=2E312F" width="640" height="480" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-<p>Reading from a public Google Sheet (code and display the data):</p>
-<div id="93317175" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sheet_id <span class="op">=</span> <span class="st">"1jcZAtyEZ_5Q7ruPaUYxErM_a4UP9dP9PwbnsRnVl0hE"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"https://docs.google.com/spreadsheets/d/</span><span class="sc">{</span>sheet_id<span class="sc">}</span><span class="ss">/gviz/tq?tqx=out:csv"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="callout-body-container callout-body">
+<p>A chart can show a pattern, but a story explains why that pattern matters. Good data storytelling combines technical accuracy with clear communication.</p>
+</div>
+</div>
+</section>
+<section id="why-chapter-6-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-chapter-6-matters">Why Chapter 6 Matters</h2>
+<p>The earlier chapters gave you individual data science skills. Chapter 6 asks you to combine them. In a real project, these skills do not happen separately. You move back and forth between exploring, cleaning, visualizing, modeling, and explaining.</p>
+<p>A strong data story usually grows from this sequence:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
 <div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Food</th>
-<th data-quarto-table-cell-role="th">Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Apple</td>
-<td>1.99</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Pineapple</td>
-<td>3.99</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Chicken</td>
-<td>4.99</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Noodles</td>
-<td>2.99</td>
-</tr>
-</tbody>
-</table>
-
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Question] --&gt; B[Data]
+    B --&gt; C[Cleaning]
+    C --&gt; D[Analysis]
+    D --&gt; E[Visualization]
+    E --&gt; F[Modeling]
+    F --&gt; G[Story]
+    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px
+    style C fill:#fef3c7,stroke:#333,stroke-width:1.5px
+    style E fill:#dcfce7,stroke:#333,stroke-width:1.5px
+    style G fill:#ede9fe,stroke:#333,stroke-width:2px
+</pre>
+</div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p>This is code snippet that is NOT runned:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> isOdd(n):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> n<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>: </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The story is not something you add at the end just to make your project look polished. It should guide your decisions from the beginning: what you analyze, what you visualize, and what you choose to explain.</p>
+</section>
+<section id="review-the-data-science-toolkit" class="level2">
+<h2 class="anchored" data-anchor-id="review-the-data-science-toolkit">Review: The Data Science Toolkit</h2>
+<p>Each previous chapter introduced a different part of the workflow. Together, these skills help you turn raw data into a message that people can understand and use.</p>
+<section id="chapter-2-visualizing-clean-data" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-2-visualizing-clean-data">Chapter 2: Visualizing Clean Data</h3>
+<p>Chapter 2 focused on using charts to make data easier to interpret. Instead of asking an audience to scan a spreadsheet, we learned how to display patterns visually.</p>
+<p>Key skills included:</p>
+<ul>
+<li>Exploring datasets from open data sources such as the Delaware Open Data Portal.</li>
+<li>Filtering and organizing data in Google Sheets.</li>
+<li>Choosing chart types based on the question being asked.</li>
+<li>Using bar charts, line charts, pie charts, and scatter plots.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Visualization Principle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The best chart is not always the most complex one. The best chart is the one that makes the message easiest to understand.</p>
+</div>
+</div>
+<p>For example, if you want to compare accident counts across counties, a bar chart may be clearer than a pie chart. If you want to show how accident counts changed over time, a line chart is usually more appropriate.</p>
+</section>
+</section>
+<section id="chapter-3-python-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-python-pandas">Chapter 3: Python &amp; Pandas</h2>
+<p>Chapter 3 moved us beyond manual spreadsheet work. Python and Pandas gave us a way to work with larger datasets more efficiently and repeatably.</p>
+<section id="why-python-helps" class="level3">
+<h3 class="anchored" data-anchor-id="why-python-helps">Why Python Helps</h3>
+<p>Python is useful in data science because it lets you write repeatable instructions. Instead of filtering data manually each time, you can write code that performs the same analysis consistently.</p>
+</section>
+<section id="core-pandas-skills" class="level3">
+<h3 class="anchored" data-anchor-id="core-pandas-skills">Core Pandas Skills</h3>
+<p>You practiced how to:</p>
+<ul>
+<li>Import Pandas.</li>
+<li>Load CSV files with <code>read_csv()</code>.</li>
+<li>Preview rows with <code>.head()</code>.</li>
+<li>Check dataset size with <code>.shape</code>.</li>
+<li>Filter rows using <code>.loc</code>, <code>.query()</code>, and Boolean conditions.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a dataset</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"crash_data.csv"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the data</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Check number of rows and columns</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df.shape</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for one county</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>new_castle <span class="op">=</span> df[df[<span class="st">"county"</span>] <span class="op">==</span> <span class="st">"New Castle"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Why This Matters for Storytelling
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Coding helps you ask better questions. Once your data is loaded into Python, you can quickly test ideas, compare groups, and refine your story based on evidence.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="chapter-4-cleaning-preprocessing" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-4-cleaning-preprocessing">Chapter 4: Cleaning &amp; Preprocessing</h2>
+<p>Chapter 4 focused on preparing data so it could be trusted. Raw data often contains missing values, inconsistent formats, duplicates, or categories that need to be transformed before analysis.</p>
+<section id="the-etl-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="the-etl-pipeline">The ETL Pipeline</h3>
+<p>A common way to describe this process is ETL:</p>
+<ul>
+<li><strong>Extract</strong> — collect the data from a source.</li>
+<li><strong>Transform</strong> — clean, reshape, encode, or standardize the data.</li>
+<li><strong>Load</strong> — store the prepared data in a usable format.</li>
+</ul>
+</section>
+<section id="common-preparation-steps" class="level3">
+<h3 class="anchored" data-anchor-id="common-preparation-steps">Common Preparation Steps</h3>
+<p>You learned how to work with:</p>
+<ul>
+<li>Missing or incomplete values.</li>
+<li>Date and numeric conversions.</li>
+<li>Sorting and filtering.</li>
+<li>Normalization.</li>
+<li>Geospatial processing.</li>
+<li>Label encoding and one-hot encoding.</li>
+<li>Merging datasets.</li>
+<li>Grouping and aggregation.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: convert a date column and group by weekday</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"crash_date"</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">"crash_date"</span>])</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"weekday"</span>] <span class="op">=</span> df[<span class="st">"crash_date"</span>].dt.day_name()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>weekday_counts <span class="op">=</span> df.groupby(<span class="st">"weekday"</span>).size()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Clean Data Builds Trust
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the data is messy, the story may be misleading. Strong communication depends on strong preparation.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="chapter-5-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-5-machine-learning">Chapter 5: Machine Learning</h2>
+<p>Chapter 5 introduced machine learning as a way to move from describing data to making predictions. In storytelling, a model can help answer questions such as: What might happen next? Which factors seem most important? How well can we predict an outcome?</p>
+<section id="regression-and-classification" class="level3">
+<h3 class="anchored" data-anchor-id="regression-and-classification">Regression and Classification</h3>
+<p>Two major types of machine learning problems are:</p>
+<ul>
+<li><strong>Regression</strong> — predicts a continuous number, such as price, count, or temperature.</li>
+<li><strong>Classification</strong> — predicts a category, such as yes/no, high/medium/low, or accident/no accident.</li>
+</ul>
+</section>
+<section id="traintest-split" class="level3">
+<h3 class="anchored" data-anchor-id="traintest-split">Train/Test Split</h3>
+<p>You also learned why models need to be evaluated on data they have not already seen.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Prepared Data] --&gt; B[Training Set]
+    A --&gt; C[Testing Set]
+    B --&gt; D[Train Model]
+    D --&gt; E[Make Predictions]
+    C --&gt; F[Evaluate Performance]
+    E --&gt; F
+    style A fill:#e0f2fe,stroke:#333,stroke-width:1.5px
+    style F fill:#dcfce7,stroke:#333,stroke-width:1.5px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="model-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="model-evaluation">Model Evaluation</h3>
+<p>Two common evaluation metrics were:</p>
+<ul>
+<li><strong>MSE</strong> — Mean Squared Error, which measures prediction error.</li>
+<li><strong>R²</strong> — a measure of how well the model explains variation in the data.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Modeling and Storytelling
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A model result is not automatically a story. The story comes from explaining what the model suggests, how reliable it is, and why the result matters to the audience.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="from-technical-work-to-communication" class="level2">
+<h2 class="anchored" data-anchor-id="from-technical-work-to-communication">From Technical Work to Communication</h2>
+<p>At this point, you have learned the major parts of a data science workflow. Chapter 6 brings these parts together and shifts the focus toward communication.</p>
+<p>A complete data science story should answer four questions:</p>
+<ol type="1">
+<li><p><strong>What did you ask?</strong><br>
+The research question or problem.</p></li>
+<li><p><strong>What data did you use?</strong><br>
+The dataset, source, and important columns.</p></li>
+<li><p><strong>What did you find?</strong><br>
+The patterns, comparisons, visualizations, and model results.</p></li>
+<li><p><strong>Why does it matter?</strong><br>
+The key takeaway and its real-world meaning.</p></li>
+</ol>
+</section>
+<section id="mini-example-turning-a-finding-into-a-story" class="level2">
+<h2 class="anchored" data-anchor-id="mini-example-turning-a-finding-into-a-story">Mini Example: Turning a Finding into a Story</h2>
+<p>A weak finding might sound like this:</p>
+<blockquote class="blockquote">
+<p>Friday had the highest number of crashes.</p>
+</blockquote>
+<p>That statement is not wrong, but it is incomplete. A stronger data story adds context:</p>
+<blockquote class="blockquote">
+<p>Friday had the highest number of crashes, which may reflect heavier commuting, weekend travel, and more people on the road at the end of the workweek. This suggests that traffic safety messaging or enforcement may be especially important before Friday evening travel periods.</p>
+</blockquote>
+<p>The second version is stronger because it connects the data to a possible explanation and a real-world implication.</p>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Visualization helps people see patterns quickly.</li>
+<li>Python and Pandas make analysis more efficient and repeatable.</li>
+<li>Cleaning and preprocessing make results more trustworthy.</li>
+<li>Machine learning can support prediction and comparison.</li>
+<li>Storytelling connects the technical work to audience understanding and action.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The Big Idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Data storytelling is not decoration. It is the process of turning analysis into understanding.</p>
+</div>
+</div>
+</section>
+<section id="roadmap-for-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="roadmap-for-part-2">Roadmap for Part 2</h2>
+<p>In Part 2, you will apply this toolkit to design your own data science project. You will choose a dataset, define a research question, plan your analysis, and begin thinking about how your final results will become a clear presentation.</p>
 
 
 </section>

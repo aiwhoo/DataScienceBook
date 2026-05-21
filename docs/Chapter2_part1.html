@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Technical Instructional Team">
 
-<title>Project Title – template</title>
+<title>Data Visualization – template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,45 +21,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -103,15 +69,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script type="text/javascript">
-window.PlotlyConfig = {MathJaxConfig: 'local'};
-if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-</script>
-<script type="module">import "https://cdn.plot.ly/plotly-3.3.1.min"</script>
-
 
 
 <link rel="stylesheet" href="styles.css">
@@ -126,7 +83,9 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Motivation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      template
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,7 +112,7 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motivation</span></a>
   </div>
 </li>
@@ -197,8 +156,20 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#motivation-for-this-work" id="toc-motivation-for-this-work" class="nav-link active" data-scroll-target="#motivation-for-this-work">Motivation for this Work</a></li>
-  <li><a href="#this-is-a-subtitle" id="toc-this-is-a-subtitle" class="nav-link" data-scroll-target="#this-is-a-subtitle">This is a subtitle</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#every-day-you-already-use-data" id="toc-every-day-you-already-use-data" class="nav-link" data-scroll-target="#every-day-you-already-use-data">Every Day, You Already Use Data</a></li>
+  <li><a href="#so-what-exactly-is-data" id="toc-so-what-exactly-is-data" class="nav-link" data-scroll-target="#so-what-exactly-is-data">So… What Exactly Is Data?</a></li>
+  <li><a href="#why-does-data-matter" id="toc-why-does-data-matter" class="nav-link" data-scroll-target="#why-does-data-matter">Why Does Data Matter?</a></li>
+  <li><a href="#types-of-data" id="toc-types-of-data" class="nav-link" data-scroll-target="#types-of-data">Types of Data</a></li>
+  <li><a href="#a-real-dataset-delaware-traffic-crashes" id="toc-a-real-dataset-delaware-traffic-crashes" class="nav-link" data-scroll-target="#a-real-dataset-delaware-traffic-crashes">A Real Dataset: Delaware Traffic Crashes</a></li>
+  <li><a href="#what-can-we-ask-this-data" id="toc-what-can-we-ask-this-data" class="nav-link" data-scroll-target="#what-can-we-ask-this-data">What Can We Ask This Data?</a></li>
+  <li><a href="#good-questions-vs.-bad-questions" id="toc-good-questions-vs.-bad-questions" class="nav-link" data-scroll-target="#good-questions-vs.-bad-questions">Good Questions vs.&nbsp;Bad Questions</a>
+  <ul class="collapse">
+  <li><a href="#weak-questions" id="toc-weak-questions" class="nav-link" data-scroll-target="#weak-questions">Weak Questions</a></li>
+  <li><a href="#strong-questions" id="toc-strong-questions" class="nav-link" data-scroll-target="#strong-questions">Strong Questions</a></li>
+  </ul></li>
+  <li><a href="#activity-ask-better-questions" id="toc-activity-ask-better-questions" class="nav-link" data-scroll-target="#activity-ask-better-questions">Activity: Ask Better Questions</a></li>
+  <li><a href="#roadmap-for-part-1" id="toc-roadmap-for-part-1" class="nav-link" data-scroll-target="#roadmap-for-part-1">Roadmap for Part 1</a></li>
   </ul>
 </nav>
     </div>
@@ -207,13 +178,20 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Title</h1>
+<h1 class="title">Data Visualization</h1>
+<p class="subtitle lead">Part 1: Understanding Data and Asking Good Questions</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Technical Instructional Team </p>
+          </div>
+  </div>
     
   
     
@@ -224,143 +202,188 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 </header>
 
 
-<p><em>Author, Technology Service Center, University of Delaware</em></p>
-<p>20XX-XX-XX</p>
-<section id="motivation-for-this-work" class="level2">
-<h2 class="anchored" data-anchor-id="motivation-for-this-work">Motivation for this Work</h2>
-<p>Insert a paragraph of the motivation of this work.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li>Explain what <strong>data</strong> is and why it matters in everyday life.</li>
+<li>Identify different types of data, including <strong>numerical, categorical, time-based, and geographic</strong> data.</li>
+<li>Use a real dataset to ask meaningful analytical questions.</li>
+<li>Distinguish between <strong>weak questions</strong> and <strong>strong questions</strong> in data analysis.</li>
+<li>Connect questions to the kinds of visuals that may help answer them.</li>
+</ul>
+<p>This chapter is organized into three parts:</p>
+<ul>
+<li><strong>Part 1:</strong> Understanding data and asking good questions<br>
+</li>
+<li><strong>Part 2:</strong> Turning data into charts, graphs, and maps<br>
+</li>
+<li><strong>Part 3:</strong> Cleaning, summarizing, and interpreting data</li>
+</ul>
 </section>
-<section id="this-is-a-subtitle" class="level2">
-<h2 class="anchored" data-anchor-id="this-is-a-subtitle">This is a subtitle</h2>
-<p>This is text.</p>
-<p><a href="https://quarto.org/">Hyperlink to an externel website</a></p>
-<p><a href="keyFindings.html#key-finding-1">Hyperlink to another section</a></p>
-<p>A table is below:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Item</th>
-<th style="text-align: center;">In Stock</th>
-<th style="text-align: right;">Price</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Python Hat</td>
-<td style="text-align: center;">True</td>
-<td style="text-align: right;">23.99</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SQL Hat</td>
-<td style="text-align: center;">True</td>
-<td style="text-align: right;">23.99</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Codecademy Tee</td>
-<td style="text-align: center;">False</td>
-<td style="text-align: right;">19.99</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Codecademy Hoodie</td>
-<td style="text-align: center;">False</td>
-<td style="text-align: right;">42.99</td>
-</tr>
-</tbody>
-</table>
-<p>This is an image:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/cat.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 1: Cat image</figcaption>
-</figure>
+<section id="every-day-you-already-use-data" class="level2">
+<h2 class="anchored" data-anchor-id="every-day-you-already-use-data">Every Day, You Already Use Data</h2>
+<p>Even before you study data formally, you already use it every day. You check the weather before leaving the house, glance at the clock to see if you have time for breakfast, or notice traffic patterns during your commute. In each case, you are collecting information, interpreting it, and making a decision.</p>
+<p>One simple example is the question: <strong>Should you bring an umbrella today?</strong> To answer it, you might look at the temperature, cloud cover, and chance of rain. That is data-driven decision-making in action.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Interactive plot is below:</p>
-<div id="a2aabe2a" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.1.min.js" integrity="sha256-4rD3fugVb/nVJYUv5Ky3v+fYXoouHaBSP20WIJuEiWg=" crossorigin="anonymous"></script>                <div id="5b7fa623-d980-463d-bfbf-6c974b072c41" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5b7fa623-d980-463d-bfbf-6c974b072c41")) {                    Plotly.newPlot(                        "5b7fa623-d980-463d-bfbf-6c974b072c41",                        [{"hovertemplate":"species=setosa\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"setosa","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"setosa","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"AAAAAAAADEAAAAAAAAAIQJqZmZmZmQlAzczMzMzMCEDNzMzMzMwMQDMzMzMzMw9AMzMzMzMzC0AzMzMzMzMLQDMzMzMzMwdAzczMzMzMCECamZmZmZkNQDMzMzMzMwtAAAAAAAAACEAAAAAAAAAIQAAAAAAAABBAmpmZmZmZEUAzMzMzMzMPQAAAAAAAAAxAZmZmZmZmDkBmZmZmZmYOQDMzMzMzMwtAmpmZmZmZDUDNzMzMzMwMQGZmZmZmZgpAMzMzMzMzC0AAAAAAAAAIQDMzMzMzMwtAAAAAAAAADEAzMzMzMzMLQJqZmZmZmQlAzczMzMzMCEAzMzMzMzMLQGZmZmZmZhBAzczMzMzMEEDNzMzMzMwIQJqZmZmZmQlAAAAAAAAADEDNzMzMzMwIQAAAAAAAAAhAMzMzMzMzC0AAAAAAAAAMQGZmZmZmZgJAmpmZmZmZCUAAAAAAAAAMQGZmZmZmZg5AAAAAAAAACEBmZmZmZmYOQJqZmZmZmQlAmpmZmZmZDUBmZmZmZmYKQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"ZmZmZmZmFECamZmZmZkTQM3MzMzMzBJAZmZmZmZmEkAAAAAAAAAUQJqZmZmZmRVAZmZmZmZmEkAAAAAAAAAUQJqZmZmZmRFAmpmZmZmZE0CamZmZmZkVQDMzMzMzMxNAMzMzMzMzE0AzMzMzMzMRQDMzMzMzMxdAzczMzMzMFkCamZmZmZkVQGZmZmZmZhRAzczMzMzMFkBmZmZmZmYUQJqZmZmZmRVAZmZmZmZmFEBmZmZmZmYSQGZmZmZmZhRAMzMzMzMzE0AAAAAAAAAUQAAAAAAAABRAzczMzMzMFEDNzMzMzMwUQM3MzMzMzBJAMzMzMzMzE0CamZmZmZkVQM3MzMzMzBRAAAAAAAAAFkCamZmZmZkTQAAAAAAAABRAAAAAAAAAFkCamZmZmZkTQJqZmZmZmRFAZmZmZmZmFEAAAAAAAAAUQAAAAAAAABJAmpmZmZmZEUAAAAAAAAAUQGZmZmZmZhRAMzMzMzMzE0BmZmZmZmYUQGZmZmZmZhJAMzMzMzMzFUAAAAAAAAAUQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"species=versicolor\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"versicolor","marker":{"color":"#EF553B","symbol":"circle"},"mode":"markers","name":"versicolor","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"mpmZmZmZCUCamZmZmZkJQM3MzMzMzAhAZmZmZmZmAkBmZmZmZmYGQGZmZmZmZgZAZmZmZmZmCkAzMzMzMzMDQDMzMzMzMwdAmpmZmZmZBUAAAAAAAAAAQAAAAAAAAAhAmpmZmZmZAUAzMzMzMzMHQDMzMzMzMwdAzczMzMzMCEAAAAAAAAAIQJqZmZmZmQVAmpmZmZmZAUAAAAAAAAAEQJqZmZmZmQlAZmZmZmZmBkAAAAAAAAAEQGZmZmZmZgZAMzMzMzMzB0AAAAAAAAAIQGZmZmZmZgZAAAAAAAAACEAzMzMzMzMHQM3MzMzMzARAMzMzMzMzA0AzMzMzMzMDQJqZmZmZmQVAmpmZmZmZBUAAAAAAAAAIQDMzMzMzMwtAzczMzMzMCEBmZmZmZmYCQAAAAAAAAAhAAAAAAAAABEDNzMzMzMwEQAAAAAAAAAhAzczMzMzMBEBmZmZmZmYCQJqZmZmZmQVAAAAAAAAACEAzMzMzMzMHQDMzMzMzMwdAAAAAAAAABEBmZmZmZmYGQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAAAAHECamZmZmZkZQJqZmZmZmRtAAAAAAAAAFkAAAAAAAAAaQM3MzMzMzBZAMzMzMzMzGUCamZmZmZkTQGZmZmZmZhpAzczMzMzMFEAAAAAAAAAUQJqZmZmZmRdAAAAAAAAAGEBmZmZmZmYYQGZmZmZmZhZAzczMzMzMGkBmZmZmZmYWQDMzMzMzMxdAzczMzMzMGEBmZmZmZmYWQJqZmZmZmRdAZmZmZmZmGEAzMzMzMzMZQGZmZmZmZhhAmpmZmZmZGUBmZmZmZmYaQDMzMzMzMxtAzczMzMzMGkAAAAAAAAAYQM3MzMzMzBZAAAAAAAAAFkAAAAAAAAAWQDMzMzMzMxdAAAAAAAAAGECamZmZmZkVQAAAAAAAABhAzczMzMzMGkAzMzMzMzMZQGZmZmZmZhZAAAAAAAAAFkAAAAAAAAAWQGZmZmZmZhhAMzMzMzMzF0AAAAAAAAAUQGZmZmZmZhZAzczMzMzMFkDNzMzMzMwWQM3MzMzMzBhAZmZmZmZmFEDNzMzMzMwWQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"species=virginica\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"virginica","marker":{"color":"#00cc96","symbol":"circle"},"mode":"markers","name":"virginica","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"ZmZmZmZmCkCamZmZmZkFQAAAAAAAAAhAMzMzMzMzB0AAAAAAAAAIQAAAAAAAAAhAAAAAAAAABEAzMzMzMzMHQAAAAAAAAARAzczMzMzMDECamZmZmZkJQJqZmZmZmQVAAAAAAAAACEAAAAAAAAAEQGZmZmZmZgZAmpmZmZmZCUAAAAAAAAAIQGZmZmZmZg5AzczMzMzMBECamZmZmZkBQJqZmZmZmQlAZmZmZmZmBkBmZmZmZmYGQJqZmZmZmQVAZmZmZmZmCkCamZmZmZkJQGZmZmZmZgZAAAAAAAAACEBmZmZmZmYGQAAAAAAAAAhAZmZmZmZmBkBmZmZmZmYOQGZmZmZmZgZAZmZmZmZmBkDNzMzMzMwEQAAAAAAAAAhAMzMzMzMzC0DNzMzMzMwIQAAAAAAAAAhAzczMzMzMCEDNzMzMzMwIQM3MzMzMzAhAmpmZmZmZBUCamZmZmZkJQGZmZmZmZgpAAAAAAAAACEAAAAAAAAAEQAAAAAAAAAhAMzMzMzMzC0AAAAAAAAAIQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"MzMzMzMzGUAzMzMzMzMXQGZmZmZmZhxAMzMzMzMzGUAAAAAAAAAaQGZmZmZmZh5AmpmZmZmZE0AzMzMzMzMdQM3MzMzMzBpAzczMzMzMHEAAAAAAAAAaQJqZmZmZmRlAMzMzMzMzG0DNzMzMzMwWQDMzMzMzMxdAmpmZmZmZGUAAAAAAAAAaQM3MzMzMzB5AzczMzMzMHkAAAAAAAAAYQJqZmZmZmRtAZmZmZmZmFkDNzMzMzMweQDMzMzMzMxlAzczMzMzMGkDNzMzMzMwcQM3MzMzMzBhAZmZmZmZmGECamZmZmZkZQM3MzMzMzBxAmpmZmZmZHUCamZmZmZkfQJqZmZmZmRlAMzMzMzMzGUBmZmZmZmYYQM3MzMzMzB5AMzMzMzMzGUCamZmZmZkZQAAAAAAAABhAmpmZmZmZG0DNzMzMzMwaQJqZmZmZmRtAMzMzMzMzF0AzMzMzMzMbQM3MzMzMzBpAzczMzMzMGkAzMzMzMzMZQAAAAAAAABpAzczMzMzMGECamZmZmZkXQA=="},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"sepal_width"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"sepal_length"}},"legend":{"title":{"text":"species"},"tracegroupgap":0},"title":{"text":"Interactive Plotly Scatter"}},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('5b7fa623-d980-463d-bfbf-6c974b072c41');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };            </script>        </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Think About It
 </div>
 </div>
-<p>This is a map:</p>
-<iframe src="https://www.google.com/maps/d/embed?mid=1L1EOKHYYIpvG8KEbe4iMEppFlZ598jA&amp;ehbc=2E312F" width="640" height="480" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-<p>Reading from a public Google Sheet (code and display the data):</p>
-<div id="93317175" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sheet_id <span class="op">=</span> <span class="st">"1jcZAtyEZ_5Q7ruPaUYxErM_a4UP9dP9PwbnsRnVl0hE"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"https://docs.google.com/spreadsheets/d/</span><span class="sc">{</span>sheet_id<span class="sc">}</span><span class="ss">/gviz/tq?tqx=out:csv"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Food</th>
-<th data-quarto-table-cell-role="th">Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Apple</td>
-<td>1.99</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Pineapple</td>
-<td>3.99</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Chicken</td>
-<td>4.99</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Noodles</td>
-<td>2.99</td>
-</tr>
-</tbody>
-</table>
-
+<div class="callout-body-container callout-body">
+<p>What is one decision you made this morning based on information you gathered—even informally?</p>
 </div>
 </div>
+</section>
+<section id="so-what-exactly-is-data" class="level2">
+<h2 class="anchored" data-anchor-id="so-what-exactly-is-data">So… What Exactly Is Data?</h2>
+<p>Data is simply <strong>raw information about the world</strong>. It can take many forms, including numbers, words, locations, and times. By itself, data is just a collection of facts. It becomes useful when we organize it, analyze it, and look for meaning.</p>
+<p>Some common forms of data include:</p>
+<ul>
+<li><strong>Numbers</strong> — ages, temperatures, prices, speeds, or anything you can count</li>
+<li><strong>Categories</strong> — labels such as rainy, sunny, car, truck, or school subject</li>
+<li><strong>Time</strong> — dates, hours, seasons, or changes over time</li>
+<li><strong>Location</strong> — counties, zip codes, states, or GPS coordinates</li>
+</ul>
+<p>Raw data does not automatically tell a story. To become meaningful, it must be organized, questioned, and often visualized.</p>
+</section>
+<section id="why-does-data-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-data-matter">Why Does Data Matter?</h2>
+<p>Data matters because it helps people make better decisions and discover patterns they might otherwise miss.</p>
+<ul>
+<li><strong>Make Predictions:</strong> Doctors use patient data to predict health risks. Coaches use statistics to predict outcomes.</li>
+<li><strong>Guide Decisions:</strong> Cities use crash data to decide where to add traffic lights. Schools use test scores to improve curriculum.</li>
+<li><strong>Reveal Patterns:</strong> Stores may notice that umbrella sales rise before storms, even before the forecast changes.</li>
+</ul>
+<p>When we learn to read data well, we gain the ability to understand the world more clearly.</p>
+</section>
+<section id="types-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-data">Types of Data</h2>
+<p>Before you can analyze or visualize anything, you need to know what kind of data you are working with. Different kinds of data are better suited to different chart types and analytical questions.</p>
+<p>The four common types we will use throughout this chapter are:</p>
+<ul>
+<li><strong>Numerical data</strong></li>
+<li><strong>Categorical data</strong></li>
+<li><strong>Time-based data</strong></li>
+<li><strong>Geographic data</strong></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>This is code snippet that is NOT runned:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> isOdd(n):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> n<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>: </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Quick Check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Is “number of crashes per month” numerical or categorical? Is “city where a crash occurred” time-based or geographic?</p>
+</div>
+</div>
+</section>
+<section id="a-real-dataset-delaware-traffic-crashes" class="level2">
+<h2 class="anchored" data-anchor-id="a-real-dataset-delaware-traffic-crashes">A Real Dataset: Delaware Traffic Crashes</h2>
+<p>To make these ideas concrete, we can use a real dataset: the <strong>Delaware Traffic Crash Dataset</strong>.</p>
+<p>This public dataset records reported traffic crashes in Delaware and includes a wide range of variables, such as:</p>
+<ul>
+<li>Date and time of each crash</li>
+<li>Location, including county, road name, and GPS</li>
+<li>Weather and road conditions</li>
+<li>Number of vehicles and injuries involved</li>
+<li>Driver age, seatbelt use, and more</li>
+</ul>
+<p>This dataset is especially useful because it is local, real, and rich in different types of data. It gives us time-based, geographic, categorical, and numerical variables all in one place.</p>
+</section>
+<section id="what-can-we-ask-this-data" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-we-ask-this-data">What Can We Ask This Data?</h2>
+<p>A dataset becomes powerful when you ask good questions about it. Strong data analysis does not start with a chart—it starts with curiosity.</p>
+<p>For example, we might ask:</p>
+<ul>
+<li><strong>When do crashes happen most?</strong> Are they more common during rush hour, late at night, or in certain seasons?</li>
+<li><strong>Where are crashes concentrated?</strong> Are some counties, roads, or intersections more dangerous than others?</li>
+<li><strong>What factors increase risk?</strong> Do weather, speeding, or seatbelt use affect injury severity?</li>
+</ul>
+<p>These are analytical questions because they connect variables and push us toward insight.</p>
+</section>
+<section id="good-questions-vs.-bad-questions" class="level2">
+<h2 class="anchored" data-anchor-id="good-questions-vs.-bad-questions">Good Questions vs.&nbsp;Bad Questions</h2>
+<p>One of the most important skills in data analysis is learning to tell the difference between a vague question and a meaningful one.</p>
+<section id="weak-questions" class="level3">
+<h3 class="anchored" data-anchor-id="weak-questions">Weak Questions</h3>
+<p>Weak questions are often too broad, too descriptive, or too unfocused.</p>
+<p>Examples include:</p>
+<ul>
+<li>What is in this dataset?</li>
+<li>Make a chart of the data.</li>
+<li>How many crashes are there?</li>
+<li>Show me something interesting.</li>
+</ul>
+</section>
+<section id="strong-questions" class="level3">
+<h3 class="anchored" data-anchor-id="strong-questions">Strong Questions</h3>
+<p>Strong questions connect variables, can be tested with data, and lead to a clear direction for analysis.</p>
+<p>Examples include:</p>
+<ul>
+<li>How does weather affect crash severity?</li>
+<li>Which hour of day has the most crashes?</li>
+<li>Do teen drivers crash more in certain conditions?</li>
+<li>Has crash frequency changed over time?</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Insight
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Strong analytical questions often begin with words like <strong>how</strong>, <strong>does</strong>, <strong>which</strong>, or <strong>what is the relationship between</strong>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="activity-ask-better-questions" class="level2">
+<h2 class="anchored" data-anchor-id="activity-ask-better-questions">Activity: Ask Better Questions</h2>
+<p>Now it is your turn to practice.</p>
+<p>Working individually or with a partner:</p>
+<ol type="1">
+<li><strong>Choose a Dataset:</strong> Use the Delaware crash data, school lunch participation data, local weather data, or another dataset your teacher provides.</li>
+<li><strong>Explore the Variables:</strong> Look through the columns and identify the types of data present.</li>
+<li><strong>Write Two Strong Questions:</strong> Make sure each question connects at least two variables and could actually be answered with the data.</li>
+<li><strong>Share and Revise:</strong> Discuss your questions with the class and improve them if needed.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Bonus Challenge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For each question, predict what kind of chart might help answer it: a bar chart, line graph, scatter plot, or map.</p>
+</div>
+</div>
+</section>
+<section id="roadmap-for-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="roadmap-for-part-1">Roadmap for Part 1</h2>
+<p>In this part, we built the foundation for data visualization:</p>
+<ul>
+<li><p><strong>What data is</strong><br>
+Understanding raw facts, categories, time, and location</p></li>
+<li><p><strong>Why data matters</strong><br>
+Using data to make decisions and spot patterns</p></li>
+<li><p><strong>How to ask strong questions</strong><br>
+Moving from vague curiosity to testable analysis</p></li>
+</ul>
+<p>In Part 2, we will turn those questions into <strong>charts, graphs, and other visuals</strong>.</p>
 
 
 </section>

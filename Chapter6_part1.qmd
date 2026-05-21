@@ -1,0 +1,241 @@
+---
+title: "Data Storytelling & Presentation"
+subtitle: "Part 1: From Skills to Story"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Connect the major skills from Chapters 2 through 5 into one complete data science workflow.
+*   Explain how visualization, Python, preprocessing, and machine learning each support stronger data storytelling.
+*   Identify the difference between simply reporting results and communicating a meaningful insight.
+*   Recognize the three starting questions behind every strong data story: audience, message, and action.
+*   Prepare to move from technical analysis into a clear, audience-centered presentation.
+
+## Warm Up: From Skills to Story
+
+Imagine you are a data scientist with one dataset and one chance to tell your audience something important. Your goal is not only to show what is in the dataset, but to help people understand why it matters.
+
+Before beginning any data story, ask yourself:
+
+*   What topic or problem does this dataset represent?
+*   Who needs to understand the results?
+*   What pattern, trend, or comparison might be important?
+*   What should the audience think, understand, or do after seeing the story?
+
+This is the heart of data storytelling. Data gives us evidence, but storytelling gives that evidence structure, meaning, and purpose.
+
+::: {.callout-tip}
+### Think About It
+A chart can show a pattern, but a story explains why that pattern matters. Good data storytelling combines technical accuracy with clear communication.
+:::
+
+## Why Chapter 6 Matters
+
+The earlier chapters gave you individual data science skills. Chapter 6 asks you to combine them. In a real project, these skills do not happen separately. You move back and forth between exploring, cleaning, visualizing, modeling, and explaining.
+
+A strong data story usually grows from this sequence:
+
+```{mermaid}
+flowchart LR
+    A[Question] --> B[Data]
+    B --> C[Cleaning]
+    C --> D[Analysis]
+    D --> E[Visualization]
+    E --> F[Modeling]
+    F --> G[Story]
+    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px
+    style C fill:#fef3c7,stroke:#333,stroke-width:1.5px
+    style E fill:#dcfce7,stroke:#333,stroke-width:1.5px
+    style G fill:#ede9fe,stroke:#333,stroke-width:2px
+```
+
+The story is not something you add at the end just to make your project look polished. It should guide your decisions from the beginning: what you analyze, what you visualize, and what you choose to explain.
+
+## Review: The Data Science Toolkit
+
+Each previous chapter introduced a different part of the workflow. Together, these skills help you turn raw data into a message that people can understand and use.
+
+### Chapter 2: Visualizing Clean Data
+
+Chapter 2 focused on using charts to make data easier to interpret. Instead of asking an audience to scan a spreadsheet, we learned how to display patterns visually.
+
+Key skills included:
+
+*   Exploring datasets from open data sources such as the Delaware Open Data Portal.
+*   Filtering and organizing data in Google Sheets.
+*   Choosing chart types based on the question being asked.
+*   Using bar charts, line charts, pie charts, and scatter plots.
+
+::: {.callout-note}
+### Visualization Principle
+The best chart is not always the most complex one. The best chart is the one that makes the message easiest to understand.
+:::
+
+For example, if you want to compare accident counts across counties, a bar chart may be clearer than a pie chart. If you want to show how accident counts changed over time, a line chart is usually more appropriate.
+
+## Chapter 3: Python & Pandas
+
+Chapter 3 moved us beyond manual spreadsheet work. Python and Pandas gave us a way to work with larger datasets more efficiently and repeatably.
+
+### Why Python Helps
+
+Python is useful in data science because it lets you write repeatable instructions. Instead of filtering data manually each time, you can write code that performs the same analysis consistently.
+
+### Core Pandas Skills
+
+You practiced how to:
+
+*   Import Pandas.
+*   Load CSV files with `read_csv()`.
+*   Preview rows with `.head()`.
+*   Check dataset size with `.shape`.
+*   Filter rows using `.loc`, `.query()`, and Boolean conditions.
+
+```python
+import pandas as pd
+
+# Load a dataset
+df = pd.read_csv("crash_data.csv")
+
+# Preview the data
+df.head()
+
+# Check number of rows and columns
+df.shape
+
+# Filter for one county
+new_castle = df[df["county"] == "New Castle"]
+```
+
+::: {.callout-tip}
+### Why This Matters for Storytelling
+Coding helps you ask better questions. Once your data is loaded into Python, you can quickly test ideas, compare groups, and refine your story based on evidence.
+:::
+
+## Chapter 4: Cleaning & Preprocessing
+
+Chapter 4 focused on preparing data so it could be trusted. Raw data often contains missing values, inconsistent formats, duplicates, or categories that need to be transformed before analysis.
+
+### The ETL Pipeline
+
+A common way to describe this process is ETL:
+
+*   **Extract** — collect the data from a source.
+*   **Transform** — clean, reshape, encode, or standardize the data.
+*   **Load** — store the prepared data in a usable format.
+
+### Common Preparation Steps
+
+You learned how to work with:
+
+*   Missing or incomplete values.
+*   Date and numeric conversions.
+*   Sorting and filtering.
+*   Normalization.
+*   Geospatial processing.
+*   Label encoding and one-hot encoding.
+*   Merging datasets.
+*   Grouping and aggregation.
+
+```python
+# Example: convert a date column and group by weekday
+df["crash_date"] = pd.to_datetime(df["crash_date"])
+df["weekday"] = df["crash_date"].dt.day_name()
+
+weekday_counts = df.groupby("weekday").size()
+```
+
+::: {.callout-warning}
+### Clean Data Builds Trust
+If the data is messy, the story may be misleading. Strong communication depends on strong preparation.
+:::
+
+## Chapter 5: Machine Learning
+
+Chapter 5 introduced machine learning as a way to move from describing data to making predictions. In storytelling, a model can help answer questions such as: What might happen next? Which factors seem most important? How well can we predict an outcome?
+
+### Regression and Classification
+
+Two major types of machine learning problems are:
+
+*   **Regression** — predicts a continuous number, such as price, count, or temperature.
+*   **Classification** — predicts a category, such as yes/no, high/medium/low, or accident/no accident.
+
+### Train/Test Split
+
+You also learned why models need to be evaluated on data they have not already seen.
+
+```{mermaid}
+flowchart TD
+    A[Prepared Data] --> B[Training Set]
+    A --> C[Testing Set]
+    B --> D[Train Model]
+    D --> E[Make Predictions]
+    C --> F[Evaluate Performance]
+    E --> F
+    style A fill:#e0f2fe,stroke:#333,stroke-width:1.5px
+    style F fill:#dcfce7,stroke:#333,stroke-width:1.5px
+```
+
+### Model Evaluation
+
+Two common evaluation metrics were:
+
+*   **MSE** — Mean Squared Error, which measures prediction error.
+*   **R²** — a measure of how well the model explains variation in the data.
+
+::: {.callout-note}
+### Modeling and Storytelling
+A model result is not automatically a story. The story comes from explaining what the model suggests, how reliable it is, and why the result matters to the audience.
+:::
+
+## From Technical Work to Communication
+
+At this point, you have learned the major parts of a data science workflow. Chapter 6 brings these parts together and shifts the focus toward communication.
+
+A complete data science story should answer four questions:
+
+1.  **What did you ask?**  
+    The research question or problem.
+
+2.  **What data did you use?**  
+    The dataset, source, and important columns.
+
+3.  **What did you find?**  
+    The patterns, comparisons, visualizations, and model results.
+
+4.  **Why does it matter?**  
+    The key takeaway and its real-world meaning.
+
+## Mini Example: Turning a Finding into a Story
+
+A weak finding might sound like this:
+
+> Friday had the highest number of crashes.
+
+That statement is not wrong, but it is incomplete. A stronger data story adds context:
+
+> Friday had the highest number of crashes, which may reflect heavier commuting, weekend travel, and more people on the road at the end of the workweek. This suggests that traffic safety messaging or enforcement may be especially important before Friday evening travel periods.
+
+The second version is stronger because it connects the data to a possible explanation and a real-world implication.
+
+## Key Takeaways
+
+*   Visualization helps people see patterns quickly.
+*   Python and Pandas make analysis more efficient and repeatable.
+*   Cleaning and preprocessing make results more trustworthy.
+*   Machine learning can support prediction and comparison.
+*   Storytelling connects the technical work to audience understanding and action.
+
+::: {.callout-tip}
+### The Big Idea
+Data storytelling is not decoration. It is the process of turning analysis into understanding.
+:::
+
+## Roadmap for Part 2
+
+In Part 2, you will apply this toolkit to design your own data science project. You will choose a dataset, define a research question, plan your analysis, and begin thinking about how your final results will become a clear presentation.

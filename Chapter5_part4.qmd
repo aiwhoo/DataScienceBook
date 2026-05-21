@@ -1,0 +1,145 @@
+---
+title: "Machine Learning in Practice"
+subtitle: "Part 4: Decision Trees and Model Comparison"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Explain why **Linear Regression** may fail on nonlinear data.
+*   Describe how a **Decision Tree** model makes predictions.
+*   Compare Linear Regression and Decision Trees using **MSE** and **R²**.
+*   Recognize why model comparison is essential in practical machine learning.
+*   Build and evaluate two models on the same dataset for a fair comparison.
+
+## When Linear Regression Falls Short
+
+Linear Regression assumes the relationship between inputs and outputs follows a straight line. That assumption is sometimes useful—but real-world data is often more complicated.
+
+Relationships in data may be curved, stepped, or highly nonlinear. When that happens, a straight-line model can miss important patterns.
+
+This leads to an important question: **What kind of model should we try when a line is not enough?**
+
+## Enter the Decision Tree
+
+A **Decision Tree** is a model that makes predictions by asking a series of yes/no questions about the data and splitting observations into branches.
+
+Unlike Linear Regression, it does not try to fit one straight line across the entire dataset. Instead, it creates decision rules that divide the data into smaller and more specific groups.
+
+### Why Decision Trees Matter
+
+*   **Works for Regression and Classification:** It can predict both numbers and categories.
+*   **Handles Nonlinear Patterns:** It adapts more easily to complex relationships.
+*   **Easy to Visualize:** The branching structure can often be drawn and interpreted step by step.
+
+::: {.callout-note}
+### Decision Rule
+A Decision Tree makes predictions by repeatedly splitting data based on feature thresholds. Each split creates a new branch in the model.
+:::
+
+```{mermaid}
+graph TD
+    A[Start with Data] --> B{Feature Rule?}
+    B -->|Yes| C[Branch 1]
+    B -->|No| D[Branch 2]
+    C --> E[Prediction]
+    D --> F[Prediction]
+```
+
+## Building a Decision Tree
+
+To create a fair comparison, we use the same dataset from the Linear Regression example.
+
+The workflow is familiar:
+
+1.  **Load and Prepare the Data**
+2.  **Initialize the Model**
+3.  **Fit the Model**
+4.  **Generate Predictions**
+5.  **Evaluate the Results**
+
+A typical scikit-learn workflow looks like this:
+
+```python
+from sklearn.tree import DecisionTreeRegressor
+
+tree_model = DecisionTreeRegressor(random_state=42)
+tree_model.fit(X_train, y_train)
+tree_predictions = tree_model.predict(X_test)
+```
+
+## The Results Improved
+
+In the slide example, the visual results improved. The scatter plot showed the predicted values sitting much closer to the actual values than they did with Linear Regression.
+
+That visual “tightening” suggests that the Decision Tree captured the underlying pattern more effectively.
+
+The evaluation metrics also improved:
+
+*   **MSE:** 82
+*   **R²:** 0.52
+
+These numbers are much stronger than the earlier Linear Regression results.
+
+## The Numbers Back It Up
+
+Why do these metrics matter?
+
+*   **Lower MSE** means the model’s predictions are closer to the true values.
+*   **Higher R²** means the model explains more of the variation in the data.
+
+Compared with Linear Regression:
+
+*   Linear Regression had a **higher MSE** and a **lower R²**.
+*   The Decision Tree had a **lower MSE** and a **higher R²**.
+
+That makes the Decision Tree the stronger model for this dataset.
+
+::: {.callout-tip}
+### Instructor Insight: One Model Does Not Fit Every Problem
+A model that performs poorly is not a dead end. It is often a sign that the data needs a different modeling approach.
+:::
+
+## Linear Regression vs. Decision Tree
+
+Here is the big comparison:
+
+*   **Linear Regression**
+    *   Regression only
+    *   Assumes a linear relationship
+    *   Easier to describe with a formula
+*   **Decision Tree**
+    *   Works for regression and classification
+    *   Handles nonlinear patterns
+    *   Easier to explain visually with branches
+
+For this chapter’s dataset, the Decision Tree performed better on both major metrics.
+
+## Activity: Build and Compare Your Own Models
+
+Now it is your turn to test both models on the same dataset.
+
+1.  **Build Both Models:** Train a Linear Regression model and a Decision Tree model.
+2.  **Evaluate with Metrics:** Calculate MSE and R² for each one.
+3.  **Create a Scatter Plot:** Compare predictions with actual values and look for differences in fit.
+
+The goal is not just to build a model—it is to learn how to compare models and choose the one that fits the data best.
+
+## Wrap-Up: What This Chapter Built Toward
+
+Across Chapter 5, you moved through the core structure of an introductory machine learning workflow:
+
+*   You learned what machine learning is and why it matters.
+*   You distinguished between regression and classification.
+*   You used train/test split to evaluate models fairly.
+*   You built models with scikit-learn.
+*   You compared Linear Regression and Decision Trees using real metrics.
+
+## Looking Ahead
+
+This chapter introduced a powerful idea at the heart of data science: **different models reveal different strengths and weaknesses**.
+
+As you continue, the goal is not just to run code, but to think critically about what your model learned, how well it performed, and why one approach might work better than another.

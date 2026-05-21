@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Technical Instructional Team">
 
-<title>Project Title – template</title>
+<title>Machine Learning in Practice – template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,45 +21,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -103,15 +69,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script type="text/javascript">
-window.PlotlyConfig = {MathJaxConfig: 'local'};
-if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-</script>
-<script type="module">import "https://cdn.plot.ly/plotly-3.3.1.min"</script>
-
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -126,7 +86,9 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Motivation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      template
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,7 +115,7 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motivation</span></a>
   </div>
 </li>
@@ -197,8 +159,19 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#motivation-for-this-work" id="toc-motivation-for-this-work" class="nav-link active" data-scroll-target="#motivation-for-this-work">Motivation for this Work</a></li>
-  <li><a href="#this-is-a-subtitle" id="toc-this-is-a-subtitle" class="nav-link" data-scroll-target="#this-is-a-subtitle">This is a subtitle</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#a-prediction-mystery-can-you-guess-a-friends-heart-rate" id="toc-a-prediction-mystery-can-you-guess-a-friends-heart-rate" class="nav-link" data-scroll-target="#a-prediction-mystery-can-you-guess-a-friends-heart-rate">A Prediction Mystery: Can You Guess a Friend’s Heart Rate?</a></li>
+  <li><a href="#teaching-a-computer-to-solve-the-mystery" id="toc-teaching-a-computer-to-solve-the-mystery" class="nav-link" data-scroll-target="#teaching-a-computer-to-solve-the-mystery">Teaching a Computer to Solve the Mystery</a></li>
+  <li><a href="#what-is-machine-learning" id="toc-what-is-machine-learning" class="nav-link" data-scroll-target="#what-is-machine-learning">What is Machine Learning?</a></li>
+  <li><a href="#why-machine-learning-it-is-everywhere." id="toc-why-machine-learning-it-is-everywhere." class="nav-link" data-scroll-target="#why-machine-learning-it-is-everywhere.">Why Machine Learning? It Is Everywhere.</a></li>
+  <li><a href="#how-does-machine-learning-work" id="toc-how-does-machine-learning-work" class="nav-link" data-scroll-target="#how-does-machine-learning-work">How Does Machine Learning Work?</a>
+  <ul class="collapse">
+  <li><a href="#regression-vs.-classification" id="toc-regression-vs.-classification" class="nav-link" data-scroll-target="#regression-vs.-classification">1. Regression vs.&nbsp;Classification</a></li>
+  <li><a href="#traintest-split-and-overfitting" id="toc-traintest-split-and-overfitting" class="nav-link" data-scroll-target="#traintest-split-and-overfitting">2. Train/Test Split and Overfitting</a></li>
+  <li><a href="#modeling-with-scikit-learn" id="toc-modeling-with-scikit-learn" class="nav-link" data-scroll-target="#modeling-with-scikit-learn">3. Modeling with scikit-learn</a></li>
+  </ul></li>
+  <li><a href="#session-overview" id="toc-session-overview" class="nav-link" data-scroll-target="#session-overview">Session Overview</a></li>
+  <li><a href="#roadmap-for-part-1" id="toc-roadmap-for-part-1" class="nav-link" data-scroll-target="#roadmap-for-part-1">Roadmap for Part 1</a></li>
   </ul>
 </nav>
     </div>
@@ -207,13 +180,20 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Title</h1>
+<h1 class="title">Machine Learning in Practice</h1>
+<p class="subtitle lead">Part 1: Introduction to Machine Learning</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Technical Instructional Team </p>
+          </div>
+  </div>
     
   
     
@@ -224,143 +204,134 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 </header>
 
 
-<p><em>Author, Technology Service Center, University of Delaware</em></p>
-<p>20XX-XX-XX</p>
-<section id="motivation-for-this-work" class="level2">
-<h2 class="anchored" data-anchor-id="motivation-for-this-work">Motivation for this Work</h2>
-<p>Insert a paragraph of the motivation of this work.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+<li>Define <strong>machine learning</strong> as a process of learning patterns from data.</li>
+<li>Explain how machine learning uses multiple clues, or <strong>features</strong>, to make predictions.</li>
+<li>Identify everyday examples of machine learning in apps, transportation, and smart systems.</li>
+<li>Describe the three big ideas that structure this chapter: <strong>task type</strong>, <strong>evaluation</strong>, and <strong>modeling tools</strong>.</li>
+</ul>
 </section>
-<section id="this-is-a-subtitle" class="level2">
-<h2 class="anchored" data-anchor-id="this-is-a-subtitle">This is a subtitle</h2>
-<p>This is text.</p>
-<p><a href="https://quarto.org/">Hyperlink to an externel website</a></p>
-<p><a href="keyFindings.html#key-finding-1">Hyperlink to another section</a></p>
-<p>A table is below:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Item</th>
-<th style="text-align: center;">In Stock</th>
-<th style="text-align: right;">Price</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Python Hat</td>
-<td style="text-align: center;">True</td>
-<td style="text-align: right;">23.99</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SQL Hat</td>
-<td style="text-align: center;">True</td>
-<td style="text-align: right;">23.99</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Codecademy Tee</td>
-<td style="text-align: center;">False</td>
-<td style="text-align: right;">19.99</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Codecademy Hoodie</td>
-<td style="text-align: center;">False</td>
-<td style="text-align: right;">42.99</td>
-</tr>
-</tbody>
-</table>
-<p>This is an image:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/cat.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 1: Cat image</figcaption>
-</figure>
+<section id="a-prediction-mystery-can-you-guess-a-friends-heart-rate" class="level2">
+<h2 class="anchored" data-anchor-id="a-prediction-mystery-can-you-guess-a-friends-heart-rate">A Prediction Mystery: Can You Guess a Friend’s Heart Rate?</h2>
+<p>Imagine this scenario: yesterday, you walked <strong>8,000 steps</strong>, while your friend walked only <strong>3,000</strong>. Would your heart rates be the same? Probably not. Now add even more clues: your ages, genders, and how far you traveled. Suddenly, the problem becomes richer—and more interesting.</p>
+<p>This is exactly the kind of situation where <strong>machine learning</strong> becomes useful. Instead of relying on a single clue, we use multiple pieces of information to make a smarter prediction.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Interactive plot is below:</p>
-<div id="a2aabe2a" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.1.min.js" integrity="sha256-4rD3fugVb/nVJYUv5Ky3v+fYXoouHaBSP20WIJuEiWg=" crossorigin="anonymous"></script>                <div id="5b7fa623-d980-463d-bfbf-6c974b072c41" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5b7fa623-d980-463d-bfbf-6c974b072c41")) {                    Plotly.newPlot(                        "5b7fa623-d980-463d-bfbf-6c974b072c41",                        [{"hovertemplate":"species=setosa\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"setosa","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"setosa","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"AAAAAAAADEAAAAAAAAAIQJqZmZmZmQlAzczMzMzMCEDNzMzMzMwMQDMzMzMzMw9AMzMzMzMzC0AzMzMzMzMLQDMzMzMzMwdAzczMzMzMCECamZmZmZkNQDMzMzMzMwtAAAAAAAAACEAAAAAAAAAIQAAAAAAAABBAmpmZmZmZEUAzMzMzMzMPQAAAAAAAAAxAZmZmZmZmDkBmZmZmZmYOQDMzMzMzMwtAmpmZmZmZDUDNzMzMzMwMQGZmZmZmZgpAMzMzMzMzC0AAAAAAAAAIQDMzMzMzMwtAAAAAAAAADEAzMzMzMzMLQJqZmZmZmQlAzczMzMzMCEAzMzMzMzMLQGZmZmZmZhBAzczMzMzMEEDNzMzMzMwIQJqZmZmZmQlAAAAAAAAADEDNzMzMzMwIQAAAAAAAAAhAMzMzMzMzC0AAAAAAAAAMQGZmZmZmZgJAmpmZmZmZCUAAAAAAAAAMQGZmZmZmZg5AAAAAAAAACEBmZmZmZmYOQJqZmZmZmQlAmpmZmZmZDUBmZmZmZmYKQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"ZmZmZmZmFECamZmZmZkTQM3MzMzMzBJAZmZmZmZmEkAAAAAAAAAUQJqZmZmZmRVAZmZmZmZmEkAAAAAAAAAUQJqZmZmZmRFAmpmZmZmZE0CamZmZmZkVQDMzMzMzMxNAMzMzMzMzE0AzMzMzMzMRQDMzMzMzMxdAzczMzMzMFkCamZmZmZkVQGZmZmZmZhRAzczMzMzMFkBmZmZmZmYUQJqZmZmZmRVAZmZmZmZmFEBmZmZmZmYSQGZmZmZmZhRAMzMzMzMzE0AAAAAAAAAUQAAAAAAAABRAzczMzMzMFEDNzMzMzMwUQM3MzMzMzBJAMzMzMzMzE0CamZmZmZkVQM3MzMzMzBRAAAAAAAAAFkCamZmZmZkTQAAAAAAAABRAAAAAAAAAFkCamZmZmZkTQJqZmZmZmRFAZmZmZmZmFEAAAAAAAAAUQAAAAAAAABJAmpmZmZmZEUAAAAAAAAAUQGZmZmZmZhRAMzMzMzMzE0BmZmZmZmYUQGZmZmZmZhJAMzMzMzMzFUAAAAAAAAAUQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"species=versicolor\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"versicolor","marker":{"color":"#EF553B","symbol":"circle"},"mode":"markers","name":"versicolor","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"mpmZmZmZCUCamZmZmZkJQM3MzMzMzAhAZmZmZmZmAkBmZmZmZmYGQGZmZmZmZgZAZmZmZmZmCkAzMzMzMzMDQDMzMzMzMwdAmpmZmZmZBUAAAAAAAAAAQAAAAAAAAAhAmpmZmZmZAUAzMzMzMzMHQDMzMzMzMwdAzczMzMzMCEAAAAAAAAAIQJqZmZmZmQVAmpmZmZmZAUAAAAAAAAAEQJqZmZmZmQlAZmZmZmZmBkAAAAAAAAAEQGZmZmZmZgZAMzMzMzMzB0AAAAAAAAAIQGZmZmZmZgZAAAAAAAAACEAzMzMzMzMHQM3MzMzMzARAMzMzMzMzA0AzMzMzMzMDQJqZmZmZmQVAmpmZmZmZBUAAAAAAAAAIQDMzMzMzMwtAzczMzMzMCEBmZmZmZmYCQAAAAAAAAAhAAAAAAAAABEDNzMzMzMwEQAAAAAAAAAhAzczMzMzMBEBmZmZmZmYCQJqZmZmZmQVAAAAAAAAACEAzMzMzMzMHQDMzMzMzMwdAAAAAAAAABEBmZmZmZmYGQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAAAAHECamZmZmZkZQJqZmZmZmRtAAAAAAAAAFkAAAAAAAAAaQM3MzMzMzBZAMzMzMzMzGUCamZmZmZkTQGZmZmZmZhpAzczMzMzMFEAAAAAAAAAUQJqZmZmZmRdAAAAAAAAAGEBmZmZmZmYYQGZmZmZmZhZAzczMzMzMGkBmZmZmZmYWQDMzMzMzMxdAzczMzMzMGEBmZmZmZmYWQJqZmZmZmRdAZmZmZmZmGEAzMzMzMzMZQGZmZmZmZhhAmpmZmZmZGUBmZmZmZmYaQDMzMzMzMxtAzczMzMzMGkAAAAAAAAAYQM3MzMzMzBZAAAAAAAAAFkAAAAAAAAAWQDMzMzMzMxdAAAAAAAAAGECamZmZmZkVQAAAAAAAABhAzczMzMzMGkAzMzMzMzMZQGZmZmZmZhZAAAAAAAAAFkAAAAAAAAAWQGZmZmZmZhhAMzMzMzMzF0AAAAAAAAAUQGZmZmZmZhZAzczMzMzMFkDNzMzMzMwWQM3MzMzMzBhAZmZmZmZmFEDNzMzMzMwWQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"species=virginica\u003cbr\u003esepal_width=%{x}\u003cbr\u003esepal_length=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"virginica","marker":{"color":"#00cc96","symbol":"circle"},"mode":"markers","name":"virginica","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"ZmZmZmZmCkCamZmZmZkFQAAAAAAAAAhAMzMzMzMzB0AAAAAAAAAIQAAAAAAAAAhAAAAAAAAABEAzMzMzMzMHQAAAAAAAAARAzczMzMzMDECamZmZmZkJQJqZmZmZmQVAAAAAAAAACEAAAAAAAAAEQGZmZmZmZgZAmpmZmZmZCUAAAAAAAAAIQGZmZmZmZg5AzczMzMzMBECamZmZmZkBQJqZmZmZmQlAZmZmZmZmBkBmZmZmZmYGQJqZmZmZmQVAZmZmZmZmCkCamZmZmZkJQGZmZmZmZgZAAAAAAAAACEBmZmZmZmYGQAAAAAAAAAhAZmZmZmZmBkBmZmZmZmYOQGZmZmZmZgZAZmZmZmZmBkDNzMzMzMwEQAAAAAAAAAhAMzMzMzMzC0DNzMzMzMwIQAAAAAAAAAhAzczMzMzMCEDNzMzMzMwIQM3MzMzMzAhAmpmZmZmZBUCamZmZmZkJQGZmZmZmZgpAAAAAAAAACEAAAAAAAAAEQAAAAAAAAAhAMzMzMzMzC0AAAAAAAAAIQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"MzMzMzMzGUAzMzMzMzMXQGZmZmZmZhxAMzMzMzMzGUAAAAAAAAAaQGZmZmZmZh5AmpmZmZmZE0AzMzMzMzMdQM3MzMzMzBpAzczMzMzMHEAAAAAAAAAaQJqZmZmZmRlAMzMzMzMzG0DNzMzMzMwWQDMzMzMzMxdAmpmZmZmZGUAAAAAAAAAaQM3MzMzMzB5AzczMzMzMHkAAAAAAAAAYQJqZmZmZmRtAZmZmZmZmFkDNzMzMzMweQDMzMzMzMxlAzczMzMzMGkDNzMzMzMwcQM3MzMzMzBhAZmZmZmZmGECamZmZmZkZQM3MzMzMzBxAmpmZmZmZHUCamZmZmZkfQJqZmZmZmRlAMzMzMzMzGUBmZmZmZmYYQM3MzMzMzB5AMzMzMzMzGUCamZmZmZkZQAAAAAAAABhAmpmZmZmZG0DNzMzMzMwaQJqZmZmZmRtAMzMzMzMzF0AzMzMzMzMbQM3MzMzMzBpAzczMzMzMGkAzMzMzMzMZQAAAAAAAABpAzczMzMzMGECamZmZmZkXQA=="},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"sepal_width"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"sepal_length"}},"legend":{"title":{"text":"species"},"tracegroupgap":0},"title":{"text":"Interactive Plotly Scatter"}},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('5b7fa623-d980-463d-bfbf-6c974b072c41');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };            </script>        </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A Machine Learning Problem
 </div>
 </div>
-<p>This is a map:</p>
-<iframe src="https://www.google.com/maps/d/embed?mid=1L1EOKHYYIpvG8KEbe4iMEppFlZ598jA&amp;ehbc=2E312F" width="640" height="480" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-<p>Reading from a public Google Sheet (code and display the data):</p>
-<div id="93317175" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sheet_id <span class="op">=</span> <span class="st">"1jcZAtyEZ_5Q7ruPaUYxErM_a4UP9dP9PwbnsRnVl0hE"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"https://docs.google.com/spreadsheets/d/</span><span class="sc">{</span>sheet_id<span class="sc">}</span><span class="ss">/gviz/tq?tqx=out:csv"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="callout-body-container callout-body">
+<p>A machine learning problem often begins with a question like: <em>Given several clues, can we predict an outcome?</em> In this chapter, that outcome is <strong>heart rate</strong>.</p>
+</div>
+</div>
+</section>
+<section id="teaching-a-computer-to-solve-the-mystery" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-a-computer-to-solve-the-mystery">Teaching a Computer to Solve the Mystery</h2>
+<p>At its core, machine learning is about <strong>teaching a computer to learn from examples</strong>. Rather than programming every rule by hand, we give the computer data and let it discover patterns for itself.</p>
+<p>Think about how you learned to recognize a dog. Nobody handed you a perfect rulebook. You learned by seeing many examples. Machine learning works in much the same way: the computer studies examples, detects patterns, and uses them to make predictions about new cases it has never seen before.</p>
+</section>
+<section id="what-is-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-machine-learning">What is Machine Learning?</h2>
+<p>Machine Learning is when computers learn from data to make predictions <strong>without being explicitly programmed for every single scenario</strong>.</p>
+<p>That does not mean the computer is “thinking” like a person. It means the computer is finding relationships in data. If those relationships are useful, the model can make a reasonable guess when new data appears.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
 <div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Food</th>
-<th data-quarto-table-cell-role="th">Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Apple</td>
-<td>1.99</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Pineapple</td>
-<td>3.99</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Chicken</td>
-<td>4.99</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Noodles</td>
-<td>2.99</td>
-</tr>
-</tbody>
-</table>
-
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[Examples from Data] --&gt; B[Model Learns Patterns]
+    B --&gt; C[Prediction on New Data]
+</pre>
+</div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p>This is code snippet that is NOT runned:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> isOdd(n):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> n<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>: </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Insight: Learning from Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A machine learning model is only as useful as the examples it learns from. Good data helps models find real patterns instead of random noise.</p>
+</div>
+</div>
+</section>
+<section id="why-machine-learning-it-is-everywhere." class="level2">
+<h2 class="anchored" data-anchor-id="why-machine-learning-it-is-everywhere.">Why Machine Learning? It Is Everywhere.</h2>
+<p>Machine learning is not a futuristic idea. It is already embedded in many tools people use every day.</p>
+<ul>
+<li><strong>TikTok:</strong> Learns from your watch history, likes, and interactions to recommend videos.</li>
+<li><strong>Tesla:</strong> Uses computer vision models to detect pedestrians, lane markings, and obstacles in real time.</li>
+<li><strong>Smart Systems:</strong> Powers recommendation engines, fraud detection systems, and voice assistants.</li>
+</ul>
+<p>These systems all rely on the same core idea: use past data to make a smart prediction or decision in the present.</p>
+</section>
+<section id="how-does-machine-learning-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-machine-learning-work">How Does Machine Learning Work?</h2>
+<p>This chapter is organized around <strong>three big ideas</strong> that appear in nearly every machine learning project.</p>
+<section id="regression-vs.-classification" class="level3">
+<h3 class="anchored" data-anchor-id="regression-vs.-classification">1. Regression vs.&nbsp;Classification</h3>
+<p>What kind of problem are we solving? Are we predicting a <strong>number</strong>, or assigning a <strong>category</strong>?</p>
+</section>
+<section id="traintest-split-and-overfitting" class="level3">
+<h3 class="anchored" data-anchor-id="traintest-split-and-overfitting">2. Train/Test Split and Overfitting</h3>
+<p>How do we teach the computer fairly? We need one set of data for learning and another for honest evaluation.</p>
+</section>
+<section id="modeling-with-scikit-learn" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-with-scikit-learn">3. Modeling with scikit-learn</h3>
+<p>What tool will we use to build the model? In this chapter, we use <strong>scikit-learn</strong>, one of Python’s most important machine learning libraries.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    A[Machine Learning Project] --&gt; B[Task Type]
+    A --&gt; C[Evaluation Strategy]
+    A --&gt; D[Modeling Tool]
+    B --&gt; B1[Regression vs Classification]
+    C --&gt; C1[Train/Test Split + Overfitting]
+    D --&gt; D1[scikit-learn Models]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="session-overview" class="level2">
+<h2 class="anchored" data-anchor-id="session-overview">Session Overview</h2>
+<p>Across the four parts of Chapter 5, we move from big ideas to hands-on model building:</p>
+<ul>
+<li><strong>Part 1:</strong> Introduction to Machine Learning</li>
+<li><strong>Part 2:</strong> Regression vs.&nbsp;Classification, Train/Test Split, and Overfitting</li>
+<li><strong>Part 3:</strong> scikit-learn and Linear Regression</li>
+<li><strong>Part 4:</strong> Decision Trees, model comparison, and improving predictions</li>
+</ul>
+</section>
+<section id="roadmap-for-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="roadmap-for-part-1">Roadmap for Part 1</h2>
+<p>Today we established the foundation for the rest of the chapter. Our next steps will move from the <strong>idea</strong> of machine learning to the <strong>practice</strong> of building and evaluating models:</p>
+<ol type="1">
+<li><strong>Regression vs.&nbsp;Classification:</strong> Understanding what kind of prediction problem we are solving.</li>
+<li><strong>Train/Test Split:</strong> Learning how to evaluate models honestly.</li>
+<li><strong>scikit-learn Modeling:</strong> Building real models with Python tools.</li>
+<li><strong>Decision Trees:</strong> Comparing models and improving predictions.</li>
+</ol>
 
 
 </section>

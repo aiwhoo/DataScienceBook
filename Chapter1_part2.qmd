@@ -1,0 +1,166 @@
+
+---
+title: "Chapter 1: What is Data?"
+subtitle: "Part 2: Exploring Data Through Real-Life Activities"
+author: "Technical Instructional Team"
+format:
+  html:
+    toc: true
+    toc-title: "On this page"
+    toc-location: right
+    number-sections: false
+    page-layout: article
+---
+
+> Every action leaves a trace. Learning to notice and interpret those traces is one of the first steps in data science.
+
+## From Ideas to Action
+
+So far, we have focused on the concept of data. Now it is time to make that idea more concrete.
+
+The activities in this chapter help you notice something important: **data is everywhere, but patterns are often hidden until you stop and examine them**.
+
+::: {.callout-tip}
+### Your Goal
+Analyze your own data and begin developing a sharper, more critical lens for understanding it.
+:::
+
+---
+
+## Activity 1: Log Your Data
+
+**Purpose:** Understand how ordinary daily actions generate data  
+
+**Task:** Record everything you did yesterday as completely as possible  
+
+**Include actions such as:**
+- Phone use  
+- Walking or travel  
+- Music or video streaming  
+- Texting or messaging  
+- Websites visited  
+
+**Then identify:**
+- What kind of data was created  
+- Where it was stored (device, app, or cloud)  
+
+<details>
+<summary>Reflection Questions</summary>
+
+1. What did the data reveal about your habits or routines?  
+2. Did anything surprise you about how much data you generate?  
+3. Is your data incomplete, limited, or potentially biased?  
+
+</details>
+
+::: {.callout-note}
+### Why This Matters
+Collecting data is only the first step. Insight comes from asking questions about it.
+:::
+
+---
+
+## Activity 2: Explore Your Google Data
+
+**Purpose:** Examine how platforms collect detailed records of behavior  
+
+**Task:** Use **Google Takeout** to explore your personal data  
+
+**Look for categories such as:**
+- **Search History** — queries you’ve made  
+- **YouTube Activity** — videos watched or searched  
+- **Location Data** — places you’ve visited  
+
+This activity helps make invisible digital records visible.
+
+<details>
+<summary>Reflection Questions</summary>
+
+1. What surprised you the most?  
+2. How detailed was the information?  
+3. Who else might find this data useful (advertisers, researchers, companies)?  
+
+</details>
+
+::: {.callout-important}
+### Critical Thinking
+Personal data is powerful—but it also raises questions about privacy and control.
+:::
+
+---
+
+## Activity 3: Text Message Analysis
+
+**Purpose:** Explore communication patterns as data  
+
+**Task:** Choose a recent conversation and analyze it  
+
+**Measure:**
+- Messages sent vs. received  
+- Average response time  
+- Most common words or emojis  
+
+You can also use a sentiment analysis tool (e.g., Daniel Soper Sentiment Analyzer) to classify tone:
+- Positive  
+- Neutral  
+- Negative  
+
+<details>
+<summary>Reflection Questions</summary>
+
+1. Who starts conversations more often?  
+2. What patterns appear in communication?  
+3. When might a computer misinterpret tone (sarcasm, humor)?  
+
+</details>
+
+---
+
+## Activity 4: Pose Detection
+
+**Purpose:** Understand how computers interpret physical movement  
+
+**Task:** Use a pose detection tool (e.g., MediaPipe Pose)  
+
+**Observe how accuracy changes based on:**
+- Movement speed  
+- Body position  
+- Lighting conditions  
+
+<details>
+<summary>Reflection Questions</summary>
+
+1. When does pose detection fail?  
+2. What conditions reduce accuracy?  
+3. What does this reveal about machine limitations?  
+
+</details>
+
+---
+
+## Looking Across All Activities
+
+After completing all activities, step back and look for patterns:
+
+- **Your Patterns:** What habits or routines became visible?  
+- **Machine Misreads:** When did tools misinterpret tone or movement?  
+- **Missing Data:** What parts of your life were not captured well?  
+- **Bigger Meaning:** What does this say about how data represents people?  
+
+---
+
+## Key Takeaways
+
+* **Data is everywhere.** Everyday actions generate information.  
+* **Every action creates traces.** Clicking, searching, walking, and messaging all leave records.  
+* **Patterns emerge over time.** Small data points combine into meaningful insights.  
+* **Both types of data matter.** Structured and unstructured data work together.  
+* **Critical thinking is essential.** Data can be incomplete or misleading if not questioned.  
+
+---
+
+## Looking Ahead
+
+This chapter introduces a core idea of data science: **our lives are full of data, even when we do not see it**.
+
+In the chapters ahead, you will learn how to collect, organize, analyze, and question data more carefully.

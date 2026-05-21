@@ -1,0 +1,158 @@
+---
+title: "Data Visualization"
+subtitle: "Part 1: Understanding Data and Asking Good Questions"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Explain what **data** is and why it matters in everyday life.
+*   Identify different types of data, including **numerical, categorical, time-based, and geographic** data.
+*   Use a real dataset to ask meaningful analytical questions.
+*   Distinguish between **weak questions** and **strong questions** in data analysis.
+*   Connect questions to the kinds of visuals that may help answer them.
+
+This chapter is organized into three parts:
+
+- **Part 1:** Understanding data and asking good questions  
+- **Part 2:** Turning data into charts, graphs, and maps  
+- **Part 3:** Cleaning, summarizing, and interpreting data  
+
+## Every Day, You Already Use Data
+
+Even before you study data formally, you already use it every day. You check the weather before leaving the house, glance at the clock to see if you have time for breakfast, or notice traffic patterns during your commute. In each case, you are collecting information, interpreting it, and making a decision.
+
+One simple example is the question: **Should you bring an umbrella today?** To answer it, you might look at the temperature, cloud cover, and chance of rain. That is data-driven decision-making in action.
+
+::: {.callout-note}
+### Think About It
+What is one decision you made this morning based on information you gathered—even informally?
+:::
+
+## So... What Exactly Is Data?
+
+Data is simply **raw information about the world**. It can take many forms, including numbers, words, locations, and times. By itself, data is just a collection of facts. It becomes useful when we organize it, analyze it, and look for meaning.
+
+Some common forms of data include:
+
+*   **Numbers** — ages, temperatures, prices, speeds, or anything you can count
+*   **Categories** — labels such as rainy, sunny, car, truck, or school subject
+*   **Time** — dates, hours, seasons, or changes over time
+*   **Location** — counties, zip codes, states, or GPS coordinates
+
+Raw data does not automatically tell a story. To become meaningful, it must be organized, questioned, and often visualized.
+
+## Why Does Data Matter?
+
+Data matters because it helps people make better decisions and discover patterns they might otherwise miss.
+
+*   **Make Predictions:** Doctors use patient data to predict health risks. Coaches use statistics to predict outcomes.
+*   **Guide Decisions:** Cities use crash data to decide where to add traffic lights. Schools use test scores to improve curriculum.
+*   **Reveal Patterns:** Stores may notice that umbrella sales rise before storms, even before the forecast changes.
+
+When we learn to read data well, we gain the ability to understand the world more clearly.
+
+## Types of Data
+
+Before you can analyze or visualize anything, you need to know what kind of data you are working with. Different kinds of data are better suited to different chart types and analytical questions.
+
+The four common types we will use throughout this chapter are:
+
+*   **Numerical data**
+*   **Categorical data**
+*   **Time-based data**
+*   **Geographic data**
+
+::: {.callout-note}
+### Quick Check
+Is “number of crashes per month” numerical or categorical? Is “city where a crash occurred” time-based or geographic?
+:::
+
+## A Real Dataset: Delaware Traffic Crashes
+
+To make these ideas concrete, we can use a real dataset: the **Delaware Traffic Crash Dataset**.
+
+This public dataset records reported traffic crashes in Delaware and includes a wide range of variables, such as:
+
+*   Date and time of each crash
+*   Location, including county, road name, and GPS
+*   Weather and road conditions
+*   Number of vehicles and injuries involved
+*   Driver age, seatbelt use, and more
+
+This dataset is especially useful because it is local, real, and rich in different types of data. It gives us time-based, geographic, categorical, and numerical variables all in one place.
+
+## What Can We Ask This Data?
+
+A dataset becomes powerful when you ask good questions about it. Strong data analysis does not start with a chart—it starts with curiosity.
+
+For example, we might ask:
+
+*   **When do crashes happen most?** Are they more common during rush hour, late at night, or in certain seasons?
+*   **Where are crashes concentrated?** Are some counties, roads, or intersections more dangerous than others?
+*   **What factors increase risk?** Do weather, speeding, or seatbelt use affect injury severity?
+
+These are analytical questions because they connect variables and push us toward insight.
+
+## Good Questions vs. Bad Questions
+
+One of the most important skills in data analysis is learning to tell the difference between a vague question and a meaningful one.
+
+### Weak Questions
+Weak questions are often too broad, too descriptive, or too unfocused.
+
+Examples include:
+
+*   What is in this dataset?
+*   Make a chart of the data.
+*   How many crashes are there?
+*   Show me something interesting.
+
+### Strong Questions
+Strong questions connect variables, can be tested with data, and lead to a clear direction for analysis.
+
+Examples include:
+
+*   How does weather affect crash severity?
+*   Which hour of day has the most crashes?
+*   Do teen drivers crash more in certain conditions?
+*   Has crash frequency changed over time?
+
+::: {.callout-tip}
+### Instructor Insight
+Strong analytical questions often begin with words like **how**, **does**, **which**, or **what is the relationship between**.
+:::
+
+## Activity: Ask Better Questions
+
+Now it is your turn to practice.
+
+Working individually or with a partner:
+
+1.  **Choose a Dataset:** Use the Delaware crash data, school lunch participation data, local weather data, or another dataset your teacher provides.
+2.  **Explore the Variables:** Look through the columns and identify the types of data present.
+3.  **Write Two Strong Questions:** Make sure each question connects at least two variables and could actually be answered with the data.
+4.  **Share and Revise:** Discuss your questions with the class and improve them if needed.
+
+::: {.callout-note}
+### Bonus Challenge
+For each question, predict what kind of chart might help answer it: a bar chart, line graph, scatter plot, or map.
+:::
+
+## Roadmap for Part 1
+
+In this part, we built the foundation for data visualization:
+
+- **What data is**  
+  Understanding raw facts, categories, time, and location  
+
+- **Why data matters**  
+  Using data to make decisions and spot patterns  
+
+- **How to ask strong questions**  
+  Moving from vague curiosity to testable analysis  
+
+In Part 2, we will turn those questions into **charts, graphs, and other visuals**.

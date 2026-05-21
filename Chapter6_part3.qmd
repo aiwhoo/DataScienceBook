@@ -1,0 +1,272 @@
+---
+title: "Data Storytelling & Presentation"
+subtitle: "Part 3: Mastering Data Storytelling"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Define data storytelling and explain how it differs from simply showing results.
+*   Identify the four essential elements of a strong data story: context, narrative, data, and visual design.
+*   Turn technical findings into a clear message for a specific audience.
+*   Use AI tools thoughtfully to improve clarity, structure, and audience awareness.
+*   Design a final presentation that emphasizes insight, relevance, and impact.
+
+## From Project Work to Storytelling
+
+Part 2 focused on designing a complete data science project. Part 3 focuses on the final step: communicating your results.
+
+At this stage, you may have a dataset, charts, summary tables, and model results. But those materials do not automatically create understanding. The audience needs guidance. They need to know what question you asked, what evidence you found, and why the finding matters.
+
+::: {.callout-note}
+### Core Idea
+Data storytelling is the process of guiding an audience from evidence to understanding. The goal is not to show everything you did. The goal is to make the most important insight clear.
+:::
+
+## What Is Data Storytelling?
+
+Data storytelling combines three things:
+
+*   **Data** — the evidence behind the message.
+*   **Visuals** — charts, tables, or graphics that make patterns easier to see.
+*   **Narrative** — the explanation that connects the evidence to meaning.
+
+A dataset may contain hundreds of possible details. A story selects the details that matter most and arranges them in a way the audience can follow.
+
+```{mermaid}
+flowchart LR
+    A[Data] --> D[Data Story]
+    B[Visuals] --> D
+    C[Narrative] --> D
+    D --> E[Understanding]
+    D --> F[Action]
+    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px
+    style B fill:#dcfce7,stroke:#333,stroke-width:1.5px
+    style C fill:#fef3c7,stroke:#333,stroke-width:1.5px
+    style D fill:#ede9fe,stroke:#333,stroke-width:2px
+```
+
+## The Four Essential Elements
+
+A strong data story usually includes four connected elements.
+
+### 1. Context
+
+Context explains the situation. It answers:
+
+*   What is the topic?
+*   Why should the audience care?
+*   What problem or question are we investigating?
+
+Without context, the audience may see the chart but not understand why it matters.
+
+### 2. Narrative
+
+Narrative is the path through the story. It gives the presentation a beginning, middle, and end.
+
+A simple narrative structure is:
+
+1.  Here is the question.
+2.  Here is the data we used.
+3.  Here is the pattern we found.
+4.  Here is what the pattern means.
+5.  Here is what we should remember or do next.
+
+### 3. Data
+
+The data is the evidence. It keeps the story grounded and credible. Good data storytelling does not exaggerate or hide uncertainty. It explains what the data supports and what it does not prove.
+
+### 4. Visual Design
+
+Visual design controls how easily the audience can understand the evidence. A clear visual uses appropriate chart types, readable labels, meaningful titles, and minimal clutter.
+
+::: {.callout-tip}
+### Design Principle
+Do not make the audience work harder than necessary. A chart should make the main point easier to see, not harder.
+:::
+
+## Why Storytelling Matters in Data Science
+
+Data science is often technical, but decisions are made by people. Storytelling helps bridge the gap between technical work and human understanding.
+
+A strong story can:
+
+*   Simplify complex results.
+*   Help the audience remember the main message.
+*   Connect findings to real-world impact.
+*   Support better decisions.
+*   Make analysis feel relevant rather than abstract.
+
+### Example: Data vs. Story
+
+A basic data statement might be:
+
+> Accident rates increased by 20%.
+
+A stronger story would be:
+
+> Accident rates increased by 20%, especially during heavier commuting periods. This suggests that changes in travel behavior may be affecting road safety and that prevention efforts should focus on high-traffic times.
+
+The second version does more than report a number. It connects the number to a possible explanation and a practical implication.
+
+## Turning Findings into Messages
+
+A common mistake is trying to present every result. A better approach is to identify the strongest message and use your evidence to support it.
+
+### Use This Formula
+
+> Our analysis shows that **[main finding]**, which matters because **[real-world meaning]**.
+
+Examples:
+
+*   Our analysis shows that crashes are more common on Fridays, which matters because prevention efforts may be most useful before weekend travel begins.
+*   Our analysis shows that one model predicted outcomes more accurately than another, which matters because model choice affects how much confidence we should place in predictions.
+*   Our analysis shows that missing data was concentrated in specific fields, which matters because those fields may limit the conclusions we can draw.
+
+::: {.callout-note}
+### Strong Message Test
+If your audience remembers only one sentence from your presentation, that sentence should be your key message.
+:::
+
+## Choosing What to Show
+
+Your final presentation should not include every chart or every line of code. Choose the evidence that best supports the story.
+
+Ask yourself:
+
+*   Does this chart answer the research question?
+*   Does this result support the main message?
+*   Is this detail necessary for the audience to understand the conclusion?
+*   Would removing this slide make the story weaker?
+
+If the answer is no, the content may belong in an appendix or may not be needed at all.
+
+## Slide Design for Data Stories
+
+Good slides help the audience focus. They should not compete with the speaker.
+
+### Practical Slide Guidelines
+
+*   Use one main idea per slide.
+*   Write titles that state the takeaway, not just the topic.
+*   Keep charts large and readable.
+*   Label axes clearly.
+*   Avoid unnecessary decoration.
+*   Use short text, not full paragraphs.
+*   Explain what the audience should notice.
+
+### Weak vs. Strong Slide Titles
+
+A weak title:
+
+> Bar Chart of Accidents
+
+A stronger title:
+
+> Friday Had the Highest Number of Reported Accidents
+
+The stronger title tells the audience what to look for before they even study the chart.
+
+## Using ChatGPT and AI Tools Thoughtfully
+
+AI tools can help improve communication, but they should not replace your understanding of the data. You are still responsible for accuracy.
+
+### Helpful Uses
+
+You can use AI to:
+
+*   Improve wording for clarity.
+*   Make explanations more concise.
+*   Generate possible slide titles.
+*   Predict audience questions.
+*   Suggest ways to connect visuals to a narrative.
+*   Rewrite technical findings for a nontechnical audience.
+
+### Example Prompt
+
+```text
+I am presenting a chart showing that Friday has the highest number of traffic crashes.
+Help me write a clear slide title and a 2-sentence explanation for a general audience.
+```
+
+### Use AI Carefully
+
+Always check that AI-generated explanations match your actual results. Do not let AI invent conclusions, causes, or numbers that are not supported by your data.
+
+::: {.callout-warning}
+### Accuracy First
+AI can improve language, but it cannot verify your analysis unless you give it the correct evidence. The data must lead the story.
+:::
+
+## Activity: Define Your Key Message
+
+Before building your final presentation, complete the following:
+
+1.  Write your research question.
+2.  Identify your most important finding.
+3.  Write a 1–2 sentence key message.
+4.  Explain why your audience should care.
+5.  Choose the one chart that best supports the message.
+
+Use this template:
+
+```text
+My research question is:
+
+My main finding is:
+
+My key message is:
+
+This matters because:
+
+The best visual to support this message is:
+```
+
+## Final Presentation Flow
+
+A strong final presentation should feel like a guided journey.
+
+```{mermaid}
+flowchart TD
+    A[Hook: Why the topic matters] --> B[Research Question]
+    B --> C[Dataset and Preparation]
+    C --> D[Key Visual Findings]
+    D --> E[Model Results, if used]
+    E --> F[Main Insight]
+    F --> G[Conclusion and Impact]
+    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px
+    style D fill:#dcfce7,stroke:#333,stroke-width:1.5px
+    style F fill:#fef3c7,stroke:#333,stroke-width:1.5px
+    style G fill:#ede9fe,stroke:#333,stroke-width:2px
+```
+
+This flow keeps the presentation focused. The audience should never feel like they are watching disconnected charts. Each slide should move them closer to the conclusion.
+
+## Final Checklist
+
+Before presenting, review this checklist:
+
+*   My research question is clear.
+*   I can explain my dataset in simple language.
+*   I selected only the most important charts.
+*   My charts have clear titles and labels.
+*   My model results are explained honestly.
+*   My key message is easy to remember.
+*   My conclusion explains why the findings matter.
+*   I am prepared to answer questions about my process.
+
+## Chapter 6 Summary
+
+Across Chapter 6, we moved from skills to project design to storytelling.
+
+*   Part 1 reviewed the toolkit: visualization, Python, preprocessing, and machine learning.
+*   Part 2 showed how to design a complete data science project.
+*   Part 3 focused on communicating findings with clarity and impact.
+
+::: {.callout-tip}
+### Final Thought
+The goal is not to impress the audience with every technical step. The goal is to help them understand the insight, trust the evidence, and remember why it matters.
+:::

@@ -1,0 +1,172 @@
+---
+title: "Data Visualization"
+subtitle: "Part 2: Turning Data into Visuals"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Why Visualize Data?
+
+A table full of numbers can be hard to interpret. A clear chart, however, can reveal the same pattern in seconds.
+
+Data visualization is not just about making information look good. It is about making information **clear, memorable, and useful**.
+
+Good visuals help us:
+
+*   **Spot patterns** that are hard to notice in raw numbers
+*   **Save time** by making the main idea easier to grasp
+*   **Tell a story** by turning data into a message people can understand
+
+## The Chart Selection Rule
+
+One of the most common mistakes in data visualization is choosing the wrong chart type.
+
+A simple rule helps: **start with your question**. Ask yourself what you are trying to show, then choose the chart that communicates that idea most clearly.
+
+::: {.callout-note}
+### Golden Rule
+Choose the chart that answers your question most clearly—not the one that looks the most impressive.
+:::
+
+## The Bar Chart
+
+A **bar chart** is best for comparing values across categories.
+
+Examples include:
+
+*   Test scores across different classes
+*   Sales for different products
+*   Population by city or state
+*   Wins across sports teams
+
+A bar chart makes differences easy to compare because each bar represents a quantity.
+
+::: {.callout-tip}
+### Best Use
+Think **compare** → think **bar chart**.
+:::
+
+## The Line Chart
+
+A **line chart** is used to show how something changes over time.
+
+Examples include:
+
+*   GPA across several semesters
+*   Daily temperature over a week
+*   Social media followers growing month by month
+
+Line charts are especially useful for showing trends, increases, decreases, and patterns across time.
+
+::: {.callout-tip}
+### Best Use
+Think **trend** or **over time** → think **line chart**.
+:::
+
+## The Pie Chart
+
+A **pie chart** shows how categories make up a whole.
+
+It works best when:
+
+*   There are **five or fewer categories**
+*   The values add up to **100%**
+*   The slices are clearly different in size
+
+Pie charts can be helpful, but they are often overused.
+
+Avoid them when:
+
+*   You need to compare exact values
+*   You have too many categories
+*   The slices are very similar in size
+
+In many cases, a bar chart is easier to read.
+
+## The Scatter Plot
+
+A **scatter plot** shows the relationship between two numerical variables.
+
+Examples include:
+
+*   Hours studied vs. exam score
+*   Temperature vs. ice cream sales
+*   Height vs. shoe size
+*   Sleep hours vs. mood rating
+
+Scatter plots help us look for **relationships** or **correlations** between variables.
+
+If the dots rise together, the relationship may be positive. If they fall, it may be negative. If the dots are scattered randomly, there may be no clear pattern.
+
+::: {.callout-note}
+### Correlation Reminder
+Correlation is not the same as causation. A relationship between two variables does not automatically mean one causes the other.
+:::
+
+## Common Mistakes in Data Visualization
+
+Even good data can be misunderstood if the chart is poorly designed.
+
+Some common mistakes include:
+
+### Wrong Chart Type
+Using a line chart for unrelated categories or a pie chart for trends over time can confuse the reader.
+
+### Too Much Data
+Crowding too many categories into one chart creates visual clutter and makes the message harder to see.
+
+### Misleading Scales
+Changing the axis scale can exaggerate or hide differences. Honest scales help people trust what they see.
+
+::: {.callout-important}
+### Why Design Choices Matter
+A misleading chart can change how people understand reality. Clear visualization is part of responsible data analysis.
+:::
+
+## Comparing Multiple Variables
+
+Sometimes one chart is not enough. When your data involves several variables at once, you may need more advanced visual strategies.
+
+Examples include:
+
+*   **Grouped bar charts** to compare several categories within each group
+*   **Multi-line charts** to compare trends across groups over time
+*   **Color or size encoding** in a scatter plot to add more layers of information
+
+These visuals can be powerful, but they should still remain easy to read.
+
+## Activity: Which Chart Would You Use?
+
+Choose the best chart type for each scenario:
+
+*   Showing how school lunch participation changed each month
+*   Showing the percentage of students who prefer each school subject
+*   Exploring the relationship between sleep and GPA
+*   Comparing wins across five sports teams
+
+Possible chart choices include:
+
+*   Bar chart
+*   Line chart
+*   Pie chart
+*   Scatter plot
+
+::: {.callout-tip}
+### Goal of the Activity
+Do not just name a chart—explain **why** it fits the question.
+:::
+
+## Roadmap for Part 2
+
+In this part, we focused on how to match a question to the right visual:
+
+- **Choosing chart types**  
+  Knowing when to use bars, lines, pies, and scatter plots  
+
+- **Avoiding common mistakes**  
+  Keeping charts clear, honest, and readable  
+
+- **Comparing more than one variable**  
+  Using visuals that show more complex patterns  
+
+In Part 3, we will move from choosing visuals to **cleaning, summarizing, and interpreting data**.

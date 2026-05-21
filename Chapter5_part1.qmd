@@ -1,0 +1,100 @@
+---
+title: "Machine Learning in Practice"
+subtitle: "Part 1: Introduction to Machine Learning"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Define **machine learning** as a process of learning patterns from data.
+*   Explain how machine learning uses multiple clues, or **features**, to make predictions.
+*   Identify everyday examples of machine learning in apps, transportation, and smart systems.
+*   Describe the three big ideas that structure this chapter: **task type**, **evaluation**, and **modeling tools**.
+
+## A Prediction Mystery: Can You Guess a Friend's Heart Rate?
+
+Imagine this scenario: yesterday, you walked **8,000 steps**, while your friend walked only **3,000**. Would your heart rates be the same? Probably not. Now add even more clues: your ages, genders, and how far you traveled. Suddenly, the problem becomes richer—and more interesting.
+
+This is exactly the kind of situation where **machine learning** becomes useful. Instead of relying on a single clue, we use multiple pieces of information to make a smarter prediction.
+
+::: {.callout-note}
+### A Machine Learning Problem
+A machine learning problem often begins with a question like: *Given several clues, can we predict an outcome?* In this chapter, that outcome is **heart rate**.
+:::
+
+## Teaching a Computer to Solve the Mystery
+
+At its core, machine learning is about **teaching a computer to learn from examples**. Rather than programming every rule by hand, we give the computer data and let it discover patterns for itself.
+
+Think about how you learned to recognize a dog. Nobody handed you a perfect rulebook. You learned by seeing many examples. Machine learning works in much the same way: the computer studies examples, detects patterns, and uses them to make predictions about new cases it has never seen before.
+
+## What is Machine Learning?
+
+Machine Learning is when computers learn from data to make predictions **without being explicitly programmed for every single scenario**.
+
+That does not mean the computer is “thinking” like a person. It means the computer is finding relationships in data. If those relationships are useful, the model can make a reasonable guess when new data appears.
+
+```{mermaid}
+graph LR
+    A[Examples from Data] --> B[Model Learns Patterns]
+    B --> C[Prediction on New Data]
+```
+
+::: {.callout-tip}
+### Instructor Insight: Learning from Examples
+A machine learning model is only as useful as the examples it learns from. Good data helps models find real patterns instead of random noise.
+:::
+
+## Why Machine Learning? It Is Everywhere.
+
+Machine learning is not a futuristic idea. It is already embedded in many tools people use every day.
+
+*   **TikTok:** Learns from your watch history, likes, and interactions to recommend videos.
+*   **Tesla:** Uses computer vision models to detect pedestrians, lane markings, and obstacles in real time.
+*   **Smart Systems:** Powers recommendation engines, fraud detection systems, and voice assistants.
+
+These systems all rely on the same core idea: use past data to make a smart prediction or decision in the present.
+
+## How Does Machine Learning Work?
+
+This chapter is organized around **three big ideas** that appear in nearly every machine learning project.
+
+### 1. Regression vs. Classification
+What kind of problem are we solving? Are we predicting a **number**, or assigning a **category**?
+
+### 2. Train/Test Split and Overfitting
+How do we teach the computer fairly? We need one set of data for learning and another for honest evaluation.
+
+### 3. Modeling with scikit-learn
+What tool will we use to build the model? In this chapter, we use **scikit-learn**, one of Python’s most important machine learning libraries.
+
+```{mermaid}
+graph TD
+    A[Machine Learning Project] --> B[Task Type]
+    A --> C[Evaluation Strategy]
+    A --> D[Modeling Tool]
+    B --> B1[Regression vs Classification]
+    C --> C1[Train/Test Split + Overfitting]
+    D --> D1[scikit-learn Models]
+```
+
+## Session Overview
+
+Across the four parts of Chapter 5, we move from big ideas to hands-on model building:
+
+*   **Part 1:** Introduction to Machine Learning
+*   **Part 2:** Regression vs. Classification, Train/Test Split, and Overfitting
+*   **Part 3:** scikit-learn and Linear Regression
+*   **Part 4:** Decision Trees, model comparison, and improving predictions
+
+## Roadmap for Part 1
+
+Today we established the foundation for the rest of the chapter. Our next steps will move from the **idea** of machine learning to the **practice** of building and evaluating models:
+
+1.  **Regression vs. Classification:** Understanding what kind of prediction problem we are solving.
+2.  **Train/Test Split:** Learning how to evaluate models honestly.
+3.  **scikit-learn Modeling:** Building real models with Python tools.
+4.  **Decision Trees:** Comparing models and improving predictions.

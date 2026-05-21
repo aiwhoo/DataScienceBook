@@ -1,0 +1,133 @@
+---
+title: "Data Storytelling & Insight Presentation"
+subtitle: "Part 1: Foundations of Data Storytelling"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+* Explain the purpose of data storytelling.
+* Identify the four key elements of an effective data story.
+* Describe why storytelling matters in data science.
+* Use AI tools to improve communication and clarity.
+* Create a focused key message for a presentation.
+
+## Introduction: Beyond Charts
+
+Data science is not only about analyzing information — it is also about communicating it clearly.
+
+A chart may show patterns, but storytelling explains why those patterns matter. Strong data storytelling helps audiences understand insights, remember important findings, and make better decisions.
+
+::: {.callout-note}
+### Core Idea
+Good data storytelling combines **data**, **visuals**, and **narrative** to guide audiences toward understanding.
+:::
+
+## What Is Data Storytelling?
+
+Data storytelling is the process of combining:
+
+* Data
+* Visual design
+* Narrative
+
+Together, these elements transform raw numbers into meaningful insight.
+
+Instead of simply presenting charts, a strong presentation explains:
+
+* What happened
+* Why it matters
+* What the audience should understand
+
+```{mermaid}
+graph LR
+A[Data] --> B[Visuals]
+B --> C[Narrative]
+C --> D[Insight]
+```
+
+## The Four Essential Elements
+
+Every effective data story includes four major components.
+
+### Context
+Provides background information and explains why the topic matters.
+
+### Narrative
+Guides the audience through the story logically.
+
+### Data
+Supports the story using evidence, trends, and analysis.
+
+### Visual Design
+Uses charts and layout to make information easier to understand.
+
+::: {.callout-tip}
+### Think About It
+A presentation should not force the audience to figure out the message on their own. Your job is to guide them clearly toward the key insight.
+:::
+
+## Why Storytelling Matters
+
+Storytelling helps simplify complex ideas and makes information more memorable.
+
+People are more likely to remember a meaningful story than isolated numbers.
+
+### Example
+
+Data:
+* Accident rates increased by 20%
+
+Story:
+* Increased commuting patterns may have contributed to more roadway accidents.
+
+The second explanation gives context and meaning to the data.
+
+## Using AI Tools for Communication
+
+AI tools such as ChatGPT can help improve data presentations.
+
+### AI Can Help With:
+
+* Improving clarity
+* Rewriting confusing explanations
+* Making language more engaging
+* Predicting audience questions
+* Matching visuals to the narrative
+
+### Example
+
+❌ Before:
+* “This is a line chart.”
+
+✅ After:
+* “This chart shows a sharp increase in Friday accidents.”
+
+## Activity: Define Your Key Message
+
+Before building a presentation, identify your most important takeaway.
+
+Ask yourself:
+
+* What is the main insight?
+* Why should the audience care?
+* What should they remember afterward?
+
+A strong presentation usually focuses on one clear message.
+
+## Final Takeaways
+
+In this lesson, you learned that:
+
+* Data storytelling combines analysis and communication
+* Strong visuals support a clear message
+* Context helps audiences understand meaning
+* Stories make data easier to remember
+
+::: {.callout-note}
+### Final Thought
+The goal of data storytelling is not just to show data — it is to help people understand and act on it.
+:::

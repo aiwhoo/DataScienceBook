@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Technical Instructional Team">
 
-<title>Key Findings – template</title>
+<title>Machine Learning in Practice – template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bcb4737e8fbcf1e9dfc00b59f8305558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +104,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -82,7 +121,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./keyFindings.html">Key Findings</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      template
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -115,31 +156,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./keyFindings.html" class="sidebar-item-text sidebar-link active">
+  <a href="./keyFindings.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Key Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./detailedFindings.html" class="sidebar-item-text sidebar-link">
+  <a href="./detailedFindings.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Detailed Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./method.html" class="sidebar-item-text sidebar-link">
+  <a href="./method.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Method</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+  <a href="./summary.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Appendix</span></a>
   </div>
 </li>
@@ -153,8 +194,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#key-finding-1" id="toc-key-finding-1" class="nav-link active" data-scroll-target="#key-finding-1">Key Finding 1</a></li>
-  <li><a href="#key-finding-2" id="toc-key-finding-2" class="nav-link" data-scroll-target="#key-finding-2">Key Finding 2</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#when-linear-regression-falls-short" id="toc-when-linear-regression-falls-short" class="nav-link" data-scroll-target="#when-linear-regression-falls-short">When Linear Regression Falls Short</a></li>
+  <li><a href="#enter-the-decision-tree" id="toc-enter-the-decision-tree" class="nav-link" data-scroll-target="#enter-the-decision-tree">Enter the Decision Tree</a>
+  <ul class="collapse">
+  <li><a href="#why-decision-trees-matter" id="toc-why-decision-trees-matter" class="nav-link" data-scroll-target="#why-decision-trees-matter">Why Decision Trees Matter</a></li>
+  </ul></li>
+  <li><a href="#building-a-decision-tree" id="toc-building-a-decision-tree" class="nav-link" data-scroll-target="#building-a-decision-tree">Building a Decision Tree</a></li>
+  <li><a href="#the-results-improved" id="toc-the-results-improved" class="nav-link" data-scroll-target="#the-results-improved">The Results Improved</a></li>
+  <li><a href="#the-numbers-back-it-up" id="toc-the-numbers-back-it-up" class="nav-link" data-scroll-target="#the-numbers-back-it-up">The Numbers Back It Up</a></li>
+  <li><a href="#linear-regression-vs.-decision-tree" id="toc-linear-regression-vs.-decision-tree" class="nav-link" data-scroll-target="#linear-regression-vs.-decision-tree">Linear Regression vs.&nbsp;Decision Tree</a></li>
+  <li><a href="#activity-build-and-compare-your-own-models" id="toc-activity-build-and-compare-your-own-models" class="nav-link" data-scroll-target="#activity-build-and-compare-your-own-models">Activity: Build and Compare Your Own Models</a></li>
+  <li><a href="#wrap-up-what-this-chapter-built-toward" id="toc-wrap-up-what-this-chapter-built-toward" class="nav-link" data-scroll-target="#wrap-up-what-this-chapter-built-toward">Wrap-Up: What This Chapter Built Toward</a></li>
+  <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead">Looking Ahead</a></li>
   </ul>
 </nav>
     </div>
@@ -163,13 +215,20 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Key Findings</h1>
+<h1 class="title">Machine Learning in Practice</h1>
+<p class="subtitle lead">Part 4: Decision Trees and Model Comparison</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Technical Instructional Team </p>
+          </div>
+  </div>
     
   
     
@@ -180,25 +239,166 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="key-finding-1" class="level2">
-<h2 class="anchored" data-anchor-id="key-finding-1">Key Finding 1</h2>
-<p>This is text about the first key finding.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src=".\assets/grey_cat.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 2: Image of a grey cat</figcaption>
-</figure>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+<li>Explain why <strong>Linear Regression</strong> may fail on nonlinear data.</li>
+<li>Describe how a <strong>Decision Tree</strong> model makes predictions.</li>
+<li>Compare Linear Regression and Decision Trees using <strong>MSE</strong> and <strong>R²</strong>.</li>
+<li>Recognize why model comparison is essential in practical machine learning.</li>
+<li>Build and evaluate two models on the same dataset for a fair comparison.</li>
+</ul>
+</section>
+<section id="when-linear-regression-falls-short" class="level2">
+<h2 class="anchored" data-anchor-id="when-linear-regression-falls-short">When Linear Regression Falls Short</h2>
+<p>Linear Regression assumes the relationship between inputs and outputs follows a straight line. That assumption is sometimes useful—but real-world data is often more complicated.</p>
+<p>Relationships in data may be curved, stepped, or highly nonlinear. When that happens, a straight-line model can miss important patterns.</p>
+<p>This leads to an important question: <strong>What kind of model should we try when a line is not enough?</strong></p>
+</section>
+<section id="enter-the-decision-tree" class="level2">
+<h2 class="anchored" data-anchor-id="enter-the-decision-tree">Enter the Decision Tree</h2>
+<p>A <strong>Decision Tree</strong> is a model that makes predictions by asking a series of yes/no questions about the data and splitting observations into branches.</p>
+<p>Unlike Linear Regression, it does not try to fit one straight line across the entire dataset. Instead, it creates decision rules that divide the data into smaller and more specific groups.</p>
+<section id="why-decision-trees-matter" class="level3">
+<h3 class="anchored" data-anchor-id="why-decision-trees-matter">Why Decision Trees Matter</h3>
+<ul>
+<li><strong>Works for Regression and Classification:</strong> It can predict both numbers and categories.</li>
+<li><strong>Handles Nonlinear Patterns:</strong> It adapts more easily to complex relationships.</li>
+<li><strong>Easy to Visualize:</strong> The branching structure can often be drawn and interpreted step by step.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Decision Rule
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A Decision Tree makes predictions by repeatedly splitting data based on feature thresholds. Each split creates a new branch in the model.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    A[Start with Data] --&gt; B{Feature Rule?}
+    B --&gt;|Yes| C[Branch 1]
+    B --&gt;|No| D[Branch 2]
+    C --&gt; E[Prediction]
+    D --&gt; F[Prediction]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
 </div>
 </section>
-<section id="key-finding-2" class="level2">
-<h2 class="anchored" data-anchor-id="key-finding-2">Key Finding 2</h2>
-<p>This is text about the second key finding.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src=".\assets/bunch_of_kittens.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 3: Bunch of kittens</figcaption>
-</figure>
+</section>
+<section id="building-a-decision-tree" class="level2">
+<h2 class="anchored" data-anchor-id="building-a-decision-tree">Building a Decision Tree</h2>
+<p>To create a fair comparison, we use the same dataset from the Linear Regression example.</p>
+<p>The workflow is familiar:</p>
+<ol type="1">
+<li><strong>Load and Prepare the Data</strong></li>
+<li><strong>Initialize the Model</strong></li>
+<li><strong>Fit the Model</strong></li>
+<li><strong>Generate Predictions</strong></li>
+<li><strong>Evaluate the Results</strong></li>
+</ol>
+<p>A typical scikit-learn workflow looks like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeRegressor</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tree_model <span class="op">=</span> DecisionTreeRegressor(random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>tree_model.fit(X_train, y_train)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tree_predictions <span class="op">=</span> tree_model.predict(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="the-results-improved" class="level2">
+<h2 class="anchored" data-anchor-id="the-results-improved">The Results Improved</h2>
+<p>In the slide example, the visual results improved. The scatter plot showed the predicted values sitting much closer to the actual values than they did with Linear Regression.</p>
+<p>That visual “tightening” suggests that the Decision Tree captured the underlying pattern more effectively.</p>
+<p>The evaluation metrics also improved:</p>
+<ul>
+<li><strong>MSE:</strong> 82</li>
+<li><strong>R²:</strong> 0.52</li>
+</ul>
+<p>These numbers are much stronger than the earlier Linear Regression results.</p>
+</section>
+<section id="the-numbers-back-it-up" class="level2">
+<h2 class="anchored" data-anchor-id="the-numbers-back-it-up">The Numbers Back It Up</h2>
+<p>Why do these metrics matter?</p>
+<ul>
+<li><strong>Lower MSE</strong> means the model’s predictions are closer to the true values.</li>
+<li><strong>Higher R²</strong> means the model explains more of the variation in the data.</li>
+</ul>
+<p>Compared with Linear Regression:</p>
+<ul>
+<li>Linear Regression had a <strong>higher MSE</strong> and a <strong>lower R²</strong>.</li>
+<li>The Decision Tree had a <strong>lower MSE</strong> and a <strong>higher R²</strong>.</li>
+</ul>
+<p>That makes the Decision Tree the stronger model for this dataset.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Insight: One Model Does Not Fit Every Problem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A model that performs poorly is not a dead end. It is often a sign that the data needs a different modeling approach.</p>
+</div>
+</div>
+</section>
+<section id="linear-regression-vs.-decision-tree" class="level2">
+<h2 class="anchored" data-anchor-id="linear-regression-vs.-decision-tree">Linear Regression vs.&nbsp;Decision Tree</h2>
+<p>Here is the big comparison:</p>
+<ul>
+<li><strong>Linear Regression</strong>
+<ul>
+<li>Regression only</li>
+<li>Assumes a linear relationship</li>
+<li>Easier to describe with a formula</li>
+</ul></li>
+<li><strong>Decision Tree</strong>
+<ul>
+<li>Works for regression and classification</li>
+<li>Handles nonlinear patterns</li>
+<li>Easier to explain visually with branches</li>
+</ul></li>
+</ul>
+<p>For this chapter’s dataset, the Decision Tree performed better on both major metrics.</p>
+</section>
+<section id="activity-build-and-compare-your-own-models" class="level2">
+<h2 class="anchored" data-anchor-id="activity-build-and-compare-your-own-models">Activity: Build and Compare Your Own Models</h2>
+<p>Now it is your turn to test both models on the same dataset.</p>
+<ol type="1">
+<li><strong>Build Both Models:</strong> Train a Linear Regression model and a Decision Tree model.</li>
+<li><strong>Evaluate with Metrics:</strong> Calculate MSE and R² for each one.</li>
+<li><strong>Create a Scatter Plot:</strong> Compare predictions with actual values and look for differences in fit.</li>
+</ol>
+<p>The goal is not just to build a model—it is to learn how to compare models and choose the one that fits the data best.</p>
+</section>
+<section id="wrap-up-what-this-chapter-built-toward" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-what-this-chapter-built-toward">Wrap-Up: What This Chapter Built Toward</h2>
+<p>Across Chapter 5, you moved through the core structure of an introductory machine learning workflow:</p>
+<ul>
+<li>You learned what machine learning is and why it matters.</li>
+<li>You distinguished between regression and classification.</li>
+<li>You used train/test split to evaluate models fairly.</li>
+<li>You built models with scikit-learn.</li>
+<li>You compared Linear Regression and Decision Trees using real metrics.</li>
+</ul>
+</section>
+<section id="looking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
+<p>This chapter introduced a powerful idea at the heart of data science: <strong>different models reveal different strengths and weaknesses</strong>.</p>
+<p>As you continue, the goal is not just to run code, but to think critically about what your model learned, how well it performed, and why one approach might work better than another.</p>
 
 
 </section>

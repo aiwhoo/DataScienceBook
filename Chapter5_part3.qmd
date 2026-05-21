@@ -1,0 +1,187 @@
+---
+title: "Machine Learning in Practice"
+subtitle: "Part 3: scikit-learn and Linear Regression"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Define **scikit-learn** as a core Python library for machine learning.
+*   Explain the purpose of **Linear Regression** as a supervised learning algorithm.
+*   Distinguish between **independent variables (X)** and a **dependent variable (Y)**.
+*   Interpret the meaning of the linear regression formula \(y = \beta_0 + \beta_1x\).
+*   Evaluate a model using **Mean Squared Error (MSE)** and **R² Score**.
+*   Analyze why a model may perform poorly, even when it is implemented correctly.
+
+## What is scikit-learn?
+
+In Python, one of the most important tools for machine learning is **scikit-learn**. It is a powerful, open-source library designed specifically for training models, generating predictions, and evaluating performance.
+
+scikit-learn is popular because it gives data scientists a consistent set of tools for common machine learning tasks. It also works smoothly with **Pandas** and **NumPy**, which makes it a natural fit in the broader data science workflow.
+
+::: {.callout-note}
+### scikit-learn
+**scikit-learn** is a Python machine learning library that provides ready-to-use tools for building, training, and evaluating models.
+:::
+
+```{mermaid}
+graph LR
+    A[Pandas + NumPy Data] --> B[scikit-learn Model]
+    B --> C[Predictions]
+    B --> D[Evaluation Metrics]
+```
+
+## What is Linear Regression?
+
+A common first model in machine learning is **Linear Regression**.
+
+Linear Regression is a **supervised learning algorithm** that identifies relationships between variables and uses those relationships to make predictions about new data.
+
+In simple terms, it tries to fit a line through data in a way that captures the relationship between an input and an output.
+
+### What Linear Regression Does
+
+*   **Finds relationships:** It detects how one variable changes in response to another.
+*   **Makes predictions:** It uses the learned pattern to estimate unknown values.
+*   **Starts simply:** It provides a useful baseline before trying more complex models.
+
+A real example from this chapter is predicting **heart rate** from physical activity data.
+
+## Variables in Linear Regression
+
+Every linear regression model depends on two kinds of variables.
+
+### Independent Variables (X)
+These are the **inputs**, also called **features** or **predictors**. They are the pieces of information you already know.
+
+Examples include:
+
+*   Steps taken
+*   Age
+*   Distance traveled
+
+### Dependent Variable (Y)
+This is the **output**, also called the **target**. It is the value the model tries to predict.
+
+In our example, the dependent variable is:
+
+*   Heart rate
+
+A helpful way to say it is: **Y depends on X**. Change the inputs, and the output may change too.
+
+## Breaking Down the Formula
+
+The basic form of a linear regression model is:
+
+\[
+y = \beta_0 + \beta_1x
+\]
+
+Each part of the formula has a meaning:
+
+*   **\(\beta_0\) — Intercept:** The value of \(y\) when \(x = 0\). This is where the line crosses the y-axis.
+*   **\(\beta_1\) — Slope:** How much \(y\) changes for every one-unit increase in \(x\).
+
+The model learns these values from the training data by trying to minimize prediction error.
+
+::: {.callout-tip}
+### Instructor Insight: A Model Is Learned, Not Typed
+In machine learning, we usually do not type the slope and intercept by hand. The algorithm calculates them from the data.
+:::
+
+## Why Use Linear Regression?
+
+Linear Regression is a useful starting point for several reasons:
+
+*   **Simple and Fast:** It is easy to implement and computationally lightweight.
+*   **Interpretable:** The straight-line relationship is relatively easy to explain.
+*   **Good for Linear Data:** It performs well when the relationship between variables is roughly linear.
+
+However, it also has limitations:
+
+*   **Weak for Complex Patterns:** It struggles when relationships are nonlinear.
+*   **Sensitive to Missing Features:** Important predictors left out of the model can reduce accuracy.
+*   **Limited Flexibility:** Real-world data is often more complicated than a straight line.
+
+## Hands-On: Predicting Heart Rate
+
+In this exercise, we build a Linear Regression model to predict a person’s heart rate using real fitness-related data.
+
+Potential features include:
+
+*   **Steps** — a measure of physical activity level.
+*   **Gender** — a categorical feature that may influence heart rate patterns.
+*   **Age** — an important factor in heart rate baselines and ranges.
+*   **Distance** — a feature related to effort and exertion.
+
+A typical workflow in scikit-learn looks like this:
+
+```python
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+```
+
+## Evaluating the Model
+
+After training a model, we need to measure how well it performed.
+
+Two common evaluation metrics are:
+
+### Mean Squared Error (MSE)
+MSE measures the average squared difference between predicted values and actual values. Lower values are better because they indicate smaller prediction errors.
+
+### R² Score
+R² measures how much of the variation in the target variable is explained by the model. Higher values are usually better. A negative R² means the model performed worse than a very simple baseline.
+
+```python
+from sklearn.metrics import mean_squared_error, r2_score
+
+mse = mean_squared_error(y_test, predictions)
+r2 = r2_score(y_test, predictions)
+```
+
+## Reading the Scatter Plot
+
+A helpful way to visualize model performance is with a scatter plot comparing **actual values** to **predicted values**.
+
+*   **Blue dots** represent the actual heart rate values.
+*   **A prediction line** represents the model’s estimates.
+*   **A large gap** between the points and the line signals weak performance.
+
+This visual check helps confirm what the metrics are already telling us.
+
+## What the Results Revealed
+
+In the slide example, the model performed poorly:
+
+*   **MSE:** 484
+*   **R²:** -1.8
+
+These results tell us that the model’s predictions were far from the actual values—and that the model performed worse than simply guessing the mean every time.
+
+Why might that happen?
+
+*   **Small dataset:** Too few examples make it difficult to learn a reliable pattern.
+*   **Model too simple:** Linear Regression cannot capture nonlinear relationships.
+*   **Missing features:** Important predictors may not have been included.
+
+::: {.callout-note}
+### Failure Can Be Informative
+A poor model is not wasted effort. In data science, weak results often teach you what kind of model or data you need next.
+:::
+
+## Roadmap for Part 3
+
+Today we introduced the core Python library for machine learning and built a first predictive model:
+
+1.  **scikit-learn:** The toolkit for building and evaluating models.
+2.  **Linear Regression:** A simple baseline model for predicting numeric outcomes.
+3.  **Model Evaluation:** Using MSE and R² to measure performance.
+
+In Part 4, we will compare Linear Regression with a **Decision Tree** and see how a more flexible model can improve predictions.

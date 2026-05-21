@@ -1,0 +1,289 @@
+---
+title: "Data Storytelling & Presentation"
+subtitle: "Part 2: Designing Your Data Science Project"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Identify the major stages of a complete data science project.
+*   Choose a dataset that is appropriate for analysis, visualization, and modeling.
+*   Write a clear, focused, and testable research question.
+*   Apply data loading, cleaning, analysis, visualization, and modeling in a logical sequence.
+*   Plan a presentation that communicates one main message clearly and persuasively.
+
+## From Skills to Application
+
+In Part 1, we reviewed the tools you have already learned: visualization, Python, Pandas, preprocessing, and machine learning. Now the goal is to use those tools together in one complete project.
+
+A data science project is not just a collection of charts or code cells. It is a structured process that starts with a question and ends with a message your audience can understand.
+
+::: {.callout-note}
+### The Big Idea
+A successful data science project solves a problem from start to finish. It begins with curiosity, moves through evidence, and ends with a clear explanation of what the evidence means.
+:::
+
+## The Complete Project Roadmap
+
+A strong project follows a logical path. Each step builds on the previous one, so skipping steps can weaken the final result.
+
+```{mermaid}
+flowchart LR
+    A[Choose Dataset] --> B[Research Question]
+    B --> C[Load Data]
+    C --> D[Clean and Preprocess]
+    D --> E[Analyze and Visualize]
+    E --> F[Build a Model]
+    F --> G[Plan Presentation]
+    style A fill:#dbeafe,stroke:#333,stroke-width:1.5px
+    style D fill:#fef3c7,stroke:#333,stroke-width:1.5px
+    style F fill:#fce7f3,stroke:#333,stroke-width:1.5px
+    style G fill:#ede9fe,stroke:#333,stroke-width:2px
+```
+
+## Step 1: Choose a Dataset
+
+Your dataset is the foundation of the project. A strong dataset gives you enough information to ask meaningful questions and create useful visuals.
+
+### Where to Find Data
+
+Good sources include:
+
+*   **Delaware.gov** and other open data portals.
+*   Public datasets related to transportation, health, education, environment, sports, or local events.
+*   CSV files that can be loaded into Python or Google Sheets.
+
+### What Makes a Dataset Useful?
+
+A useful dataset should have:
+
+*   Enough rows to reveal patterns.
+*   Enough columns to support comparisons.
+*   Clear column names.
+*   Values that can be cleaned and analyzed.
+*   A topic that is interesting enough to keep you engaged.
+
+::: {.callout-tip}
+### Choosing with Purpose
+Pick a dataset you genuinely care about. Curiosity matters because you will spend time cleaning, exploring, modeling, and explaining the data.
+:::
+
+## Step 2: Define Your Research Question
+
+Before writing code, decide what you want to find out. A research question guides the entire project. It tells you which columns matter, which charts to create, and what kind of model might be useful.
+
+### A Strong Research Question Is...
+
+*   **Clear** — the audience can understand it quickly.
+*   **Data-driven** — it can be answered using the dataset.
+*   **Testable** — you can filter, group, calculate, or model your way toward an answer.
+*   **Focused** — it is not too broad or vague.
+
+### Example
+
+A weak question might be:
+
+> What is happening with traffic accidents?
+
+A stronger question would be:
+
+> Do traffic accidents happen more often on weekends than weekdays?
+
+The second version is better because it identifies a specific comparison and can be answered with data.
+
+::: {.callout-note}
+### Why the Question Matters
+Your research question is like a compass. Without it, your project can become a random collection of charts instead of a focused story.
+:::
+
+## Step 3: Load Your Data
+
+Once you have a dataset and research question, the next step is to load the data into a tool where you can inspect it.
+
+### Loading Data in Python
+
+```python
+import pandas as pd
+
+# Load your CSV file
+df = pd.read_csv("your_file.csv")
+
+# Preview the first few rows
+df.head()
+```
+
+### First Checks After Loading
+
+Before analyzing anything, make sure the data loaded correctly:
+
+*   Did the file open without errors?
+*   Are all expected columns visible?
+*   Do the column names make sense?
+*   Do the first few rows look reasonable?
+*   Are dates, numbers, and categories stored in usable formats?
+
+```python
+# Check dataset size
+print(df.shape)
+
+# Check column names
+print(df.columns)
+
+# Check data types
+print(df.dtypes)
+```
+
+## Step 4: Clean and Preprocess
+
+Raw data often contains missing values, inconsistent formats, and columns that need transformation. Cleaning is what makes your analysis trustworthy.
+
+### Common Cleaning Tasks
+
+You may need to:
+
+*   Remove rows with missing or irrelevant values.
+*   Rename unclear columns.
+*   Convert dates into date/time format.
+*   Convert numeric columns stored as text.
+*   Remove duplicate records.
+*   Create new columns that help answer your question.
+
+```python
+# Example: remove rows with missing values in important columns
+df_clean = df.dropna(subset=["date", "county"])
+
+# Example: convert a date column
+df_clean["date"] = pd.to_datetime(df_clean["date"])
+
+# Example: create a weekday column
+df_clean["weekday"] = df_clean["date"].dt.day_name()
+```
+
+::: {.callout-warning}
+### Be Careful
+Cleaning decisions affect your results. If you remove rows, change formats, or create new categories, be ready to explain why those choices were reasonable.
+:::
+
+## Step 5: Analyze and Visualize Findings
+
+After cleaning, begin exploring the data. This is where you look for patterns, trends, differences, and possible explanations.
+
+### Analysis Techniques
+
+Useful analysis steps include:
+
+*   Filtering rows based on your question.
+*   Grouping by category.
+*   Counting records.
+*   Calculating averages or totals.
+*   Comparing groups.
+*   Looking for outliers.
+
+```python
+# Example: count records by weekday
+weekday_counts = df_clean.groupby("weekday").size().reset_index(name="count")
+weekday_counts
+```
+
+### Choosing the Right Chart
+
+Different charts answer different kinds of questions:
+
+*   **Bar charts** compare categories.
+*   **Line charts** show trends over time.
+*   **Pie charts** show proportions, but should be used carefully.
+*   **Scatter plots** show relationships between two numeric variables.
+
+::: {.callout-tip}
+### Visualization Rule
+Every chart should have a job. If a chart does not support your research question or key message, it probably does not belong in the final presentation.
+:::
+
+## Step 6: Build a Prediction Model
+
+Once you understand the data, you can build a model that predicts an outcome. The purpose of the model is not only to get a number. The purpose is to test whether patterns in the data can help explain or predict something meaningful.
+
+### Model 1: Linear Regression
+
+Linear Regression is useful when the target variable is numeric, such as price, time, cost, or count.
+
+### Model 2: Decision Tree
+
+A Decision Tree makes predictions by splitting the data using a sequence of rules. It is often easier to explain because it works like a set of questions.
+
+### Model Evaluation
+
+Two common evaluation metrics are:
+
+*   **MSE** — Mean Squared Error, which measures prediction error.
+*   **R²** — a score that explains how much variation the model accounts for.
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+
+X = df_clean[["feature_1", "feature_2"]]
+y = df_clean["target"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+predictions = model.predict(X_test)
+
+print("MSE:", mean_squared_error(y_test, predictions))
+print("R²:", r2_score(y_test, predictions))
+```
+
+::: {.callout-note}
+### Modeling in Context
+A model does not replace your story. It adds evidence to the story by showing whether your data can support prediction or explanation.
+:::
+
+## Step 7: Plan Your Presentation
+
+The final step is to turn your work into a clear presentation. Your audience does not need to see every cleaning step or every failed chart. They need the path that leads from question to insight.
+
+### Build Around One Key Message
+
+Ask yourself:
+
+*   What is the single most important takeaway?
+*   Why should the audience care?
+*   What evidence supports the takeaway?
+*   What action, decision, or reflection should follow?
+
+### Suggested Presentation Flow
+
+A strong presentation might follow this structure:
+
+1.  Introduce the topic and why it matters.
+2.  State the research question.
+3.  Describe the dataset briefly.
+4.  Explain important cleaning steps.
+5.  Show the most relevant visualizations.
+6.  Present model results if used.
+7.  End with the key message and conclusion.
+
+## Project Checklist
+
+Before finishing your project, confirm that you have:
+
+*   A dataset that opens correctly.
+*   A clear research question.
+*   Cleaned and documented data preparation steps.
+*   At least one meaningful visualization.
+*   A model and evaluation results, if required.
+*   A presentation organized around one clear message.
+
+::: {.callout-tip}
+### Final Thought
+A strong project is not the one with the most charts or the most complicated model. A strong project is the one where every step supports the same clear, meaningful story.
+:::

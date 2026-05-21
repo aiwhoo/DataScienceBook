@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Technical Instructional Team">
 
-<title>Appendix – template</title>
+<title>Data Storytelling &amp; Insight Presentation – template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bcb4737e8fbcf1e9dfc00b59f8305558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -82,7 +86,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix.html">Appendix</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      template
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -115,31 +121,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./keyFindings.html" class="sidebar-item-text sidebar-link">
+  <a href="./keyFindings.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Key Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./detailedFindings.html" class="sidebar-item-text sidebar-link">
+  <a href="./detailedFindings.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Detailed Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./method.html" class="sidebar-item-text sidebar-link">
+  <a href="./method.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Method</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+  <a href="./summary.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix.html" class="sidebar-item-text sidebar-link active">
+  <a href="./appendix.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Appendix</span></a>
   </div>
 </li>
@@ -148,21 +154,73 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#introduction-from-analysis-to-communication" id="toc-introduction-from-analysis-to-communication" class="nav-link" data-scroll-target="#introduction-from-analysis-to-communication">Introduction: From Analysis to Communication</a></li>
+  <li><a href="#peer-critique-giving-helpful-feedback" id="toc-peer-critique-giving-helpful-feedback" class="nav-link" data-scroll-target="#peer-critique-giving-helpful-feedback">Peer Critique: Giving Helpful Feedback</a>
+  <ul class="collapse">
+  <li><a href="#what-is-clear" id="toc-what-is-clear" class="nav-link" data-scroll-target="#what-is-clear">What Is Clear?</a></li>
+  <li><a href="#what-is-confusing" id="toc-what-is-confusing" class="nav-link" data-scroll-target="#what-is-confusing">What Is Confusing?</a></li>
+  <li><a href="#what-could-improve" id="toc-what-could-improve" class="nav-link" data-scroll-target="#what-could-improve">What Could Improve?</a></li>
+  </ul></li>
+  <li><a href="#why-feedback-matters" id="toc-why-feedback-matters" class="nav-link" data-scroll-target="#why-feedback-matters">Why Feedback Matters</a></li>
+  <li><a href="#build-a-two-slide-presentation" id="toc-build-a-two-slide-presentation" class="nav-link" data-scroll-target="#build-a-two-slide-presentation">Build a Two-Slide Presentation</a></li>
+  <li><a href="#slide-1-set-the-stage" id="toc-slide-1-set-the-stage" class="nav-link" data-scroll-target="#slide-1-set-the-stage">Slide 1: Set the Stage</a>
+  <ul class="collapse">
+  <li><a href="#include" id="toc-include" class="nav-link" data-scroll-target="#include">Include:</a></li>
+  </ul></li>
+  <li><a href="#slide-2-deliver-the-insight" id="toc-slide-2-deliver-the-insight" class="nav-link" data-scroll-target="#slide-2-deliver-the-insight">Slide 2: Deliver the Insight</a>
+  <ul class="collapse">
+  <li><a href="#include-1" id="toc-include-1" class="nav-link" data-scroll-target="#include-1">Include:</a></li>
+  </ul></li>
+  <li><a href="#what-makes-a-strong-presentation" id="toc-what-makes-a-strong-presentation" class="nav-link" data-scroll-target="#what-makes-a-strong-presentation">What Makes a Strong Presentation?</a>
+  <ul class="collapse">
+  <li><a href="#clear" id="toc-clear" class="nav-link" data-scroll-target="#clear">Clear</a></li>
+  <li><a href="#focused" id="toc-focused" class="nav-link" data-scroll-target="#focused">Focused</a></li>
+  <li><a href="#insightful" id="toc-insightful" class="nav-link" data-scroll-target="#insightful">Insightful</a></li>
+  <li><a href="#story-driven" id="toc-story-driven" class="nav-link" data-scroll-target="#story-driven">Story-Driven</a></li>
+  </ul></li>
+  <li><a href="#common-mistakes-to-avoid" id="toc-common-mistakes-to-avoid" class="nav-link" data-scroll-target="#common-mistakes-to-avoid">Common Mistakes to Avoid</a>
+  <ul class="collapse">
+  <li><a href="#too-much-information" id="toc-too-much-information" class="nav-link" data-scroll-target="#too-much-information">Too Much Information</a></li>
+  <li><a href="#weak-visual-design" id="toc-weak-visual-design" class="nav-link" data-scroll-target="#weak-visual-design">Weak Visual Design</a></li>
+  <li><a href="#no-clear-message" id="toc-no-clear-message" class="nav-link" data-scroll-target="#no-clear-message">No Clear Message</a></li>
+  <li><a href="#presenting-data-without-context" id="toc-presenting-data-without-context" class="nav-link" data-scroll-target="#presenting-data-without-context">Presenting Data Without Context</a></li>
+  </ul></li>
+  <li><a href="#professional-presentation-tips" id="toc-professional-presentation-tips" class="nav-link" data-scroll-target="#professional-presentation-tips">Professional Presentation Tips</a>
+  <ul class="collapse">
+  <li><a href="#focus-on-one-insight" id="toc-focus-on-one-insight" class="nav-link" data-scroll-target="#focus-on-one-insight">Focus on One Insight</a></li>
+  <li><a href="#keep-visuals-simple" id="toc-keep-visuals-simple" class="nav-link" data-scroll-target="#keep-visuals-simple">Keep Visuals Simple</a></li>
+  <li><a href="#make-the-message-obvious" id="toc-make-the-message-obvious" class="nav-link" data-scroll-target="#make-the-message-obvious">Make the Message Obvious</a></li>
+  <li><a href="#tell-a-story" id="toc-tell-a-story" class="nav-link" data-scroll-target="#tell-a-story">Tell a Story</a></li>
+  </ul></li>
+  <li><a href="#final-takeaways" id="toc-final-takeaways" class="nav-link" data-scroll-target="#final-takeaways">Final Takeaways</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix</h1>
+<h1 class="title">Data Storytelling &amp; Insight Presentation</h1>
+<p class="subtitle lead">Part 2: Presentation &amp; Peer Feedback</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Technical Instructional Team </p>
+          </div>
+  </div>
     
   
     
@@ -173,8 +231,222 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+<li>Give constructive feedback on presentations.</li>
+<li>Identify strengths and weaknesses in communication.</li>
+<li>Build a focused two-slide presentation.</li>
+<li>Recognize the characteristics of strong data presentations.</li>
+<li>Communicate insights clearly and effectively.</li>
+</ul>
+</section>
+<section id="introduction-from-analysis-to-communication" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-from-analysis-to-communication">Introduction: From Analysis to Communication</h2>
+<p>In Part 1, we explored the foundations of data storytelling.</p>
+<p>In this section, we focus on applying those skills through presentation design, peer critique, and communication practice.</p>
+<p>Professional data scientists do more than analyze data — they also explain findings clearly and effectively.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Big Idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Strong presentations improve through feedback, revision, and practice.</p>
+</div>
+</div>
+</section>
+<section id="peer-critique-giving-helpful-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="peer-critique-giving-helpful-feedback">Peer Critique: Giving Helpful Feedback</h2>
+<p>When reviewing a classmate’s presentation, focus on three important questions.</p>
+<section id="what-is-clear" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-clear">What Is Clear?</h3>
+<p>Identify what works well and what the audience can understand easily.</p>
+</section>
+<section id="what-is-confusing" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-confusing">What Is Confusing?</h3>
+<p>Look for anything that feels unclear, overly technical, or difficult to follow.</p>
+</section>
+<section id="what-could-improve" class="level3">
+<h3 class="anchored" data-anchor-id="what-could-improve">What Could Improve?</h3>
+<p>Offer one specific and actionable suggestion.</p>
+<p>Good feedback should help presenters improve clarity and communication.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+A[Presentation] --&gt; B[Feedback]
+B --&gt; C[Revision]
+C --&gt; D[Stronger Communication]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="why-feedback-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-feedback-matters">Why Feedback Matters</h2>
+<p>Peer critique helps presenters:</p>
+<ul>
+<li>Improve clarity</li>
+<li>Identify missing explanations</li>
+<li>Strengthen organization</li>
+<li>Refine their message</li>
+</ul>
+<p>Fresh perspectives often reveal problems the presenter may not notice on their own.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Insight
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Critique is not about criticism — it is about helping others communicate more effectively.</p>
+</div>
+</div>
+</section>
+<section id="build-a-two-slide-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="build-a-two-slide-presentation">Build a Two-Slide Presentation</h2>
+<p>In this activity, students create a short presentation using their own research or dataset.</p>
+<p>The goal is to communicate one clear and meaningful insight.</p>
+</section>
+<section id="slide-1-set-the-stage" class="level2">
+<h2 class="anchored" data-anchor-id="slide-1-set-the-stage">Slide 1: Set the Stage</h2>
+<p>The first slide introduces the topic and provides context.</p>
+<section id="include" class="level3">
+<h3 class="anchored" data-anchor-id="include">Include:</h3>
+<ul>
+<li>Your research question</li>
+<li>Brief background information</li>
+<li>Why the topic matters</li>
+</ul>
+<p>The audience should quickly understand why they should care.</p>
+</section>
+</section>
+<section id="slide-2-deliver-the-insight" class="level2">
+<h2 class="anchored" data-anchor-id="slide-2-deliver-the-insight">Slide 2: Deliver the Insight</h2>
+<p>The second slide focuses on the main finding.</p>
+<section id="include-1" class="level3">
+<h3 class="anchored" data-anchor-id="include-1">Include:</h3>
+<ul>
+<li>The most important insight</li>
+<li>A key takeaway</li>
+<li>Why the finding matters</li>
+</ul>
+<p>Every element on the slide should support one central message.</p>
+</section>
+</section>
+<section id="what-makes-a-strong-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-a-strong-presentation">What Makes a Strong Presentation?</h2>
+<p>Strong presentations are:</p>
+<section id="clear" class="level3">
+<h3 class="anchored" data-anchor-id="clear">Clear</h3>
+<p>The audience understands the message quickly.</p>
+</section>
+<section id="focused" class="level3">
+<h3 class="anchored" data-anchor-id="focused">Focused</h3>
+<p>The presentation centers around one major idea.</p>
+</section>
+<section id="insightful" class="level3">
+<h3 class="anchored" data-anchor-id="insightful">Insightful</h3>
+<p>The presentation explains why the findings matter.</p>
+</section>
+<section id="story-driven" class="level3">
+<h3 class="anchored" data-anchor-id="story-driven">Story-Driven</h3>
+<p>The visuals and data support a meaningful narrative.</p>
+</section>
+</section>
+<section id="common-mistakes-to-avoid" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<section id="too-much-information" class="level3">
+<h3 class="anchored" data-anchor-id="too-much-information">Too Much Information</h3>
+<p>Overcrowded slides can confuse audiences.</p>
+</section>
+<section id="weak-visual-design" class="level3">
+<h3 class="anchored" data-anchor-id="weak-visual-design">Weak Visual Design</h3>
+<p>Charts should be simple and easy to read.</p>
+</section>
+<section id="no-clear-message" class="level3">
+<h3 class="anchored" data-anchor-id="no-clear-message">No Clear Message</h3>
+<p>Every presentation should communicate one important takeaway.</p>
+</section>
+<section id="presenting-data-without-context" class="level3">
+<h3 class="anchored" data-anchor-id="presenting-data-without-context">Presenting Data Without Context</h3>
+<p>Data alone is not enough — explain why it matters.</p>
+</section>
+</section>
+<section id="professional-presentation-tips" class="level2">
+<h2 class="anchored" data-anchor-id="professional-presentation-tips">Professional Presentation Tips</h2>
+<section id="focus-on-one-insight" class="level3">
+<h3 class="anchored" data-anchor-id="focus-on-one-insight">Focus on One Insight</h3>
+<p>If the audience remembers one thing, what should it be?</p>
+</section>
+<section id="keep-visuals-simple" class="level3">
+<h3 class="anchored" data-anchor-id="keep-visuals-simple">Keep Visuals Simple</h3>
+<p>Remove unnecessary labels, gridlines, and clutter.</p>
+</section>
+<section id="make-the-message-obvious" class="level3">
+<h3 class="anchored" data-anchor-id="make-the-message-obvious">Make the Message Obvious</h3>
+<p>Do not make audiences search for the point.</p>
+</section>
+<section id="tell-a-story" class="level3">
+<h3 class="anchored" data-anchor-id="tell-a-story">Tell a Story</h3>
+<p>A strong presentation moves logically from: * Context * Data * Insight * Action</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+A[Context] --&gt; B[Data]
+B --&gt; C[Insight]
+C --&gt; D[Action]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="final-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="final-takeaways">Final Takeaways</h2>
+<p>By this point, you have practiced:</p>
+<ul>
+<li>Communication</li>
+<li>Storytelling</li>
+<li>Presentation design</li>
+<li>Constructive critique</li>
+</ul>
+<p>These skills are essential in data science because insights only become valuable when audiences can understand them.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Final Thought
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Great data presentations do more than display information — they help audiences understand, remember, and care.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

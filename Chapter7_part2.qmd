@@ -1,0 +1,171 @@
+---
+title: "Data Storytelling & Insight Presentation"
+subtitle: "Part 2: Presentation & Peer Feedback"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+* Give constructive feedback on presentations.
+* Identify strengths and weaknesses in communication.
+* Build a focused two-slide presentation.
+* Recognize the characteristics of strong data presentations.
+* Communicate insights clearly and effectively.
+
+## Introduction: From Analysis to Communication
+
+In Part 1, we explored the foundations of data storytelling.
+
+In this section, we focus on applying those skills through presentation design, peer critique, and communication practice.
+
+Professional data scientists do more than analyze data — they also explain findings clearly and effectively.
+
+::: {.callout-note}
+### The Big Idea
+Strong presentations improve through feedback, revision, and practice.
+:::
+
+## Peer Critique: Giving Helpful Feedback
+
+When reviewing a classmate’s presentation, focus on three important questions.
+
+### What Is Clear?
+
+Identify what works well and what the audience can understand easily.
+
+### What Is Confusing?
+
+Look for anything that feels unclear, overly technical, or difficult to follow.
+
+### What Could Improve?
+
+Offer one specific and actionable suggestion.
+
+Good feedback should help presenters improve clarity and communication.
+
+```{mermaid}
+flowchart LR
+A[Presentation] --> B[Feedback]
+B --> C[Revision]
+C --> D[Stronger Communication]
+```
+
+## Why Feedback Matters
+
+Peer critique helps presenters:
+
+* Improve clarity
+* Identify missing explanations
+* Strengthen organization
+* Refine their message
+
+Fresh perspectives often reveal problems the presenter may not notice on their own.
+
+::: {.callout-tip}
+### Instructor Insight
+Critique is not about criticism — it is about helping others communicate more effectively.
+:::
+
+## Build a Two-Slide Presentation
+
+In this activity, students create a short presentation using their own research or dataset.
+
+The goal is to communicate one clear and meaningful insight.
+
+## Slide 1: Set the Stage
+
+The first slide introduces the topic and provides context.
+
+### Include:
+
+* Your research question
+* Brief background information
+* Why the topic matters
+
+The audience should quickly understand why they should care.
+
+## Slide 2: Deliver the Insight
+
+The second slide focuses on the main finding.
+
+### Include:
+
+* The most important insight
+* A key takeaway
+* Why the finding matters
+
+Every element on the slide should support one central message.
+
+## What Makes a Strong Presentation?
+
+Strong presentations are:
+
+### Clear
+The audience understands the message quickly.
+
+### Focused
+The presentation centers around one major idea.
+
+### Insightful
+The presentation explains why the findings matter.
+
+### Story-Driven
+The visuals and data support a meaningful narrative.
+
+## Common Mistakes to Avoid
+
+### Too Much Information
+Overcrowded slides can confuse audiences.
+
+### Weak Visual Design
+Charts should be simple and easy to read.
+
+### No Clear Message
+Every presentation should communicate one important takeaway.
+
+### Presenting Data Without Context
+Data alone is not enough — explain why it matters.
+
+## Professional Presentation Tips
+
+### Focus on One Insight
+If the audience remembers one thing, what should it be?
+
+### Keep Visuals Simple
+Remove unnecessary labels, gridlines, and clutter.
+
+### Make the Message Obvious
+Do not make audiences search for the point.
+
+### Tell a Story
+A strong presentation moves logically from:
+* Context
+* Data
+* Insight
+* Action
+
+```{mermaid}
+graph TD
+A[Context] --> B[Data]
+B --> C[Insight]
+C --> D[Action]
+```
+
+## Final Takeaways
+
+By this point, you have practiced:
+
+* Communication
+* Storytelling
+* Presentation design
+* Constructive critique
+
+These skills are essential in data science because insights only become valuable when audiences can understand them.
+
+::: {.callout-note}
+### Final Thought
+Great data presentations do more than display information — they help audiences understand, remember, and care.
+:::

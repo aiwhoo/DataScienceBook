@@ -1,0 +1,154 @@
+---
+title: "Machine Learning in Practice"
+subtitle: "Part 2: Regression, Classification, and Train/Test Split"
+author: "Technical Instructional Team"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this tutorial, you will be able to:
+
+*   Distinguish between **regression** and **classification** tasks.
+*   Identify whether a dataset column represents a numeric target or a categorical label.
+*   Explain why a **train/test split** is necessary for honest model evaluation.
+*   Define **overfitting** and describe several strategies for preventing it.
+*   Use `train_test_split()` conceptually as the first step in preparing a machine learning workflow.
+
+## Quick Recap: Where We Left Off
+
+In Part 1, we introduced machine learning as a way for computers to learn from data and make predictions. We also previewed three major ideas that shape almost every ML project.
+
+Now we move into the first two of those ideas: **task type** and **evaluation**.
+
+*   **Part 1:** Introduction to Machine Learning
+*   **Part 2:** Regression vs. Classification
+*   **Part 3:** Train/Test Split
+*   **Part 4:** Building and comparing models
+
+Today’s goal is to close out the discussion of **task types** and take the first major step toward trustworthy model building.
+
+## Regression vs. Classification
+
+One of the first questions in any machine learning project is simple but essential: **What kind of prediction are we making?**
+
+### Regression
+A **regression** task predicts a **continuous number**.
+
+Examples include:
+
+*   What will a house price be?
+*   How many units will a company sell?
+*   What will the temperature be tomorrow?
+
+### Classification
+A **classification** task predicts a **label or category**.
+
+Examples include:
+
+*   Is this email spam or not?
+*   Is this tumor benign or malignant?
+*   What animal is in this photo?
+
+::: {.callout-note}
+### Task Type Matters
+Before choosing a model, you must know whether your target is a **number** or a **category**. That decision shapes everything that follows.
+:::
+
+## Activity: Spot the Task Type
+
+To practice this idea, look carefully at the columns in your dataset and ask a simple question:
+
+> Am I trying to predict a number, or a category?
+
+Work through these three steps:
+
+1.  **Find Regression Columns:** Identify columns with numerical outputs worth predicting, such as price, age, or score.
+2.  **Find Classification Columns:** Identify columns with labels or categories, such as yes/no, type, or species.
+3.  **Discuss with a Partner:** Share your choices and explain why each column fits its task type.
+
+::: {.callout-tip}
+### Instructor Insight: Start with the Target
+A helpful habit is to identify your **target column** first. Once you know what you want to predict, it becomes easier to decide whether the task is regression or classification.
+:::
+
+## Why Split Your Data?
+
+Once you know the type of problem you are solving, the next question is: **How do you know if your model is actually any good?**
+
+The answer begins with a **train/test split**.
+
+Before training a model, we divide the dataset into two parts:
+
+*   **Training Set (~80%)** — the portion the model learns from.
+*   **Testing Set (~20%)** — the portion reserved for evaluation.
+
+This separation matters because a model should not be judged on data it has already seen. A strong model should perform well on **new, unseen data**.
+
+```{mermaid}
+graph LR
+    A[Full Dataset] --> B[Training Set ~80%]
+    A --> C[Testing Set ~20%]
+    B --> D[Model Learns Patterns]
+    C --> E[Model Is Evaluated Honestly]
+```
+
+## What is Overfitting?
+
+A model can appear successful for the wrong reason. Sometimes it does not learn the real pattern in the data—it simply memorizes the training examples.
+
+That problem is called **overfitting**.
+
+### Overfitting
+The model memorizes the training data, including noise and random quirks, instead of learning patterns that generalize.
+
+### Good Generalization
+The model captures real patterns and performs well on new, unseen data.
+
+A useful analogy is a student who memorizes every answer on practice tests. If the real exam looks slightly different, the student struggles. Real understanding matters more than memorization.
+
+::: {.callout-note}
+### Why the Test Set Matters
+The test set helps reveal whether the model learned something useful—or just memorized what it already saw.
+:::
+
+## Best Practices to Prevent Overfitting
+
+There is no single magic fix for overfitting, but several strategies help reduce the risk:
+
+*   **Use a Train/Test Split:** Always evaluate on data the model has not trained on.
+*   **Get More Data:** More examples help the model find real patterns instead of memorizing noise.
+*   **Simplify the Model:** Fewer parameters can reduce the model’s tendency to overfit.
+*   **Cross-Validation:** Test the model across multiple splits for a more reliable estimate of performance.
+
+## Hands-On with scikit-learn
+
+To create a train/test split in Python, we commonly use the `train_test_split()` function from **scikit-learn**, the machine learning library we will use throughout this chapter.
+
+In practice, the workflow looks like this:
+
+1.  Choose your feature column(s), usually called `X`.
+2.  Choose your target column, usually called `y`.
+3.  Call `train_test_split(X, y, test_size=0.2)`.
+4.  Inspect the shape of each split to confirm the data was divided correctly.
+
+```python
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+
+::: {.callout-tip}
+### Instructor Insight: Why `random_state`?
+Using `random_state=42` keeps the split consistent each time you run the code. That makes your results easier to reproduce and compare.
+:::
+
+## Roadmap for Part 2
+
+Today we focused on two core ideas that every ML project depends on:
+
+1.  **Regression vs. Classification:** Understanding whether we predict numbers or labels.
+2.  **Train/Test Split:** Separating learning from evaluation.
+3.  **Overfitting:** Recognizing when a model learns the wrong lesson.
+
+In Part 3, we will begin building a real machine learning model with **scikit-learn** and **Linear Regression**.

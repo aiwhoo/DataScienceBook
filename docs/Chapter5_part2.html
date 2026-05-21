@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Technical Instructional Team">
 
-<title>Summary – template</title>
+<title>Machine Learning in Practice – template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bcb4737e8fbcf1e9dfc00b59f8305558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +104,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -82,7 +121,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html">Summary</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      template
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -115,31 +156,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./keyFindings.html" class="sidebar-item-text sidebar-link">
+  <a href="./keyFindings.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Key Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./detailedFindings.html" class="sidebar-item-text sidebar-link">
+  <a href="./detailedFindings.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Detailed Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./method.html" class="sidebar-item-text sidebar-link">
+  <a href="./method.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Method</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
+  <a href="./summary.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Appendix</span></a>
   </div>
 </li>
@@ -148,21 +189,50 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#quick-recap-where-we-left-off" id="toc-quick-recap-where-we-left-off" class="nav-link" data-scroll-target="#quick-recap-where-we-left-off">Quick Recap: Where We Left Off</a></li>
+  <li><a href="#regression-vs.-classification" id="toc-regression-vs.-classification" class="nav-link" data-scroll-target="#regression-vs.-classification">Regression vs.&nbsp;Classification</a>
+  <ul class="collapse">
+  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression</a></li>
+  <li><a href="#classification" id="toc-classification" class="nav-link" data-scroll-target="#classification">Classification</a></li>
+  </ul></li>
+  <li><a href="#activity-spot-the-task-type" id="toc-activity-spot-the-task-type" class="nav-link" data-scroll-target="#activity-spot-the-task-type">Activity: Spot the Task Type</a></li>
+  <li><a href="#why-split-your-data" id="toc-why-split-your-data" class="nav-link" data-scroll-target="#why-split-your-data">Why Split Your Data?</a></li>
+  <li><a href="#what-is-overfitting" id="toc-what-is-overfitting" class="nav-link" data-scroll-target="#what-is-overfitting">What is Overfitting?</a>
+  <ul class="collapse">
+  <li><a href="#overfitting" id="toc-overfitting" class="nav-link" data-scroll-target="#overfitting">Overfitting</a></li>
+  <li><a href="#good-generalization" id="toc-good-generalization" class="nav-link" data-scroll-target="#good-generalization">Good Generalization</a></li>
+  </ul></li>
+  <li><a href="#best-practices-to-prevent-overfitting" id="toc-best-practices-to-prevent-overfitting" class="nav-link" data-scroll-target="#best-practices-to-prevent-overfitting">Best Practices to Prevent Overfitting</a></li>
+  <li><a href="#hands-on-with-scikit-learn" id="toc-hands-on-with-scikit-learn" class="nav-link" data-scroll-target="#hands-on-with-scikit-learn">Hands-On with scikit-learn</a></li>
+  <li><a href="#roadmap-for-part-2" id="toc-roadmap-for-part-2" class="nav-link" data-scroll-target="#roadmap-for-part-2">Roadmap for Part 2</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Summary</h1>
+<h1 class="title">Machine Learning in Practice</h1>
+<p class="subtitle lead">Part 2: Regression, Classification, and Train/Test Split</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Technical Instructional Team </p>
+          </div>
+  </div>
     
   
     
@@ -173,8 +243,195 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+<li>Distinguish between <strong>regression</strong> and <strong>classification</strong> tasks.</li>
+<li>Identify whether a dataset column represents a numeric target or a categorical label.</li>
+<li>Explain why a <strong>train/test split</strong> is necessary for honest model evaluation.</li>
+<li>Define <strong>overfitting</strong> and describe several strategies for preventing it.</li>
+<li>Use <code>train_test_split()</code> conceptually as the first step in preparing a machine learning workflow.</li>
+</ul>
+</section>
+<section id="quick-recap-where-we-left-off" class="level2">
+<h2 class="anchored" data-anchor-id="quick-recap-where-we-left-off">Quick Recap: Where We Left Off</h2>
+<p>In Part 1, we introduced machine learning as a way for computers to learn from data and make predictions. We also previewed three major ideas that shape almost every ML project.</p>
+<p>Now we move into the first two of those ideas: <strong>task type</strong> and <strong>evaluation</strong>.</p>
+<ul>
+<li><strong>Part 1:</strong> Introduction to Machine Learning</li>
+<li><strong>Part 2:</strong> Regression vs.&nbsp;Classification</li>
+<li><strong>Part 3:</strong> Train/Test Split</li>
+<li><strong>Part 4:</strong> Building and comparing models</li>
+</ul>
+<p>Today’s goal is to close out the discussion of <strong>task types</strong> and take the first major step toward trustworthy model building.</p>
+</section>
+<section id="regression-vs.-classification" class="level2">
+<h2 class="anchored" data-anchor-id="regression-vs.-classification">Regression vs.&nbsp;Classification</h2>
+<p>One of the first questions in any machine learning project is simple but essential: <strong>What kind of prediction are we making?</strong></p>
+<section id="regression" class="level3">
+<h3 class="anchored" data-anchor-id="regression">Regression</h3>
+<p>A <strong>regression</strong> task predicts a <strong>continuous number</strong>.</p>
+<p>Examples include:</p>
+<ul>
+<li>What will a house price be?</li>
+<li>How many units will a company sell?</li>
+<li>What will the temperature be tomorrow?</li>
+</ul>
+</section>
+<section id="classification" class="level3">
+<h3 class="anchored" data-anchor-id="classification">Classification</h3>
+<p>A <strong>classification</strong> task predicts a <strong>label or category</strong>.</p>
+<p>Examples include:</p>
+<ul>
+<li>Is this email spam or not?</li>
+<li>Is this tumor benign or malignant?</li>
+<li>What animal is in this photo?</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Task Type Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before choosing a model, you must know whether your target is a <strong>number</strong> or a <strong>category</strong>. That decision shapes everything that follows.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="activity-spot-the-task-type" class="level2">
+<h2 class="anchored" data-anchor-id="activity-spot-the-task-type">Activity: Spot the Task Type</h2>
+<p>To practice this idea, look carefully at the columns in your dataset and ask a simple question:</p>
+<blockquote class="blockquote">
+<p>Am I trying to predict a number, or a category?</p>
+</blockquote>
+<p>Work through these three steps:</p>
+<ol type="1">
+<li><strong>Find Regression Columns:</strong> Identify columns with numerical outputs worth predicting, such as price, age, or score.</li>
+<li><strong>Find Classification Columns:</strong> Identify columns with labels or categories, such as yes/no, type, or species.</li>
+<li><strong>Discuss with a Partner:</strong> Share your choices and explain why each column fits its task type.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Insight: Start with the Target
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A helpful habit is to identify your <strong>target column</strong> first. Once you know what you want to predict, it becomes easier to decide whether the task is regression or classification.</p>
+</div>
+</div>
+</section>
+<section id="why-split-your-data" class="level2">
+<h2 class="anchored" data-anchor-id="why-split-your-data">Why Split Your Data?</h2>
+<p>Once you know the type of problem you are solving, the next question is: <strong>How do you know if your model is actually any good?</strong></p>
+<p>The answer begins with a <strong>train/test split</strong>.</p>
+<p>Before training a model, we divide the dataset into two parts:</p>
+<ul>
+<li><strong>Training Set (~80%)</strong> — the portion the model learns from.</li>
+<li><strong>Testing Set (~20%)</strong> — the portion reserved for evaluation.</li>
+</ul>
+<p>This separation matters because a model should not be judged on data it has already seen. A strong model should perform well on <strong>new, unseen data</strong>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[Full Dataset] --&gt; B[Training Set ~80%]
+    A --&gt; C[Testing Set ~20%]
+    B --&gt; D[Model Learns Patterns]
+    C --&gt; E[Model Is Evaluated Honestly]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-overfitting" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-overfitting">What is Overfitting?</h2>
+<p>A model can appear successful for the wrong reason. Sometimes it does not learn the real pattern in the data—it simply memorizes the training examples.</p>
+<p>That problem is called <strong>overfitting</strong>.</p>
+<section id="overfitting" class="level3">
+<h3 class="anchored" data-anchor-id="overfitting">Overfitting</h3>
+<p>The model memorizes the training data, including noise and random quirks, instead of learning patterns that generalize.</p>
+</section>
+<section id="good-generalization" class="level3">
+<h3 class="anchored" data-anchor-id="good-generalization">Good Generalization</h3>
+<p>The model captures real patterns and performs well on new, unseen data.</p>
+<p>A useful analogy is a student who memorizes every answer on practice tests. If the real exam looks slightly different, the student struggles. Real understanding matters more than memorization.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why the Test Set Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The test set helps reveal whether the model learned something useful—or just memorized what it already saw.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="best-practices-to-prevent-overfitting" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices-to-prevent-overfitting">Best Practices to Prevent Overfitting</h2>
+<p>There is no single magic fix for overfitting, but several strategies help reduce the risk:</p>
+<ul>
+<li><strong>Use a Train/Test Split:</strong> Always evaluate on data the model has not trained on.</li>
+<li><strong>Get More Data:</strong> More examples help the model find real patterns instead of memorizing noise.</li>
+<li><strong>Simplify the Model:</strong> Fewer parameters can reduce the model’s tendency to overfit.</li>
+<li><strong>Cross-Validation:</strong> Test the model across multiple splits for a more reliable estimate of performance.</li>
+</ul>
+</section>
+<section id="hands-on-with-scikit-learn" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-with-scikit-learn">Hands-On with scikit-learn</h2>
+<p>To create a train/test split in Python, we commonly use the <code>train_test_split()</code> function from <strong>scikit-learn</strong>, the machine learning library we will use throughout this chapter.</p>
+<p>In practice, the workflow looks like this:</p>
+<ol type="1">
+<li>Choose your feature column(s), usually called <code>X</code>.</li>
+<li>Choose your target column, usually called <code>y</code>.</li>
+<li>Call <code>train_test_split(X, y, test_size=0.2)</code>.</li>
+<li>Inspect the shape of each split to confirm the data was divided correctly.</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Instructor Insight: Why <code>random_state</code>?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using <code>random_state=42</code> keeps the split consistent each time you run the code. That makes your results easier to reproduce and compare.</p>
+</div>
+</div>
+</section>
+<section id="roadmap-for-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="roadmap-for-part-2">Roadmap for Part 2</h2>
+<p>Today we focused on two core ideas that every ML project depends on:</p>
+<ol type="1">
+<li><strong>Regression vs.&nbsp;Classification:</strong> Understanding whether we predict numbers or labels.</li>
+<li><strong>Train/Test Split:</strong> Separating learning from evaluation.</li>
+<li><strong>Overfitting:</strong> Recognizing when a model learns the wrong lesson.</li>
+</ol>
+<p>In Part 3, we will begin building a real machine learning model with <strong>scikit-learn</strong> and <strong>Linear Regression</strong>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
