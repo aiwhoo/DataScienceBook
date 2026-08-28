@@ -30,17 +30,8 @@ By the end of this tutorial, you will be able to:
 Every transformation step solves a specific real-world problem, making data comparable, interpretable, and ready for mathematical models.
 
 ### Visualizing the Transformation Pipeline
-```{mermaid}
-graph LR
-    A[Raw Data] --> B{Transform}
-    subgraph B
-    B1[Filter]
-    B2[Normalize]
-    B3[Encode]
-    B4[Engineer]
-    end
-    B --> C[Machine-Ready Insights]
-```
+
+![Raw data enters the Transform stage — filtered, normalized, encoded, and engineered — and comes out the other side as machine-ready insights.](/assets/images/diagrams/transform-pipeline.svg){#fig-transform-pipeline fig-alt="A flow diagram showing a box labeled Raw Data with an arrow into a larger box labeled Transform, which contains four smaller boxes: Filter, Normalize, Encode, and Engineer. An arrow leads out of the Transform box into a final box labeled Machine-Ready Insights." width="90%"}
 
 ---
 

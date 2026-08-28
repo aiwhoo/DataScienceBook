@@ -3,3 +3,6 @@
 /_site/
 /docs/
 /site_libs/
+# PDF-render scratch artifacts (Mermaid-to-LaTeX intermediates), left
+# next to source .qmd files rather than inside /docs/.
+**/*_files/

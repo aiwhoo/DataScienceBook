@@ -59,14 +59,7 @@ Computers can sometimes get confused by spaces in file names. When naming your p
 
 Once your project is open, you will spend most of your time in two primary areas of the workspace.
 
-```{mermaid}
-graph LR
-    subgraph PyCharm Interface
-    A[Project Panel] --- B[Code Editor]
-    end
-    A -->|Manages| C[.py Files and Folders]
-    B -->|User Input| D[Writing Python Code]
-```
+![The two areas of the PyCharm workspace: the Project Panel manages your files and folders, while the Code Editor is where you write Python code.](/assets/images/diagrams/pycharm-interface.svg){#fig-pycharm-interface fig-alt="A diagram of the PyCharm Interface containing two boxes, Project Panel and Code Editor, connected to each other. An arrow labeled Manages goes from Project Panel down to a box labeled dot-py Files and Folders. An arrow labeled User Input goes from Code Editor down to a box labeled Writing Python Code." width="85%"}
 
 *   **Project Panel:** Located on the left, this shows all your folders and `.py` files.
 *   **Code Editor:** This is the main central area where you type, edit, and refine your Python code.

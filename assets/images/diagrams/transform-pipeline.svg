@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="700" height="260" fill="#fafafa"/>
+  <text x="350" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#2a2a2a">The Transform Stage</text>
+  <text x="350" y="46" text-anchor="middle" font-size="12" fill="#6a6a6a">raw data becomes machine-ready insights</text>
+
+  <rect x="20" y="110" width="110" height="60" rx="6" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="75" y="145" text-anchor="middle" font-size="12" fill="#2a2a2a">Raw Data</text>
+
+  <g stroke="#a8a8a8" stroke-width="2" fill="none"><path d="M 132 140 L 155 140"/></g>
+  <polygon points="155,140 146,135 146,145" fill="#a8a8a8"/>
+
+  <rect x="160" y="70" width="380" height="140" rx="6" fill="#e9ecef" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="350" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#6f42c1">TRANSFORM</text>
+
+  <rect x="175" y="115" width="78" height="48" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="214" y="144" text-anchor="middle" font-size="11" fill="#2a2a2a">Filter</text>
+
+  <rect x="258" y="115" width="78" height="48" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="297" y="144" text-anchor="middle" font-size="11" fill="#2a2a2a">Normalize</text>
+
+  <rect x="341" y="115" width="78" height="48" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="380" y="144" text-anchor="middle" font-size="11" fill="#2a2a2a">Encode</text>
+
+  <rect x="424" y="115" width="78" height="48" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="463" y="144" text-anchor="middle" font-size="11" fill="#2a2a2a">Engineer</text>
+
+  <g stroke="#a8a8a8" stroke-width="2" fill="none"><path d="M 542 140 L 565 140"/></g>
+  <polygon points="565,140 556,135 556,145" fill="#a8a8a8"/>
+
+  <rect x="570" y="108" width="115" height="64" rx="6" fill="#f4eef2" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="627" y="134" text-anchor="middle" font-size="11" fill="#2a2a2a">Machine-Ready</text>
+  <text x="627" y="150" text-anchor="middle" font-size="11" fill="#2a2a2a">Insights</text>
+</svg>

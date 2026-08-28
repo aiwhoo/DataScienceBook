@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="340" fill="#fafafa"/>
+  <text x="320" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#2a2a2a">The PyCharm Interface</text>
+  <text x="320" y="46" text-anchor="middle" font-size="12" fill="#6a6a6a">two areas you'll live in</text>
+
+  <!-- Outer frame -->
+  <rect x="60" y="70" width="400" height="135" rx="6" fill="#e9ecef" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="260" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#6f42c1">PyCharm Interface</text>
+
+  <rect x="85" y="110" width="160" height="65" rx="6" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="165" y="148" text-anchor="middle" font-size="13" fill="#2a2a2a">Project Panel</text>
+
+  <line x1="245" y1="142" x2="275" y2="142" stroke="#a8a8a8" stroke-width="1.5"/>
+
+  <rect x="275" y="110" width="160" height="65" rx="6" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="355" y="148" text-anchor="middle" font-size="13" fill="#2a2a2a">Code Editor</text>
+
+  <!-- Arrows down to outputs -->
+  <g stroke="#a8a8a8" stroke-width="1.5" fill="none">
+    <path d="M 165 175 L 165 245"/>
+    <path d="M 355 175 L 460 245"/>
+  </g>
+  <g fill="#a8a8a8">
+    <polygon points="165,245 160,235 170,235"/>
+    <polygon points="460,245 453,237 465,240"/>
+  </g>
+  <text x="200" y="222" text-anchor="middle" font-size="10" fill="#10a37f" font-weight="600">Manages</text>
+  <text x="430" y="215" text-anchor="middle" font-size="10" fill="#10a37f" font-weight="600">User Input</text>
+
+  <rect x="60" y="250" width="210" height="55" rx="6" fill="#f4eef2" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="165" y="282" text-anchor="middle" font-size="12" fill="#2a2a2a">.py Files and Folders</text>
+
+  <rect x="370" y="250" width="210" height="55" rx="6" fill="#f4eef2" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="475" y="282" text-anchor="middle" font-size="12" fill="#2a2a2a">Writing Python Code</text>
+</svg>

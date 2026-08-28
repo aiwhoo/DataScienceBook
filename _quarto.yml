@@ -50,3 +50,7 @@ format:
       - brand
     css: styles.css
     toc: true
+  pdf:
+    documentclass: scrreprt
+    toc: true
+    number-sections: true
