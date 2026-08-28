@@ -3,3 +3,184 @@ title: "Data Wrangling with Spreadsheets"
 author: "Technical Instructional Team"
 format: html
 ---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Explain why "eyeballing" a dataset stops working once it grows past a few dozen rows.
+*   Use spreadsheet filters to narrow a huge dataset down to just the rows you care about.
+*   Write `=UNIQUE()` and `=COUNTIF()` formulas to summarize a categorical column automatically.
+*   Build a pivot table that groups and counts data across two categories at once.
+*   Recognize sorting, filtering, and grouping as the core moves of data analysis — moves you will repeat later in Python.
+
+## Why Spreadsheets First?
+
+In [Chapter 1](../01-what-is-data/what-is-data.qmd), you learned that **structured data** — information organized into consistent rows and columns — is the kind computers love. Well, there's a tool for working with rows and columns that's already sitting on your laptop: the spreadsheet. Before data scientists reach for code, most of them learned to think in Google Sheets or Excel, and there's a good reason to start there.
+
+Here's an experiment you can do in your head. Imagine your 72-hour data log from Chapter 1 — maybe 20 rows of screen time, steps, and sleep. Want to find your highest-step day? Just look. Your eyes can scan 20 rows in a few seconds. Sorting and filtering *by eye* works fine at this scale.
+
+Now scale up. The **Delaware Open Data Portal** ([https://data.delaware.gov/](https://data.delaware.gov/)) publishes a dataset of every reported traffic crash in the state from 2010 to 2024 — **539,947 rows**. Want to know which day of the week has the most crashes? Go ahead, start scanning. At one row per second, you'd finish in about six days — without sleeping, and assuming you could somehow keep a tally in your head the whole time.
+
+Obviously nobody does that. The whole point of a spreadsheet is that *the software does the scanning for you*. You just have to learn to ask it the right way. In this chapter you'll learn three ways to ask, each more powerful than the last:
+
+1.  **Filters** — "Hide everything except the rows I care about."
+2.  **Formulas** — "Count these rows for me and write down the answer."
+3.  **Pivot tables** — "Group everything by category and summarize each group, all at once."
+
+These three moves — filtering, counting, grouping — aren't just spreadsheet tricks. They are *the* fundamental moves of data analysis, and you will meet them again, wearing Python costumes, in Unit II.
+
+## Sorting and Filtering
+
+Let's start with the biggest bang for the smallest effort. Open a dataset in Google Sheets, click the **Data** menu, and choose **Create a filter**. Small funnel-shaped icons appear on every column header — and suddenly every column is interactive.
+
+::: {.callout-note}
+### Filter (spreadsheet)
+A **filter** is a spreadsheet feature that temporarily hides rows that don't match conditions you choose, so you only see the subset you care about. The hidden rows aren't deleted — turn the filter off and they all come back.
+:::
+
+Click any column's funnel icon and you can:
+
+*   **Sort** the whole sheet by that column (A→Z, Z→A, smallest→largest).
+*   **Filter by values** — check and uncheck boxes to show only certain categories.
+*   **Filter by condition** — show only rows where the value is greater than, less than, or between numbers you choose.
+
+Here's how that plays out on the Delaware crash data. Suppose you only care about crashes in your own county during the last five years. Two clicks at a time:
+
+1.  On the **County** column, filter by values: uncheck everything except **New Castle**.
+2.  On the **Year** column, filter by condition: **is between** 2020 **and** 2024.
+
+That's it. Roughly half a million rows collapse to just the tens of thousands that match — one county, one five-year window. Every formula, chart, and scroll from this point on operates on a dataset you can actually reason about.
+
+::: {.callout-tip}
+### Instructor Insight: Filters Don't Destroy
+Students are often afraid to filter because it *looks* like the data disappeared. It didn't — the row numbers on the left will even skip (3, 4, 9, 10, 47...) to show you rows are merely hidden. Filtering is always reversible. Deleting is not. When in doubt, filter.
+:::
+
+One honest warning: on a dataset this size, Google Sheets will be *slow*. Every filter click may bring a loading bar, and sometimes the dreaded spinning wheel. That sluggishness is real, it gets worse as data grows, and it's exactly the pain that will motivate us to learn Python in Unit II. For now, patience — the filters do work.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+You filter the crash dataset to show only crashes where **County = Sussex** and **Year is between 2020 and 2024**. Your friend panics: "You deleted 500,000 rows of state data!" Are the other rows gone? And what two things could you do to see them again?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+The rows are not gone — a filter only **hides** rows that don't match; the skipping row numbers prove they're still there. To see them again you could (1) turn the filter off entirely (Data menu → Remove filter), or (2) edit the filter conditions — for example, re-check the other counties or widen the year range.
+:::
+:::
+
+## Formulas That Do the Counting For You
+
+Filters let you *see* a subset. But data science usually needs a number: *how many?* You could filter to Mondays, squint at the row count, write it down, then repeat six more times for the other weekdays... or you could make the spreadsheet do all of it with formulas.
+
+::: {.callout-note}
+### Formula
+A **formula** is an instruction you type into a spreadsheet cell, always starting with `=`, that tells the spreadsheet to calculate a value for you. When the underlying data changes, the formula automatically recalculates — you never have to redo the work by hand.
+:::
+
+Formulas need a way to point at data, and that's what cell references are for.
+
+::: {.callout-note}
+### Cell Reference
+A **cell reference** is the address of a cell or range of cells, written as a column letter plus a row number. `B2` means "column B, row 2." A range like `B2:B540000` means "every cell in column B from row 2 down to row 540000." Formulas use references so they can work on data wherever it lives.
+:::
+
+Let's answer a real question with the crash data: **which day of the week has the most crashes?** Suppose column B holds the weekday of each crash (`Monday`, `Tuesday`, ...), with the header in row 1 and data running from row 2 down.
+
+**Step 1: Find the distinct values with `=UNIQUE()`.** Before counting anything, you need to know what categories even exist in the column. Click an empty cell (say, `D2`) and type:
+
+```
+=UNIQUE(B2:B540000)
+```
+
+The spreadsheet scans the entire weekday column and spills out each distinct value exactly once — seven cells, `Monday` through `Sunday`. On your own 72-hour log this would be overkill; on 539,947 rows, it's the only sane way to discover what's in a column. (It's also a great data-quality check: if `UNIQUE` returns eight values because someone typed `monday` in lowercase somewhere, you've just caught a problem you'd never have spotted by scrolling.)
+
+**Step 2: Count each category with `=COUNTIF()`.** Now, next to the first unique value in `D2`, click cell `E2` and type:
+
+```
+=COUNTIF(B2:B540000, D2)
+```
+
+Read it like a sentence: "Look through the range `B2:B540000`, and count every cell that matches whatever is in `D2`." If `D2` says `Monday`, `E2` becomes the total number of Monday crashes in fifteen years of Delaware data — computed in about a second.
+
+**Step 3: Fill down.** Drag the small square at the corner of `E2` down six rows. The reference to `D2` slides along with it (`D3`, `D4`, ...), so each row counts its own weekday. Seven formulas, and the entire question is answered:
+
+```
+| D         | E      |
+|-----------|--------|
+| Monday    | 78,412 |
+| Tuesday   | 79,905 |
+| Wednesday | 81,338 |
+| Thursday  | 82,010 |
+| Friday    | 91,773 |
+| Saturday  | 72,441 |
+| Sunday    | 54,068 |
+```
+
+(Counts shown are illustrative — yours will depend on the exact dataset you download.) Notice what just happened: a question that would take *days* by eye took three formulas and a drag. And because formulas recalculate automatically, if the state publishes next year's crashes tomorrow, your summary updates itself.
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+**Prompt:** "I'm a high school student learning Google Sheets. Explain, piece by piece, what the formula `=COUNTIF(B2:B540000, D2)` does. Then suggest a formula that would count only the crashes where column B says 'Friday' AND column C says '2023' — and explain why plain COUNTIF can't do that alone."
+
+Try the suggested formula on a real sheet before you trust it — does it return the same number you get by filtering to Friday + 2023 and reading the row count? Verifying an AI's formula against a method you already trust is a habit worth keeping.
+:::
+
+## Pivot Tables: Grouping Made Visual
+
+`COUNTIF` answered "how many crashes per weekday?" — one category, seven formulas. But real questions are often two-dimensional: *how many crashes happened on each weekday, in each year?* That's 7 weekdays × 15 years = 105 combinations. Nobody wants to write 105 COUNTIF formulas.
+
+This is the job of the **pivot table**: everything COUNTIF does, for every category combination at once, with zero formulas typed.
+
+::: {.callout-note}
+### Pivot Table
+A **pivot table** is a spreadsheet tool that automatically groups rows by the categories in one or more columns and calculates a summary (count, sum, average...) for each group. It turns a long list of raw rows into a compact grid of totals — no formulas required.
+:::
+
+In Google Sheets: select your data, then **Insert → Pivot table**. A blank grid appears with a panel offering four slots, and building the weekday-by-year summary is pure drag-and-drop:
+
+*   **Rows:** add the **Weekday** column → each weekday becomes a row label.
+*   **Columns:** add the **Year** column → each year becomes a column header.
+*   **Values:** add any column, summarized by **COUNTA** → each cell of the grid becomes the number of crashes for that weekday-year pair.
+
+Ten seconds of dragging, and you're looking at a 7×15 grid: every Friday of 2020, every Sunday of 2024, all counted. Add **County** to the Filters slot and you can restrict the whole table to New Castle with one dropdown — the pivot equivalent of the filter you built earlier. Want averages instead of counts, or a different pair of categories? Drag the fields around and the table rebuilds itself instantly. That's why it's called a *pivot* table: you can spin the same data around to face any question.
+
+The mental model to keep is **group, then summarize**:
+
+```{mermaid}
+graph LR
+    A[539,947 raw rows] --> B{Group by category}
+    B --> C[Monday rows]
+    B --> D[Tuesday rows]
+    B --> E[... one pile per group]
+    C --> F[Count each pile]
+    D --> F
+    E --> F
+    F --> G[One tidy summary table]
+    style G fill:#28a745,color:#fff
+```
+
+This exact idea — group rows by a category and summarize them — comes back later as Python's `groupby()` in Chapter 5.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+You want to know the number of crashes for each **county** in each **month of the year** (January through December). Would you reach for COUNTIF or a pivot table — and if you chose the pivot table, what goes in the Rows, Columns, and Values slots?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+A pivot table. With 3 counties × 12 months = 36 combinations, writing 36 COUNTIF formulas would be slow and error-prone. In the pivot table: put **County** in Rows, **Month** in Columns, and any column in **Values** summarized by COUNTA (count). Each cell of the resulting 3×12 grid is the crash count for one county in one month. (Swapping Rows and Columns also works — it's the same table, pivoted.)
+:::
+:::
+
+## Your Turn: Summarize a Real Dataset
+
+Time to run the full playbook yourself, start to finish.
+
+1.  **Get a dataset.** Download a small-to-medium dataset (a few hundred to a few thousand rows) as a CSV from the [Delaware Open Data Portal](https://data.delaware.gov/) or [Kaggle](https://www.kaggle.com/datasets), and open it in Google Sheets. Pick one that has at least one **categorical column** — a column with repeating labels like a type, day, county, or category.
+2.  **Explore with a filter.** Turn on **Data → Create a filter** and narrow the data to one category or one range of values. Then bring everything back.
+3.  **Summarize with formulas.** In an empty column, use `=UNIQUE()` to list the distinct values of your categorical column. Next to it, use `=COUNTIF()` (filled down) to count how many rows match each value.
+4.  **Build one pivot table** that groups by your categorical column — and, if your data has a second interesting column, put it on the other axis. Check that the pivot table's counts agree with your COUNTIF results. (They should. If they don't, you've found either a typo in a formula or a data-quality surprise — both worth investigating.)
+
+::: {.callout-tip}
+### Bonus Challenge
+Look at your finished summary and write down **one sentence** stating the most interesting pattern you see — for example, "Crashes peak on Fridays." Then write a second sentence guessing *why*. Keep both sentences; you'll want them in the next chapter.
+:::
+
+## Roadmap: From Tables to Pictures
+
+You can now take a raw pile of thousands of rows and wrangle it into a small, meaningful summary table — distinct categories, counts per category, even a two-dimensional grid of totals. But a table of numbers still makes your reader do the work of finding the pattern. In **Chapter 3**, you'll turn exactly these summary tables into charts — bar charts, line charts, and more — so the pattern jumps off the screen before anyone reads a single number. The wrangling you practiced here is step one of every chart you'll ever make: first summarize, then visualize.
