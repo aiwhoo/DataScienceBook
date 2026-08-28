@@ -1,7 +1,12 @@
 /.quarto/
 **/*.quarto_ipynb
 /_site/
-/docs/
+# /docs/* (not /docs/) so the PDF exception below can actually apply —
+# git can't re-include a file whose parent directory is itself ignored.
+/docs/*
+# ...except the rendered PDF, which is tracked so it's downloadable
+# straight from the repo without a local Quarto build.
+!/docs/Data-Science-for-High-School.pdf
 /site_libs/
 # PDF-render scratch artifacts (Mermaid-to-LaTeX intermediates), left
 # next to source .qmd files rather than inside /docs/.
