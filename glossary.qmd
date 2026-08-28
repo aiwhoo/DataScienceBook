@@ -2,3 +2,322 @@
 title: "Glossary"
 format: html
 ---
+
+Every term introduced in this book, collected in one place. Each entry links back to the chapter where it's first taught, if you want the fuller explanation and worked example.
+
+## Algorithmic Bias
+
+**Algorithmic bias** happens when a computer system produces systematically unfair results because the data it learned from contained bias. The algorithm isn't malicious — it's *obedient*. It faithfully learns whatever patterns are in its training data, including the unfair ones. Data scientists summarize it in four words: **bias in, bias out.**
+
+See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
+
+## API
+
+An **API** (Application Programming Interface) is a way for one program to ask another program for data — usually over the internet — and get back a structured answer. The requesting program sends a specially formatted URL; the serving program replies with machine-readable data instead of a human-readable web page.
+
+See [Where Data Comes From: APIs & Real-World Sources](06-apis-data-sources/apis-data-sources.qmd).
+
+## Bias (in data)
+
+**Bias (in data)** is a systematic tilt in a dataset — caused by how, where, or from whom the data was collected — that makes it misrepresent the real world. A biased dataset isn't "wrong numbers"; it's true numbers that tell a slanted story.
+
+See [What Is Data?](01-what-is-data/what-is-data.qmd).
+
+## Big Data
+
+In this context, **Big Data** refers to datasets that are too large or complex to be dealt with efficiently by traditional data-processing software, necessitating more robust tools like Python and Pandas.
+
+See [Python & Pandas: Working with Big Data](04-python-pandas/Chapter3-Part1.qmd).
+
+## Boolean Masking
+
+Bracket notation works by creating a **Boolean Mask**—a series of True/False values for every row. Python then only displays the rows marked "True."
+
+See [Part 4: Filtering Like a Pro](04-python-pandas/Chapter3-Part4.qmd).
+
+## Causation
+
+**Causation** means one thing actually *makes* the other happen — changing the first genuinely changes the second. Causation is a claim about how the world *works*, and it's much, much harder to prove than correlation.
+
+See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
+
+## Cell Reference
+
+A **cell reference** is the address of a cell or range of cells, written as a column letter plus a row number. `B2` means "column B, row 2." A range like `B2:B540000` means "every cell in column B from row 2 down to row 540000." Formulas use references so they can work on data wherever it lives.
+
+See [Data Wrangling with Spreadsheets](02-spreadsheets/spreadsheets.qmd).
+
+## Classification
+
+**Classification** is predicting a *category* — a label from a fixed set of choices, like "spam / not spam" or "cat / dog / hamster."
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## Correlation
+
+**Correlation** means two things tend to move together: when one goes up, the other tends to go up (or reliably down). Correlation describes a *pattern* you can see in the data. It says nothing about *why* the pattern exists.
+
+See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
+
+## Dashboard
+
+A **dashboard** is a visual display that gathers one or more charts (and sometimes tables or maps) in a single view, so a reader can absorb the most important results of a dataset at a glance — without ever touching the raw rows.
+
+See [Data Visualization Basics](03-data-visualization/data-visualization.qmd).
+
+## Data
+
+**Data** is information that can be collected, stored, and analyzed. It comes from our actions, our devices, and the world around us — every step counted, song skipped, and door opened can become a data point.
+
+See [What Is Data?](01-what-is-data/what-is-data.qmd).
+
+## Data Logging
+
+**Data logging** is the practice of recording observations or measurements over time, at regular intervals or as events happen, so the record can be analyzed later. A fitness tracker logs your steps automatically; a scientist logging tide heights every hour is doing the same thing by hand.
+
+See [What Is Data?](01-what-is-data/what-is-data.qmd).
+
+## Data Preparation
+
+Data Preparation is the process of cleaning and transforming raw data prior to processing and analysis. It often involves reformatting types and handling missing values.
+
+See [Part 4: Filtering Like a Pro](04-python-pandas/Chapter3-Part4.qmd).
+
+## Data Privacy
+
+**Data privacy** is your ability to control information about yourself — what gets collected, who can see it, how it's used, and how long it's kept. It rests on **consent**: the idea that companies should tell you what they collect and get your agreement before collecting it.
+
+See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
+
+## Data Storytelling
+
+**Data storytelling** is the practice of combining data, visual design, and narrative so that an audience understands *and cares about* your findings — instead of just seeing a chart. The data supplies the evidence; the visuals make it visible; the narrative makes it matter.
+
+See [Telling Your Data Story](11-data-storytelling/data-storytelling.qmd).
+
+## Data Visualization
+
+**Data visualization** is the practice of representing data as pictures — charts, graphs, maps — so that patterns, trends, and outliers can be seen at a glance instead of computed in your head. It is the last step of the summarize-then-show pipeline you started in Chapter 2.
+
+See [Data Visualization Basics](03-data-visualization/data-visualization.qmd).
+
+## DataFrame
+
+A **DataFrame** is the Pandas function that opens a CSV file and loads it as a structured table—similar to Excel opening a file, but handled entirely through code.
+
+See [Part 3: Meet Your New Best Friend—Pandas](04-python-pandas/Chapter3-Part3.qmd).
+
+## Decision Tree
+
+A **decision tree** is a model that makes predictions by asking a sequence of yes/no questions about the features — like a flowchart it learns from the data. For example: *Is Steps greater than 800? If yes, is Hour of Day past 6 PM?* — and each path of answers ends in a prediction. Because each question splits the data into pieces that get their own predictions, a tree can capture patterns that bend, jump, and zigzag — no straight-line assumption anywhere.
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## Dual-Axis Chart
+
+A **dual-axis chart** is a chart-literacy term for a graph with *two different* y-axis scales — one on the left, one on the right — so two variables with very different ranges (say, crash counts in the thousands and rainfall in inches) can share one picture. CODAP supports adding a second, right-side y-axis as a separate option, but handle the idea with care wherever you meet it: as you'll see in "How Charts Can Mislead," two independently-scaled axes are one of the easiest ways to accidentally lie with a chart.
+
+See [Data Visualization Basics](03-data-visualization/data-visualization.qmd).
+
+## Encoding
+
+**Encoding** is the process of converting categorical data (text-based labels) into numerical values. This ensures that non-numeric features can be used as inputs for mathematical models.
+
+See [Part 4: Encoding, Merging, and the ETL Endgame](05-etl/Chapter4-Part4.qmd).
+
+## Endpoint
+
+An **endpoint** is one specific URL (or URL pattern) that an API exposes for one specific kind of data. Open-Meteo's `/v1/forecast` endpoint serves weather forecasts; its `/v1/air-quality` endpoint serves air-quality data. One API, many endpoints — like one restaurant menu with separate sections for entrées and desserts.
+
+See [Where Data Comes From: APIs & Real-World Sources](06-apis-data-sources/apis-data-sources.qmd).
+
+## ETL
+
+**ETL** stands for **Extract, Transform, and Load** — a three-stage process that turns raw, messy data into something clean, structured, and ready for analysis or machine learning. It's the invisible backbone behind every dashboard and prediction model, ensuring that data is trustworthy, consistent, and analysis-ready.
+
+See [ETL in Action: Cleaning & Preprocessing](05-etl/Chapter4-Part1.qmd).
+
+## Filter (spreadsheet)
+
+A **filter** is a spreadsheet feature that temporarily hides rows that don't match conditions you choose, so you only see the subset you care about. The hidden rows aren't deleted — turn the filter off and they all come back.
+
+See [Data Wrangling with Spreadsheets](02-spreadsheets/spreadsheets.qmd).
+
+## Formula
+
+A **formula** is an instruction you type into a spreadsheet cell, always starting with `=`, that tells the spreadsheet to calculate a value for you. When the underlying data changes, the formula automatically recalculates — you never have to redo the work by hand.
+
+See [Data Wrangling with Spreadsheets](02-spreadsheets/spreadsheets.qmd).
+
+## Hallucination (AI)
+
+A **hallucination** is when an AI model states something false as if it were fact — often fluently, in detail, and with total confidence. The model isn't "lying"; it's producing text that *sounds* right without any built-in guarantee that it *is* right.
+
+See [How AI Learns From Data](09-ai-and-llms/ai-and-llms.qmd).
+
+## Integrated Development Environment (IDE)
+
+An **IDE** is a super-powered digital notebook designed specifically for writing, running, and managing code in one centralized location.
+
+See [Part 2: Getting Started with PyCharm](04-python-pandas/Chapter3-Part2.qmd).
+
+## JSON
+
+**JSON** (JavaScript Object Notation) is a text format for structured data. Despite the "JavaScript" in its name, every programming language can read it — and to a Python programmer, JSON looks almost exactly like nested **dictionaries** (curly braces, `"key": value` pairs) and **lists** (square brackets).
+
+See [Where Data Comes From: APIs & Real-World Sources](06-apis-data-sources/apis-data-sources.qmd).
+
+## Key Message
+
+Your **key message** is the one-to-two-sentence core takeaway you want your audience to remember after your presentation — stated so that it answers the question *"why should my audience care?"* If a listener can repeat your key message to a friend the next day, your data story worked.
+
+See [Telling Your Data Story](11-data-storytelling/data-storytelling.qmd).
+
+## Large Language Model (LLM)
+
+A **Large Language Model (LLM)** is a machine learning model trained on enormous amounts of text to predict what word (or word-fragment) is most likely to come next, given everything that came before it. ChatGPT, and tools like it, are LLMs with a chat interface on top.
+
+See [How AI Learns From Data](09-ai-and-llms/ai-and-llms.qmd).
+
+## Library
+
+A **Library** is like a box of LEGO bricks—ready-made code you snap together to add functionality to your programs rather than building every tool from scratch.
+
+See [Part 3: Meet Your New Best Friend—Pandas](04-python-pandas/Chapter3-Part3.qmd).
+
+## Machine Learning
+
+**Machine learning** is teaching a computer to find patterns in data and make predictions from them — by showing it many examples, instead of writing exact rules by hand.
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## Mean
+
+The **mean** (what most people call the "average") is the sum of all the values divided by how many values there are. It uses every single data point — which is both its superpower and its weakness.
+
+See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
+
+## Mean Squared Error (MSE)
+
+**Mean Squared Error** is the average size of the model's mistakes, *squared* — for each test row, take the gap between the predicted value and the actual value, square it, then average all those squared gaps. Squaring means big mistakes count extra: missing by 20 hurts far more than four times as much as missing by 5. **Lower is better**, and an MSE of 0 would mean every prediction was perfect. This is exactly the "spread of a model's mistakes" idea we promised you at the end of [Chapter 7's section on spread](07-statistics-ethics/statistics-ethics.qmd#spread-how-different-are-the-numbers-from-each-other).
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## Median
+
+The **median** is the middle value when the data is sorted from smallest to largest. Half the values sit below it, half above. (If there's an even number of values, the median is the mean of the two middle ones.) Because it only cares about *position*, the median barely notices outliers.
+
+See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
+
+## Mode
+
+The **mode** is the value that appears most often in a dataset. It's the only measure of the middle that works on *categorical* data — data made of labels and categories instead of numbers.
+
+See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
+
+## Overfitting
+
+**Overfitting** is when a model learns its training data *too* specifically — memorizing its quirks and noise instead of the real underlying pattern — so it scores brilliantly on data it has seen and falls apart on data it hasn't. It's the model that memorized the practice questions but fails the real test.
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## pip
+
+**pip** stands for "Package Installer for Python." Think of it as Python’s own App Store. You tell it what you need, and it fetches and installs everything for you automatically.
+
+See [Part 3: Meet Your New Best Friend—Pandas](04-python-pandas/Chapter3-Part3.qmd).
+
+## Pivot Table
+
+A **pivot table** is a spreadsheet tool that automatically groups rows by the categories in one or more columns and calculates a summary (count, sum, average...) for each group. It turns a long list of raw rows into a compact grid of totals — no formulas required.
+
+See [Data Wrangling with Spreadsheets](02-spreadsheets/spreadsheets.qmd).
+
+## Prompt
+
+A **prompt** is the text you give an AI model to get a response — your question, plus any context, instructions, or examples you include with it. The prompt is the model's *entire* window into what you want.
+
+See [How AI Learns From Data](09-ai-and-llms/ai-and-llms.qmd).
+
+## Rate Limit
+
+A **rate limit** is a cap on how many requests you may send an API in a given time window (for example, Open-Meteo's free tier allows up to 10,000 requests per day). Exceed it and the API starts refusing you.
+
+See [Where Data Comes From: APIs & Real-World Sources](06-apis-data-sources/apis-data-sources.qmd).
+
+## Regression
+
+**Regression** is predicting a *number* — a continuous value that can land anywhere on a scale, like 72.4 beats per minute or $312,500.
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## Research Question
+
+A **research question** is a specific, answerable question that your data can actually address — it names what you're measuring, what you're comparing, and what would count as an answer. A topic is not a research question; a topic is where research questions come from.
+
+*   **Vague topic:** "Traffic accidents." → **Research question:** "Do traffic accidents in Delaware happen more often on weekends than on weekdays?"
+*   **Vague topic:** "Music popularity." → **Research question:** "Do songs with a faster tempo have more streams, on average, than slower songs in this Spotify dataset?"
+
+See [Designing Your Own Data Science Project](10-capstone-project/capstone-project.qmd).
+
+## R² Score
+
+The **R² score** ("R-squared") says what fraction of the pattern in the data the model actually explains. An R² of 1 is a perfect model; an R² of 0 means the model is no better than ignoring the features entirely and just guessing the average heart rate for everyone. And yes — R² can go **negative**, which means the model's predictions are actively *worse* than guessing the average every time.
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## String
+
+A **String** is a data type used in programming to represent text. In Python, strings are always wrapped in quotation marks.
+
+See [Part 2: Getting Started with PyCharm](04-python-pandas/Chapter3-Part2.qmd).
+
+## Structured Data
+
+**Structured data** is neatly organized information with a consistent format — usually rows and columns — which makes it easy for computers to search, sort, and analyze. Examples:
+
+1.  Your daily step counts (a number, tied to a date).
+2.  GPS coordinates from a phone's map app (latitude, longitude, timestamp).
+3.  Calendar events (a title, a date, a start time, an end time — always the same fields).
+
+See [What Is Data?](01-what-is-data/what-is-data.qmd).
+
+## The Load Phase
+
+The **Load** phase is the final stage of ETL where transformed data is saved to a permanent destination, ensuring it is preserved for future analysis or application.
+
+See [ETL in Action: The Load Phase](05-etl/Chapter4-Part5.qmd).
+
+## Trace
+
+A **trace** is one layer of data drawn on a chart — one line on a line chart, one set of same-colored points on a graph. A chart comparing two variables has two traces; the legend tells you which is which.
+
+See [Data Visualization Basics](03-data-visualization/data-visualization.qmd).
+
+## Train/Test Split
+
+A **train/test split** divides your dataset into two piles before any learning happens: **training data** (usually around 80%), which the model learns its patterns from, and **test data** (the remaining ~20%), which is kept hidden from the model and used afterward to check its predictions on data it has never seen. The test set is the model's real exam.
+
+See [Introduction to Machine Learning](08-machine-learning/machine-learning.qmd).
+
+## Training Data (AI)
+
+**Training data**, for an AI model like an LLM, is the collection of examples it learns its patterns from: books, websites, news articles, encyclopedias, forum posts, computer code, and other text gathered at massive scale — often a large slice of the public internet.
+
+See [How AI Learns From Data](09-ai-and-llms/ai-and-llms.qmd).
+
+## Transform
+
+**Transform** is the process of converting raw data into a structured format by applying operations like filtering, encoding, normalization, or feature engineering.
+
+See [Part 3: The Transform Engine Room](05-etl/Chapter4-Part3.qmd).
+
+## Unstructured Data
+
+**Unstructured data** is information with no fixed format, which makes it much harder for computers to process directly. Examples:
+
+1.  Photos in your camera roll (a grid of millions of colored pixels — nowhere does it *say* "birthday party").
+2.  Videos (thousands of those photos per minute, plus sound).
+3.  Voice memos (sound waves, not sentences — a computer has to work hard just to figure out what words were said).
+
+See [What Is Data?](01-what-is-data/what-is-data.qmd).
