@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 200" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="780" height="200" fill="#fafafa"/>
+  <rect x="10" y="80" width="110" height="42" rx="21" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="65" y="106" text-anchor="middle" font-size="9" fill="#2a2a2a">Raw Sources</text>
+
+  <rect x="150" y="80" width="90" height="42" rx="21" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="195" y="106" text-anchor="middle" font-size="9" fill="#2a2a2a">Extract</text>
+
+  <rect x="270" y="80" width="100" height="42" rx="21" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="320" y="106" text-anchor="middle" font-size="9" fill="#2a2a2a">Transform</text>
+
+  <rect x="400" y="80" width="90" height="42" rx="21" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="445" y="106" text-anchor="middle" font-size="9" fill="#2a2a2a">Load</text>
+
+  <rect x="520" y="75" width="110" height="50" rx="5" fill="#fff2e8" stroke="#ff6600" stroke-width="1.5"/>
+  <text x="575" y="105" text-anchor="middle" font-size="10" font-weight="600" fill="#ff6600">Data Asset</text>
+
+  <rect x="670" y="10" width="105" height="40" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="722" y="34" text-anchor="middle" font-size="9" fill="#2a2a2a">Dashboards</text>
+  <rect x="670" y="80" width="105" height="40" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="722" y="99" text-anchor="middle" font-size="8" fill="#2a2a2a">Machine</text>
+  <text x="722" y="110" text-anchor="middle" font-size="8" fill="#2a2a2a">Learning</text>
+  <rect x="670" y="150" width="105" height="40" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="722" y="174" text-anchor="middle" font-size="9" fill="#2a2a2a">Public Reports</text>
+
+  <g stroke="#a8a8a8" stroke-width="1.5" fill="none">
+    <path d="M 120 101 L 148 101"/>
+    <path d="M 240 101 L 268 101"/>
+    <path d="M 370 101 L 398 101"/>
+    <path d="M 490 100 L 518 100"/>
+    <path d="M 630 90 L 668 30"/>
+    <path d="M 630 100 L 668 100"/>
+    <path d="M 630 110 L 668 170"/>
+  </g>
+  <g fill="#a8a8a8">
+    <polygon points="148,101 141,97 141,105"/>
+    <polygon points="268,101 261,97 261,105"/>
+    <polygon points="398,101 391,97 391,105"/>
+    <polygon points="518,100 511,96 511,104"/>
+    <polygon points="668,30 658,28 662,38"/>
+    <polygon points="668,100 660,96 660,104"/>
+    <polygon points="668,170 662,162 658,172"/>
+  </g>
+</svg>

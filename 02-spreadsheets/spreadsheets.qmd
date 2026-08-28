@@ -146,18 +146,7 @@ Ten seconds of dragging, and you're looking at a 7×15 grid: every Friday of 202
 
 The mental model to keep is **group, then summarize**:
 
-```{mermaid}
-graph LR
-    A[539,947 raw rows] --> B{Group by category}
-    B --> C[Monday rows]
-    B --> D[Tuesday rows]
-    B --> E[... one pile per group]
-    C --> F[Count each pile]
-    D --> F
-    E --> F
-    F --> G[One tidy summary table]
-    style G fill:#28a745,color:#fff
-```
+![Grouping rows by category, then counting each pile, produces one tidy summary table.](/assets/images/diagrams/pivot-summary-flow.svg){fig-alt="A flow diagram showing 539,947 raw rows grouped by category into piles (Monday rows, Tuesday rows, and so on), each pile counted, producing one tidy summary table." width="90%"}
 
 This exact idea — group rows by a category and summarize them — comes back later as Python's `groupby()` in Chapter 5.
 

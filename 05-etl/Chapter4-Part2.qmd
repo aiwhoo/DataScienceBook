@@ -24,15 +24,7 @@ Every great data science project begins with messy, scattered, and incomplete da
 The golden rule of data engineering is "Garbage In, Garbage Out." Clean data is not an optional luxury; it is foundational to the integrity of your work.
 
 ### Visualizing the Pipeline Logic
-```{mermaid}
-graph TD
-    A[Messy / Scattered Data] --> B{ETL Pipeline}
-    B --> C[Trustworthy Data]
-    C --> D[Dashboards]
-    C --> E[Predictions]
-    C --> F[Business Decisions]
-    style B fill:#d4edda,stroke:#155724
-```
+![The ETL pipeline turns messy, scattered data into trustworthy data — the raw material behind dashboards, predictions, and business decisions.](/assets/images/diagrams/etl-pipeline-value.svg){fig-alt="A flow diagram showing Messy or Scattered Data feeding into the ETL Pipeline, producing Trustworthy Data, which branches into Dashboards, Predictions, and Business Decisions." width="95%"}
 
 ---
 
@@ -47,15 +39,7 @@ To practice extraction, you need reliable data sources. Two primary hubs for dat
 2.  **Kaggle:** The premier platform for data science learners. Kaggle hosts thousands of datasets, from Titanic passenger records to YouTube comment trends, and serves as both a learning lab and a proving ground.
 
 ### Abstract Concept: The Extraction Web
-```{mermaid}
-graph LR
-    A[Websites] --> E((Extraction))
-    B[Flat Files: CSV/Excel] --> E
-    C[Databases] --> E
-    D[APIs] --> E
-    E --> F[Python Environment]
-    style E fill:#fff3cd,stroke:#856404
-```
+![Four different source types, all funneling through Extraction into the same Python environment.](/assets/images/diagrams/extraction-sources.svg){fig-alt="A diagram showing four source types — Websites, Flat Files (CSV/Excel), Databases, and APIs — all feeding into an Extraction node, which feeds into the Python Environment." width="90%"}
 
 ---
 

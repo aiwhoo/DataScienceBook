@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 book:
-  title: "Data Science for High School"
-  author: "Technology Service Center, University of Delaware"
+  title: "Data Science"
+  author: "Matthew Saponaro, Ph.D"
 
   chapters:
     - index.qmd

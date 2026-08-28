@@ -30,15 +30,7 @@ Algorithms do not speak English; they speak math. Encoding is the bridge that co
 ### Choosing the Right Encoding Logic
 The choice between encoding methods depends on whether your categories have a natural "ranking" or order.
 
-```{mermaid}
-graph TD
-    A[Is there a natural order?] -->|Yes: Ordinal| B[Label Encoding]
-    A -->|No: Nominal| C[One-Hot Encoding]
-    B --> D[Assigns 0, 1, 2...]
-    C --> E[Creates binary columns 0 or 1]
-    style B fill:#d1e7dd,stroke:#0f5132
-    style C fill:#fff3cd,stroke:#856404
-```
+![If the categories have a natural order, use Label Encoding; if not, use One-Hot Encoding.](/assets/images/diagrams/encoding-decision.svg){fig-alt="A decision diagram: Is there a natural order? Yes leads to Label Encoding, which assigns 0, 1, 2. No leads to One-Hot Encoding, which creates binary columns of 0 or 1." width="85%"}
 
 ---
 
@@ -105,12 +97,7 @@ In each row, exactly one column equals 1.
 In our raw dataset, we have 24 entries per person per day. While granular, this "hourly noise" can obscure the bigger picture. **Merging (Aggregation)** collapses these redundant records into a single daily summary.
 
 ### The Aggregation Workflow
-```{mermaid}
-graph LR
-    A[24 Hourly Rows] --> B{groupby 'Name', 'Date'}
-    B --> C[.agg 'sum']
-    C --> D[1 Daily Summary Row]
-```
+![24 hourly rows, grouped and summed, collapse into a single daily summary row.](/assets/images/diagrams/aggregation-flow.svg){fig-alt="A four-step flow diagram: 24 Hourly Rows, groupby Name and Date, dot agg sum, 1 Daily Summary Row." width="95%"}
 
 ### Reflective Code: Extracting the Daily Signal
 By grouping and summing, we reveal behavioral trends that raw records obscure.

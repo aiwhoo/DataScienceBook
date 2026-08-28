@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="780" height="220" fill="#fafafa"/>
+
+  <rect x="10" y="85" width="130" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="75" y="115" text-anchor="middle" font-size="12" fill="#2a2a2a">539,947 raw rows</text>
+
+  <rect x="175" y="85" width="120" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="235" y="108" text-anchor="middle" font-size="11" fill="#2a2a2a">Group by</text>
+  <text x="235" y="122" text-anchor="middle" font-size="11" fill="#2a2a2a">category</text>
+
+  <rect x="330" y="30" width="105" height="40" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="382" y="55" text-anchor="middle" font-size="10" fill="#2a2a2a">Monday rows</text>
+  <rect x="330" y="90" width="105" height="40" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="382" y="115" text-anchor="middle" font-size="10" fill="#2a2a2a">Tuesday rows</text>
+  <rect x="330" y="150" width="105" height="40" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="382" y="168" text-anchor="middle" font-size="9" fill="#2a2a2a">… one pile</text>
+  <text x="382" y="180" text-anchor="middle" font-size="9" fill="#2a2a2a">per group</text>
+
+  <rect x="475" y="85" width="115" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="532" y="115" text-anchor="middle" font-size="11" fill="#2a2a2a">Count each pile</text>
+
+  <rect x="630" y="80" width="140" height="60" rx="5" fill="#f4eef2" stroke="#10a37f" stroke-width="1.75"/>
+  <text x="700" y="105" text-anchor="middle" font-size="11" font-weight="600" fill="#10a37f">One tidy</text>
+  <text x="700" y="120" text-anchor="middle" font-size="11" font-weight="600" fill="#10a37f">summary table</text>
+
+  <g stroke="#a8a8a8" stroke-width="1.5" fill="none">
+    <path d="M 140 110 L 173 110"/>
+    <path d="M 295 100 L 328 50"/>
+    <path d="M 295 110 L 328 110"/>
+    <path d="M 295 120 L 328 168"/>
+    <path d="M 435 50 L 473 100"/>
+    <path d="M 435 110 L 473 110"/>
+    <path d="M 435 168 L 473 120"/>
+    <path d="M 590 110 L 628 110"/>
+  </g>
+  <g fill="#a8a8a8">
+    <polygon points="173,110 165,105 165,115"/>
+    <polygon points="473,100 467,92 461,100"/>
+    <polygon points="473,110 465,105 465,115"/>
+    <polygon points="473,120 467,128 461,120"/>
+    <polygon points="628,110 620,105 620,115"/>
+  </g>
+</svg>

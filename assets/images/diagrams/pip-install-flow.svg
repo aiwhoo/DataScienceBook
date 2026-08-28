@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 120" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="700" height="120" fill="#fafafa"/>
+  <rect x="10" y="35" width="110" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="65" y="65" text-anchor="middle" font-size="10" fill="#2a2a2a">Open Terminal</text>
+
+  <rect x="150" y="35" width="150" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="225" y="57" text-anchor="middle" font-size="9" fill="#2a2a2a">Type:</text>
+  <text x="225" y="70" text-anchor="middle" font-size="9" fill="#2a2a2a">pip install pandas</text>
+
+  <rect x="330" y="35" width="140" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="400" y="65" text-anchor="middle" font-size="10" fill="#2a2a2a">pip fetches library</text>
+
+  <rect x="500" y="35" width="180" height="50" rx="5" fill="#f4eef2" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="590" y="57" text-anchor="middle" font-size="10" font-weight="600" fill="#10a37f">Success:</text>
+  <text x="590" y="70" text-anchor="middle" font-size="10" font-weight="600" fill="#10a37f">Pandas Installed</text>
+
+  <g stroke="#a8a8a8" stroke-width="1.5" fill="none">
+    <path d="M 120 60 L 148 60"/>
+    <path d="M 300 60 L 328 60"/>
+    <path d="M 470 60 L 498 60"/>
+  </g>
+  <g fill="#a8a8a8">
+    <polygon points="148,60 140,55 140,65"/>
+    <polygon points="328,60 320,55 320,65"/>
+    <polygon points="498,60 490,55 490,65"/>
+  </g>
+</svg>

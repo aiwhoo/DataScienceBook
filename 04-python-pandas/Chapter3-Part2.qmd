@@ -24,13 +24,7 @@ Now that you understand what Python is, it is time to start writing it. While yo
 An **IDE** is a super-powered digital notebook designed specifically for writing, running, and managing code in one centralized location.
 :::
 
-```{mermaid}
-graph TD
-    A[Python: The Language] -->|Requires| B[PyCharm: The IDE]
-    B --> C[Checks Syntax & Spelling]
-    B --> D[One-Click Execution]
-    B --> E[Project Organization]
-```
+![Python is the language you write; PyCharm is the IDE that requires it and adds syntax checking, one-click execution, and project organization on top.](/assets/images/diagrams/python-pycharm-relationship.svg){fig-alt="A diagram showing Python: The Language pointing to PyCharm: The IDE labeled Requires, which then branches into three boxes: Checks Syntax and Spelling, One-Click Execution, and Project Organization." width="85%"}
 
 ## Setting Up Your Digital Workshop
 

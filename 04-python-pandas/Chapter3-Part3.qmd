@@ -36,12 +36,7 @@ We use the **Terminal** in PyCharm—a text-based window for direct computer ins
 **pip** stands for "Package Installer for Python." Think of it as Python’s own App Store. You tell it what you need, and it fetches and installs everything for you automatically.
 :::
 
-```{mermaid}
-graph LR
-    A[Open Terminal] --> B[Type: pip install pandas]
-    B --> C{pip fetches library}
-    C --> D[Success: Pandas Installed]
-```
+![The four-step install flow: open the terminal, type the install command, let pip fetch the library, and confirm success.](/assets/images/diagrams/pip-install-flow.svg){fig-alt="A four-step flow diagram: Open Terminal, Type colon pip install pandas, pip fetches library, Success: Pandas Installed." width="95%"}
 
 ### Step 2: Importing into Your Code
 Once installed, you bring Pandas into every Python file with a single line of code using an **alias**.

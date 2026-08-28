@@ -29,17 +29,7 @@ Depending on the scale and portable needs of your project, you typically choose 
 *   **Write to a Database:** Structured storage designed for querying data at scale across large organizations.
 
 ### The Data Life Cycle
-```{mermaid}
-graph LR
-    A[Raw Sources] --> B(Extract)
-    B --> C(Transform)
-    C --> D(Load)
-    D --> E{Data Asset}
-    E --> F[Dashboards]
-    E --> G[Machine Learning]
-    E --> H[Public Reports]
-    style D fill:#f96,stroke:#333,stroke-width:2px
-```
+![Raw sources flow through Extract, Transform, and Load into a finished Data Asset — which then feeds dashboards, machine learning, and public reports alike.](/assets/images/diagrams/data-life-cycle.svg){fig-alt="A flow diagram: Raw Sources leads through Extract, Transform, and Load into a Data Asset, which branches into Dashboards, Machine Learning, and Public Reports." width="95%"}
 
 ---
 
@@ -97,32 +87,7 @@ Saving your file is a major milestone—it signifies that your data pipeline wor
 3.  **Load:** We exported the final dataset to a `.csv` file for future use.
 
 ### Pipeline Architecture
-```{mermaid}
-graph TD
-    %% Define styles for high contrast and readability
-    classDef default fill:#ffffff,stroke:#ff6600,stroke-width:2px,color:#000000;
-    style Extraction fill:#fff5f0,stroke:#ff6600,stroke-width:1px,stroke-dasharray: 5 5;
-    style Transformation fill:#fff5f0,stroke:#ff6600,stroke-width:1px,stroke-dasharray: 5 5;
-    style Loading fill:#fff5f0,stroke:#ff6600,stroke-width:1px,stroke-dasharray: 5 5;
-
-    subgraph Extraction
-    S1[Sheet 1] --> C[pd.concat]
-    S2[Sheet 2] --> C
-    S3[Sheet 3] --> C
-    end
-    
-    subgraph Transformation
-    C --> T1[Normalize]
-    T1 --> T2[Sort/Spatial]
-    T2 --> T3[Encode]
-    T3 --> T4[Aggregate]
-    end
-    
-    subgraph Loading
-    T4 --> L[.to_csv]
-    L --> F[(Final CSV)]
-    end
-```
+![The whole pipeline end to end: three sheets extracted and concatenated, four transform steps in sequence, then written out to the final CSV.](/assets/images/diagrams/pipeline-architecture.svg){fig-alt="A three-stage pipeline diagram. Extraction: three sheets feeding into pd.concat. Transformation: a chain of Normalize, Sort/Spatial, Encode, and Aggregate. Loading: dot to_csv writing out the Final CSV." width="95%"}
 
 ---
 

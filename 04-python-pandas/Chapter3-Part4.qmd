@@ -24,13 +24,7 @@ Once you transition your filters into code, you unlock three major advantages:
 2.  **Automation:** Run the same analysis on new data instantly.
 3.  **Reusability:** Share your exact logic with others so they can replicate your results.
 
-```{mermaid}
-graph LR
-    A[Raw Data: 500k+ Rows] --> B{Tool Selection}
-    B -->|Google Sheets| C[Manual / Slow / Crash Risk]
-    B -->|Pandas in Python| D[Automated / Scalable / Robust]
-    style D fill:#28a745,color:#fff
-```
+![Facing 500k+ rows, the Google Sheets path is manual and slow with real crash risk; the Pandas path is automated, scalable, and robust.](/assets/images/diagrams/tool-selection.svg){fig-alt="A decision diagram: Raw Data 500k+ Rows leads to Tool Selection, which branches to Google Sheets (Manual, Slow, Crash Risk) and to Pandas in Python (Automated, Scalable, Robust)." width="85%"}
 
 ## Step 1: Cleaning the Data First
 
@@ -113,15 +107,7 @@ All three methods return the same filtered result. Your choice depends on your s
 *   Use **`.query()`** when readability and clean syntax are your top priorities.
 *   Use **Conditionals** for quick, direct filtering of rows.
 
-```{mermaid}
-graph TD
-    A[Which Filter to Use?] --> B{.loc}
-    A --> C{.query}
-    A --> D[Conditionals]
-    B --> B1[Labels + Columns]
-    C --> C1[Sentence Readability]
-    D --> D1[Quick + Direct]
-```
+![Three ways to filter, and what each one is best at: .loc for labels and columns, .query for sentence-like readability, and plain conditionals for quick, direct filters.](/assets/images/diagrams/filter-choice-tree.svg){fig-alt="A tree diagram: Which Filter to Use branches into .loc, .query, and Conditionals, each pointing to its strength — Labels plus Columns, Sentence Readability, and Quick plus Direct." width="90%"}
 
 ::: {.callout-tip .knowledge-check title="Knowledge Check"}
 You filter for `df["COUNTY NAME"] == "New Castle"` and get zero rows back,

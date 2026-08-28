@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 120" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="700" height="120" fill="#fafafa"/>
+  <rect x="10" y="35" width="130" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="75" y="65" text-anchor="middle" font-size="10" fill="#2a2a2a">24 Hourly Rows</text>
+
+  <rect x="175" y="35" width="180" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="265" y="65" text-anchor="middle" font-size="10" fill="#2a2a2a">groupby 'Name', 'Date'</text>
+
+  <rect x="390" y="35" width="130" height="50" rx="5" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.25"/>
+  <text x="455" y="65" text-anchor="middle" font-size="10" fill="#2a2a2a">.agg('sum')</text>
+
+  <rect x="555" y="35" width="140" height="50" rx="5" fill="#f4eef2" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="625" y="57" text-anchor="middle" font-size="10" font-weight="600" fill="#10a37f">1 Daily</text>
+  <text x="625" y="71" text-anchor="middle" font-size="10" font-weight="600" fill="#10a37f">Summary Row</text>
+
+  <g stroke="#a8a8a8" stroke-width="1.5" fill="none">
+    <path d="M 140 60 L 173 60"/>
+    <path d="M 355 60 L 388 60"/>
+    <path d="M 520 60 L 553 60"/>
+  </g>
+  <g fill="#a8a8a8">
+    <polygon points="173,60 165,55 165,65"/>
+    <polygon points="388,60 380,55 380,65"/>
+    <polygon points="553,60 545,55 545,65"/>
+  </g>
+</svg>

@@ -32,15 +32,7 @@ Python is a high-level, beginner-friendly programming language used across globa
 ### The LEGO Metaphor for Logic
 To understand how Python works, think of it as **LEGO for coding**. Just as simple, individual blocks snap together to build complex structures, Python uses simple, modular lines of code to build incredibly powerful applications.
 
-```{mermaid}
-graph LR
-    A[Simple Code Blocks] --> B{Logical Assembly}
-    B --> C[Sophisticated AI & Web Apps]
-    B --> D[Data Analysis Pipelines]
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#bbf,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-```
+![Simple code blocks, logically assembled, become sophisticated software — the same idea as LEGO bricks snapping together into something far bigger than any single piece.](/assets/images/diagrams/lego-metaphor.svg){fig-alt="A flow diagram showing Simple Code Blocks feeding into Logical Assembly, which branches into Sophisticated AI and Web Apps on one side and Data Analysis Pipelines on the other." width="80%"}
 
 ### The "iPhone" of Coding
 Python is often called the **iPhone of coding** because it is sleek, approachable, and incredibly powerful. It abstracts away the complex, messy parts of computer science, allowing you to focus on solving problems rather than fighting with the tool.
