@@ -3,3 +3,159 @@ title: "What Is Data?"
 author: "Technical Instructional Team"
 format: html
 ---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Define data and identify where it comes from in your everyday life.
+*   Distinguish between structured and unstructured data, with examples of each.
+*   Collect a small dataset about your own day using simple data logging.
+*   Explain why every dataset has a "point of view" — and why bias and missing information matter.
+*   Describe, in one sentence each, the major skills you will build across this book.
+
+## The Big Question
+
+Here is the question this whole book hangs on: **What is data, and where does it come from in our lives?**
+
+You might picture a wall of glowing green numbers, or a spreadsheet the size of a football field. But data is far more ordinary — and far closer to you — than that. Data is simply **information that can be collected, stored, and analyzed**. And right now, you are surrounded by it. Your phone counted the steps you took to get to this page. A traffic sensor noticed the bus you rode this morning. Your streaming app remembers exactly where you paused last night's episode — down to the second.
+
+::: {.callout-note}
+### Data
+**Data** is information that can be collected, stored, and analyzed. It comes from our actions, our devices, and the world around us — every step counted, song skipped, and door opened can become a data point.
+:::
+
+In other words: data isn't something that lives only in laboratories or tech companies. It is the *exhaust* of everyday life. Every time you act — walk, type, tap, buy, wait — the world quietly takes notes. Data science is the craft of reading those notes and finding the story inside them.
+
+Over the course of this book, you'll learn that craft step by step: how to clean and organize messy datasets so they're actually usable, how to build visualizations and dashboards that make patterns jump off the screen, how to train simple machine learning models that make predictions, how to spot when data is biased or misleading, and how data drives real decisions in tech, government, and business. But every one of those skills starts with the same move: recognizing data when you see it.
+
+## Structured vs. Unstructured Data
+
+Not all data arrives in the same shape. Some of it shows up neatly filed, like books shelved in a library by call number. The rest shows up like a backpack dumped out on the floor — everything's *there*, but good luck finding your calculator.
+
+Data scientists call these two shapes **structured** and **unstructured** data.
+
+::: {.callout-note}
+### Structured Data
+**Structured data** is neatly organized information with a consistent format — usually rows and columns — which makes it easy for computers to search, sort, and analyze. Examples:
+
+1.  Your daily step counts (a number, tied to a date).
+2.  GPS coordinates from a phone's map app (latitude, longitude, timestamp).
+3.  Calendar events (a title, a date, a start time, an end time — always the same fields).
+:::
+
+Structured data is a computer's favorite meal. Ask "What was my highest step count in March?" and a computer can answer instantly, because every entry has the same predictable shape.
+
+::: {.callout-note}
+### Unstructured Data
+**Unstructured data** is information with no fixed format, which makes it much harder for computers to process directly. Examples:
+
+1.  Photos in your camera roll (a grid of millions of colored pixels — nowhere does it *say* "birthday party").
+2.  Videos (thousands of those photos per minute, plus sound).
+3.  Voice memos (sound waves, not sentences — a computer has to work hard just to figure out what words were said).
+:::
+
+Here's a useful way to feel the difference. A calendar entry that says `Dentist — Tuesday, 3:30 PM` is structured: the computer knows exactly which part is the event and which part is the time. A photo of a sticky note that says "dentist tues 3:30!!" contains the *same information* — but to a computer, it's just pixels. Turning unstructured data into something analyzable is one of the hardest (and most interesting) jobs in data science, and it's a big part of why modern AI is such a breakthrough. We'll get there later in this book.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+Your music app keeps two things about you: (a) a table of every song you've played, with the date, time, and how long you listened, and (b) the album cover images for those songs. Which is structured and which is unstructured — and why?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+The play history table is **structured** — every entry has the same predictable fields (song, date, time, duration), so a computer can easily sort and analyze it. The album cover images are **unstructured** — they're just pixels with no fixed fields, so a computer can't directly "read" what's in them.
+:::
+:::
+
+## You Are a Data Source
+
+Time to stop reading about data and start collecting some. Your subject: **you**.
+
+Whether you realize it or not, your day already generates a steady stream of information. In data science, deliberately recording that stream is called **data logging**.
+
+::: {.callout-note}
+### Data Logging
+**Data logging** is the practice of recording observations or measurements over time, at regular intervals or as events happen, so the record can be analyzed later. A fitness tracker logs your steps automatically; a scientist logging tide heights every hour is doing the same thing by hand.
+:::
+
+**The activity:** for the next 24 hours, be your own fitness tracker. Using paper, a notes app, or a simple table, log four things:
+
+1.  **Screen time** — roughly how many minutes you spend on a screen, and when.
+2.  **Steps or movement** — your phone's built-in step counter works, or just note when you walked somewhere and for how long.
+3.  **What you ate** — a quick description and the time.
+4.  **Sleep** — when you went to bed and when you woke up.
+
+That's it. No apps to install, no accounts to create — just you, observing yourself the way a scientist observes the tides.
+
+Tomorrow, look back over your log and hunt for patterns. Does your screen time spike at a particular hour? Do you snack more on days you move less? Is there a gap between when you *meant* to sleep and when you actually did? Even one day of honest data usually contains at least one small surprise.
+
+::: {.callout-tip}
+### Instructor Insight: Messy Data Is Normal Data
+Students often apologize for their logs — "I forgot to write down lunch," "I guessed on my screen time." Don't apologize; take notes. *Real* data is exactly like this: gaps, estimates, and honest guesses. Professional data scientists spend most of their time dealing with missing and messy values. Noticing where your own log got fuzzy is your first taste of a skill you'll use in every chapter of this book.
+:::
+
+## A Different Kind of Data Source
+
+Your 24-hour log took effort — you had to notice things and write them down. But some of the biggest data collections about you require no effort at all, because they're being written *for* you.
+
+::: {.callout-important}
+### Optional Aside: Your Accounts Are Keeping a Diary (Read-Only — Ask First)
+Services like Google keep a detailed, timestamped history of your activity: every search you've typed, every video you've watched, every event on your calendar. Google even offers a tool called **Google Takeout** that lets an account owner download that entire history as files.
+
+This aside is **read-only and completely optional** — the exercise below uses a made-up sample, and *nothing in this book ever requires you to download or share your real account data*. If you're curious about what your own accounts store, **talk to a parent, guardian, or teacher first** before touching any account settings or export tools. Real exports contain a lot of sensitive personal information and deserve adult guidance.
+:::
+
+Instead of using anyone's real data, here is a small **fictional sample** of what a few rows of an activity export might look like:
+
+| Timestamp | Service | Activity |
+|---|---|---|
+| Mar 14, 7:42 AM | Search | Searched: "how late does the number 12 bus run" |
+| Mar 14, 3:58 PM | YouTube | Watched: "Beginner Guitar: Your First Three Chords" |
+| Mar 14, 4:45 PM | Search | Searched: "easiest songs that only use 3 chords" |
+| Mar 15, 6:00 PM | Calendar | Event: "Guitar practice with Sam" |
+
+Four rows. No name, no photo, no profile. And yet — read them like a detective. What can you reasonably guess about this person? They probably ride the bus. They seem to be teaching themselves guitar, and they're just starting out. They likely have a friend (or teacher?) named Sam. Two searches and a video, and a little story assembles itself.
+
+Now flip the question: **what's missing, and what could be misread?** Maybe the guitar video was for a sibling. Maybe "Sam" is a cousin, a tutor, or a band. Maybe this person watched two hours of other videos on a different account we can't see. Four rows *suggest* a story, but they don't *prove* one — and a guess built on thin data can be confidently, completely wrong. Hold onto that thought, because it leads straight into the most important idea in this chapter.
+
+## Data Has a Point of View
+
+It's tempting to think of data as pure, neutral truth — after all, numbers don't lie, right? Here's the uncomfortable secret of data science: **every dataset has a point of view.** Data reflects *how* it was collected, *who* it was collected from, and *what the collector decided to measure* — and every one of those choices leaves fingerprints.
+
+::: {.callout-note}
+### Bias (in data)
+**Bias (in data)** is a systematic tilt in a dataset — caused by how, where, or from whom the data was collected — that makes it misrepresent the real world. A biased dataset isn't "wrong numbers"; it's true numbers that tell a slanted story.
+:::
+
+Consider a step counter. It measures activity by counting steps — a reasonable choice for many people. But for someone who uses a wheelchair, a step counter reads *zero* all day, no matter how many miles they push, how hard they train, or how active they are. The device isn't broken, and nobody typed in a false number. The **choice of what to measure** simply built a blind spot into the data. Anyone analyzing that data — a doctor, an insurance company, an app recommending fitness goals — would draw a badly wrong conclusion about a genuinely active person.
+
+Your own 24-hour log has a point of view too. It measured what you chose to measure, when you remembered to measure it. Someone reading only your log would know about your screen time — but nothing about your mood, your conversations, or the joke that made your whole table laugh at lunch. The data isn't lying. It's just incomplete, in ways the numbers themselves will never admit.
+
+This idea — that data can be biased, incomplete, or misleading while still being technically accurate — is one of the biggest themes of this book. In Chapter 7 (Descriptive Statistics & Data Ethics), we'll go much deeper: how averages can deceive, how biased data leads to unfair real-world decisions, and what responsible data scientists do about it. For now, just carry this habit with you: whenever you meet a dataset, ask *who collected this, how, and what might it be missing?*
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A city wants to find its worst potholes, so it releases an app that uses a phone's motion sensors to auto-report bumps while residents drive. After a month, the map shows that wealthy neighborhoods have the most potholes. Is that conclusion trustworthy? Why or why not?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+Not trustworthy. The data is biased by *how it was collected*: it only counts potholes felt by people who own smartphones, own cars, downloaded the app, and drive regularly. Neighborhoods with fewer app users report fewer potholes — no matter how bad their roads actually are. The map may really be showing where the *app users* are, not where the *potholes* are.
+:::
+:::
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+**Prompt:** "I'm a high school student learning what counts as data. List 10 everyday objects or activities in a typical student's life that quietly generate data, and for each one, tell me whether that data is structured or unstructured. Try to surprise me with a few I wouldn't think of."
+
+Compare ChatGPT's list with your own 24-hour log — did it find data sources you missed? (This is the first Try With ChatGPT box in the book — see [Using AI Responsibly](../using-ai-responsibly.qmd) for the ground rules before you start.)
+:::
+
+## Your Turn: The 72-Hour Data Log
+
+Your 24-hour log was a warm-up. Now do the real study.
+
+1.  **Log the same four things — screen time, steps/movement, food, and sleep — for 2 to 3 days.** Keep the format consistent from day to day (that's what makes your data *structured*).
+2.  **Add one measurement of your own choosing.** Money spent, minutes of homework, cups of water, songs played — anything you're curious about.
+3.  **When you're done, look across the days**, not just within one. Do weekdays look different from weekends? Does one measurement seem to rise when another falls?
+4.  **Write 3 sentences about what surprised you.** Not a summary — a *surprise*. The gap between what you expected and what the data showed is where data science lives.
+
+Keep your log — you'll want it again soon. There's no wrong result here: even discovering "my log has huge gaps because logging is hard" is a genuine data science finding.
+
+## Roadmap: Where We Go Next
+
+You now know what data is, where it hides in your life, and why every dataset deserves a healthy dose of skepticism. You've even collected a dataset of your own — which, right now, is probably scribbled in a notebook or scattered through a notes app. In Chapter 2, we'll fix that: you'll load data into a **spreadsheet**, the data scientist's first power tool, and learn to sort it, filter it, and clean it up until patterns you couldn't see on paper suddenly appear. Bring your 72-hour log — it's about to become your first real dataset.
