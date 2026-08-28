@@ -1,0 +1,14 @@
+---
+title: "Image Credits"
+format: html
+---
+
+Every historical chart and photograph reproduced in this book is sourced from Wikimedia Commons under a Creative Commons or public-domain license. This page collects the source, author, and license for each one, so the chapters themselves can stay focused on the ideas.
+
+Diagrams *without* an entry below — the flowcharts, anatomy diagrams, and pipeline illustrations throughout the book — were built by hand for this book and need no external credit.
+
+| Figure | Chapter | Source title | Author | License |
+|---|---|---|---|---|
+| Diagram of the Causes of Mortality in the Army in the East (1858) | [Chapter 3, Data Visualization Basics](03-data-visualization/data-visualization.qmd) | [Nightingale-mortality.jpg](https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg) | Florence Nightingale | [Public Domain](https://creativecommons.org/publicdomain/mark/1.0/) |
+| Anscombe's Quartet | [Chapter 7, Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd) | [Anscombe's quartet 3.svg](https://commons.wikimedia.org/wiki/File:Anscombe%27s_quartet_3.svg) | Avenue, based on data by Francis Anscombe | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
+| 1854 Broad Street Cholera Map | [Chapter 11, Telling Your Data Story](11-data-storytelling/data-storytelling.qmd) | [Snow-cholera-map-1.jpg](https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg) | John Snow | [Public Domain](https://creativecommons.org/publicdomain/mark/1.0/) |

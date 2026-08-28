@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 240" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="260" height="240" fill="#fafafa"/>
+  <text x="130" y="26" text-anchor="middle" font-size="15" font-weight="600" fill="#2a2a2a">Pie Chart</text>
+  <text x="130" y="42" text-anchor="middle" font-size="10" fill="#6a6a6a">shows proportions of a whole</text>
+
+  <g stroke="#fafafa" stroke-width="1.5">
+    <path d="M 130 120 L 130 50 A 70 70 0 0 1 186.63 161.15 Z" fill="#6f42c1"/>
+    <path d="M 130 120 L 186.63 161.15 A 70 70 0 0 1 88.85 176.63 Z" fill="#10a37f"/>
+    <path d="M 130 120 L 88.85 176.63 A 70 70 0 0 1 63.42 98.37 Z" fill="#e8a33d"/>
+    <path d="M 130 120 L 63.42 98.37 A 70 70 0 0 1 130 50 Z" fill="#c9ccd1"/>
+  </g>
+
+  <g font-size="9" fill="#2a2a2a">
+    <rect x="35" y="205" width="9" height="9" fill="#6f42c1"/>
+    <text x="48" y="213">Soccer 35%</text>
+    <rect x="130" y="205" width="9" height="9" fill="#10a37f"/>
+    <text x="143" y="213">Basketball 25%</text>
+  </g>
+  <g font-size="9" fill="#2a2a2a">
+    <rect x="35" y="222" width="9" height="9" fill="#e8a33d"/>
+    <text x="48" y="230">Track 20%</text>
+    <rect x="130" y="222" width="9" height="9" fill="#c9ccd1"/>
+    <text x="143" y="230">Other 20%</text>
+  </g>
+</svg>

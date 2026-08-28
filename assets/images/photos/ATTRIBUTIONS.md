@@ -1,5 +1,9 @@
 # Photo & Diagram Attributions
 
+> This is the internal working record for this repo. The reader-facing
+> version of this table is the book's own **Image Credits** appendix
+> (`image-credits.qmd`), listed in `_quarto.yml`'s appendices.
+
 Every real photo or historical diagram in this book is sourced from
 Wikimedia Commons under a Creative Commons or public-domain license. Each
 entry below records the source, author, and license for the chapter's

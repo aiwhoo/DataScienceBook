@@ -17,3 +17,12 @@
 .chatgpt-callout .callout-title-container {
   color: #10a37f;
 }
+
+/* Mermaid diagrams: Quarto's default theme fills subgraph/cluster boxes
+   (e.g. the "PyCharm Interface" box in Ch. 4 Part 2 and the "Transform"
+   box in Ch. 5 Part 3) with a dark slate grey by default. Lighten it so
+   subgraph boxes read as a soft highlight instead of a heavy block. */
+:root {
+  --mermaid-fg-color--lightest: #e9ecef !important;
+  --mermaid-fg-color--lighter: #ced4da !important;
+}

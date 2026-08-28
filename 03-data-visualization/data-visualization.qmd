@@ -55,6 +55,16 @@ Charts are not interchangeable. Each type answers a different *shape* of questio
 *   **Pie chart** — shows **proportions of a whole**, when the slices genuinely add up to 100%. *Example:* the percent of students who prefer each sport in your school. (Use sparingly: past five or six slices, humans are bad at comparing wedge sizes.)
 *   **Scatter plot** — reveals a **relationship between two numeric variables**, one dot per case. *Example:* does height predict weight? If the dots drift upward together, the two variables move together.
 
+::: {layout-ncol="4"}
+![](/assets/images/diagrams/chart-type-bar.svg){fig-alt="A small bar chart illustrating crashes per weekday, with Friday's bar clearly the tallest."}
+
+![](/assets/images/diagrams/chart-type-line.svg){fig-alt="A small line chart illustrating temperature rising through the morning, peaking at noon, and falling toward evening."}
+
+![](/assets/images/diagrams/chart-type-pie.svg){fig-alt="A small pie chart split into four slices labeled Soccer 35 percent, Basketball 25 percent, Track 20 percent, and Other 20 percent."}
+
+![](/assets/images/diagrams/chart-type-scatter.svg){fig-alt="A small scatter plot with dots drifting upward together and a dashed trend line, illustrating a positive relationship between two numeric variables."}
+:::
+
 A quick self-test before you build anything: *Am I comparing categories? Bar. Tracking change over time? Line. Splitting a whole into parts? Pie. Looking for a relationship between two numbers? Scatter.*
 
 ::: {.callout-tip .knowledge-check title="Knowledge Check"}
