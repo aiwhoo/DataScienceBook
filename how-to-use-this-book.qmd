@@ -2,3 +2,49 @@
 title: "How to Use This Book"
 format: html
 ---
+
+This book is more than just reading — it's built for *doing*. As you work through each chapter, you'll notice the same few features showing up again and again. Here's your field guide to each one, so the first time you meet one in Chapter 1, you'll know exactly what to do with it.
+
+## Definitions
+
+When a key vocabulary word appears for the first time, you'll see a blue note box like this. Every one of these terms is also collected in the **Glossary** appendix at the back of the book, so you can always flip there for a refresher.
+
+::: {.callout-note}
+### Dataset
+A **dataset** is an organized collection of data — often arranged in rows and columns, like a giant spreadsheet — that we can explore, question, and analyze.
+:::
+
+## Instructor Insights
+
+These green boxes are tips and shortcuts from someone who has taught this material before. Think of them as advice passed down from students who sat in your seat last year.
+
+::: {.callout-tip}
+### Instructor Insight: Type It Yourself
+It's tempting to copy and paste code examples, but typing them out yourself — typos and all — is how the patterns actually stick. The mistakes you make (and fix) are where the learning happens.
+:::
+
+## Knowledge Checks
+
+After major sections, you'll find a quick self-check question. Try to answer it in your head (or on paper) *before* clicking **Reveal Answer**. If you get it wrong, that's useful information — go back and skim the section again. Try this one:
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+Where can you find every Definition from this book collected in one place?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+In the **Glossary** appendix at the back of the book.
+:::
+:::
+
+## Try With ChatGPT
+
+These boxes give you a ready-to-use prompt for exploring the current topic further with ChatGPT. Copy the prompt, paste it into ChatGPT, and see where the conversation takes you. Before you use your first one, read [Using AI Responsibly](using-ai-responsibly.qmd) — the very next page — for the ground rules.
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+**Prompt:** "I'm a high school student starting a data science course. Give me three examples of questions a data scientist might ask about my school's cafeteria menu."
+:::
+
+## Your Turn
+
+Near the end of each chapter, you'll find a **Your Turn** activity. Unlike a Knowledge Check — which takes thirty seconds — Your Turn is a larger, open-ended, hands-on exercise where you apply the whole chapter's skills to real data. There's usually no single right answer. These are the moments where you stop reading about data science and start actually doing it.
+
+Ready? Let's talk about using AI the right way first.
