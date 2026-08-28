@@ -2,3 +2,120 @@
 title: "Getting Set Up"
 format: html
 ---
+
+Before you can do data science with Python, you need a place to actually write and run Python code. The good news: you have options. This appendix walks you through two of them — **PyCharm**, a program you install on your own computer, and **Google Colab**, which runs entirely in your web browser. Not every school issues laptops that allow software installs (many issue Chromebooks, which don't), so pick whichever path your school and your computer support. Both will get you to the exact same place: writing real Python code.
+
+## Option A: PyCharm (If You Can Install Software)
+
+If you have a laptop where you're allowed to install programs — your own computer, or a school-issued one without install restrictions — PyCharm is a fantastic choice. It's the same kind of professional tool (an **IDE**) that working data scientists use every day.
+
+Here's the short version of getting started:
+
+*   **Download PyCharm** from the official JetBrains website, choosing the version for your operating system (Windows, macOS, or Linux).
+*   **Pick the Community Edition** — it's completely free and has everything a beginner needs.
+*   **Run the installer** and follow the prompts to finish setup.
+*   **Create a new project** when PyCharm first launches — and remember the "no spaces" rule: name it something like `my_first_project`, never `my first project`.
+*   **Write and run your first program** — a one-line `print('hello Python')` — and look for the "Process finished with exit code 0" message, the computer's way of giving you a thumbs up.
+
+That's the trailer; the full movie is in [Part 2 of the Python chapter](04-python-pandas/Chapter3-Part2.qmd), which walks through every step with details on the interface, naming conventions, and how to read your first console output. If you're going the PyCharm route, head there for the complete walkthrough.
+
+## Option B: Google Colab (Chromebook-Friendly, Nothing to Install)
+
+If you're on a Chromebook — or any computer where you can't install software — you can still write and run Python. Google Colab runs Python entirely in your web browser, using Google's computers to do the actual work. All you need is a browser and a Google account.
+
+::: {.callout-note}
+### Google Colab
+**Google Colab** (short for "Colaboratory") is a free website from Google that lets you write and run Python code in your browser. Your code runs on Google's computers in the cloud, and your work saves automatically to your Google Drive — just like a Google Doc.
+:::
+
+### Step 1: Go to the Colab Website
+
+Open your browser and go to [colab.research.google.com](https://colab.research.google.com). If you're not already signed in, click **Sign in** in the top-right corner and log in with your Google account (your school Google account works, as long as your school hasn't blocked Colab — if it has, ask your teacher).
+
+::: {.callout-tip}
+### Instructor Insight: Notebooks, Not Files
+PyCharm organizes code into `.py` files inside a project folder. Colab instead uses **notebooks** — documents made of individual blocks called **cells**, where each cell can hold code you run one chunk at a time. Notebooks are hugely popular in data science because you can run a step, look at the result, and then decide what to do next. Same Python, different container.
+:::
+
+### Step 2: Create a New Notebook
+
+When Colab opens, it usually greets you with an **Open notebook** window listing recent and example notebooks. To start fresh:
+
+1.  Click **New notebook** (in the Open notebook window), *or*
+2.  If you're already looking at a notebook, use the menu: **File → New notebook in Drive**.
+
+A brand-new notebook appears, named something like `Untitled0.ipynb`. Click that name at the top of the page and rename it — the "no spaces" rule from PyCharm is a good habit here too, so try `my_first_notebook`. Colab saves it to your Google Drive automatically as you work.
+
+::: {.callout-note}
+### Cell
+A **cell** is one block of a notebook. A *code cell* holds Python code you can run; the output appears directly underneath it. You can add as many cells as you like with the **+ Code** button.
+:::
+
+### Step 3: Run Your First Code
+
+Your new notebook starts with one empty code cell, cursor already blinking inside it. Type:
+
+```python
+print('hello Python')
+```
+
+Now run it, either way works:
+
+*   Click the **round play button** (▶) on the left edge of the cell, or
+*   Press **Ctrl+Enter** (**Cmd+Enter** on a Mac) to run the cell, or **Shift+Enter** to run it and move to the next cell.
+
+The very first time you run a cell, Colab pauses for a few seconds while it says **Connecting** or **Allocating** — that's Colab starting up a computer in the cloud just for you. This is normal; it only happens once per session. Then you'll see the output appear right below the cell:
+
+```
+hello Python
+```
+
+If you see that, congratulations — you're running Python in the cloud. A small green checkmark next to the cell is Colab's version of PyCharm's "exit code 0" thumbs up.
+
+::: {.callout-tip}
+### Instructor Insight: When the Runtime Falls Asleep
+If you leave a Colab tab idle for a while, Colab disconnects your cloud computer to save resources. Your *code* is always safe (it's saved in Drive), but anything the code *created* — variables, uploaded files — gets wiped. No panic needed: just run your cells again from the top. This is the single most common "wait, it was working a minute ago!" moment for new Colab users.
+:::
+
+### Step 4: Working with Data Files (Where Colab Differs from PyCharm)
+
+Later in this book you'll load data from **CSV files**. In PyCharm this is simple: you drop the CSV into your project folder and read it by name. In Colab, your code runs on Google's computer, not yours — so that computer can't see the files on your laptop until you hand them over. You have two ways to do that.
+
+**Way 1: Upload the file directly.** Run this in a code cell:
+
+```python
+from google.colab import files
+uploaded = files.upload()
+```
+
+A **Choose Files** button appears below the cell. Click it, pick your CSV, and once it uploads you can read it just like in PyCharm:
+
+```python
+import pandas as pd
+df = pd.read_csv('my_data.csv')
+```
+
+The catch: uploaded files vanish whenever the runtime disconnects (see the sleepy-runtime note above), so you'll re-upload at the start of each session. That's fine for small class datasets.
+
+**Way 2: Mount your Google Drive.** For files you'll use again and again, store them in your Google Drive and connect Drive to your notebook:
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+Colab will pop up a permission window asking you to allow access to your Drive. Once you approve, everything in your Drive appears under the folder path `/content/drive/MyDrive/`, and you can read a file like this:
+
+```python
+import pandas as pd
+df = pd.read_csv('/content/drive/MyDrive/my_data.csv')
+```
+
+Files in Drive stick around between sessions — no re-uploading needed.
+
+## Which Should I Use?
+
+::: {.callout-tip}
+### Which Should I Use?
+If your computer lets you install software and you like the idea of a professional desktop tool, go with **PyCharm** — it's the closest match to how the Python chapter's screenshots and walkthroughs are written. If you're on a Chromebook, a shared computer, or you just want the fastest possible start, go with **Google Colab** — zero installation, and your work follows you to any computer you sign into. Either way, the Python you write is identical, and everything in this book works in both.
+:::
