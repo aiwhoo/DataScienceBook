@@ -2,6 +2,14 @@
 
 *Matthew Saponaro, Ph.D*
 
+## About the Author
+
+**Matthew Saponaro, Ph.D.**, earned his doctorate in Computer and Information Sciences from the University of Delaware. His research sits at the intersection of multi-agent systems, machine learning, and human movement — from adaptive, real-time coaching built on wearable sensor data, to computer-vision methods for gait and movement assessment, to using wearable video devices and drones to study how people use parks and recreational spaces. That same instinct — turning raw sensor, video, and activity data into insights people can actually act on — runs through this book.
+
+This book grew out of his own lecture plans and course materials from the data science classes he has taught, shaped by years of classroom experience with exactly this age group.
+
+*(This book's writing and editing were assisted by AI tools, used under the author's direction and review throughout.)*
+
 ## Why This Book Exists
 
 Think about the last hour you spent on your phone. Every video your feed served you, every song your playlist queued up, every "players near you" match in your favorite game — none of it was random. Behind each of those moments, a computer looked at data about you (and millions of people like you) and made a prediction. Data science is the skill of understanding how those predictions get made — and learning to make them yourself.
