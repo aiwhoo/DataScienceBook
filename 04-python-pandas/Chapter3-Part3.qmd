@@ -62,7 +62,7 @@ The first step in any analysis is reading your file into Python’s memory. We d
 
 ::: {.callout-note}
 ### DataFrame
-A **DataFrame** is the Pandas function that opens a CSV file and loads it as a structured table—similar to Excel opening a file, but handled entirely through code.
+A **DataFrame** is the table Pandas stores your data in—rows and columns, like a spreadsheet—but handled entirely through code. `pd.read_csv()` is the function that reads a CSV file *into* a DataFrame.
 :::
 
 ```python

@@ -110,13 +110,18 @@ Warn them that testing on the training data proves nothing — the model may sim
 
 Time to build. Our question: **can we predict a person's heart rate from the other things we know about them?** Our data: the fully processed activity dataset from Chapter 5 — the one where you encoded `Gender` into `Gender_code` and engineered `DistanceFromSchool` out of raw coordinates. Every feature below exists because of work you already did.
 
+::: {.callout-tip}
+### Which Chapter 5 Dataset Are We Using?
+This chapter picks up right *before* Chapter 5's final Merging/Aggregation step (Part 4, Section 4). At that point, every hourly row has already been cleaned, normalized, and encoded — `Gender` into `Gender_code`, `ActivityType` into one-hot columns, raw coordinates into `DistanceFromSchool` — but not yet collapsed into daily summaries. We work with that per-hour encoded table (`encoded_activity_data.csv`), not the `aggregated_daily_activity.csv` file Chapter 5's Load phase produces — collapsing to one row per day, as that final step does, would erase `Hour of Day` and most of the row-level detail our model needs.
+:::
+
 We'll use **scikit-learn** (imported as `sklearn`), the standard Python library for machine learning. First, load the data and choose what the model gets to look at (the **features**, `X`) and what it must predict (the **target**, `y`):
 
 ```python
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv("processed_full_activity_data.csv")
+df = pd.read_csv("encoded_activity_data.csv")
 
 X = df[['Steps', 'Gender_code', 'Age', 'DistanceFromSchool', 'Hour of Day', 'MoneySpent($)']]
 y = df['HeartRate']

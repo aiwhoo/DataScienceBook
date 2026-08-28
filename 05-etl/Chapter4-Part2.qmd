@@ -17,7 +17,7 @@ By the end of this tutorial, you will be able to:
 Every great data science project begins with messy, scattered, and incomplete data. Without a structured process to handle this "noise," even the most advanced machine learning algorithms will produce unreliable results.
 
 ::: {.callout-note}
-### Definition: ETL
+### ETL
 **ETL** stands for **Extract, Transform, and Load**. It is the invisible backbone of every dashboard and prediction model, ensuring that data is trustworthy, consistent, and analysis-ready.
 :::
 

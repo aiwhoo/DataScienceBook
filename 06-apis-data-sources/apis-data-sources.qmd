@@ -44,7 +44,7 @@ graph LR
 ## What Is an API?
 
 ::: {.callout-note}
-### Definition: API
+### API
 An **API** (Application Programming Interface) is a way for one program to ask another program for data — usually over the internet — and get back a structured answer. The requesting program sends a specially formatted URL; the serving program replies with machine-readable data instead of a human-readable web page.
 :::
 
@@ -61,7 +61,7 @@ For this chapter's hands-on work we will use **Open-Meteo** (<https://open-meteo
 When a website answers your *browser*, it sends HTML — text designed for humans to read. When an API answers your *program*, it almost always sends JSON.
 
 ::: {.callout-note}
-### Definition: JSON
+### JSON
 **JSON** (JavaScript Object Notation) is a text format for structured data. Despite the "JavaScript" in its name, every programming language can read it — and to a Python programmer, JSON looks almost exactly like nested **dictionaries** (curly braces, `"key": value` pairs) and **lists** (square brackets).
 :::
 
@@ -162,14 +162,14 @@ The `["key"]` lookups chain naturally: `data["current_weather"]["temperature"]` 
 ## Two Words Every API User Needs
 
 ::: {.callout-note}
-### Definition: Endpoint
+### Endpoint
 An **endpoint** is one specific URL (or URL pattern) that an API exposes for one specific kind of data. Open-Meteo's `/v1/forecast` endpoint serves weather forecasts; its `/v1/air-quality` endpoint serves air-quality data. One API, many endpoints — like one restaurant menu with separate sections for entrées and desserts.
 :::
 
 The part of the URL after the `?` is the **query string**: `latitude=39.16&longitude=-75.52&current_weather=true` is how you fill in the details of your order. Change the coordinates, and the same endpoint serves you weather for Tokyo or São Paulo.
 
 ::: {.callout-note}
-### Definition: Rate Limit
+### Rate Limit
 A **rate limit** is a cap on how many requests you may send an API in a given time window (for example, Open-Meteo's free tier allows up to 10,000 requests per day). Exceed it and the API starts refusing you.
 :::
 

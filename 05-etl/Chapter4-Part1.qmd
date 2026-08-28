@@ -15,7 +15,7 @@ By the end of this tutorial, you will be able to:
 ## What is ETL?
 
 ::: {.callout-note}
-### Definition: ETL
+### ETL
 **ETL** stands for **Extract, Transform, and Load**. It is a three-stage process designed to turn raw, messy data into something clean, structured, and ready for analysis or machine learning.
 :::
 
@@ -91,7 +91,7 @@ df_all = pd.concat(df_dict.values())
 print(df_all.head())
 ```
 
-**Output:**
+**What You'll See:**
 ```
 Checking data alignment...
 [OK] 11 columns identified

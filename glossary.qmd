@@ -41,6 +41,12 @@ See [Part 4: Filtering Like a Pro](04-python-pandas/Chapter3-Part4.qmd).
 
 See [Descriptive Statistics & Data Ethics](07-statistics-ethics/statistics-ethics.qmd).
 
+## Cell
+
+A **cell** is one block of a notebook. A *code cell* holds Python code you can run; the output appears directly underneath it. You can add as many cells as you like with the **+ Code** button.
+
+See [Getting Set Up](getting-set-up.qmd).
+
 ## Cell Reference
 
 A **cell reference** is the address of a cell or range of cells, written as a column letter plus a row number. `B2` means "column B, row 2." A range like `B2:B540000` means "every cell in column B from row 2 down to row 540000." Formulas use references so they can work on data wherever it lives.
@@ -103,9 +109,15 @@ See [Data Visualization Basics](03-data-visualization/data-visualization.qmd).
 
 ## DataFrame
 
-A **DataFrame** is the Pandas function that opens a CSV file and loads it as a structured table—similar to Excel opening a file, but handled entirely through code.
+A **DataFrame** is the table Pandas stores your data in — rows and columns, like a spreadsheet, but handled entirely through code. `pd.read_csv()` is the function that reads a CSV file *into* a DataFrame.
 
 See [Part 3: Meet Your New Best Friend—Pandas](04-python-pandas/Chapter3-Part3.qmd).
+
+## Dataset
+
+A **dataset** is an organized collection of data — often arranged in rows and columns, like a giant spreadsheet — that we can explore, question, and analyze.
+
+See [How to Use This Book](how-to-use-this-book.qmd).
 
 ## Decision Tree
 
@@ -148,6 +160,12 @@ See [Data Wrangling with Spreadsheets](02-spreadsheets/spreadsheets.qmd).
 A **formula** is an instruction you type into a spreadsheet cell, always starting with `=`, that tells the spreadsheet to calculate a value for you. When the underlying data changes, the formula automatically recalculates — you never have to redo the work by hand.
 
 See [Data Wrangling with Spreadsheets](02-spreadsheets/spreadsheets.qmd).
+
+## Google Colab
+
+**Google Colab** (short for "Colaboratory") is a free website from Google that lets you write and run Python code in your browser. Your code runs on Google's computers in the cloud, and your work saves automatically to your Google Drive — just like a Google Doc.
+
+See [Getting Set Up](getting-set-up.qmd).
 
 ## Hallucination (AI)
 

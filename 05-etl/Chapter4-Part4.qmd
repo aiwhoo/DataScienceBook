@@ -23,7 +23,7 @@ By the end of this tutorial, you will be able to:
 Algorithms do not speak English; they speak math. Encoding is the bridge that converts text labels into numbers a model can process. Without this step, even the richest categorical data remains invisible to a machine learning model.
 
 ::: {.callout-note}
-### Definition: Encoding
+### Encoding
 **Encoding** is the process of converting categorical data (text-based labels) into numerical values. This ensures that non-numeric features can be used as inputs for mathematical models.
 :::
 
@@ -122,7 +122,7 @@ daily_summary = df.groupby(['Name', 'Date']).agg({'Steps': 'sum'}).reset_index()
 print(daily_summary)
 ```
 
-**Output:**
+**What You'll See:**
 ```
 Insights Revealed:
 - Alice: Most Active (Peak: 21,025 steps on July 28)

@@ -23,7 +23,7 @@ By the end of this tutorial, you will be able to:
 ## The Purpose of Transformation
 
 ::: {.callout-note}
-### Definition: Transform
+### Transform
 **Transform** is the process of converting raw data into a structured format by applying operations like filtering, encoding, normalization, or feature engineering.
 :::
 
@@ -106,7 +106,7 @@ df_sorted = df.sort_values(by=['Name', 'Date', 'Hour'])
 print(df_sorted[['Name', 'Hour', 'steps_norm']].head())
 ```
 
-**Output:**
+**What You'll See:**
 ```
 Data Discovery: Alice's steps jumped from 0.06 at 9 AM to 1.00 at 8 PM on July 30.
 ```
@@ -128,7 +128,7 @@ distance = calculate_haversine(lat, lon, school_lat, school_lon)
 print(f"Feature Created: {distance} km from school")
 ```
 
-**Output:**
+**What You'll See:**
 ```
 Individual Variation Found:
 - Diana: 0.07 km (On Campus)

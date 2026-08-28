@@ -18,7 +18,7 @@ By the end of this tutorial, you will be able to:
 After the intensive work of extracting raw data and transforming it into something meaningful, the **Load** step serves as your finish line. It is the act of publishing your work—taking the data out of the temporary memory of a notebook and making it accessible to other people and systems.
 
 ::: {.callout-note}
-### Definition: The Load Phase
+### The Load Phase
 The **Load** phase is the final stage of ETL where transformed data is saved to a permanent destination, ensuring it is preserved for future analysis or application.
 :::
 
@@ -61,7 +61,7 @@ To save your work professionally, follow these three steps:
 aggregated_df.to_csv("aggregated_daily_activity.csv", index=False)
 ```
 
-**Output:**
+**What You'll See:**
 ```
 Success: 'aggregated_daily_activity.csv' generated in local directory.
 ```
