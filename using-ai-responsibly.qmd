@@ -2,3 +2,23 @@
 title: "Using AI Responsibly"
 format: html
 ---
+
+Throughout this book you'll find **Try With ChatGPT** boxes — ready-made prompts for digging deeper into whatever you just learned. They're there for three things: exploring a concept beyond what one chapter can cover, checking whether you actually understood something, and getting unstuck when an error message makes no sense. What they are *not* is a shortcut past the understanding itself. Before you use your first one, read this page. It's short.
+
+## The One Rule: Tutor, Not Ghostwriter
+
+A tutor explains things until you get them. A ghostwriter does the work so you don't have to. Use AI as the first, never the second.
+
+Here's the practical reason, beyond honesty: if you paste in an answer you don't understand, the gap doesn't disappear — it just moves. It resurfaces on the next test, in the follow-up question you can't answer, and especially in the Chapter 10 capstone project, where you'll have to explain and defend your own analysis. Borrowed understanding runs out exactly when you need it most.
+
+**Good use:** your pandas filter returned zero rows and you can't see why. Paste your code into ChatGPT and ask it to explain what your condition is actually checking. You're using AI to find *your* bug and understand it.
+
+**Bad use:** pasting your capstone dataset into ChatGPT and asking it to write the whole analysis. That's not your project anymore — and you'll know it the moment someone asks you a question about it.
+
+## Always Verify
+
+AI tools can be confidently, fluently wrong — especially about specific numbers, dates, and how library functions behave. If ChatGPT tells you what a pandas method does, run the code and see. If it states a fact, cross-check it against this book or another source. "It sounded sure of itself" is not evidence.
+
+## Ask Your Teacher
+
+Every classroom sets its own rules about AI on graded work, and those rules win. The prompts in this book are suggestions for your own studying — they don't override your teacher's policy. When in doubt, ask first.
