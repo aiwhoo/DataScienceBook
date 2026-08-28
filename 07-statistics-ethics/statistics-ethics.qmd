@@ -3,3 +3,251 @@ title: "Descriptive Statistics & Data Ethics"
 author: "Technical Instructional Team"
 format: html
 ---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Compute the mean, median, and mode of a small dataset by hand, and explain when each one is the best "middle" to report.
+*   Show, with actual numbers, how a single outlier can drag the mean while barely touching the median.
+*   Explain why two datasets with the same average can still be wildly different, and why *spread* matters as much as the middle.
+*   Tell the difference between correlation and causation — and spot news headlines that confuse the two.
+*   Describe how algorithmic bias happens ("bias in, bias out") and list practical steps for protecting your own data privacy.
+
+## The Number That Lies While Telling the Truth
+
+Back in Chapter 1, we ended with an uncomfortable idea: [every dataset has a point of view](../01-what-is-data/what-is-data.qmd#data-has-a-point-of-view). We promised that in Chapter 7 we'd go deeper — into how averages can deceive, how biased data leads to unfair decisions, and what responsible data scientists do about it. Welcome to Chapter 7. Time to pay up.
+
+Here's the twist that makes this chapter fun: a statistic can be **completely accurate and still totally misleading**. Nobody has to fake a number. Nobody has to lie. You just pick the *technically true* number that tells the story you want. By the end of this chapter, you'll be able to spot that trick from across the room — and, just as important, avoid pulling it by accident yourself.
+
+## Three Ways to Describe the Middle
+
+Imagine your teacher hands back a quiz and someone asks the eternal question: *"What did the class get?"* Seven students took the quiz. Here are their scores:
+
+| Student | Score |
+|---|---|
+| Ava | 82 |
+| Ben | 85 |
+| Carlos | 88 |
+| Dana | 88 |
+| Elena | 91 |
+| Finn | 94 |
+| Grace | 32 |
+
+Six students scored in the 80s and low 90s. Grace was out sick all week, took the quiz cold, and got a 32. Keep an eye on that 32 — it's about to cause trouble.
+
+There are three standard ways to answer "what's the middle of this data?" — and, as you're about to see, they can disagree with each other *while all being correct*.
+
+### The Mean: Everybody Into the Pool
+
+::: {.callout-note}
+### Mean
+The **mean** (what most people call the "average") is the sum of all the values divided by how many values there are. It uses every single data point — which is both its superpower and its weakness.
+:::
+
+Let's compute it for our quiz:
+
+```
+Sum:  82 + 85 + 88 + 88 + 91 + 94 + 32 = 560
+Mean: 560 ÷ 7 = 80
+```
+
+The mean is **80**. Technically true. But look back at the table — does 80 *feel* like a fair summary? Six of the seven students beat 80. Not one student actually scored an 80. Something is off.
+
+Here's what's off: the 32. Watch what happens if we compute the mean *without* Grace's outlier score:
+
+```
+Sum:  82 + 85 + 88 + 88 + 91 + 94 = 528
+Mean: 528 ÷ 6 = 88
+```
+
+**One single score dragged the class mean from 88 down to 80** — a full 8 points. That's the mean's weakness: because it uses every value, one extreme value (an **outlier**) can yank it around like a dog on a leash. The mean got pulled 8 points *toward* the outlier, away from where most of the class actually landed.
+
+### The Median: The One in the Middle
+
+::: {.callout-note}
+### Median
+The **median** is the middle value when the data is sorted from smallest to largest. Half the values sit below it, half above. (If there's an even number of values, the median is the mean of the two middle ones.) Because it only cares about *position*, the median barely notices outliers.
+:::
+
+Sort the seven scores and find the one in the middle:
+
+```
+32, 82, 85, [88], 88, 91, 94
+             ^^
+      3 below · 3 above
+```
+
+The median is **88** — right in the heart of where most students scored. And here's the beautiful part: it doesn't matter whether Grace scored 32, 52, or 2. As long as her score is the lowest, the middle value of the sorted list stays exactly where it is. The outlier that dragged the mean down 8 points **moved the median not at all**.
+
+Side by side:
+
+| Measure | With the 32 | Without the 32 |
+|---|---|---|
+| Mean | 80 | 88 |
+| Median | 88 | 88 |
+
+This is why you'll often hear about *median* household income or *median* home prices in the news. In any dataset where a few extreme values exist — one billionaire in a neighborhood, one mansion on a street of ordinary houses — the median tells you about the *typical* case, while the mean gets dragged toward the extremes.
+
+### The Mode: The Crowd Favorite
+
+::: {.callout-note}
+### Mode
+The **mode** is the value that appears most often in a dataset. It's the only measure of the middle that works on *categorical* data — data made of labels and categories instead of numbers.
+:::
+
+In our quiz scores, 88 appears twice (Carlos and Dana) and every other score appears once, so the mode is **88**.
+
+For quiz scores, the mode is honestly the least interesting of the three. But now try this dataset — the same seven students' favorite subjects:
+
+| Student | Favorite Subject |
+|---|---|
+| Ava | Art |
+| Ben | Science |
+| Carlos | Math |
+| Dana | Science |
+| Elena | English |
+| Finn | Science |
+| Grace | Math |
+
+What's the *mean* favorite subject? Go ahead, add up "Art + Science + Math" and divide by 7. You can't — the question doesn't even make sense. You can't sort subjects from smallest to largest either, so the median is out too. But the mode works perfectly: **Science** appears three times, more than any other subject, so Science is the mode. When your data is categories — favorite subjects, most common shoe size sold, most-streamed artist — the mode is the only middle you've got.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A real-estate website says the "average" home price on Maple Street is $500,000. You visit and find five houses: four nearly identical homes that each cost about $200,000... and one enormous mansion that cost $1,700,000. Check the website's math — is the $500,000 figure accurate? Is it *honest*? Which measure would better describe a typical Maple Street home, and what is its value?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+The math checks out: (200,000 × 4 + 1,700,000) ÷ 5 = 2,500,000 ÷ 5 = **$500,000**. The mean is perfectly *accurate* — and badly misleading, because not a single house on the street costs anywhere near $500,000. The mansion is an outlier dragging the mean up, just like Grace's 32 dragged the quiz mean down. The **median** is the better summary here: sorted, the prices are 200,000, 200,000, [200,000], 200,000, 1,700,000, so the median is **$200,000** — exactly what a typical house actually costs.
+:::
+:::
+
+## Spread: How Different Are the Numbers From Each Other?
+
+Here's a puzzle. Two classes take the same test:
+
+*   **Class A:** 78, 79, 80, 81, 82
+*   **Class B:** 60, 70, 80, 90, 100
+
+Compute the mean of each (go on, they're quick): Class A is 400 ÷ 5 = **80**. Class B is 400 ÷ 5 = **80**. Identical means. Same median too — 80 in both.
+
+But would you say these classes had the same experience? Not even close. In Class A, everyone landed within two points of the mean — the class moved as a pack. In Class B, one student aced it, one student is having a very bad day, and the mean of 80 describes a "typical student" who barely exists. The middle is the same; the **spread** is completely different.
+
+Spread — how far the values scatter from the center — is the other half of describing data, and it's the half people forget. A summary that gives you only the middle is like a weather forecast that gives you only the average temperature for the year: technically informative, useless for deciding what to wear. Any time someone hands you an average, your next question should be: *"Okay — but how spread out is it?"*
+
+Statisticians have precise tools for measuring spread (with names like *standard deviation* — you'll meet them in a future stats course), but the intuition is what matters here: **two datasets can share the same middle and still tell completely different stories.** Tuck this idea away somewhere safe, because in Chapter 8 we'll use a closely related measure — called **Mean Squared Error** — to describe how spread out a *model's mistakes* are, which turns out to be exactly how data scientists decide whether a prediction machine is any good.
+
+## Correlation Is Not Causation
+
+So far we've described one column of numbers at a time. But the questions that get data scientists out of bed in the morning involve *two* things at once: Does more studying lead to better grades? Does more screen time mean worse sleep? Questions like these are about **relationships** — and there's a famous trap waiting inside them.
+
+::: {.callout-note}
+### Correlation
+**Correlation** means two things tend to move together: when one goes up, the other tends to go up (or reliably down). Correlation describes a *pattern* you can see in the data. It says nothing about *why* the pattern exists.
+:::
+
+::: {.callout-note}
+### Causation
+**Causation** means one thing actually *makes* the other happen — changing the first genuinely changes the second. Causation is a claim about how the world *works*, and it's much, much harder to prove than correlation.
+:::
+
+The trap: our brains are pattern-hungry, and the instant we spot a correlation, we itch to declare a cause. Here's the classic example of why that itch must be resisted.
+
+**Ice cream and drowning.** If you chart monthly ice cream sales against monthly drowning deaths, you'll find they rise and fall *together*, year after year. A real correlation, visible in real data. So — does ice cream cause drowning? Should lifeguards confiscate cones at the beach? Of course not. Both numbers are being pushed up by a third thing: **summer**. Hot weather sends people to buy ice cream, and hot weather sends people swimming — and more swimming means, tragically, more drownings. Ice cream and drowning are correlated, but neither causes the other. Data scientists call that hidden third factor a *lurking variable*, and it's behind a huge share of the world's misleading statistics.
+
+Now one for you to evaluate yourself:
+
+**Fire trucks and damage.** Analyze a city's fire department records and you'll find a strong correlation: the more fire trucks dispatched to a fire, the more damage that fire causes. The pattern is real and strong. So, by the logic of "correlation = causation," the city could reduce fire damage by... sending fewer fire trucks?
+
+Stop and work it out before reading on. What's really going on here?
+
+You probably got it: **big fires** cause both. A serious fire makes the department send more trucks, *and* a serious fire causes more damage. The trucks don't cause the damage — the size of the fire causes both numbers to rise together. (In fact, the causation runs *toward* the trucks, not from them.) Cutting trucks wouldn't reduce damage; it would just mean big fires get fought by too few firefighters.
+
+From now on, every time a headline says "Study finds people who do X have more Y," run the checklist: Could Y be causing X instead of the other way around? Could some third thing — a summer, a big fire — be causing both? A correlation is a *clue*, never a verdict.
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+**Prompt:** "I'm a high school student learning the difference between correlation and causation. Give me three real-world examples where two things are correlated but neither causes the other, and for each one, tell me what the hidden third factor (lurking variable) is. Don't use the ice cream and drowning example — I already know that one."
+
+Then comes the important part: **pick ChatGPT's most interesting example and verify it.** Search for the claim online — is it a documented real correlation, or something that just *sounds* plausible? Does the lurking variable ChatGPT named actually explain it? AI tools sometimes produce examples that are made up or subtly wrong, which is exactly why [Using AI Responsibly](../using-ai-responsibly.qmd) tells you to always verify. Write two sentences on whether the example held up.
+:::
+
+## Data Has a Point of View — Revisited
+
+In [Chapter 1](../01-what-is-data/what-is-data.qmd#data-has-a-point-of-view), we met a step counter that read *zero* all day for a wheelchair user — an honest device faithfully collecting biased data, because of a choice about *what to measure*. Back then, the stakes were one misleading fitness log. Now raise the stakes: what happens when biased data gets fed into an **algorithm** that makes decisions about people automatically, thousands of times a day?
+
+::: {.callout-note}
+### Algorithmic Bias
+**Algorithmic bias** happens when a computer system produces systematically unfair results because the data it learned from contained bias. The algorithm isn't malicious — it's *obedient*. It faithfully learns whatever patterns are in its training data, including the unfair ones. Data scientists summarize it in four words: **bias in, bias out.**
+:::
+
+Here's a concrete, realistic example of how this happens — no villains required.
+
+Imagine a company gets 10,000 job applications a year, far too many to read. So it builds a program to help: feed the program the last ten years of the company's hiring decisions — which résumés got interviews, which got rejected — and let it learn the patterns of a "successful applicant." Sensible, right? The program is even designed carefully: it is never told any applicant's gender, race, or age.
+
+But suppose that over those ten years, the humans doing the hiring had a bias — say, they consistently favored applicants from a handful of familiar neighborhoods and schools, and overlooked equally qualified people from elsewhere. That bias is now *baked into the training data*. The program studies the data and learns, with perfect accuracy, the pattern it was shown: "résumés like these get hired; résumés like those don't." It starts scoring new applicants the same way. The old bias didn't disappear when the humans handed the job to a machine — it got **automated**, applied faster, at larger scale, and with a new disguise: *"it's not a person being unfair, it's just math."*
+
+And here's the detail that should make the hair on your neck stand up, because it connects everything in this chapter: hiding the sensitive information didn't help. The program never saw race, gender, or age — but other fields it *did* see, like zip code, school name, or even hobbies, can be **correlated** with them. The algorithm doesn't need to be told what it isn't supposed to know; correlation smuggles it in through the side door. The correlation trap from the last section isn't just a way to misread headlines — it's the exact mechanism by which "neutral" algorithms end up biased.
+
+The fix is not "never use algorithms." Algorithms grade essays, recommend songs, and spot diseases in medical scans — used well, they're genuinely great. The fix is what responsible data scientists actually do: **audit the training data** for the same blind spots you learned to hunt in Chapter 1 (*who* was included, *what* was measured, *what's* missing), **test the system's results** across different groups of people to catch unfairness before launch, and **keep humans responsible** for decisions that seriously affect people's lives. An algorithm can process a million rows; it cannot care about a single one of them. Caring remains your job.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A hospital builds a program to predict which patients will get the flu, so it can offer them vaccines early. It trains the program on ten years of the hospital's own patient records. A data scientist warns: "This model will underestimate flu risk for people who rarely visit the hospital." The hospital replies, "Impossible — our records are accurate. Every diagnosis in the data really happened." Who is right, and why?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+The data scientist is right — and notice that *both* statements can be true at once. The records can be perfectly accurate and still biased, because they only contain people who *came to the hospital*. Someone who gets the flu but toughs it out at home (maybe they lack insurance, transportation, or time off work) appears in the data as a person who "never gets the flu." The model learns that pattern and scores similar people as low-risk — so the very people least connected to healthcare get the fewest early vaccine offers. That's algorithmic bias from a blind spot in data collection: bias in, bias out. No inaccurate numbers required.
+:::
+:::
+
+## Your Data, Your Privacy
+
+There's one more person in the data ethics story we haven't talked about yet: **you** — not as the data scientist this time, but as the *data*.
+
+::: {.callout-note}
+### Data Privacy
+**Data privacy** is your ability to control information about yourself — what gets collected, who can see it, how it's used, and how long it's kept. It rests on **consent**: the idea that companies should tell you what they collect and get your agreement before collecting it.
+:::
+
+Think back to Chapter 1, when you logged your own day for 24 hours. It took real effort — noticing, remembering, writing things down. Meanwhile, the apps on a typical phone were logging away effortlessly, automatically, and in far more detail: not just *which* apps were opened, but for how long, at what hour, in what location, after which notification, scrolling past which posts at which speed. You logged four things about yourself and found it hard. Your devices log hundreds of things and never get tired. And remember the fictional activity export from Chapter 1 — four rows of search history were enough to sketch a little story about a stranger's life. Now imagine forty thousand rows.
+
+How is any of this allowed? The official answer is **consent and the terms of service** — that wall of text you scrolled past and clicked "I Agree" on. Legally, that document is where a company tells you what it collects and what it does with the data (including, often, sharing it with other companies). Practically, almost nobody reads them, and companies know it. That gap — between consent in theory and "I Agree" in practice — is one of the biggest open problems in data ethics, and smart people are actively fighting about how to fix it.
+
+You don't have to solve it. You just have to stop being on autopilot. Three habits worth building now:
+
+1.  **Pause before you share.** The internet has a long memory; data, once collected, is very hard to un-collect. Before posting or signing up, ask: *would I be comfortable with this in a dataset someone else controls?*
+2.  **Ask the exchange question.** Free apps aren't free — you usually pay in data. That trade can be worth it! But it's only a real *choice* if you notice you're making it: what am I giving, and what am I getting?
+3.  **Use the controls that exist.** Privacy settings, location permissions, "ask app not to track" — they're imperfect, but they're yours. Checking them occasionally (with a parent or guardian for accounts you share) beats never checking at all.
+
+Notice how the chapter has come full circle. Chapter 1's question about any dataset was *who collected this, how, and what might it be missing?* Data privacy is the same question pointed at yourself: *who is collecting **me**, how, and did I actually agree to it?*
+
+## Your Turn: The Homework Dataset
+
+Time to run the whole playbook yourself. Ten students were asked how many minutes of homework they did last night:
+
+| Student | Minutes of Homework |
+|---|---|
+| Jordan | 30 |
+| Priya | 45 |
+| Marcus | 45 |
+| Sofia | 60 |
+| Tyler | 40 |
+| Amara | 50 |
+| Diego | 45 |
+| Lily | 35 |
+| Noah | 240 |
+| Zoe | 55 |
+
+(Noah has a giant project due tomorrow. It's not going great.)
+
+Your tasks — by hand or in a spreadsheet, your choice:
+
+1.  **Compute the mean.** Add all ten values, divide by 10.
+2.  **Find the median.** Sort the values smallest to largest; with ten values, the median is the mean of the 5th and 6th.
+3.  **Find the mode.** Which value appears most often?
+4.  **Compare.** Which measures landed close together, and which one got pulled away? By whom?
+5.  **Write 2–3 sentences** answering: *If you had to report one number as "how much homework a typical student in this group does," which measure would you choose, and why?* There's a strong best answer here, but the sentences explaining your reasoning matter more than the pick itself.
+
+**Bonus:** recompute the mean without Noah. How much did one busy night move the "average" for the whole group? Now imagine a news headline written from each version of the number.
+
+## Roadmap: From Describing to Predicting
+
+Look at the toolkit you just assembled. You can find the middle of a dataset three different ways — and choose the honest one. You know that spread matters as much as the middle. You can spot a correlation and refuse to call it causation until it earns the title. And you know that data, algorithms, and the people they affect are connected by a simple rule: bias in, bias out.
+
+Everything in that toolkit points forward. In Chapter 8, we take the leap from *describing* data to **predicting** with it: building a simple machine learning model that learns a pattern from data and makes predictions about cases it has never seen. Every idea will feel familiar. A model's predictions are built on the patterns of correlation; judging whether the model is any good comes down to measuring the spread of its mistakes (that Mean Squared Error idea from the spread section); and deciding whether to *trust* the model comes down to the ethics questions you just learned to ask. You already think like a data scientist. Next, you'll build like one.
