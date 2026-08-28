@@ -3,3 +3,218 @@ title: "Where Data Comes From: APIs & Real-World Sources"
 author: "Technical Instructional Team"
 format: html
 ---
+
+In [Chapter 5](../05-etl/Chapter4-Part2.qmd), you mastered the **Extract** phase of ETL by pulling data out of flat files — a multi-sheet Excel workbook that was already sitting on your computer. But professional data scientists rarely get their data hand-delivered as a tidy file. More often, the data lives on *someone else's computer*, and you have to go ask for it. This chapter teaches you how to do exactly that.
+
+## Learning Objectives
+By the end of this chapter, you will be able to:
+
+* Describe the four major channels through which data reaches a data scientist: files, databases, APIs, and sensors.
+* Explain what an API is and why it is the standard way programs share live data.
+* Read a JSON response and map its structure onto Python dictionaries and lists.
+* Use the Python `requests` library to call a real, free public API and extract specific fields from the response.
+* Judge when it is appropriate — ethically and legally — to extract data from a web source.
+
+---
+
+## Four Ways Data Reaches You
+
+Think back to the "Extraction Web" diagram from Chapter 5: websites, flat files, databases, and APIs all feeding into your Python environment. Let's slow down and look at each channel properly, plus one more that is quietly becoming the biggest data source on Earth.
+
+```{mermaid}
+graph LR
+    A[Files: CSV / Excel] --> E((Your Python
+    Environment))
+    B[Databases] --> E
+    C[APIs] --> E
+    D[Sensors] --> E
+    style E fill:#fff3cd,stroke:#856404
+```
+
+**Files.** This is what Chapter 5 covered: CSVs, Excel workbooks, and other flat files that you download once and load with `pd.read_csv()` or `pd.read_excel()`. Files are simple and portable, but they are frozen snapshots — the moment a file is saved, it starts going stale.
+
+**Databases.** When an organization has too much data to fit in a spreadsheet — millions of customer orders, years of hospital records — it stores that data in a **database**: structured, indexed, and queryable with a language called SQL. Databases are the workhorses of industry, but this book does not go deep on them. For now, just know they exist, and that pandas can talk to them when the time comes.
+
+**APIs.** An API lets your program request *live, on-demand* data from another computer over the internet. Want the temperature in Dover right now, the current position of the International Space Station, or the latest exchange rates? You don't download a file — you ask an API, and it answers in real time. This is the star of this chapter.
+
+**Sensors.** Fitness trackers, weather stations, traffic cameras, smart thermostats — physical devices that generate a *constant stream* of measurements. The simulated activity dataset you unified in Chapter 5 (steps, heart rate, GPS) was designed to mimic exactly this kind of sensor output. Sensor data usually reaches you *through* one of the other three channels: it gets logged to files, stored in databases, or served up by an API.
+
+---
+
+## What Is an API?
+
+::: {.callout-note}
+### Definition: API
+An **API** (Application Programming Interface) is a way for one program to ask another program for data — usually over the internet — and get back a structured answer. The requesting program sends a specially formatted URL; the serving program replies with machine-readable data instead of a human-readable web page.
+:::
+
+The classic analogy: an API is the **waiter** in a restaurant. You (the customer) don't walk into the kitchen and start opening refrigerators — the kitchen would (rightly) throw you out. Instead, you look at the **menu** (the API's documentation, which lists exactly what you're allowed to ask for), give your order to the waiter in a standard format ("one forecast for latitude 39.16, please"), and the waiter brings back exactly what you ordered, plated in a predictable way.
+
+This arrangement is good for everyone. The kitchen keeps control of its ingredients and processes; you get your meal without needing to know how the stove works. Likewise, a weather service keeps control of its supercomputers and forecast models, while you get clean, structured data with three lines of Python.
+
+For this chapter's hands-on work we will use **Open-Meteo** (<https://open-meteo.com>), a genuinely free weather API: no account, no sign-up, no API key. It serves real forecast data for any point on the planet.
+
+---
+
+## JSON: The Language APIs Speak
+
+When a website answers your *browser*, it sends HTML — text designed for humans to read. When an API answers your *program*, it almost always sends JSON.
+
+::: {.callout-note}
+### Definition: JSON
+**JSON** (JavaScript Object Notation) is a text format for structured data. Despite the "JavaScript" in its name, every programming language can read it — and to a Python programmer, JSON looks almost exactly like nested **dictionaries** (curly braces, `"key": value` pairs) and **lists** (square brackets).
+:::
+
+Here is the actual JSON that Open-Meteo returns when asked for the current weather in Dover, Delaware:
+
+```json
+{
+  "latitude": 39.169113,
+  "longitude": -75.51602,
+  "elevation": 6.0,
+  "timezone": "GMT",
+  "current_weather_units": {
+    "temperature": "°C",
+    "windspeed": "km/h",
+    "winddirection": "°"
+  },
+  "current_weather": {
+    "time": "2026-08-28T02:15",
+    "temperature": 23.6,
+    "windspeed": 9.6,
+    "winddirection": 146,
+    "is_day": 0,
+    "weathercode": 3
+  }
+}
+```
+
+Let's decode a few of these fields in plain English:
+
+* **`latitude` / `longitude`** — the coordinates the forecast is *actually* for. Notice they aren't exactly what we asked for (39.16, −75.52): the API snapped our request to the nearest point on its weather-model grid. Real data sources make small, honest adjustments like this all the time.
+* **`current_weather`** — a nested object (an inner dictionary!) holding the actual measurements: `23.6` degrees, wind at `9.6` km/h. The `is_day: 0` field means it was nighttime when this response was captured.
+* **`current_weather_units`** — a matching dictionary that tells you the *units* for each measurement. Never assume units; a temperature of `23.6` means something very different in °C than in °F.
+
+Notice the nesting: a dictionary inside a dictionary. That is JSON's superpower — it can represent hierarchies that a flat CSV cannot.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+In the JSON above, is `current_weather` a single value, a list, or something else? And how would you describe the overall structure of this response to a classmate who only knows Python?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+`current_weather` is a **nested object** — a dictionary inside the outer dictionary. The whole response is one big Python-style dictionary whose values are a mix of numbers (`latitude`), strings (`timezone`), and inner dictionaries (`current_weather`, `current_weather_units`).
+:::
+:::
+
+---
+
+## Hands-On: Calling Your First API
+
+In Chapter 5, extraction meant `pd.read_excel()`. Extracting from an API takes a different library — **`requests`** — but the spirit is identical: pull raw data into Python so you can work with it.
+
+```python
+import requests
+
+response = requests.get(
+    "https://api.open-meteo.com/v1/forecast"
+    "?latitude=39.16&longitude=-75.52&current_weather=true"
+)
+data = response.json()
+print(data)
+```
+
+**Output:**
+```
+{'latitude': 39.169113, 'longitude': -75.51602,
+ 'generationtime_ms': 0.259, 'utc_offset_seconds': 0,
+ 'timezone': 'GMT', 'timezone_abbreviation': 'GMT', 'elevation': 6.0,
+ 'current_weather_units': {'time': 'iso8601', 'interval': 'seconds',
+  'temperature': '°C', 'windspeed': 'km/h', 'winddirection': '°',
+  'is_day': '', 'weathercode': 'wmo code'},
+ 'current_weather': {'time': '2026-08-28T02:15', 'interval': 900,
+  'temperature': 23.6, 'windspeed': 9.6, 'winddirection': 146,
+  'is_day': 0, 'weathercode': 3}}
+```
+
+(Your numbers will differ — this is *live* weather. That's the whole point.)
+
+Three lines did all the work:
+
+1. `requests.get(url)` sends the request across the internet — the waiter carries your order to the kitchen.
+2. `response.json()` parses the JSON reply into a regular **Python dictionary**.
+3. From there, it's just Python. No new syntax needed:
+
+```python
+weather = data["current_weather"]
+print("Temperature:", weather["temperature"], "°C")
+print("Wind speed:", weather["windspeed"], "km/h")
+```
+
+**Output:**
+```
+Temperature: 23.6 °C
+Wind speed: 9.6 km/h
+```
+
+The `["key"]` lookups chain naturally: `data["current_weather"]["temperature"]` reaches two levels deep in one line, exactly like any nested dictionary you've used before.
+
+---
+
+## Two Words Every API User Needs
+
+::: {.callout-note}
+### Definition: Endpoint
+An **endpoint** is one specific URL (or URL pattern) that an API exposes for one specific kind of data. Open-Meteo's `/v1/forecast` endpoint serves weather forecasts; its `/v1/air-quality` endpoint serves air-quality data. One API, many endpoints — like one restaurant menu with separate sections for entrées and desserts.
+:::
+
+The part of the URL after the `?` is the **query string**: `latitude=39.16&longitude=-75.52&current_weather=true` is how you fill in the details of your order. Change the coordinates, and the same endpoint serves you weather for Tokyo or São Paulo.
+
+::: {.callout-note}
+### Definition: Rate Limit
+A **rate limit** is a cap on how many requests you may send an API in a given time window (for example, Open-Meteo's free tier allows up to 10,000 requests per day). Exceed it and the API starts refusing you.
+:::
+
+Rate limits matter for two reasons. First, **politeness**: a free service is donating computing power to you; a runaway `while True:` loop hammering it a thousand times a second is the programming equivalent of ordering everything on the menu and eating none of it. Second, **self-preservation**: services block abusers, sometimes permanently. If you ever need many requests, add a pause (`time.sleep(1)`) between them and cache what you've already fetched.
+
+---
+
+## Is It OK to Take This Data?
+
+Just because your code *can* fetch something doesn't mean you *should*. Here is the practical dividing line:
+
+* **Documented public APIs — yes.** When a service like Open-Meteo publishes documentation, examples, and usage limits, it is explicitly inviting programs to request its data. Using it as documented, within its rate limits, is exactly what it's for.
+* **Scraping a site with no API — slow down.** "Scraping" means writing code that downloads a site's human-facing web pages and picks data out of the HTML. Some sites tolerate it; many explicitly forbid it in their **terms of service**, and doing it anyway can violate those terms, overload the site, or misuse people's personal information.
+
+Before you ever write a scraper, do two concrete checks:
+
+1. **Read the site's terms of service** (usually linked in the page footer) and search for words like "scrape," "crawl," "automated," or "bot."
+2. **Check the site's `robots.txt`** — a public file at the site's root (e.g., `https://example.com/robots.txt`) where the site declares which pages automated programs may and may not visit. A `Disallow:` line is the site telling bots to stay out.
+
+And the golden rule: **if an official API exists, use it instead of scraping.** It's more reliable, more respectful, and the data arrives as clean JSON instead of tangled HTML.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+Your friend wants hourly prices from an online store for a class project. The store has no public API, and its terms of service say "automated access is prohibited." Your friend says, "It's just for school, so it's fine." What would you tell them, and what alternatives could you suggest?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+"Just for school" doesn't override the terms of service — the prohibition applies to *any* automated access, and the scraper could get their IP blocked or worse. Better alternatives: look for an official API from the store or a comparable retailer, search Kaggle or an open data portal for an existing price dataset, or email the site to ask permission. Checking the terms of service and `robots.txt` *first* is exactly the habit that separates responsible data scientists from reckless ones.
+:::
+:::
+
+---
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+Call an API (or find any raw JSON online), paste a confusing chunk of it into ChatGPT, and ask: *"Here is a JSON response from an API. Explain what each field probably means and what units it might use."* For example, try the Open-Meteo response above and ask what `weathercode: 3` and `interval: 900` mean. Then verify ChatGPT's guesses against the official documentation at <https://open-meteo.com/en/docs> — did it get everything right?
+:::
+
+---
+
+## Your Turn
+
+1. Call Open-Meteo from Python for a location you care about — your town, a city you'd love to visit, or the middle of the Pacific Ocean. Change the `latitude` and `longitude` in the query string. (Or pick another free, no-key API, such as the ISS position tracker at `http://api.open-notify.org/iss-now.json`.)
+2. Print **three specific fields** from the response — not the whole dictionary. For example: temperature, wind speed, and whether it's currently daytime there.
+3. Write **two sentences** about what this data could be used for. Who would want a live feed of it, and what decision could it help them make?
+
+---
+
+## Roadmap: From Raw Data to Understanding
+
+You now command the full extraction toolkit: files (Chapter 5), and live APIs (this chapter), with databases and sensors on your radar. That completes Unit II — you can *get* data and *clean* it. But a dictionary full of temperatures is not yet knowledge. In Unit III, we turn to what the numbers actually *mean*: summarizing data with statistics, questioning it with an ethical eye, and finally teaching machines to find patterns in it and make predictions. The data you learned to fetch today is the fuel for everything that comes next.
