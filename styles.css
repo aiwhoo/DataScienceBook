@@ -1,1 +1,19 @@
 /* css styles */
+
+/* Knowledge Check callouts: a lighter-weight self-check than a full
+   "Your Turn" activity. Applied via `::: {.callout-tip .knowledge-check}`. */
+.knowledge-check {
+  border-left-color: #6f42c1 !important;
+}
+.knowledge-check .callout-title-container {
+  color: #6f42c1;
+}
+
+/* "Try With ChatGPT" callouts: a recurring, copy-pasteable AI prompt tied
+   to the surrounding section. Applied via `::: {.callout-tip .chatgpt-callout}`. */
+.chatgpt-callout {
+  border-left-color: #10a37f !important;
+}
+.chatgpt-callout .callout-title-container {
+  color: #10a37f;
+}
