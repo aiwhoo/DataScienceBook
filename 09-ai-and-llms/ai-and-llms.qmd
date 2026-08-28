@@ -3,3 +3,174 @@ title: "How AI Learns From Data"
 author: "Technical Instructional Team"
 format: html
 ---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Explain what a Large Language Model (LLM) is, and how it uses the exact same "learn a pattern from examples, predict on unseen input" idea you practiced in Chapter 8 — just at a vastly larger scale.
+*   Describe where an LLM's training data comes from, and why biases or gaps in that data show up in the model's answers — for the same reason a biased hiring algorithm makes biased decisions.
+*   Write specific, well-structured prompts that get noticeably better answers than vague ones, and explain *why* they work better.
+*   Define hallucination, explain in plain language why models produce them, and catch one in the wild.
+*   Apply the "always verify" rule from [Using AI Responsibly](../using-ai-responsibly.qmd) to any factual claim an AI tool makes.
+
+## The Other End of the Prompt
+
+Since the very first chapters of this book, a little box labeled **🤖 Try With ChatGPT** has been following you around. You've used it to quiz yourself on data types, to decode error messages, to explain your model's R² score in plain English. Each time, you typed some words, and something on the other end typed words back — usually helpful ones, occasionally wrong ones, always *confident* ones.
+
+We never stopped to ask the obvious question: **what is on the other end?**
+
+Now you're finally ready for the answer, because as of [Chapter 8](../08-machine-learning/machine-learning.qmd), you've built a machine learning model with your own hands. You fed it examples, watched it learn a pattern nobody programmed into it, tested it on data it had never seen, and caught it being confidently wrong. Hold onto every one of those experiences, because here's the punchline of this chapter: *the thing on the other end of the prompt is the same kind of thing you built* — trained the same basic way, evaluated the same basic way, and wrong in some of the same ways. The difference is scale. Enormous, almost absurd scale.
+
+## What Is a Large Language Model?
+
+::: {.callout-note}
+### Large Language Model (LLM)
+A **Large Language Model (LLM)** is a machine learning model trained on enormous amounts of text to predict what word (or word-fragment) is most likely to come next, given everything that came before it. ChatGPT, and tools like it, are LLMs with a chat interface on top.
+:::
+
+Read that definition again slowly, because it should sound familiar. In Chapter 8, you trained a model by showing it examples — 216 rows of activity data — and it learned a pattern: *given* Steps, Age, Hour of Day, and the rest, *predict* HeartRate. Then you tested it on rows it had never seen.
+
+An LLM is trained the same basic way — **learn a pattern from examples, then predict on unseen input** — with two things swapped out:
+
+| | Your Chapter 8 model | An LLM |
+|---|---|---|
+| **Training examples** | 216 rows of activity data | A giant fraction of all publicly available text — trillions of words |
+| **Given...** | Steps, Age, Hour of Day, ... | All the words so far ("The capital of France is...") |
+| **Predict...** | A heart rate number | The most likely next word ("Paris") |
+| **Tested on** | The 20% of rows it never saw | Text it never saw |
+
+That's it. That's the core mechanism. When you send ChatGPT a prompt, it predicts the most likely next word-fragment, adds it to the text, predicts the next one after *that*, and repeats — thousands of times per response. It turns out that when a model gets extraordinarily good at "what word comes next?" across trillions of words of human writing, the predictions start to look like explanations, translations, working Python code, and answers to your questions. Not because anyone wrote a rule for "how to explain `.loc`" — for the same reason nobody wrote a pedestrian-detection rule for the self-driving car in Chapter 8 — but because the pattern was in the examples, and the model learned it.
+
+One more Chapter 8 idea carries over, and it's the one to never forget: your heart-rate model didn't *understand* cardiology — it found statistical patterns in its training rows, and when those patterns didn't cover a situation, it confidently produced garbage (remember the R² of -1.8?). An LLM doesn't *understand* the world either. It found statistical patterns in text. Most of the time those patterns produce genuinely useful output. Sometimes they produce fluent, confident garbage. We'll get there in a few pages.
+
+## Where Does the Training Data Come From?
+
+::: {.callout-note}
+### Training Data (AI)
+**Training data**, for an AI model like an LLM, is the collection of examples it learns its patterns from: books, websites, news articles, encyclopedias, forum posts, computer code, and other text gathered at massive scale — often a large slice of the public internet.
+:::
+
+Your Chapter 8 model learned from data you personally cleaned and could inspect row by row. An LLM's training data is far too large for any human to read — but it is still *data*, and that means everything you learned about data in this book applies to it.
+
+Think back to [Chapter 1](../01-what-is-data/what-is-data.qmd), where you learned that **every dataset has a point of view**: data reflects how it was collected, who it was collected from, and what the collector decided to measure. Your 24-hour activity log captured your screen time but not the joke that made your whole table laugh at lunch. Now scale that idea up. A pile of text scraped largely from the internet has a point of view too:
+
+*   **Some languages are overrepresented.** There is vastly more English on the web than most other languages, so LLMs are typically strongest in English and noticeably weaker in languages with less online text.
+*   **Some viewpoints and communities are overrepresented.** People who post a lot online — and topics that get written about a lot — dominate the examples. Perspectives that are rarely written down are, to the model, nearly invisible.
+*   **Some time periods are missing entirely.** Training data is collected up to a cutoff date. Ask about something that happened after that cutoff, and the model has literally zero examples to draw on — though it may answer anyway.
+
+And now connect this to [Chapter 7's](../07-statistics-ethics/statistics-ethics.qmd) algorithmic bias lesson. Remember the flu-vaccine model: its hospital records were perfectly accurate, yet the model still made biased predictions, because the *collection* had a blind spot — people who never came to the hospital looked like people who never got sick. **Bias in, bias out.** An LLM works by the exact same mechanism. If its training text underrepresents a language, a community, or a viewpoint — or repeats a stereotype thousands of times — the model learns *that* pattern just as faithfully as it learns grammar, and its responses can reflect the same biases and gaps. Not because anyone programmed it to be biased, but for the same reason the hiring algorithm and the flu model were: **a model learns whatever patterns are in its examples, including the ones we wish weren't there.**
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A friend says: "ChatGPT read basically the whole internet, so its answers are neutral — it's seen every side of everything." Using Chapter 1's "data has a point of view" and Chapter 7's "bias in, bias out," give two specific reasons this reasoning fails.
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+First, "the whole internet" is itself a dataset with a point of view: it overrepresents certain languages (especially English), certain communities (people who write a lot online), and certain time periods (nothing after the training cutoff) — so the model's examples were never a balanced sample of "every side" to begin with. Second, bias in, bias out: a model learns whatever patterns dominate its examples, so if a stereotype or one-sided framing appears frequently in the training text, the model absorbs and can reproduce it — exactly the mechanism that made Chapter 7's flu-vaccine model score the least-connected patients as "low risk." Seeing *lots* of data is not the same as seeing *representative* data.
+:::
+:::
+
+## Prompting Is a Skill
+
+::: {.callout-note}
+### Prompt
+A **prompt** is the text you give an AI model to get a response — your question, plus any context, instructions, or examples you include with it. The prompt is the model's *entire* window into what you want.
+:::
+
+Here is a secret hiding in plain sight: every **Try With ChatGPT** box in this book has been quietly teaching you prompting this whole time. Go back and look at one — say, Chapter 8's. It doesn't say "ask ChatGPT about your model." It says: *"I'm a high school student who just trained my first machine learning models. My model's Mean Squared Error was ___ and its R² score was ___..."* Who you are. What you did. Your actual numbers. A specific question. That structure was never decoration. It's the difference between a useful answer and a useless one, and now you'll see exactly why.
+
+An LLM predicts the most likely continuation *of your prompt*. A vague prompt is compatible with thousands of continuations, so you get the most generic one. A specific prompt narrows the field until the most likely continuation is the answer you actually need. Watch it happen with a real question from [Chapter 4](../04-python-pandas/Chapter3-Part4.qmd):
+
+**The vague prompt:**
+
+> explain loc and query
+
+What does a model do with this? It doesn't know you mean *pandas* (a "query" could be SQL, a database, a search engine). It doesn't know what you already understand, what you're stuck on, or how long an answer you want. So it predicts the most statistically typical response to a vague question about "loc and query": a multi-paragraph, textbook-style overview — probably about pandas, if you're lucky — that re-explains things you already know, in someone else's example data, and never touches the thing you were actually wondering.
+
+**The specific prompt:**
+
+> I'm a high school student learning pandas. I already know how to filter a DataFrame with `.loc`, like this:
+>
+> `df.loc[df['Steps'] > 8000, ['Name', 'Steps']]`
+>
+> My textbook says `.query()` can do similar filtering. Show me this exact filter rewritten with `.query()`, then give me a short two-column table of when `.loc` is the better choice vs. when `.query()` is. Keep the whole answer under 200 words.
+
+Same topic. Completely different result — and you can name exactly why, piece by piece:
+
+*   **Context** ("high school student learning pandas," "I already know `.loc`") tells the model what level to pitch the answer at and what *not* to waste words re-explaining.
+*   **A concrete example** (your actual line of code) anchors the answer in *your* problem instead of a made-up one — the model can now rewrite *your* filter, not invent a random one.
+*   **A clear, specific question** ("show me this exact filter rewritten with `.query()`") is compatible with very few continuations — most of them correct and on-target.
+*   **A stated format** ("a short two-column table," "under 200 words") shapes the response into something you can actually use, instead of an essay you have to dig through.
+
+None of this is magic, and none of it requires secret keywords. It's the same skill as asking a good question of a teacher or writing a clear bug report: give context, be specific, say what form the answer should take. The payoff is real — and from now on, when you write your own prompts instead of using ours, you know the recipe.
+
+## When AI Gets It Confidently Wrong
+
+::: {.callout-note}
+### Hallucination (AI)
+A **hallucination** is when an AI model states something false as if it were fact — often fluently, in detail, and with total confidence. The model isn't "lying"; it's producing text that *sounds* right without any built-in guarantee that it *is* right.
+:::
+
+Why does this happen? One plain sentence covers it: **an LLM is predicting plausible-sounding text, not looking up guaranteed-true facts — unless it has been specifically connected to a search engine or another tool that checks.** "Plausible" and "true" overlap most of the time, which is what makes the failures so sneaky: a hallucination doesn't look like an error. It looks exactly like a correct answer.
+
+Here's what that looks like in *this course*. Suppose you're redoing your Chapter 5 cleaning work and ask an AI assistant:
+
+> What pandas method fills the missing values in a column with that column's median?
+
+And it replies, smoothly and helpfully:
+
+> You can use the `.fill_missing()` method with the strategy parameter: `df['HeartRate'].fill_missing(strategy='median')`.
+
+That answer has everything: a method name that follows pandas naming conventions, a plausible parameter, tidy example code. It is also completely made up. **There is no `.fill_missing()` method in pandas.** Run that line and Python answers instantly:
+
+```
+AttributeError: 'Series' object has no attribute 'fill_missing'
+```
+
+The real method — the one you actually used in Chapter 5 — is `.fillna()`:
+
+```python
+df['HeartRate'] = df['HeartRate'].fillna(df['HeartRate'].median())
+```
+
+Notice what just happened, because it's the whole lesson in miniature. The hallucinated answer *sounded* more official than the real one. And notice what caught it: not squinting at the answer harder — **running the code.** This is exactly the "always verify" rule from [Using AI Responsibly](../using-ai-responsibly.qmd), which warned you on page one that AI tools "can be confidently, fluently wrong — especially about specific numbers, dates, and how library functions behave." Now you know *why* they can: the model is a next-word predictor trained on patterns, and `fill_missing` fits the pattern of pandas method names beautifully. Plausibility is what LLMs are built to produce. Truth is your job to check:
+
+*   **Claims about code:** run it. Two seconds of `AttributeError` beats twenty minutes of confusion.
+*   **Claims about facts, numbers, or dates:** cross-check against this book, class materials, or a source you trust.
+*   **"It sounded sure of itself"** is not evidence. It never was. Fluent confidence is precisely what a hallucination is made of.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A classmate asks ChatGPT for the pandas method that removes duplicate rows, gets back a confident answer with example code, and pastes it straight into their notebook because "it gave me the exact syntax and everything — it obviously knows." Explain (a) why the detailed, confident style of the answer is *not* evidence that it's correct, using this chapter's one-sentence explanation of why hallucinations happen, and (b) the fastest way for your classmate to verify the answer.
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+(a) An LLM produces plausible-sounding text by predicting likely next words — it is not looking up guaranteed-true facts. Fluency, detail, and exact-looking syntax are what the model generates *whether or not the content is true*, so a polished answer is exactly what both a correct response and a hallucination look like. Confidence is the model's style, not its evidence. (b) Run the code. If the method is real (it's `.drop_duplicates()`), it executes; if it was hallucinated, Python throws an `AttributeError` immediately. For code claims, execution is the fastest and most reliable verification there is — the same "always verify" rule from Using AI Responsibly.
+:::
+:::
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+This one is bigger than usual, because this time the *prompting itself* is the experiment.
+
+**Step 1 — the vague prompt.** Pick a real data-science question from this course — for example, how to handle outliers like Diana's heart-rate spike from Chapter 5, or when to use a bar chart vs. a histogram from Chapter 3. Ask it badly, on purpose, in ten words or fewer: *"how do I deal with outliers"*. Save the response.
+
+**Step 2 — the specific prompt.** Start a **new chat** (so the model can't peek at Step 1) and ask the same question using this chapter's recipe — context, a concrete example, a clear question, a stated format:
+
+**Prompt:** "I'm a high school student working with a small activity dataset (216 rows: steps, heart rate, age). One person has a heart-rate reading far above all their others, and I think it might be a sensor error. Should I remove it, cap it, or keep it? Give me a short pros-and-cons list for each of the three options, then a one-sentence recommendation for my situation. Under 250 words."
+
+**Step 3 — compare.** Put the two responses side by side and write down: (1) two concrete ways the specific prompt's answer is more useful — did the context, the example, or the stated format cause each improvement? (2) Anything the vague answer included that was generic filler.
+
+**Step 4 — the verification pass.** Now read *both* responses with this chapter's eyes and underline every part you should double-check before trusting it: any named method or function (run it), any specific number or statistical claim (check it against Chapters 5 and 7), any confident statement that came with no reasoning attached. A specific prompt gets you a *more useful* answer — it does not get you a *guaranteed-true* one. Even the good response gets the verification treatment.
+:::
+
+## Your Turn: Catch One in the Wild
+
+Time to run the "always verify" rule for real, on your own prompt, start to finish.
+
+1.  **Ask.** Write your own prompt to ChatGPT (or whichever AI tool your class uses) about anything from this course — a pandas method, a statistics concept from Chapter 7, what some matplotlib function does, a fact about how train/test splits work. Use the specific-prompt recipe; you've earned it.
+2.  **Pick a claim.** From the response, choose one concrete, checkable factual claim. Not an opinion ("this method is convenient") — a fact: a method name, what a parameter does, a definition, a number.
+3.  **Actually verify it.** Choose your weapon: run the code in your notebook, look it up in this book, or check an authoritative source (for pandas claims, the official pandas documentation is the referee). "It sounded right" does not count as verification — that's the exact trap this chapter is about.
+4.  **Write the verdict.** In 2–3 sentences: What was the claim? Did it hold up — fully, partly, or not at all? And what was your evidence? If the claim survived, say what convinced you. If you caught a hallucination, congratulations — describe it, because you just did professional-grade fact-checking, and you'll never read an AI answer the same way again.
+
+## Roadmap: Everything, All at Once
+
+Look at the toolbox you're carrying out of Unit III. You can question where data comes from and whose point of view it carries. You can clean it, transform it, and pull it from APIs. You can summarize it honestly with statistics and make it speak with visualizations. You can train models that predict — and diagnose them when they fail. And as of this chapter, you understand the AI tools at your elbow well enough to use them the way a professional does: as a genuinely powerful assistant whose every factual claim gets verified before it gets trusted.
+
+Unit IV is where all of it comes together. In Chapters 10 and 11, you stop practicing on our datasets and our questions, and you build something that's yours: an original data science project, carried from a raw question all the way to a finished analysis — and then presented to an audience that will ask *you* the follow-up questions. Every skill in the toolbox gets used, AI included, tutor-not-ghostwriter included. You've spent nine chapters learning data science. Now you get to do some.
