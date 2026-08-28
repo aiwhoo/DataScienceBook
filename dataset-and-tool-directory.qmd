@@ -2,3 +2,34 @@
 title: "Dataset & Tool Directory"
 format: html
 ---
+
+A quick reference to every tool and data source this book uses, gathered in one place.
+
+## Where to Find Data
+
+- **[Delaware Open Data Portal](https://data.delaware.gov/)** — real government
+  datasets (traffic crashes, school enrollment, park locations, COVID-19
+  trends, and more). Used throughout this book, starting in Chapter 2.
+- **[Kaggle](https://www.kaggle.com/datasets)** — a huge library of datasets and
+  a learning community, mentioned as an alternative data source starting in
+  Chapter 2.
+
+## Tools Used in This Book
+
+- **[CODAP](https://codap.concord.org/)** — free, no-login drag-and-drop data
+  visualization, used in Chapter 3. See also CODAP's official
+  [How-to Guides](https://codap.concord.org/help/how-to-guides/).
+- **Google Sheets** — spreadsheet formulas, filtering, and pivot tables, used
+  in Chapter 2.
+- **PyCharm** — a Python IDE, set up in Chapter 4 (see also
+  [Getting Set Up](getting-set-up.qmd)).
+- **[Google Colab](https://colab.research.google.com)** — a no-install
+  alternative to PyCharm, covered in [Getting Set Up](getting-set-up.qmd).
+- **[Open-Meteo](https://open-meteo.com)** — a genuinely free weather API
+  (no account, no API key), used in Chapter 6 to teach how APIs work. See its
+  [documentation](https://open-meteo.com/en/docs) for the full range of
+  endpoints. Chapter 6 also points curious readers to the
+  [Open Notify ISS position API](http://api.open-notify.org/iss-now.json) as
+  a second free, no-key API to try.
+- **[scikit-learn](https://scikit-learn.org/)** — the machine learning
+  library used in Chapter 8.
