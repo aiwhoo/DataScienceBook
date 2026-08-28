@@ -3,3 +3,286 @@ title: "Introduction to Machine Learning"
 author: "Technical Instructional Team"
 format: html
 ---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Explain what machine learning is — and how "learning patterns from examples" differs from ordinary programming with hand-written rules.
+*   Tell regression problems apart from classification problems, and sort real-world prediction tasks into the right bucket.
+*   Explain why data scientists split data into a training set and a test set, and how that split guards against overfitting.
+*   Train a Linear Regression model and a Decision Tree model in Python with scikit-learn, using the activity dataset you cleaned in Chapter 5.
+*   Judge a model's predictions using Mean Squared Error (MSE) and the R² score — and explain, in plain English, what those numbers actually say.
+
+## From Describing to Predicting
+
+At the end of [Chapter 7](../07-statistics-ethics/statistics-ethics.qmd), we made you a promise: you'd stop *describing* data and start *predicting* with it. This is that chapter.
+
+And here's the good news — you've already done the hard part. Back in [Chapter 5](../05-etl/Chapter4-Part4.qmd), you spent four whole tutorials cleaning, normalizing, and encoding the activity dataset: Alice, Charlie, and Diana's steps, heart rates, locations, and spending, all scrubbed and translated into numbers a machine can read. At the time, we kept saying that all this work was "preparing the data for machine learning." Today the machine finally shows up to learn. You did the cooking; now we eat.
+
+One warning before we start: our first model is going to fail. Not a little — spectacularly. That's on purpose. Watching a model fail, *measuring* how badly it failed, figuring out why, and then trying something better is not the embarrassing part of machine learning. It **is** machine learning. Let's go.
+
+## What Is Machine Learning?
+
+::: {.callout-note}
+### Machine Learning
+**Machine learning** is teaching a computer to find patterns in data and make predictions from them — by showing it many examples, instead of writing exact rules by hand.
+:::
+
+To see why that's a big deal, compare it to the programming you've done so far. Everything you wrote in Chapters 4 and 5 was **rule-based**: you told the computer *exactly* what to do, step by step. "If the value is missing, fill it with the median. Multiply this column by that number. Sort by date." The computer contributed zero ideas of its own; it just followed your recipe very, very fast.
+
+Now try to write exact rules for this: *look at a photo and decide whether there's a pedestrian in it.* Go ahead — where do you even begin? "If some pixels are... person-shaped"? People come in every size, pose, outfit, and lighting condition. Nobody can write that rule book by hand. But a self-driving car's obstacle-detection system does this many times per second — because instead of being given rules, it was shown **millions of labeled examples** ("this photo contains a pedestrian; this one doesn't") and it *learned* the pattern itself.
+
+You already interact with machine learning daily, probably before breakfast:
+
+*   **Your recommendation feed.** TikTok, YouTube, and Spotify don't have a hand-written rule that says "this specific user likes this specific video." They learned your taste from thousands of examples of what you watched, skipped, and replayed — and they predict what you'll want next.
+*   **A self-driving car's obstacle detection.** As above: trained on enormous piles of labeled road images, so it can predict "pedestrian" or "clear road" for images it has never seen before.
+*   **Your email's spam filter.** Trained on millions of messages that humans marked as spam or not-spam, it predicts which pile each new message belongs in.
+
+Notice the shape all three share, because it's the shape of this whole chapter: **examples in, pattern learned, predictions out on new, never-before-seen cases.** And notice something else, from Chapter 7: a model learns whatever patterns are in its examples — including the biased ones. *Bias in, bias out* was never just a slogan about the past; it's a warning about every model you're about to build.
+
+## Regression vs. Classification
+
+Prediction problems come in two flavors, and the very first question a data scientist asks about any new problem is: *which flavor is this?*
+
+::: {.callout-note}
+### Regression
+**Regression** is predicting a *number* — a continuous value that can land anywhere on a scale, like 72.4 beats per minute or $312,500.
+:::
+
+::: {.callout-note}
+### Classification
+**Classification** is predicting a *category* — a label from a fixed set of choices, like "spam / not spam" or "cat / dog / hamster."
+:::
+
+The test is simple: look at the **answer** you want the model to produce. Is it a number you could put on a number line, or a label you could put on a name tag?
+
+| Prediction task | Answer looks like... | Flavor |
+|---|---|---|
+| Tomorrow's high temperature | 74°F | Regression |
+| A house's selling price | $312,500 | Regression |
+| Is this email spam? | spam / not spam | Classification |
+| Is this wild plant safe or toxic? | safe / toxic | Classification |
+
+Now you try. In a few pages we're going to predict a person's **HeartRate** from their Steps, Age, distance from school, and so on. Which flavor is that?
+
+Think about the answer the model gives: a heart rate like 78 or 103 — a number on a scale, not a label from a list. That makes it **regression**, which is why both models in this chapter have "Regressor" or "Regression" in their names. (If instead we asked the model to predict each person's *ActivityType* — Cycling, Running, or Resting — *that* would be classification.)
+
+## Train/Test Split and Overfitting
+
+Here's a question that sounds dumb and turns out to be one of the most important ideas in all of machine learning: once you've trained a model, how do you find out if it's any good?
+
+The obvious answer: ask it to predict the data it trained on and see if it gets it right. And the obvious answer is a trap.
+
+Imagine a classmate who gets tomorrow's exact test questions in advance, memorizes the answer key overnight, and scores 100%. Impressive? No — meaningless. The 100% tells you they can *memorize*, not that they *understand*. To find out what they actually learned, you'd have to hand them questions they've **never seen**.
+
+Models can pull the same trick, and there's a name for it:
+
+::: {.callout-note}
+### Overfitting
+**Overfitting** is when a model learns its training data *too* specifically — memorizing its quirks and noise instead of the real underlying pattern — so it scores brilliantly on data it has seen and falls apart on data it hasn't. It's the model that memorized the practice questions but fails the real test.
+:::
+
+The defense is beautifully simple:
+
+::: {.callout-note}
+### Train/Test Split
+A **train/test split** divides your dataset into two piles before any learning happens: **training data** (usually around 80%), which the model learns its patterns from, and **test data** (the remaining ~20%), which is kept hidden from the model and used afterward to check its predictions on data it has never seen. The test set is the model's real exam.
+:::
+
+The model never gets to peek at the test set during training — that's the whole point. If it truly learned the pattern, it will do well on the hidden pile. If it merely memorized, the test set will expose it.
+
+The train/test split is your first tool against overfitting, but not the only one. Data scientists also:
+
+1.  **Keep the test set locked away** and judge every model on data it never trained on — the split itself.
+2.  **Prefer simpler models** when possible; a model with fewer knobs to turn has less capacity to memorize noise.
+3.  **Collect more data** — the more examples a model sees, the harder it becomes to memorize them all, and the more it's forced to learn the actual pattern.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A student builds a model to predict quiz scores and proudly reports: "It's incredible — I tested it on the same 50 rows I trained it on, and it predicted every score almost perfectly!" What would you warn them about, and what one change to their process would give a trustworthy measure of the model's quality?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+Warn them that testing on the training data proves nothing — the model may simply have *memorized* those 50 rows (overfitting), like a student who saw the answer key before the test. Near-perfect scores on seen data are exactly what a memorizer produces. The fix: **split the data first** — train on one portion (say 80%) and evaluate only on the held-out test portion the model has never seen. Its performance on that unseen 20% is the real measure of quality.
+:::
+:::
+
+## Hands-On: Predicting Heart Rate with Linear Regression
+
+Time to build. Our question: **can we predict a person's heart rate from the other things we know about them?** Our data: the fully processed activity dataset from Chapter 5 — the one where you encoded `Gender` into `Gender_code` and engineered `DistanceFromSchool` out of raw coordinates. Every feature below exists because of work you already did.
+
+We'll use **scikit-learn** (imported as `sklearn`), the standard Python library for machine learning. First, load the data and choose what the model gets to look at (the **features**, `X`) and what it must predict (the **target**, `y`):
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+df = pd.read_csv("processed_full_activity_data.csv")
+
+X = df[['Steps', 'Gender_code', 'Age', 'DistanceFromSchool', 'Hour of Day', 'MoneySpent($)']]
+y = df['HeartRate']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+
+That last line is the train/test split from the previous section, made real: `test_size=0.2` hides 20% of the rows in a test set, and `random_state=42` just fixes the random shuffle so you get the same split every time you run it.
+
+Our first model is **Linear Regression** — the simplest prediction machine there is. It assumes the target is a straight-line combination of the features: heart rate equals *some number* times Steps, plus *some number* times Age, and so on. "Training" means finding the numbers that make that line fit the training data as closely as possible.
+
+```python
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+```
+
+Three lines: create the model, `fit` it to the training pile (this is the learning), then `predict` heart rates for the hidden test pile. Now — the moment of truth. How good are those predictions? We'll grade them with two standard measures:
+
+```python
+from sklearn.metrics import mean_squared_error, r2_score
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+print("Mean Squared Error:", mse)
+print("R² Score:", r2)
+```
+
+**Output:**
+```
+Mean Squared Error: 484
+R² Score: -1.8
+```
+
+Before you can react to those numbers, you need to know what they mean.
+
+::: {.callout-note}
+### Mean Squared Error (MSE)
+**Mean Squared Error** is the average size of the model's mistakes, *squared* — for each test row, take the gap between the predicted value and the actual value, square it, then average all those squared gaps. Squaring means big mistakes count extra: missing by 20 hurts far more than four times as much as missing by 5. **Lower is better**, and an MSE of 0 would mean every prediction was perfect. This is exactly the "spread of a model's mistakes" idea we promised you at the end of [Chapter 7's section on spread](../07-statistics-ethics/statistics-ethics.qmd#spread-how-different-are-the-numbers-from-each-other).
+:::
+
+::: {.callout-note}
+### R² Score
+The **R² score** ("R-squared") says what fraction of the pattern in the data the model actually explains. An R² of 1 is a perfect model; an R² of 0 means the model is no better than ignoring the features entirely and just guessing the average heart rate for everyone. And yes — R² can go **negative**, which means the model's predictions are actively *worse* than guessing the average every time.
+:::
+
+Now look at our results again. An MSE of 484 sounds abstract until you un-square it: the square root of 484 is 22, so this model's typical miss is on the order of **22 beats per minute**. Predicting 95 when the truth is 73 — for a resting teenager, that's not a small miss; that's the difference between "sitting in class" and "just ran up the stairs."
+
+And the R² of **-1.8** is the real gut punch. Negative. Our carefully trained model, fed six features of lovingly cleaned data, performs *worse than a model with no features at all* — worse than shrugging and guessing the average heart rate for every single person. All that ETL work, and the machine came back with something a wild guess would beat.
+
+There's one more way to see the failure, and it's the most vivid. The source script plots the results with matplotlib:
+
+```python
+import matplotlib.pyplot as plt
+
+plt.scatter(y_test, y_pred, alpha=0.6, color='blue')
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
+plt.xlabel("Actual HeartRate")
+plt.ylabel("Predicted HeartRate")
+plt.title("Actual vs Predicted HeartRate (Linear Regression)")
+plt.show()
+```
+
+Picture what this draws. Each blue dot is one test row: its position left-to-right is the person's *actual* heart rate, and its height is what the model *predicted*. The red dashed diagonal is the "perfect prediction" line — a dot lands exactly on it only when predicted equals actual. For a good model, the dots hug that diagonal like cars in a lane. For ours? The blue dots are **scattered far from the line** — some high above it (predictions way too high), some far below (way too low), with barely any visible relationship between where a dot *should* be and where it is. It looks less like a lane of traffic and more like the aftermath of a paintball match.
+
+So the verdict is in, delivered three ways — a big MSE, a negative R², and a scatter plot in open rebellion. Our model is bad. The next question is the one that separates data scientists from button-pushers: *why?*
+
+## Why Did the Model Do So Poorly? And What Can We Try Instead?
+
+Resist the urge to conclude "machine learning doesn't work" or "the data is garbage." Diagnose instead. There are three honest suspects here:
+
+1.  **The test set is small — and possibly noisy.** Our dataset covers three people over a few days; 20% of that is not many rows. With a tiny test set, a couple of unlucky or unusual rows (remember Diana's outlier heart-rate spike from Chapter 5?) can wreck the scores all by themselves. Small samples make noisy verdicts — the same lesson, you'll notice, as judging a restaurant by its first two reviews.
+2.  **Linear regression assumes a straight line — and heart rate may not follow one.** Our model can only express "as X goes up, HeartRate goes up (or down) at a steady rate." But think about how heart rate actually behaves across a day: low through a resting morning, spiking during a workout, dropping again after — rising and falling in waves. If the true relationship bends and the model can only draw a straight line, it will fail no matter how much data you give it. You can't trace a curve with a ruler.
+3.  **We may have the wrong features — or be missing the right ones.** Does `MoneySpent($)` really influence heart rate? Probably not much — it may be adding noise, not signal. Meanwhile, features that *would* matter, like what activity the person was doing at that moment, aren't in our feature list at all. A model can only learn from what you show it.
+
+Suspect #2 suggests a concrete experiment: try a model that *isn't* forced to draw straight lines.
+
+::: {.callout-note}
+### Decision Tree
+A **decision tree** is a model that makes predictions by asking a sequence of yes/no questions about the features — like a flowchart it learns from the data. For example: *Is Steps greater than 800? If yes, is Hour of Day past 6 PM?* — and each path of answers ends in a prediction. Because each question splits the data into pieces that get their own predictions, a tree can capture patterns that bend, jump, and zigzag — no straight-line assumption anywhere.
+:::
+
+If you've ever played twenty questions, you already understand decision trees. Let's see if asking good questions beats drawing a straight line.
+
+## Hands-On: Trying a Decision Tree
+
+Here's the quiet superpower of scikit-learn: every model speaks the same language — `fit`, then `predict`. Swapping in an entirely different algorithm takes three changed lines. Same training data, same hidden test set, same grading:
+
+```python
+from sklearn.tree import DecisionTreeRegressor
+tree_model = DecisionTreeRegressor(random_state=42)
+tree_model.fit(X_train, y_train)
+y_pred_tree = tree_model.predict(X_test)
+
+mse_tree = mean_squared_error(y_test, y_pred_tree)
+r2_tree = r2_score(y_test, y_pred_tree)
+print("Mean Squared Error:", mse_tree)
+print("R² Score:", r2_tree)
+```
+
+**Output:**
+```
+Mean Squared Error: 82
+R² Score: 0.52
+```
+
+Read those against the linear model's report card. MSE fell from 484 to **82** — un-square it and the typical miss shrank from about 22 beats per minute to about **9**. And R² climbed from -1.8 all the way to **0.52**: instead of doing worse than guessing the average, the tree now explains about **52% of the variation** in heart rate. Not a perfect model — nearly half the pattern still escapes it — but a genuinely useful one, produced from the *exact same data* that made linear regression look hopeless.
+
+The scatter plot tells the same story visually. Draw it just like before — actual heart rate across, predicted heart rate up, red dashed "perfect prediction" diagonal:
+
+```python
+plt.scatter(y_test, y_pred_tree, alpha=0.6, color='orange')
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
+plt.xlabel("Actual HeartRate")
+plt.ylabel("Predicted HeartRate")
+plt.title("Actual vs Predicted HeartRate (Decision Tree)")
+plt.show()
+```
+
+This time the orange dots land **noticeably closer to the diagonal** than the blue ones did. They don't sit *on* the line — an R² of 0.52 still leaves real scatter, dots drifting above and below — but now there's an unmistakable trend hugging the diagonal: when the actual heart rate is high, the prediction tends to be high; when it's low, the prediction tends to be low. The paintball aftermath has organized itself into something that actually resembles a lane.
+
+## Comparing the Two Models
+
+Put the two contenders side by side:
+
+| | Linear Regression | Decision Tree |
+|---|---|---|
+| **Task type** | Regression (predicts a number) | Regression (predicts a number) |
+| **How it works** | Finds the best straight-line formula combining the features | Learns a flowchart of if/else questions that split the data into groups |
+| **Strengths** | Simple, fast, easy to interpret; excellent when the relationship really is close to a straight line | Captures non-linear, bendy relationships; no straight-line assumption |
+| **Weaknesses** | Can *only* draw straight lines — hopeless when the true pattern curves | Can overfit by growing very deep and memorizing training data |
+| **Result on our data** | MSE = 484, R² = -1.8 | MSE = 82, R² = 0.52 |
+
+So *why* did the Decision Tree win — and win this decisively? Not because trees are simply "better." It won because of the mismatch we diagnosed as suspect #2: **the real relationship between our features and heart rate isn't a straight line, and only one of these models was allowed to bend.** Heart rate rises and falls in waves across a day — resting, active, resting again. Linear regression was structurally forbidden from expressing that shape; forced to summarize a wavy pattern with one flat formula, it produced predictions worse than guessing the average. The tree, free to carve the data with questions — *this* hour range and *that* step count get one prediction, a different combination gets another — could follow the curves the ruler couldn't.
+
+The lesson to carry with you: **when a model fails, the model's assumptions are always a suspect.** The right response to a bad score isn't despair, and it isn't blind trust in a fancier tool — it's diagnosis, then a targeted experiment. That's what you just did.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A friend sees your results and says: "Decision Trees beat Linear Regression, 82 to 484. Got it — I'll never use Linear Regression again." Using this chapter's diagnosis of *why* the tree won here, explain what's wrong with that conclusion, and describe a situation where Linear Regression would be the better choice.
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+The tree didn't win because trees are universally better — it won because *this particular relationship* (features vs. heart rate) is non-linear, and linear regression is structurally limited to straight lines. On a problem where the true relationship really is close to a straight line — say, predicting a taxi fare from trip distance — Linear Regression can be the better tool: simple, fast, easy to explain, and less prone to overfitting than a deep tree that might memorize training quirks. The model should match the shape of the problem; there is no single "best" model for everything.
+:::
+:::
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+**Prompt:** "I'm a high school student who just trained my first machine learning models. My model's Mean Squared Error was ___ and its R² score was ___, predicting ___ (fill in your own numbers and target from the Your Turn activity below — or use this chapter's results). In plain English: is that a good result? What does each number tell me, and what would you try next to improve it?"
+
+Then do what you practiced in [Chapter 7](../07-statistics-ethics/statistics-ethics.qmd): **verify before you trust.** Check ChatGPT's explanation of MSE and R² against this chapter's definitions. Did it mention that R² can be negative, and what that means? Did its "what to try next" suggestions match any of our three suspects (small data, wrong model shape, wrong features)? Write two sentences on where its explanation matched this chapter — and where, if anywhere, it went off track.
+:::
+
+## Your Turn: Two Models Enter
+
+Run the full experiment yourself, end to end. Use your own dataset if you have one from earlier chapters — or the processed activity dataset from [Chapter 5](../05-etl/Chapter4-Part4.qmd).
+
+1.  **Pick a target.** Choose one *numeric* column to predict (that makes it regression). If you're using the activity dataset, try predicting `Steps` instead of `HeartRate` — a fresh question with the same data.
+2.  **Pick your features.** Choose 3–6 other columns as `X`. For each one, ask Chapter 7's favorite question: *do I have a reason to believe this is related to the target, or am I just throwing it in?*
+3.  **Split.** Use `train_test_split` with `test_size=0.2`, exactly as in this chapter.
+4.  **Train both models.** Fit a `LinearRegression()` and a `DecisionTreeRegressor()` on the same training data.
+5.  **Grade both.** Compute MSE and R² for each model on the test set. Un-square each MSE (take its square root) to get the typical miss in the target's real units.
+6.  **Write the verdict.** In 2–3 sentences: which model did better, and *why do you think so?* Don't just report the numbers — make a claim about the shape of the relationship, the size of your data, or your choice of features, the way this chapter did.
+
+**Bonus:** describe (or actually plot) the actual-vs-predicted scatter for your better model. How close do your dots come to the red dashed diagonal?
+
+## Roadmap: The Same Idea, a Billion Times Bigger
+
+Take stock of what just happened. A computer looked at examples, found a pattern no one explicitly programmed into it, and made predictions about data it had never seen — and you measured exactly how good those predictions were, diagnosed a failure, and fixed it by choosing a model whose shape matched the problem. That loop — *learn from examples, predict, evaluate, improve* — is the beating heart of every machine learning system on Earth.
+
+Including one you've been using all along. In Chapter 9, we turn to the AI tools that have been at your elbow since the start of this book and ask how they actually work — because ChatGPT and its cousins are, at their core, a much, much bigger version of exactly what you did today: a model trained to find patterns in examples and predict what comes next. The differences are scale (trillions of words instead of a few hundred rows of heart rates) and ambition (predicting language itself instead of a number) — but the fundamentals are ones you now own: training data, learned patterns, predictions on unseen input, and models that can be confidently, measurably wrong. You've built a model. Next, you'll understand the biggest ones ever built.
