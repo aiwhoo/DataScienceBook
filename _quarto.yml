@@ -3,24 +3,44 @@ project:
   output-dir: docs
 
 book:
-  title: "template"
-  author: "AI Whoo School"
+  title: "Data Science for High School"
+  author: "Technology Service Center, University of Delaware"
 
   chapters:
     - index.qmd
-    - part: "Chapter 3: Python and Pandas"
+    - how-to-use-this-book.qmd
+    - using-ai-responsibly.qmd
+    - part: "Unit I: Foundations"
       chapters:
-      - Chapter3/Chapter3-Part1.qmd
-      - Chapter3/Chapter3-Part2.qmd
-      - Chapter3/Chapter3-Part3.qmd
-      - Chapter3/Chapter3-Part4.qmd
-    - part: "Chapter 4: ETL in Action"
+        - 01-what-is-data/what-is-data.qmd
+        - 02-spreadsheets/spreadsheets.qmd
+        - 03-data-visualization/data-visualization.qmd
+    - part: "Unit II: Programming for Data Science"
       chapters:
-      - Chapter4/Chapter4-Part1.qmd
-      - Chapter4/Chapter4-Part2.qmd
-      - Chapter4/Chapter4-Part3.qmd
-      - Chapter4/Chapter4-Part4.qmd
-      - Chapter4/Chapter4-Part5.qmd
+        - 04-python-pandas/Chapter3-Part1.qmd
+        - 04-python-pandas/Chapter3-Part2.qmd
+        - 04-python-pandas/Chapter3-Part3.qmd
+        - 04-python-pandas/Chapter3-Part4.qmd
+        - 05-etl/Chapter4-Part1.qmd
+        - 05-etl/Chapter4-Part2.qmd
+        - 05-etl/Chapter4-Part3.qmd
+        - 05-etl/Chapter4-Part4.qmd
+        - 05-etl/Chapter4-Part5.qmd
+        - 06-apis-data-sources/apis-data-sources.qmd
+    - part: "Unit III: Understanding and Modeling Data"
+      chapters:
+        - 07-statistics-ethics/statistics-ethics.qmd
+        - 08-machine-learning/machine-learning.qmd
+        - 09-ai-and-llms/ai-and-llms.qmd
+    - part: "Unit IV: Communicating and Applying Data Science"
+      chapters:
+        - 10-capstone-project/capstone-project.qmd
+        - 11-data-storytelling/data-storytelling.qmd
+
+  appendices:
+    - glossary.qmd
+    - getting-set-up.qmd
+    - dataset-and-tool-directory.qmd
 
 format:
   html:
