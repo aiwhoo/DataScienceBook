@@ -25,6 +25,12 @@ Now imagine the same seven numbers as seven bars. The tallest bar hits you befor
 **Data visualization** is the practice of representing data as pictures — charts, graphs, maps — so that patterns, trends, and outliers can be seen at a glance instead of computed in your head. It is the last step of the summarize-then-show pipeline you started in Chapter 2.
 :::
 
+One of the earliest and most famous examples predates computers entirely. In 1858, nurse and statistician Florence Nightingale wanted to convince the British Army that unsanitary conditions — not battle wounds — were killing most of their soldiers. A table of numbers hadn't moved anyone. So she built this instead:
+
+![Florence Nightingale's 1858 "Diagram of the Causes of Mortality in the Army in the East" — each wedge is a month, and the blue area shows deaths from preventable disease dwarfing the red area of deaths from battle wounds.](/assets/images/photos/nightingale-rose-diagram.jpg){#fig-nightingale fig-alt="A colorful circular rose diagram from 1858 divided into monthly wedges, where the size of the blue wedges (deaths from disease) is dramatically larger than the red wedges (deaths from wounds), showing that disease was the far greater killer." width="70%"}
+
+The Army reformed its hospitals soon after. That's the whole promise of this chapter in one picture: the numbers didn't change, but making them *visible* changed what people did about them.
+
 ## Dataset vs. Dashboard
 
 Two words you'll hear constantly in data science are *dataset* and *dashboard*, and it's worth being precise about the difference.

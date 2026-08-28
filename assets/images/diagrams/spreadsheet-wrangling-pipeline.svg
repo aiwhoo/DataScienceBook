@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="700" height="340" fill="#fafafa"/>
+  <text x="350" y="32" text-anchor="middle" font-size="20" font-weight="600" fill="#2a2a2a">Three Moves: Filter → Formula → Pivot Table</text>
+  <text x="350" y="52" text-anchor="middle" font-size="12" fill="#6a6a6a">539,947 raw rows, narrowed down to an answer</text>
+
+  <!-- Stage 1: Filter -->
+  <g>
+    <rect x="30" y="80" width="190" height="190" rx="6" fill="#ffffff" stroke="#6f42c1" stroke-width="1.5"/>
+    <rect x="30" y="80" width="190" height="30" rx="6" fill="#6f42c1"/>
+    <rect x="30" y="98" width="190" height="12" fill="#6f42c1"/>
+    <text x="125" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">1 · FILTER</text>
+    <text x="125" y="135" text-anchor="middle" font-size="12" fill="#2a2a2a">539,947 rows</text>
+    <text x="125" y="160" text-anchor="middle" font-size="11" fill="#6a6a6a">"only show Monday"</text>
+    <text x="125" y="200" text-anchor="middle" font-size="12" font-weight="600" fill="#2a2a2a">77,850 rows</text>
+    <text x="125" y="218" text-anchor="middle" font-size="11" fill="#6a6a6a">remain visible</text>
+  </g>
+
+  <!-- Stage 2: Formula -->
+  <g>
+    <rect x="255" y="80" width="190" height="190" rx="6" fill="#ffffff" stroke="#10a37f" stroke-width="1.5"/>
+    <rect x="255" y="80" width="190" height="30" rx="6" fill="#10a37f"/>
+    <rect x="255" y="98" width="190" height="12" fill="#10a37f"/>
+    <text x="350" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">2 · FORMULA</text>
+    <text x="350" y="135" text-anchor="middle" font-size="11" fill="#2a2a2a">=COUNTIF(day,</text>
+    <text x="350" y="152" text-anchor="middle" font-size="11" fill="#2a2a2a">"Monday")</text>
+    <text x="350" y="200" text-anchor="middle" font-size="12" font-weight="600" fill="#2a2a2a">77,850</text>
+    <text x="350" y="218" text-anchor="middle" font-size="11" fill="#6a6a6a">counted automatically</text>
+  </g>
+
+  <!-- Stage 3: Pivot table -->
+  <g>
+    <rect x="480" y="80" width="190" height="190" rx="6" fill="#ffffff" stroke="#6f42c1" stroke-width="1.5"/>
+    <rect x="480" y="80" width="190" height="30" rx="6" fill="#6f42c1"/>
+    <rect x="480" y="98" width="190" height="12" fill="#6f42c1"/>
+    <text x="575" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">3 · PIVOT TABLE</text>
+    <text x="500" y="132" font-size="11" fill="#2a2a2a">Monday</text>
+    <text x="650" y="132" text-anchor="end" font-size="11" fill="#2a2a2a">77,850</text>
+    <text x="500" y="151" font-size="11" fill="#2a2a2a">Tuesday</text>
+    <text x="650" y="151" text-anchor="end" font-size="11" fill="#2a2a2a">74,213</text>
+    <text x="500" y="170" font-size="11" fill="#2a2a2a">Wednesday</text>
+    <text x="650" y="170" text-anchor="end" font-size="11" fill="#2a2a2a">76,904</text>
+    <text x="500" y="189" font-size="11" fill="#9a9a9a">… (7 rows total)</text>
+    <text x="575" y="225" text-anchor="middle" font-size="11" fill="#6a6a6a">one row per weekday,</text>
+    <text x="575" y="243" text-anchor="middle" font-size="11" fill="#6a6a6a">grouped and summed</text>
+  </g>
+
+  <g stroke="#a8a8a8" stroke-width="2" fill="none">
+    <path d="M 220 175 L 255 175"/>
+    <path d="M 445 175 L 480 175"/>
+  </g>
+  <g fill="#a8a8a8">
+    <polygon points="255,175 246,170 246,180"/>
+    <polygon points="480,175 471,170 471,180"/>
+  </g>
+
+  <text x="350" y="305" text-anchor="middle" font-size="12" fill="#6a6a6a">Filtering, counting, and grouping — the same three moves you'll repeat in Python later.</text>
+  <text x="350" y="325" text-anchor="middle" font-size="10" fill="#9a9a9a">Sample diagram — hand-built vector, not AI-generated</text>
+</svg>

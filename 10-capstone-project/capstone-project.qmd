@@ -22,6 +22,8 @@ The capstone project flips the script: **you** choose the dataset, **you** ask t
 
 This chapter is your project blueprint. It walks through the five steps of the capstone, and at each step it points back to the chapter where you already learned the skill. Nothing here is new material — it's your entire toolbox, finally used all at once, on a project you own.
 
+![The five-step capstone pipeline, each step mapped back to the chapter where you first learned it.](/assets/images/diagrams/capstone-pipeline.svg){#fig-capstone-pipeline fig-alt="A five-step horizontal flow diagram: Choose a Dataset (Chapters 2 and 6), Define a Research Question, Load and Clean (Chapters 4 and 5), Analyze and Visualize (Chapters 3 and 7), and an optional fifth step, Prediction Model (Chapter 8)." width="95%"}
+
 ## Step 1: Choose a Dataset
 
 Everything downstream depends on this choice, so choose with two rules in mind:

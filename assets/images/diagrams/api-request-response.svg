@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="700" height="320" fill="#fafafa"/>
+  <text x="350" y="30" text-anchor="middle" font-size="20" font-weight="600" fill="#2a2a2a">An API Is the Waiter, Not the Kitchen</text>
+  <text x="350" y="50" text-anchor="middle" font-size="12" fill="#6a6a6a">your program never touches the kitchen directly</text>
+
+  <rect x="30" y="110" width="170" height="100" rx="8" fill="#eef0f4" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="115" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#2a2a2a">You</text>
+  <text x="115" y="168" text-anchor="middle" font-size="11" fill="#6a6a6a">(the client)</text>
+  <text x="115" y="192" text-anchor="middle" font-size="10" fill="#8a8a8a">your Python script</text>
+
+  <rect x="265" y="110" width="170" height="100" rx="8" fill="#eef0f4" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="350" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#6f42c1">API</text>
+  <text x="350" y="168" text-anchor="middle" font-size="11" fill="#6a6a6a">(the waiter)</text>
+  <text x="350" y="192" text-anchor="middle" font-size="10" fill="#8a8a8a">takes your order</text>
+
+  <rect x="500" y="110" width="170" height="100" rx="8" fill="#eef0f4" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="585" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#2a2a2a">Server</text>
+  <text x="585" y="168" text-anchor="middle" font-size="11" fill="#6a6a6a">(the kitchen)</text>
+  <text x="585" y="192" text-anchor="middle" font-size="10" fill="#8a8a8a">does the real work</text>
+
+  <!-- Request arrows: top, left to right -->
+  <g stroke="#6f42c1" stroke-width="2" fill="none">
+    <path d="M 200 130 L 262 130"/>
+    <path d="M 435 130 L 497 130"/>
+  </g>
+  <g fill="#6f42c1">
+    <polygon points="262,130 253,125 253,135"/>
+    <polygon points="497,130 488,125 488,135"/>
+  </g>
+  <text x="230" y="120" text-anchor="middle" font-size="9" fill="#6f42c1">GET forecast</text>
+  <text x="466" y="120" text-anchor="middle" font-size="9" fill="#6f42c1">forwards order</text>
+
+  <!-- Response arrows: bottom, right to left -->
+  <g stroke="#10a37f" stroke-width="2" fill="none">
+    <path d="M 497 195 L 435 195"/>
+    <path d="M 262 195 L 200 195"/>
+  </g>
+  <g fill="#10a37f">
+    <polygon points="435,195 444,190 444,200"/>
+    <polygon points="200,195 209,190 209,200"/>
+  </g>
+  <text x="466" y="215" text-anchor="middle" font-size="9" fill="#10a37f">raw result</text>
+  <text x="230" y="215" text-anchor="middle" font-size="9" fill="#10a37f">JSON: {"temp": 72}</text>
+
+  <text x="350" y="260" text-anchor="middle" font-size="12" fill="#6a6a6a">You never open the kitchen's refrigerators — you order from the menu, and the waiter plates the answer.</text>
+  <text x="350" y="290" text-anchor="middle" font-size="10" fill="#9a9a9a">Sample diagram — hand-built vector, not AI-generated</text>
+</svg>

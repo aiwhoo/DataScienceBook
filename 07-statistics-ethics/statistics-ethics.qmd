@@ -133,6 +133,12 @@ But would you say these classes had the same experience? Not even close. In Clas
 
 Spread — how far the values scatter from the center — is the other half of describing data, and it's the half people forget. A summary that gives you only the middle is like a weather forecast that gives you only the average temperature for the year: technically informative, useless for deciding what to wear. Any time someone hands you an average, your next question should be: *"Okay — but how spread out is it?"*
 
+Statistician Francis Anscombe made this point unforgettable in 1973 with four datasets now called **Anscombe's Quartet**. Each of the four has the *exact same* mean, the *exact same* spread, and the *exact same* correlation — but plot them, and you see four completely different pictures:
+
+![Anscombe's Quartet: four datasets with identical summary statistics (mean, spread, and correlation), but visibly different shapes when plotted.](/assets/images/photos/anscombes-quartet.svg){#fig-anscombe fig-alt="Four scatter plots in a 2x2 grid, each with the same fitted regression line and identical summary statistics, but showing very different data patterns — one linear, one curved, one with a single outlier changing the slope, and one where nearly all points share the same x-value." width="80%"}
+
+Same numbers on paper, four different stories in the data. That's the whole lesson of this section, made visible: **never trust a summary statistic you haven't plotted.**
+
 Statisticians have precise tools for measuring spread (with names like *standard deviation* — you'll meet them in a future stats course), but the intuition is what matters here: **two datasets can share the same middle and still tell completely different stories.** Tuck this idea away somewhere safe, because in Chapter 8 we'll use a closely related measure — called **Mean Squared Error** — to describe how spread out a *model's mistakes* are, which turns out to be exactly how data scientists decide whether a prediction machine is any good.
 
 ## Correlation Is Not Causation

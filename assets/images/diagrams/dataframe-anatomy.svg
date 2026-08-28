@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="680" height="380" fill="#fafafa"/>
+  <text x="340" y="30" text-anchor="middle" font-size="20" font-weight="600" fill="#2a2a2a">Anatomy of a DataFrame</text>
+  <text x="340" y="50" text-anchor="middle" font-size="12" fill="#6a6a6a">pd.read_csv() reads a file INTO a DataFrame — a table, not a function</text>
+
+  <!-- File -->
+  <g>
+    <path d="M 30 150 L 130 150 L 155 175 L 155 240 L 30 240 Z" fill="#eef0f4" stroke="#2a2a2a" stroke-width="1.5"/>
+    <path d="M 130 150 L 130 175 L 155 175 Z" fill="#d5d5d5" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="92" y="205" text-anchor="middle" font-size="11" fill="#2a2a2a">delaware_</text>
+    <text x="92" y="220" text-anchor="middle" font-size="11" fill="#2a2a2a">crash_data.csv</text>
+  </g>
+
+  <g stroke="#a8a8a8" stroke-width="2" fill="none">
+    <path d="M 158 195 L 250 195"/>
+  </g>
+  <polygon points="250,195 241,190 241,200" fill="#a8a8a8"/>
+  <text x="204" y="182" text-anchor="middle" font-size="11" fill="#10a37f" font-weight="600">pd.read_csv()</text>
+
+  <!-- DataFrame table -->
+  <g>
+    <rect x="260" y="90" width="350" height="238" fill="#ffffff" stroke="#2a2a2a" stroke-width="1.5"/>
+    <rect x="260" y="90" width="350" height="30" fill="#6f42c1"/>
+    <text x="285" y="110" text-anchor="middle" font-size="11" fill="#ffffff"></text>
+    <text x="360" y="110" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">County</text>
+    <text x="460" y="110" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">Date</text>
+    <text x="560" y="110" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">Injuries</text>
+
+    <rect x="260" y="120" width="50" height="208" fill="#eef0f4"/>
+    <text x="285" y="150" text-anchor="middle" font-size="12" fill="#6a6a6a">0</text>
+    <text x="285" y="202" text-anchor="middle" font-size="12" fill="#6a6a6a">1</text>
+    <text x="285" y="254" text-anchor="middle" font-size="12" fill="#6a6a6a">2</text>
+    <text x="285" y="306" text-anchor="middle" font-size="12" fill="#6a6a6a">3</text>
+
+    <line x1="310" y1="120" x2="310" y2="328" stroke="#d5d5d5"/>
+    <line x1="410" y1="120" x2="410" y2="328" stroke="#d5d5d5"/>
+    <line x1="510" y1="120" x2="510" y2="328" stroke="#d5d5d5"/>
+    <line x1="260" y1="172" x2="610" y2="172" stroke="#d5d5d5"/>
+    <line x1="260" y1="224" x2="610" y2="224" stroke="#d5d5d5"/>
+    <line x1="260" y1="276" x2="610" y2="276" stroke="#d5d5d5"/>
+
+    <text x="360" y="150" text-anchor="middle" font-size="12" fill="#2a2a2a">New Castle</text>
+    <text x="460" y="150" text-anchor="middle" font-size="12" fill="#2a2a2a">3/2/2019</text>
+    <text x="560" y="150" text-anchor="middle" font-size="12" fill="#2a2a2a">0</text>
+
+    <text x="360" y="202" text-anchor="middle" font-size="12" fill="#2a2a2a">Kent</text>
+    <text x="460" y="202" text-anchor="middle" font-size="12" fill="#2a2a2a">3/2/2019</text>
+    <text x="560" y="202" text-anchor="middle" font-size="12" fill="#2a2a2a">2</text>
+
+    <text x="360" y="254" text-anchor="middle" font-size="12" fill="#2a2a2a">Sussex</text>
+    <text x="460" y="254" text-anchor="middle" font-size="12" fill="#2a2a2a">3/3/2019</text>
+    <text x="560" y="254" text-anchor="middle" font-size="12" fill="#2a2a2a">0</text>
+
+    <text x="360" y="306" text-anchor="middle" font-size="12" fill="#2a2a2a">New Castle</text>
+    <text x="460" y="306" text-anchor="middle" font-size="12" fill="#2a2a2a">3/3/2019</text>
+    <text x="560" y="306" text-anchor="middle" font-size="12" fill="#2a2a2a">1</text>
+
+    <!-- Highlight a row -->
+    <rect x="260" y="172" width="350" height="52" fill="none" stroke="#10a37f" stroke-width="2.5"/>
+    <!-- Highlight a cell -->
+    <rect x="410" y="172" width="100" height="52" fill="#6f42c1" fill-opacity="0.12" stroke="#6f42c1" stroke-width="2"/>
+  </g>
+
+  <!-- Callout labels -->
+  <text x="285" y="345" text-anchor="middle" font-size="11" fill="#6a6a6a">Index</text>
+  <line x1="285" y1="330" x2="285" y2="340" stroke="#a8a8a8"/>
+  <text x="360" y="80" text-anchor="middle" font-size="11" fill="#6a6a6a">Columns</text>
+  <text x="620" y="202" text-anchor="start" font-size="11" fill="#10a37f" font-weight="600">◄ a Row</text>
+  <text x="460" y="358" text-anchor="middle" font-size="11" fill="#6f42c1" font-weight="600">a Cell (one value)</text>
+
+  <text x="340" y="373" text-anchor="middle" font-size="10" fill="#9a9a9a">Sample diagram — hand-built vector, not AI-generated</text>
+</svg>

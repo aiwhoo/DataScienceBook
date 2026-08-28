@@ -35,6 +35,8 @@ graph LR
 
 ---
 
+![The same three rows before and after ETL: messy, inconsistent values on the left become clean, standardized, numeric values on the right.](/assets/images/diagrams/etl-before-after.svg){#fig-etl-before-after fig-alt="A three-column diagram showing raw messy data with inconsistent capitalization and missing values under Extract, a list of cleaning operations under Transform, and a clean numeric table under Load." width="90%"}
+
 ## How ETL Fits Into the Data Pipeline
 
 ETL serves as the **bridge between raw data and real insights**. Without it, data remains scattered across systems and impossible to use effectively. Every chart, recommendation engine, or machine learning model you encounter depends on data that has traversed this pipeline.

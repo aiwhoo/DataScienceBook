@@ -25,6 +25,8 @@ You might picture a wall of glowing green numbers, or a spreadsheet the size of 
 **Data** is information that can be collected, stored, and analyzed. It comes from our actions, our devices, and the world around us — every step counted, song skipped, and door opened can become a data point.
 :::
 
+![Three ordinary moments from a day, and the structured data row each one becomes.](/assets/images/diagrams/everyday-data-exhaust.svg){#fig-data-exhaust fig-alt="A diagram showing three everyday moments — steps counted, a song skipped, and a door opened — each connected by an arrow to a matching row in a structured data table with Time, Event, and Value columns." width="85%"}
+
 In other words: data isn't something that lives only in laboratories or tech companies. It is the *exhaust* of everyday life. Every time you act — walk, type, tap, buy, wait — the world quietly takes notes. Data science is the craft of reading those notes and finding the story inside them.
 
 Over the course of this book, you'll learn that craft step by step: how to clean and organize messy datasets so they're actually usable, how to build visualizations and dashboards that make patterns jump off the screen, how to train simple machine learning models that make predictions, how to spot when data is biased or misleading, and how data drives real decisions in tech, government, and business. But every one of those skills starts with the same move: recognizing data when you see it.

@@ -92,6 +92,8 @@ A **train/test split** divides your dataset into two piles before any learning h
 
 The model never gets to peek at the test set during training — that's the whole point. If it truly learned the pattern, it will do well on the hidden pile. If it merely memorized, the test set will expose it.
 
+![The three steps every model in this chapter follows: split the data, fit the model on the training set only, then predict on the test set and grade the result.](/assets/images/diagrams/train-test-evaluate.svg){#fig-train-test-evaluate fig-alt="A flow diagram showing a full dataset splitting into a training set and a locked-away test set, the training set feeding model.fit() to produce a trained model, and the trained model plus the test set feeding model.predict() to produce predictions graded with MSE and R²." width="75%"}
+
 The train/test split is your first tool against overfitting, but not the only one. Data scientists also:
 
 1.  **Keep the test set locked away** and judge every model on data it never trained on — the split itself.

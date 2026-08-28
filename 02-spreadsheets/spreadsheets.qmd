@@ -30,6 +30,8 @@ Obviously nobody does that. The whole point of a spreadsheet is that *the softwa
 
 These three moves — filtering, counting, grouping — aren't just spreadsheet tricks. They are *the* fundamental moves of data analysis, and you will meet them again, wearing Python costumes, in Unit II.
 
+![The three moves of this chapter, applied to the 539,947-row Delaware crash dataset: filter down, count with a formula, then group into a pivot table.](/assets/images/diagrams/spreadsheet-wrangling-pipeline.svg){#fig-spreadsheet-pipeline fig-alt="A three-stage flow diagram: Filter narrows 539,947 rows to 77,850, a COUNTIF formula counts them automatically, and a pivot table groups the counts into one row per weekday." width="90%"}
+
 ## Sorting and Filtering
 
 Let's start with the biggest bang for the smallest effort. Open a dataset in Google Sheets, click the **Data** menu, and choose **Create a filter**. Small funnel-shaped icons appear on every column header — and suddenly every column is interactive.

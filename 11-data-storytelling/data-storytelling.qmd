@@ -46,6 +46,12 @@ Every effective data story — a three-minute class presentation or a front-page
 
 Take away any one of the four and the story fails in a predictable way. No context? Nobody knows why they're looking. No narrative? It's a data dump. No data? It's an anecdote. No visual design? Your audience has to take your word for what they could have *seen*.
 
+All four elements appear together in one of the most famous data stories ever told. In 1854, physician John Snow was trying to convince London that cholera spread through contaminated water, not "bad air" — the accepted theory of the time. He plotted every death from a single outbreak as a dot on a street map:
+
+![John Snow's 1854 map of the Soho cholera outbreak. Each black bar is a death, stacked at the house where it happened — and they cluster tightly around one water pump on Broad Street.](/assets/images/photos/snow-cholera-map.jpg){#fig-snow-cholera fig-alt="A hand-drawn 1854 street map of the Soho district of London, with black bars representing cholera deaths stacked at each house, clustering heavily around a water pump at the center of Broad Street." width="75%"}
+
+Context: a deadly outbreak nobody could explain. Narrative: a physician's contested theory, tested against the evidence. Data: every recorded death, real and exact. Visual design: one map that made the pattern impossible to miss. The city removed the Broad Street pump handle soon after — and modern epidemiology traces its origin to this single, unforgettable chart.
+
 ::: {.callout-tip .knowledge-check title="Knowledge Check"}
 A student opens their capstone presentation like this: *"I used pandas to load a CSV with 4,200 rows, dropped the rows with missing values, grouped by day of the week, and made this bar chart."* Every word is true. Which of the four elements of a data story are missing from this opening, and what would you add first?
 

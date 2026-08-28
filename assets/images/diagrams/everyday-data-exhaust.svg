@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="380" fill="#fafafa"/>
+  <text x="320" y="32" text-anchor="middle" font-size="20" font-weight="600" fill="#2a2a2a">Data Is the Exhaust of Everyday Life</text>
+  <text x="320" y="52" text-anchor="middle" font-size="12" fill="#6a6a6a">unstructured moments become a structured record</text>
+
+  <!-- Left: three everyday moments -->
+  <g>
+    <rect x="30" y="110" width="230" height="56" rx="8" fill="#eef0f4" stroke="#6f42c1" stroke-width="1.5"/>
+    <text x="45" y="134" font-size="13" fill="#2a2a2a">Steps counted: 10,412</text>
+    <text x="45" y="152" font-size="11" fill="#8a8a8a">6:58 AM · phone pedometer</text>
+
+    <rect x="30" y="176" width="230" height="56" rx="8" fill="#eef0f4" stroke="#6f42c1" stroke-width="1.5"/>
+    <text x="45" y="200" font-size="13" fill="#2a2a2a">Song skipped after 0:47</text>
+    <text x="45" y="218" font-size="11" fill="#8a8a8a">9:14 PM · streaming app</text>
+
+    <rect x="30" y="242" width="230" height="56" rx="8" fill="#eef0f4" stroke="#6f42c1" stroke-width="1.5"/>
+    <text x="45" y="266" font-size="13" fill="#2a2a2a">Front door opened</text>
+    <text x="45" y="284" font-size="11" fill="#8a8a8a">7:42 AM · smart lock</text>
+  </g>
+
+  <!-- Connectors -->
+  <g stroke="#a8a8a8" stroke-width="1.5" fill="none">
+    <path d="M 260 138 L 390 138"/>
+    <path d="M 260 204 L 390 204"/>
+    <path d="M 260 270 L 390 270"/>
+  </g>
+  <g fill="#a8a8a8">
+    <polygon points="390,138 382,133 382,143"/>
+    <polygon points="390,204 382,199 382,209"/>
+    <polygon points="390,270 382,265 382,275"/>
+  </g>
+
+  <!-- Right: structured record table -->
+  <g>
+    <rect x="390" y="70" width="220" height="228" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+    <rect x="390" y="70" width="220" height="30" fill="#6f42c1"/>
+    <text x="425" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">Time</text>
+    <text x="500" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">Event</text>
+    <text x="573" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">Value</text>
+
+    <line x1="390" y1="166" x2="610" y2="166" stroke="#d5d5d5"/>
+    <line x1="390" y1="232" x2="610" y2="232" stroke="#d5d5d5"/>
+    <line x1="460" y1="100" x2="460" y2="298" stroke="#d5d5d5"/>
+    <line x1="540" y1="100" x2="540" y2="298" stroke="#d5d5d5"/>
+
+    <text x="425" y="138" text-anchor="middle" font-size="12" fill="#2a2a2a">6:58 AM</text>
+    <text x="500" y="138" text-anchor="middle" font-size="12" fill="#2a2a2a">Steps</text>
+    <text x="573" y="138" text-anchor="middle" font-size="12" fill="#2a2a2a">10,412</text>
+
+    <text x="425" y="204" text-anchor="middle" font-size="12" fill="#2a2a2a">9:14 PM</text>
+    <text x="500" y="204" text-anchor="middle" font-size="12" fill="#2a2a2a">Skip</text>
+    <text x="573" y="204" text-anchor="middle" font-size="12" fill="#2a2a2a">Track #47</text>
+
+    <text x="425" y="270" text-anchor="middle" font-size="12" fill="#2a2a2a">7:42 AM</text>
+    <text x="500" y="270" text-anchor="middle" font-size="12" fill="#2a2a2a">Door</text>
+    <text x="573" y="270" text-anchor="middle" font-size="12" fill="#2a2a2a">Opened</text>
+  </g>
+  <text x="320" y="325" text-anchor="middle" font-size="11" fill="#6a6a6a">One row per moment — the raw event on the left becomes the same fact as a data row on the right.</text>
+
+  <text x="320" y="365" text-anchor="middle" font-size="10" fill="#9a9a9a">Sample diagram — hand-built vector, not AI-generated</text>
+</svg>

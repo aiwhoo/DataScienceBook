@@ -79,6 +79,8 @@ df = pd.read_csv("delaware_crash_data.csv")
    lives on your computer.
 :::
 
+![The parts of a DataFrame: pd.read_csv() reads a file into a table with an Index (row labels), Columns (field names), Rows, and individual Cells.](/assets/images/diagrams/dataframe-anatomy.svg){#fig-dataframe-anatomy fig-alt="A diagram showing a CSV file with an arrow labeled pd.read_csv() pointing into a DataFrame table, with the Index column, Columns header row, one highlighted Row, and one highlighted Cell each labeled." width="85%"}
+
 ## The Exploration Toolkit: First Steps
 
 Once your data is loaded, a data analyst must immediately **peek inside**. These two commands are the foundation of every exploration workflow.

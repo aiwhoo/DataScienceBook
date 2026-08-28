@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="700" height="320" fill="#fafafa"/>
+  <text x="350" y="28" text-anchor="middle" font-size="20" font-weight="600" fill="#2a2a2a">Same Recipe, Bigger Kitchen</text>
+  <text x="350" y="46" text-anchor="middle" font-size="12" fill="#6a6a6a">one mechanism, two very different scales</text>
+
+  <text x="115" y="66" text-anchor="middle" font-size="10" fill="#8a8a8a">EXAMPLES</text>
+  <text x="350" y="66" text-anchor="middle" font-size="10" fill="#8a8a8a">LEARN PATTERN</text>
+  <text x="585" y="66" text-anchor="middle" font-size="10" fill="#8a8a8a">PREDICT</text>
+
+  <!-- Row 1: Chapter 8 model -->
+  <text x="30" y="90" font-size="11" font-weight="600" fill="#6f42c1">CHAPTER 8 MODEL</text>
+  <rect x="30" y="96" width="170" height="60" rx="6" fill="#f4eef2" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="115" y="122" text-anchor="middle" font-size="11" fill="#2a2a2a">216 rows of</text>
+  <text x="115" y="138" text-anchor="middle" font-size="11" fill="#2a2a2a">activity data</text>
+
+  <rect x="265" y="96" width="170" height="60" rx="6" fill="#f4eef2" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="350" y="122" text-anchor="middle" font-size="11" fill="#2a2a2a">Steps, Age, Hour</text>
+  <text x="350" y="138" text-anchor="middle" font-size="11" fill="#2a2a2a">→ HeartRate pattern</text>
+
+  <rect x="500" y="96" width="170" height="60" rx="6" fill="#f4eef2" stroke="#6f42c1" stroke-width="1.5"/>
+  <text x="585" y="122" text-anchor="middle" font-size="11" fill="#2a2a2a">Predict a</text>
+  <text x="585" y="138" text-anchor="middle" font-size="11" fill="#2a2a2a">heart rate number</text>
+
+  <g stroke="#6f42c1" stroke-width="1.5" fill="none">
+    <path d="M 200 126 L 262 126"/>
+    <path d="M 435 126 L 497 126"/>
+  </g>
+  <g fill="#6f42c1"><polygon points="262,126 253,121 253,131"/><polygon points="497,126 488,121 488,131"/></g>
+
+  <!-- Row 2: an LLM -->
+  <text x="30" y="196" font-size="11" font-weight="600" fill="#10a37f">AN LLM</text>
+  <rect x="30" y="202" width="170" height="70" rx="6" fill="#eafaf5" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="115" y="230" text-anchor="middle" font-size="11" fill="#2a2a2a">Trillions of words</text>
+  <text x="115" y="246" text-anchor="middle" font-size="11" fill="#2a2a2a">of human text</text>
+
+  <rect x="265" y="202" width="170" height="70" rx="6" fill="#eafaf5" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="350" y="230" text-anchor="middle" font-size="11" fill="#2a2a2a">All words so far</text>
+  <text x="350" y="246" text-anchor="middle" font-size="11" fill="#2a2a2a">→ next-word pattern</text>
+
+  <rect x="500" y="202" width="170" height="70" rx="6" fill="#eafaf5" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="585" y="230" text-anchor="middle" font-size="11" fill="#2a2a2a">Predict the</text>
+  <text x="585" y="246" text-anchor="middle" font-size="11" fill="#2a2a2a">most likely next word</text>
+
+  <g stroke="#10a37f" stroke-width="1.5" fill="none">
+    <path d="M 200 237 L 262 237"/>
+    <path d="M 435 237 L 497 237"/>
+  </g>
+  <g fill="#10a37f"><polygon points="262,237 253,232 253,242"/><polygon points="497,237 488,232 488,242"/></g>
+
+  <text x="350" y="300" text-anchor="middle" font-size="10" fill="#9a9a9a">Sample diagram — hand-built vector, not AI-generated</text>
+</svg>

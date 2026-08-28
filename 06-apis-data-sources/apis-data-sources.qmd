@@ -52,6 +52,8 @@ The classic analogy: an API is the **waiter** in a restaurant. You (the customer
 
 This arrangement is good for everyone. The kitchen keeps control of its ingredients and processes; you get your meal without needing to know how the stove works. Likewise, a weather service keeps control of its supercomputers and forecast models, while you get clean, structured data with three lines of Python.
 
+![The client sends a request through the API and gets a response back — it never touches the server's internals directly.](/assets/images/diagrams/api-request-response.svg){#fig-api-cycle fig-alt="A diagram showing three boxes — You the client, the API labeled as the waiter, and the Server labeled as the kitchen — connected by a request arrow going right and a response arrow going left." width="90%"}
+
 For this chapter's hands-on work we will use **Open-Meteo** (<https://open-meteo.com>), a genuinely free weather API: no account, no sign-up, no API key. It serves real forecast data for any point on the planet.
 
 ---
