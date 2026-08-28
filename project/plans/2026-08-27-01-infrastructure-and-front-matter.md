@@ -80,8 +80,8 @@ DataScienceBook/
 - Create: `11-data-storytelling/data-storytelling.qmd`
 - Create: `glossary.qmd`
 - Create: `dataset-and-tool-directory.qmd`
-- Create: `how-to-use-this-book.qmd` (stub only in this task — full content in Task 4)
-- Create: `using-ai-responsibly.qmd` (stub only in this task — full content in Task 5)
+- Create: `how-to-use-this-book.qmd` (stub only in this task — full content in Task 5)
+- Create: `using-ai-responsibly.qmd` (stub only in this task — full content in Task 6)
 - Modify: `_quarto.yml` (full rewrite)
 
 **Interfaces:**
