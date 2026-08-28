@@ -1,4 +1,4 @@
-# ETL in Action: The Extraction Frontier
+# ETL in Action: The Extraction Frontier {.unnumbered}
 
 Raw data is almost never ready for immediate use. Before a single insight can be drawn or a model trained, data must travel through a pipeline that separates amateur analysis from professional data engineering. This tutorial focuses on **Extraction**, the first and most critical mile of the data science journey.
 

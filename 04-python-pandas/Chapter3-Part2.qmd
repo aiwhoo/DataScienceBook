@@ -1,9 +1,9 @@
 ---
-title: "Python & Pandas: Working with Big Data"
-subtitle: "Part 2: Getting Started with PyCharm"
 author: "Technical Instructional Team"
 format: html
 ---
+
+# Part 2: Getting Started with PyCharm {.unnumbered}
 
 ## Learning Objectives
 

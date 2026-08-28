@@ -1,9 +1,10 @@
 ---
-title: "Part 3: The Transform Engine Room"
 abstract: "Raw data is rarely ready for use. In this tutorial, we explore the Transform stage—the critical engine room where messy, inconsistent records are reshaped into structured, machine-ready insights through normalization, sequential sorting, and geospatial engineering."
 ---
 
-# Transform: The Bridge Between Raw and Ready
+# Part 3: The Transform Engine Room {.unnumbered}
+
+## Transform: The Bridge Between Raw and Ready
 
 Imagine trying to build a high-performance engine using parts from three different countries, each using different measurement systems. Some parts are in inches, others in millimeters, and some aren't labeled at all. This is exactly what a data scientist faces with raw data. 
 

@@ -1,9 +1,9 @@
 ---
-title: "Python & Pandas: Working with Big Data"
-subtitle: "Part 3: Meet Your New Best Friend—Pandas"
 author: "Technical Instructional Team"
 format: html
 ---
+
+# Part 3: Meet Your New Best Friend—Pandas {.unnumbered}
 
 ## Learning Objectives
 

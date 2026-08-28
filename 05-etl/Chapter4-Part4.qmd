@@ -1,9 +1,10 @@
 ---
-title: "Part 4: Encoding, Merging, and the ETL Endgame"
 abstract: "In this final stretch of the ETL journey, we transition from cleaning raw data to preparing it for machine learning. We explore how to translate human language into mathematics through encoding and how to distill high-frequency noise into actionable insights through data aggregation."
 ---
 
-# Teaching Machines to Speak Data
+# Part 4: Encoding, Merging, and the ETL Endgame {.unnumbered}
+
+## Teaching Machines to Speak Data
 
 Raw data rarely speaks the language that machine learning algorithms understand. While humans see categories like "Resting" or "Cycling," an algorithm sees only mathematical vectors. This tutorial covers the "Endgame" of the ETL process: **Encoding** categorical text into numeric features and **Merging** granular records into meaningful summaries. By mastering these final steps, you turn a collection of individual data points into a cohesive, analysis-ready information pipeline.
 

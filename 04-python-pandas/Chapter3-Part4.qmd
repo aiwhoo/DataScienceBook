@@ -1,9 +1,9 @@
 ---
-title: "Python & Pandas: Working with Big Data"
-subtitle: "Part 4: Filtering Like a Pro"
 author: "Technical Instructional Team"
 format: html
 ---
+
+# Part 4: Filtering Like a Pro {.unnumbered}
 
 ## Learning Objectives
 
