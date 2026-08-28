@@ -3,3 +3,158 @@ title: "Data Visualization Basics"
 author: "Technical Instructional Team"
 format: html
 ---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Explain the difference between a **dataset** (the raw material) and a **dashboard** (the visual display built from it).
+*   Match a question to the right chart type — bar, line, pie, or scatter — and explain why it fits.
+*   Import a dataset into **CODAP**, a free browser-based tool, and build a chart with zero code.
+*   Compare two variables on one graph using CODAP's drag-and-drop attributes and legends.
+*   Spot the three most common ways a chart can mislead its reader — and avoid building one yourself.
+
+## From Tables to Pictures
+
+In [Chapter 2](../02-spreadsheets/spreadsheets.qmd), you wrangled 539,947 rows of Delaware crash data down to a tidy seven-row summary: one row per weekday, one count per row. That table *contains* the answer to "which day has the most crashes?" — but it doesn't *show* it. A reader still has to scan the numbers, compare them in their head, and hunt for the winner.
+
+Now imagine the same seven numbers as seven bars. The tallest bar hits you before you've read a single label. That's the entire promise of this chapter: a good chart moves the pattern from the reader's head onto the page.
+
+::: {.callout-note}
+### Data Visualization
+**Data visualization** is the practice of representing data as pictures — charts, graphs, maps — so that patterns, trends, and outliers can be seen at a glance instead of computed in your head. It is the last step of the summarize-then-show pipeline you started in Chapter 2.
+:::
+
+## Dataset vs. Dashboard
+
+Two words you'll hear constantly in data science are *dataset* and *dashboard*, and it's worth being precise about the difference.
+
+A **dataset** is the raw material: the full table of rows and columns, every crash, every timestamp, every county. It's complete, it's detailed, and it's unreadable at a glance — like the engine of a car.
+
+A **dashboard** is what you build *on top of* the dataset: a small set of visual displays that surface just the results that matter. Think of an actual car dashboard. Your car is tracking thousands of readings per second — fuel injection timing, oxygen levels, wheel rotation — but the dashboard shows you exactly three or four things: speed, fuel, temperature, and a warning light. Or think of your phone's lock screen: the phone knows *everything* (every message, every app's state, your battery's exact voltage), but the lock screen curates it down to the time, the battery percent, and a couple of notifications.
+
+::: {.callout-note}
+### Dashboard
+A **dashboard** is a visual display that gathers one or more charts (and sometimes tables or maps) in a single view, so a reader can absorb the most important results of a dataset at a glance — without ever touching the raw rows.
+:::
+
+The skill of this chapter is exactly that curation: deciding *which* picture, built from *which* summary, tells the story best.
+
+## Choosing the Right Chart
+
+Charts are not interchangeable. Each type answers a different *shape* of question, and picking the wrong one can bury your pattern. Here are the four you'll use most:
+
+*   **Bar chart** — compares amounts across **categories**. *Example:* number of crashes per weekday. Seven categories, seven bars, tallest bar wins.
+*   **Line chart** — shows a **trend over time** (or any ordered sequence). *Example:* temperature throughout the day, hour by hour — the line's rise and fall *is* the story.
+*   **Pie chart** — shows **proportions of a whole**, when the slices genuinely add up to 100%. *Example:* the percent of students who prefer each sport in your school. (Use sparingly: past five or six slices, humans are bad at comparing wedge sizes.)
+*   **Scatter plot** — reveals a **relationship between two numeric variables**, one dot per case. *Example:* does height predict weight? If the dots drift upward together, the two variables move together.
+
+A quick self-test before you build anything: *Am I comparing categories? Bar. Tracking change over time? Line. Splitting a whole into parts? Pie. Looking for a relationship between two numbers? Scatter.*
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+For each question below, pick the best chart type (bar, line, pie, or scatter) and say why in one phrase:
+
+1.  "Has the number of crashes in Delaware gone up or down since 2010?"
+2.  "Do crashes happen more when it rains more? (Compare each day's rainfall to that day's crash count.)"
+3.  "What fraction of all 2024 crashes happened in each of Delaware's three counties?"
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+1.  **Line chart** — it's a trend over time (years in order on the x-axis, crashes on the y-axis).
+2.  **Scatter plot** — it's a relationship between two numeric variables (rainfall vs. crash count, one dot per day).
+3.  **Pie chart** (or a three-bar bar chart) — three parts of a whole that add to 100%. With only three slices, a pie is readable; a bar chart works too and makes the exact comparison easier.
+:::
+:::
+
+## Meet CODAP: Charts Without Code
+
+To build charts, this book uses **CODAP** (Common Online Data Analysis Platform), a free tool from the Concord Consortium that runs entirely in your browser at [https://codap.concord.org/](https://codap.concord.org/) — no download, no account, no code. Click **Launch CODAP** on that page, then **Create a New Document**, and you have a blank workspace.
+
+CODAP is built around one idea: *drag and drop*. Data comes in as a **case table** (rows and columns, just like your spreadsheet), and you build graphs by physically dragging column names onto them. Whenever you get stuck, CODAP's official [How-to Guides](https://codap.concord.org/help/how-to-guides/) cover every move in this chapter with short animations.
+
+## Hands-On: Building Your First Chart in CODAP
+
+Let's rebuild Chapter 2's headline finding — crashes per weekday — as a real chart. You'll need your summarized data from Chapter 2's Your Turn activity (or make a new one the same way: `=UNIQUE()` for the weekdays, `=COUNTIF()` for the counts). In Google Sheets, select your two summary columns and download them as a CSV (**File → Download → Comma Separated Values**), so you have a small file with a `Weekday` column and a `Crashes` column — seven rows plus a header.
+
+**Step 1: Import the data.** With a new CODAP document open, simply **drag your CSV file into the CODAP window** — that's the whole import. If it worked, your data appears as a case table. (Prefer menus? Click the **≡** menu, select **Import**, click the **Local File** tab, click inside the dashed box, choose your file, and select **Open**.)
+
+**Step 2: Make an empty graph.** Click the **Graph** button on the top toolbar. A graph appears with your seven cases as points scattered randomly — CODAP is showing you the cases exist but doesn't yet know what you want on the axes.
+
+**Step 3: Drag attributes onto the axes.** In CODAP, columns are called **attributes**. Drag the `Weekday` attribute *from the column header of the case table* onto the graph's horizontal (x) axis, and drag `Crashes` onto the vertical (y) axis. The random scatter snaps into order: one point per weekday, at the height of that day's crash count. The pattern from your Chapter 2 table — Friday's spike, Sunday's dip — is now visible from across the room. (Changed your mind about an axis? Drag a new attribute onto it to replace the old one, or click the axis title to pick from a menu of attributes.)
+
+**Step 4: Turn dots into bars.** Points work, but a bar chart makes comparisons even more legible. Make a second graph with just `Weekday` on the x-axis. To its right you'll see the **inspector palette** — a slim strip of icons. Click the **Configuration** icon and select **Fuse Dots into Bars**. CODAP draws bars whose lengths are proportional to the *number of cases* in each category — which, in a one-row-per-weekday summary table, is 1 for every day! To make bar length come from your `Crashes` column instead, click the **Configuration** icon again, set the scale to **Formula**, then click the numeric axis label, choose **Edit Formula**, and enter `Crashes`. Now each bar's length is that weekday's crash count.
+
+**Step 5: Add a title.** Every CODAP component has a title bar across its top. Click the title text on your graph and type something a stranger could understand, like *Delaware Crashes per Weekday, 2010–2024*. A chart without a title is a picture; a chart with one is an argument.
+
+::: {.callout-tip}
+### Instructor Insight: Bars Count Cases
+Notice what Step 4 revealed: CODAP's bar charts naturally count *rows*. If you imported the raw crash data — one row per crash — then `Weekday` on the x-axis plus **Fuse Dots into Bars** would give you correct bar heights automatically, no formula needed, because each category really would contain thousands of cases. Our summary table pre-counted the rows, so we had to tell CODAP where the counts live. Knowing *what your rows represent* is half of visualization.
+:::
+
+## Comparing Multiple Variables
+
+One variable answers "how much?" Two variables answer the more interesting question: "compared to what?" Suppose your Chapter 2 pivot table gave you crashes per weekday for two different years, so your CSV now has three columns: `Weekday`, `Crashes2023`, and `Crashes2024`. CODAP gives you two drag-and-drop ways to put both on screen.
+
+**Way 1: Add a second attribute to the y-axis.** Build the Step 3 graph with `Weekday` on x and `Crashes2023` on y. Now drag `Crashes2024` onto the graph and drop it **directly on top of the plus sign** that appears near the top of the y-axis. When you're over the right spot, highlighting appears around the plus sign along with the text *"Add attribute Crashes2024."* Release, and both years plot on the same graph in different colors — every weekday now shows two points, one per year, and you can see instantly whether 2024 ran higher or lower than 2023. One warning: if you drop the new attribute on the *axis itself* instead of the plus sign, CODAP will **replace** the first attribute rather than add a second one. Aim for the plus.
+
+Each of those color-coded sets of points is what data scientists call a **trace**.
+
+::: {.callout-note}
+### Trace
+A **trace** is one layer of data drawn on a chart — one line on a line chart, one set of same-colored points on a graph. A chart comparing two variables has two traces; the legend tells you which is which.
+:::
+
+::: {.callout-note}
+### Dual-Axis Chart
+A **dual-axis chart** is a chart-literacy term for a graph with *two different* y-axis scales — one on the left, one on the right — so two variables with very different ranges (say, crash counts in the thousands and rainfall in inches) can share one picture. CODAP supports adding a second, right-side y-axis as a separate option, but handle the idea with care wherever you meet it: as you'll see in "How Charts Can Mislead," two independently-scaled axes are one of the easiest ways to accidentally lie with a chart.
+:::
+
+**Way 2: Color by a category (the legend).** If your second variable is a *category* rather than a number — say each row also has a `County` column — drag that attribute name from the case table to the **center of the graph**. When the graph region turns yellow, release the mouse. CODAP colors every point by its category and adds a color-coded **legend** at the bottom of the graph, turning one cloud of points into several comparable groups.
+
+And here's CODAP's quiet superpower, called **dynamic linking**: every table and graph in a document is connected. Click a bar, a point, or a row in *any* one of them, and the same cases light up in *all* of them. Select the Friday bar and watch Friday's row highlight in your table — the picture and the data are never out of sync.
+
+## Build Your Own Dashboard
+
+Time to assemble the pieces. A CODAP document that holds a case table and two graphs, arranged so you can see them together, *is* a small dashboard — a curated view of your dataset, just like the car dashboard from earlier. Build one:
+
+1.  Using your crash summary data, make **two different charts of the same data** in one CODAP document — for example, the fused-bar chart of crashes per weekday from Step 4, and the two-year comparison graph from "Comparing Multiple Variables" (or a points-by-weekday graph with a legend).
+2.  Drag the components around the workspace so the table and both graphs are visible side by side, each with a clear title.
+3.  Click a weekday in one graph and watch dynamic linking highlight it everywhere.
+
+Then answer, in writing: **which of your two charts tells the crash story better, and why?** There is a defensible answer for either choice — what matters is that your reason talks about the *reader* ("the bar chart makes Friday's spike obvious without reading any numbers") and not just the *builder* ("it was easier to make").
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+**Prompt:** "I made a bar chart showing the number of traffic crashes for each day of the week, and Friday's bar is clearly the tallest. My teacher asked whether a different chart type would tell this story more clearly. Describe the strengths and weaknesses of showing this data as a bar chart vs. a line chart vs. a pie chart, and tell me which you'd choose and why."
+
+Before you accept the answer, test it against what you learned in "Choosing the Right Chart": weekdays are *categories*, not a continuous timeline — does ChatGPT's recommendation respect that? If it suggests a line chart, ask it a follow-up: "What does a line between Tuesday and Wednesday imply that might not be true?"
+:::
+
+## How Charts Can Mislead
+
+Charts are persuasive — that's their job. But the same power that makes a real pattern obvious can make a fake pattern look real. Here are the three failure modes you'll meet most often in the wild. Learn them as a reader first, and vow never to ship them as a builder.
+
+**1. The truncated axis.** A bar chart's y-axis starts at 4,980 instead of 0. Company A's bar (5,000 sales) towers at *twice the height* of Company B's bar (4,990 sales) — for a difference of ten sales, about 0.2%. Starting the axis just below the smallest value spends the entire vertical space on the *difference*, exaggerating it wildly. Bars encode quantity by length, so the length has to start at zero; a bar chart with a non-zero start is showing you a zoomed-in sliver and letting your eyes believe it's the whole picture.
+
+**2. Mismatched scales.** A graph shows two lines: your school's fundraiser (drawn against a left axis that runs 0–$500) and a rival school's (drawn against a right axis running 0–$50,000). The two lines cross and climb together, looking neck-and-neck — but the rival raised a hundred times more money. Whenever two variables are drawn on two *independently chosen* scales, the picture's "they look equal" or "they look correlated" is an artifact of whoever picked the scales. This is exactly why the dual-axis chart defined above demands suspicion: always read both axes before you believe the shapes.
+
+**3. The cherry-picked window.** A headline chart shows crashes *falling* impressively from January to April — but the full fifteen-year dataset shows crashes *rising* steadily, with a dip every winter. By cropping the time window to one convenient downhill stretch, the chart-maker showed a true fact that tells a false story. The data isn't fake; the *frame* is. When a trend chart covers a suspiciously short or oddly specific period, ask what the years outside the frame were doing.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A news graphic shows a bar chart titled "Teen screen time EXPLODES!" comparing last year (6.2 hours/day) to this year (6.5 hours/day). The y-axis runs from 6.0 to 6.6, and this year's bar is three times the height of last year's. Which failure mode is this, what is the honest size of the change, and what one fix would make the chart truthful?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+This is a **truncated axis**. The honest change is 0.3 hours on a base of 6.2 — roughly a 5% increase, not an explosion. The fix: start the y-axis at 0, so the two bars' lengths are proportional to the actual quantities. (Drawn honestly, the bars would look nearly identical — which is the true story.)
+:::
+:::
+
+## Your Turn: Two Charts, One Dataset
+
+Run the full pipeline on data of your own choosing.
+
+1.  **Pick a dataset** from the [Delaware Open Data Portal](https://data.delaware.gov/) or [Kaggle](https://www.kaggle.com/datasets) — ideally one with at least one categorical column and one or two numeric columns. If it's big, use your Chapter 2 skills to filter or summarize it in Google Sheets first, then download the result as a CSV.
+2.  **Import it into CODAP** (drag the CSV into a new document) and build **at least two different chart types** — for example, a fused-bar chart of counts per category and a scatter-style graph of two numeric attributes, or a graph with a legend comparing groups.
+3.  **For each chart, write 2–3 sentences** on what pattern it reveals — or hides. Be specific: "The bar chart reveals that one category is nearly double all the others, but it hides how that category changed over time" is the level of thinking to aim for.
+4.  **Bonus:** apply the "How Charts Can Mislead" checklist to your own charts. Does any axis start somewhere other than zero? Is any time window doing sneaky work? Fix anything you catch — being your own toughest chart critic is the habit that makes the rest of this book work.
+
+## Roadmap: When Even the Dashboard Isn't Enough
+
+You can now take raw data, wrangle it into a summary (Chapter 2), and turn that summary into charts that make the pattern undeniable (this chapter) — all without a line of code. But remember the honest warning from Chapter 2: at 539,947 rows, the spreadsheet itself was wheezing. Some datasets are too big even to *open* in Google Sheets, let alone filter and summarize there. In **Chapter 4**, you'll meet Python and its data library, pandas — tools that do the same filtering, counting, and grouping you've been doing by hand, but on millions of rows in seconds. The moves won't change; only the muscle behind them will.
