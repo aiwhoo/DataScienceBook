@@ -3,3 +3,140 @@ title: "Designing Your Own Data Science Project"
 author: "Technical Instructional Team"
 format: html
 ---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+*   Select a dataset that is both personally interesting and rich enough to support a real analysis.
+*   Turn a vague topic into a specific, answerable **research question**.
+*   Map each stage of your capstone project to the skills you learned in Chapters 2 through 8.
+*   Evaluate a project plan against a concrete rubric — before investing hours of work in it.
+*   Decide whether your research question calls for a prediction model, or whether analysis and visualization alone will answer it.
+
+## Your Capstone Project
+
+For nine chapters, we handed you the datasets and asked the questions. You filtered half a million Delaware traffic crashes, cleaned Diana's messy fitness tracker data, pulled live weather from an API, computed statistics that don't lie, and trained models that predict. Every one of those chapters was practice for this moment.
+
+The capstone project flips the script: **you** choose the dataset, **you** ask the question, and **you** carry the analysis from raw CSV to finished answer. It's the difference between doing exercises from a textbook and playing an actual game. Nobody knows in advance what you'll find — not your teacher, not this book, not you. That's not a bug; that's the whole point of data science.
+
+This chapter is your project blueprint. It walks through the five steps of the capstone, and at each step it points back to the chapter where you already learned the skill. Nothing here is new material — it's your entire toolbox, finally used all at once, on a project you own.
+
+## Step 1: Choose a Dataset
+
+Everything downstream depends on this choice, so choose with two rules in mind:
+
+1.  **Pick something you actually care about.** Sports, music, the environment, health, video games, local events, movies — if the topic bores you, the project will feel like a chore, and it will show in the final result. If the topic genuinely interests you, you'll ask sharper questions and notice things a bored analyst would miss.
+2.  **Pick something with enough substance to explore.** A dataset with 12 rows and 2 columns runs out of questions fast. Aim for at least a few hundred rows and several columns — ideally a mix of **categorical** columns (types, days, counties, teams) and **numeric** columns (counts, scores, prices, temperatures), because that mix is what makes filtering, grouping, and charting possible.
+
+Where do you find data like that? You already know:
+
+*   The **Delaware Open Data Portal** ([https://data.delaware.gov/](https://data.delaware.gov/)) — the source of our 539,000-row traffic crash dataset, plus hundreds of others on health, education, environment, and public safety. [Chapter 2](../02-spreadsheets/spreadsheets.qmd) is where you first downloaded a CSV from it.
+*   **Kaggle** ([https://www.kaggle.com/datasets](https://www.kaggle.com/datasets)) — thousands of datasets on nearly any topic imaginable, from Spotify tracks to Pokémon stats.
+*   A **public API** — if you want live or very current data (weather, air quality, space launches), [Chapter 6](../06-apis-data-sources/apis-data-sources.qmd) taught you how to request it, read the JSON, and check the terms of service before you do.
+
+Download a candidate and open it. Skim the columns. If you find yourself already wondering things — *"huh, is that higher on weekends?"* — you've found your dataset.
+
+## Step 2: Define a Research Question
+
+A dataset is not a project. A **question** is a project. This is the single most common place where capstone projects go wrong — not in the code, but in starting with a topic so vague that no amount of pandas can answer it.
+
+::: {.callout-note}
+### Research Question
+A **research question** is a specific, answerable question that your data can actually address — it names what you're measuring, what you're comparing, and what would count as an answer. A topic is not a research question; a topic is where research questions come from.
+
+*   **Vague topic:** "Traffic accidents." → **Research question:** "Do traffic accidents in Delaware happen more often on weekends than on weekdays?"
+*   **Vague topic:** "Music popularity." → **Research question:** "Do songs with a faster tempo have more streams, on average, than slower songs in this Spotify dataset?"
+:::
+
+Notice what the transformation does in both examples: it picks a **measurable outcome** (number of accidents, number of streams), a **comparison** (weekend vs. weekday, faster vs. slower), and implicitly a **verdict** — after the analysis, you can say "yes," "no," or "it's more complicated than that, and here's how." A vague topic can never be finished; a research question can.
+
+One more test worth running: ask yourself *"what chart would answer this?"* If you can picture the chart — a bar per day of the week, a scatter plot of tempo vs. streams — the question is probably specific enough. If you can't picture any chart, the question isn't ready yet.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A classmate proposes this as their capstone research question: *"I want to study climate change."* Is this a research question? If not, rewrite it into one, assuming they have a dataset of monthly average temperatures for Delaware from 1950 to 2020.
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+It's a topic, not a research question — it names no measurement, no comparison, and no way to know when you've answered it. A rewrite using their actual dataset: *"Have Delaware's average summer temperatures increased between 1950 and 2020, and by how much per decade?"* Now there's a measurable outcome (average summer temperature), a comparison (across decades), and a chart you can already picture (a line chart of temperature over time).
+:::
+:::
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+**Prompt:** "I'm a high school student choosing a dataset for my data science capstone project. I'm considering a dataset about ___ (describe your candidate dataset — its topic and its main columns). Brainstorm 3 possible research questions I could investigate with it."
+
+Then do the important part yourself: for each of the three, ask *"what would I measure, what would I compare, and what chart would answer it?"* Pick the one that passes all three tests most clearly. If none of them do, tell ChatGPT why and ask it to sharpen them — you're the editor here, not the audience.
+:::
+
+## Step 3: Load and Clean Your Data
+
+You've done this twice before, in two different tools:
+
+*   [Chapter 4](../04-python-pandas/Chapter3-Part1.qmd) taught you to load a CSV into **pandas** with `read_csv()`, inspect it with `head()` and `info()`, and filter and group it — the skills that tamed 539,000 crash records without a single spinning wheel of doom.
+*   [Chapter 5](../05-etl/Chapter4-Part1.qmd) taught you the full **ETL** pipeline: extracting raw data, then transforming it — handling missing values, fixing formats, normalization, encoding — into something analysis-ready.
+
+For a smaller dataset, Google Sheets ([Chapter 2](../02-spreadsheets/spreadsheets.qmd)) is a legitimate choice too. Use the tool that fits your data's size.
+
+We won't re-teach any of it here — just run the checklist you already know:
+
+- [ ] **Missing values:** Are there empty cells or NaNs? Decide — and be ready to justify — whether to drop those rows or fill them.
+- [ ] **Irrelevant rows and columns:** If your question is about weekends vs. weekdays, columns that can't possibly bear on it are clutter. Trim them.
+- [ ] **Correct formats:** Are dates actually dates, and numbers actually numbers — not text that merely looks like them?
+- [ ] **Transformations, if needed:** If you'll compare columns on wildly different scales, normalize. If a model will need categorical data as numbers, encode.
+
+Keep a note of every cleaning decision you make and *why*. That "why" becomes part of your final project — real data scientists show their cleaning work, because every dropped row is a judgment call someone might question.
+
+## Step 4: Analyze and Visualize
+
+Now the payoff: making the data answer your question.
+
+*   **Filter, group, and calculate.** Slice the data by your comparison — weekend vs. weekday, one category vs. another — and compute the numbers that matter. Reach for the descriptive statistics from [Chapter 7](../07-statistics-ethics/statistics-ethics.qmd): mean, median, and mode each tell a different story, and Chapter 7 showed you how to pick the honest one (and to remember that correlation is not causation when you interpret what you find).
+*   **Chart it.** A finding nobody can see is a finding nobody believes. [Chapter 3](../03-data-visualization/data-visualization.qmd) taught you the chart-choosing logic — bar charts for categories, line charts for change over time, scatter plots for relationships, pie charts (sparingly!) for parts of a whole — and gave you CODAP for building them by dragging and dropping. For data living in pandas, the plotting skills from Chapters 4 and 5 do the same job in code.
+
+The standard to aim for: at least one chart that *directly* answers part of your research question. Not a chart of the data in general — a chart where someone can look at it and see the answer. If your question is "do accidents happen more on weekends?", the bar chart of crashes per day of the week *is* the answer, in picture form.
+
+## Step 5 (Optional): Build a Prediction Model
+
+This step is **optional**, and whether it belongs in your project depends entirely on your research question.
+
+Ask yourself: *is my question a prediction question?* "Do accidents happen more on weekends?" is a **description** question — Steps 3 and 4 fully answer it, and bolting a model onto it adds nothing. But "can I predict tomorrow's crash count from the day of week and the weather?" is a **prediction** question, and that's when [Chapter 8](../08-machine-learning/machine-learning.qmd) enters the game.
+
+If your question is a prediction question, you know the drill:
+
+1.  Split your data into training and test sets.
+2.  Train a **Linear Regression** model, and a **Decision Tree** as a challenger.
+3.  Compare them with **MSE** and **R²** — and interpret the scores honestly, including when they're bad. (Remember: Chapter 8's first heart-rate model scored a *negative* R², and diagnosing why was the most valuable part of the chapter.)
+
+A project with no model is not a lesser project. A description question answered rigorously beats a prediction model duct-taped onto a question that never asked for one.
+
+## What Makes a Good Project?
+
+Here is the rubric. Check your project against it — every item is something you can point to and verify, not a vibe:
+
+*   **A specific research question** — it names a measurable outcome and a comparison, and you can picture the chart that would answer it.
+*   **Real data, actually loaded and explored** — the dataset is open in pandas or Sheets and you've run real operations on it, not just described what it contains.
+*   **At least one cleaning or transformation step, justified in your own words** — for example: *"I dropped 340 rows with missing dates because my question depends on the day of the week,"* not just *"I cleaned the data."*
+*   **At least one chart that answers part of the research question** — someone can look at the chart and see the answer, without you standing next to it explaining.
+*   **An honest account of at least one limitation** — missing data, a small sample size, a possible confounding variable, or a reason your finding might not generalize. Naming a weakness is a strength; pretending there isn't one is the actual weakness.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A student's project summary reads: *"I found a really interesting dataset about local restaurants and made some nice charts of the data. The analysis was good and I learned a lot."* Using the rubric above, name at least three specific items this summary gives you no evidence for.
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+It fails to show evidence for nearly every rubric item: (1) no **research question** is stated — "restaurants" is a topic; (2) no **cleaning or transformation step** is described, let alone justified; (3) "some nice charts of the data" doesn't show a chart that **answers a specific question** — charts *of* data aren't the same as charts that answer something; and (4) no **limitation** is acknowledged. Words like "interesting," "nice," and "good" are exactly the vague adjectives the rubric is designed to replace with checkable evidence.
+:::
+:::
+
+## Your Turn: Stake Your Claim
+
+Time to put a first stake in the ground for your capstone.
+
+1.  **Name a candidate dataset.** Browse the [Delaware Open Data Portal](https://data.delaware.gov/), Kaggle, or an API from Chapter 6, and pick one dataset that genuinely interests you. Write down its name, its source, roughly how many rows it has, and 3–5 of its columns (note which are categorical and which are numeric).
+2.  **Draft a research question.** Write one first-draft research question for that dataset. Apply the Step 2 tests: What are you measuring? What are you comparing? What chart would answer it?
+3.  **Run the rubric.** Go through "What Makes a Good Project?" item by item and mark each one: *can my dataset and question deliver this?* If the dataset is too thin to support a cleaning step, a comparison, and a chart — better to find out now. Revise the question (or swap the dataset) until every rubric item is at least *reachable*.
+4.  **Keep it.** This page of notes is the seed of your actual capstone. You'll build on it, not start over.
+
+## Roadmap: From Analysis to Story
+
+Suppose you finish every step in this chapter: clean data, a sharp question, a chart that answers it, maybe even a model. You now have something valuable — and if it stays in your notebook, almost nobody will ever benefit from it. An analysis that isn't communicated might as well not exist.
+
+Chapter 11 covers the final skill of the course: **data storytelling** — turning your capstone from a stack of correct results into a story that someone who has never seen your dataset actually wants to hear, understands on the first pass, and remembers afterward. Your analysis answers the question. Your story is what makes anyone care about the answer.
