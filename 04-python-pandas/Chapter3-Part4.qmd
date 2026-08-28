@@ -83,16 +83,11 @@ If you prefer code that reads like a plain English sentence, `.query()` is your 
 filtered_df = df.query("`COUNTY NAME` == 'New Castle' and YEAR >= 2020 and YEAR <= 2024")
 ```
 
-```{=html}
-<script>
-(() => {
-    const method = ".query()";
-    document.write(`<div style="background-color: #f0f4f8; padding: 10px; border-left: 5px solid #007bff; font-family: sans-serif;">
-        <strong>Interactive Logic:</strong> The <code>${method}</code> method is ideal for large datasets because it is concise and highly readable for collaborators.
-    </div>`);
-})();
-</script>
-```
+::: {.callout-note}
+### Why `.query()` Reads Like a Sentence
+The `.query()` method is ideal for large datasets because it is concise
+and highly readable for collaborators.
+:::
 
 ### Method 3: Direct Bracket Notation (Conditionals)
 This is the most direct approach. You write a rule inside square brackets directly on the DataFrame. It is excellent for quick, one-off filters.
@@ -127,6 +122,17 @@ graph TD
     C --> C1[Sentence Readability]
     D --> D1[Quick + Direct]
 ```
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+You filter for `df["COUNTY NAME"] == "New Castle"` and get zero rows back,
+even though you can see "New Castle" in the data. What's the most likely
+cause?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+Invisible leading or trailing whitespace in the county name values.
+Running `.str.strip()` on the column before filtering usually fixes this.
+:::
+:::
 
 ## Your Mission: Filter Like a Pro
 

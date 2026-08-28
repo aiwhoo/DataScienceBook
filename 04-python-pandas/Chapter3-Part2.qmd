@@ -80,17 +80,11 @@ To verify your environment is working, we will use the `print()` function to dis
 print('hello Python')
 ```
 
-```{=html}
-<script>
-(() => {
-    const output = "hello Python";
-    document.write(`<div style="background-color: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace;">
-        <span style="color: #6a9955;"># Simulated Console Output:</span><br>
-        ${output}<br><br>
-        <span style="color: #6a9955;">Process finished with exit code 0</span>
-    </div>`);
-})();
-</script>
+**Output:**
+```
+hello Python
+
+Process finished with exit code 0
 ```
 
 ### Understanding the Syntax
@@ -109,6 +103,17 @@ A **String** is a data type used in programming to represent text. In Python, st
 After clicking the **green run button**, PyCharm executes your file and shows the output in the **Run Console** at the bottom of the screen. 
 
 If your code runs successfully, you will see your message followed by the phrase **"Process finished with exit code 0"**. This is the computer's way of confirming that the program ran perfectly with no errors.
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+You named a project "my first project" with spaces in the name. What’s
+likely to go wrong, and what should you do instead?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+Spaces in file and folder names can confuse some tools and command-line
+operations. Use underscores (`my_first_project`) or CamelCase
+(`MyFirstProject`) instead.
+:::
+:::
 
 ::: {.callout-tip}
 ### Instructor Insight: The "Thumbs Up"

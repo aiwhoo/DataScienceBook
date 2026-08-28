@@ -70,20 +70,14 @@ A **DataFrame** is the Pandas function that opens a CSV file and loads it as a s
 df = pd.read_csv("delaware_crash_data.csv")
 ```
 
-```{=html}
-<script>
-(() => {
-    const variable = "df";
-    const functionName = "pd.read_csv()";
-    document.write(`<div style="background-color: #f8f9fa; padding: 15px; border-left: 5px solid #007bff; font-family: monospace;">
-        <strong>Code Logic:</strong><br>
-        1. <strong>${variable}</strong>: A variable that stores your entire dataset—you can name it anything (e.g., records, crash_data).<br>
-        2. <strong>${functionName}</strong>: The specific tool that opens the CSV.<br>
-        3. <strong>File Path</strong>: The text in quotes tells Python exactly where the file lives on your computer.
-    </div>`);
-})();
-</script>
-```
+::: {.callout-note}
+### Code Logic
+1. **`df`**: A variable that stores your entire dataset — you can name it
+   anything (e.g., `records`, `crash_data`).
+2. **`pd.read_csv()`**: The specific tool that opens the CSV.
+3. **File Path**: The text in quotes tells Python exactly where the file
+   lives on your computer.
+:::
 
 ## The Exploration Toolkit: First Steps
 
@@ -126,6 +120,25 @@ When we applied these tools to the Delaware Crash dataset, the results provided 
 ::: {.callout-tip}
 ### Instructor Insight: Why .info() comes first
 Running `.describe()` on categorical data produces misleading or meaningless results. This is why you must use `.info()` first to verify a column's true data type. Because most Delaware crash data columns are categorical, `.describe()` has limited usefulness here.
+:::
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+Copy the text output of `df.info()` from your own dataset and paste it into
+ChatGPT. Ask: *"Which of these columns are actually categorical, even
+though they might look numeric? How can you tell from this output?"*
+:::
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+You run `df.describe()` on a column called `weather_code` and get a mean,
+min, and max back — but the results don't make sense. What probably went
+wrong?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+`weather_code` is probably categorical data (a coded label) stored as
+numbers, not truly numeric data. `.describe()` treats it as numeric
+anyway, producing meaningless statistics. Running `.info()` first would
+have revealed this.
+:::
 :::
 
 ## Your Turn: Explore a Dataset

@@ -72,18 +72,27 @@ The journey begins with the simplest command: telling the computer to speak back
 print('hello Python')
 ```
 
-```{=html}
-<script>
-(() => {
-    const output = "hello Python";
-    document.write(`<div style="background-color: #f4f4f4; padding: 10px; border-left: 5px solid #28a745; font-family: monospace;">Console Output: ${output}</div>`);
-})();
-</script>
+**Output:**
+```
+hello Python
 ```
 
 ::: {.callout-note}
 ### The "Exit Code 0"
 When you run a script in a professional environment, seeing **Process finished with exit code 0** is the computer’s way of giving you a "thumbs up," meaning the code ran perfectly without errors.
+:::
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+Why does Google Sheets struggle with a dataset of 539,000 rows, while
+Python and Pandas handle it easily?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+Spreadsheet programs like Google Sheets try to keep the entire dataset
+in view and recalculate formulas across all visible cells, which gets
+slower and more memory-intensive as rows grow. Pandas processes data
+programmatically in memory without needing to render every row, so it
+stays fast even at very large scales.
+:::
 :::
 
 ## Roadmap for Part 1
