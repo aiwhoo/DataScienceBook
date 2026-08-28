@@ -1,84 +1,30 @@
-# Data Science Book {.unnumbered}
 ---
-title: "Project Title"
+title: "Preface"
 ---
 
-*Author, Technology Service Center, University of Delaware*
+*Technology Service Center, University of Delaware*
 
-20XX-XX-XX
+## Why This Book Exists
 
-## Motivation for this Work
+Think about the last hour you spent on your phone. Every video your feed served you, every song your playlist queued up, every "players near you" match in your favorite game — none of it was random. Behind each of those moments, a computer looked at data about you (and millions of people like you) and made a prediction. Data science is the skill of understanding how those predictions get made — and learning to make them yourself.
 
-Insert a paragraph of the motivation of this work. 
+That matters for two reasons. First, decisions about you are already being made with data: what content you see, what ads follow you around, even what colleges and employers might one day learn about you. Understanding how that works turns you from a passive target into an informed participant. Second, the ability to *question, filter, and reshape* data is a genuine superpower. Whether you end up in medicine, music, sports, gaming, or a career that doesn't exist yet, the people who can turn raw numbers into honest answers will be the ones others turn to.
 
+The good news: you don't need to be a math genius or a seasoned programmer to start. You need curiosity and a willingness to ask good questions. This book supplies the rest.
 
-## This is a subtitle 
+## What This Book Covers
 
-This is text. 
+The book is organized into four units, each building on the last:
 
-[Hyperlink to an externel website](https://quarto.org/)
+1.  **Unit I: Foundations** — what data actually is, how to work with it in spreadsheets, and how to turn it into visualizations that tell the truth.
+2.  **Unit II: Programming for Data Science** — your introduction to Python and Pandas, the tools professionals use when a dataset (like Delaware's 539,000 traffic crash records) is too big for a spreadsheet to handle.
+3.  **Unit III: Understanding and Modeling Data** — statistics, ethics, machine learning, and modern AI: how computers find patterns, and how to judge whether those patterns can be trusted.
+4.  **Unit IV: Communicating and Applying Data Science** — a capstone project and the art of data storytelling, because an insight nobody understands is an insight nobody uses.
 
-[Hyperlink to another section](keyFindings.html#key-finding-1) 
+Along the way you'll work with real datasets — traffic crashes, open government data, and information pulled live from the web — not toy examples invented for a textbook.
 
-A table is below:
+## Before You Dive In
 
-| Item              | In Stock | Price |
-| :---------------- | :------: | ----: |
-| Python Hat        |   True   | 23.99 |
-| SQL Hat           |   True   | 23.99 |
-| Codecademy Tee    |  False   | 19.99 |
-| Codecademy Hoodie |  False   | 42.99 |
+Two short pages follow this one, and they're worth reading first. **How to Use This Book** explains the features you'll see in every chapter — callout boxes, code you can run yourself, and end-of-chapter roadmaps — and how to get the most out of them. **Using AI Responsibly** sets out how tools like ChatGPT and Claude fit into your learning: when they help you grow and when they quietly rob you of the skills you came here to build.
 
-This is an image: 
-
-![Figure 1: Cat image](/assets/cat.png)
-
-Interactive plot is below: 
-
-```{python}
-#| echo: false
-import plotly.express as px
-
-# Example dataset
-df = px.data.iris()
-
-# Make interactive plot
-fig = px.scatter(df, x="sepal_width", y="sepal_length",
-                 color="species",
-                 title="Interactive Plotly Scatter")
-
-fig
-```
-
-
-This is a map:
-
-<iframe
-  src="https://www.google.com/maps/d/embed?mid=1L1EOKHYYIpvG8KEbe4iMEppFlZ598jA&ehbc=2E312F"
-  width="640"
-  height="480"
-  style="border:0;"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-Reading from a public Google Sheet (code and display the data): 
-```{python}
-import pandas as pd
-
-sheet_id = "1jcZAtyEZ_5Q7ruPaUYxErM_a4UP9dP9PwbnsRnVl0hE"
-url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv"
-
-df = pd.read_csv(url)
-df.head()
-```
-
-This is code snippet that is NOT runned: 
-
-```python
-def isOdd(n):
-  if n%2 == 0: 
-    return False
-  return True
-```
-
+That's it. Turn the page, and let's start asking better questions of the data all around you.
