@@ -21,7 +21,7 @@ A quick reference to every tool and data source this book uses, gathered in one 
   [How-to Guides](https://codap.concord.org/help/how-to-guides/).
 - **Google Sheets** — spreadsheet formulas, filtering, and pivot tables, used
   in Chapter 2.
-- **PyCharm** — a Python IDE, set up in Chapter 4 (see also
+- **[PyCharm](https://www.jetbrains.com/pycharm/download/)** — a Python IDE, set up in Chapter 4 (see also
   [Getting Set Up](getting-set-up.qmd)).
 - **[Google Colab](https://colab.research.google.com)** — a no-install
   alternative to PyCharm, covered in [Getting Set Up](getting-set-up.qmd).

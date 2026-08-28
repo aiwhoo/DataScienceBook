@@ -15,7 +15,7 @@ The good news: you don't need to be a math genius or a seasoned programmer to st
 The book is organized into four units, each building on the last:
 
 1.  **Unit I: Foundations** — what data actually is, how to work with it in spreadsheets, and how to turn it into visualizations that tell the truth.
-2.  **Unit II: Programming for Data Science** — your introduction to Python and Pandas, the tools professionals use when a dataset (like Delaware's 539,000 traffic crash records) is too big for a spreadsheet to handle.
+2.  **Unit II: Programming for Data Science** — your introduction to Python and Pandas, the tools professionals use when a dataset (like Delaware's nearly 540,000 traffic crash records) is too big for a spreadsheet to handle.
 3.  **Unit III: Understanding and Modeling Data** — statistics, ethics, machine learning, and modern AI: how computers find patterns, and how to judge whether those patterns can be trusted.
 4.  **Unit IV: Communicating and Applying Data Science** — a capstone project and the art of data storytelling, because an insight nobody understands is an insight nobody uses.
 

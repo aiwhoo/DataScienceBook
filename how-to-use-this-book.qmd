@@ -24,6 +24,15 @@ These green boxes are tips and shortcuts from someone who has taught this materi
 It's tempting to copy and paste code examples, but typing them out yourself — typos and all — is how the patterns actually stick. The mistakes you make (and fix) are where the learning happens.
 :::
 
+## Optional Asides
+
+Every so often you'll meet a yellow box like this one. These are optional detours — extra context that isn't required to follow the chapter, and sometimes touches on something worth a grown-up's input before you try it yourself.
+
+::: {.callout-important}
+### Optional Aside: You Can Skip This Box
+Optional Asides never contain material the rest of the chapter depends on — skip one entirely and you'll lose nothing. When a box like this suggests exploring something involving your own accounts or personal data, talk to a parent, guardian, or teacher first.
+:::
+
 ## Knowledge Checks
 
 After major sections, you'll find a quick self-check question. Try to answer it in your head (or on paper) *before* clicking **Reveal Answer**. If you get it wrong, that's useful information — go back and skim the section again. Try this one:

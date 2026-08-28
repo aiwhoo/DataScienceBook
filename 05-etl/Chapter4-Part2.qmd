@@ -1,4 +1,4 @@
-# ETL in Action: The Extraction Frontier {.unnumbered}
+# Part 2: The Extraction Frontier {.unnumbered}
 
 Raw data is almost never ready for immediate use. Before a single insight can be drawn or a model trained, data must travel through a pipeline that separates amateur analysis from professional data engineering. This tutorial focuses on **Extraction**, the first and most critical mile of the data science journey.
 
@@ -66,7 +66,7 @@ In this tutorial, we work with a **Simulated Daily Activity Record**. This datas
 *   **Timeline:** Tracks three individuals over three days (July 28–30, 2025).
 *   **Format:** A multi-sheet Excel workbook where each day lives in its own sheet.
 *   **Granularity:** One record per hour per person.
-*   **Dimensions:** 11 columns blending personal identity, biometrics (Steps/HeartRate), location (GPS), and behavioral spend data.
+*   **Dimensions:** 11 columns total, blending personal identity, biometrics (Steps/HeartRate), location (GPS), and behavioral spend data.
 
 ::: {.callout-tip}
 ### Instructor Insight: Multi-Dimensionality
@@ -94,12 +94,8 @@ df_all = pd.concat(df.values(), ignore_index=True)
 print(df_all.head())
 ```
 
-**Output:**
+**What You'll See:**
 ```
-Loading 3 worksheets... Done.
-Unifying 216 records... Done.
-
-Output: df_all.head()
         Date        Hour   Name     Steps  HeartRate
 0  2025-07-28  09:00  Alice     1200  72
 1  2025-07-28  10:00  Alice     3500  85
@@ -107,6 +103,7 @@ Output: df_all.head()
 3  2025-07-28  09:00  Charlie    800  68
 4  2025-07-28  10:00  Charlie   5600  110
 ```
+That's the first 5 of all 216 rows — `head()` always shows just the top of the table, and only 5 of the dataset's 11 columns fit on one line here; the rest (`Gender`, `ActivityType`, GPS coordinates, and spending) come into play in the next few sections.
 
 ---
 

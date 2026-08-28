@@ -62,7 +62,7 @@ Python isn't just a trend; it is the engine behind modern innovation. Its versat
 
 ## Python as a Superpower
 
-With Python, you move from being a passive reader of data to an active problem solver. You don't just "look" at 539,000 rows; you **question, filter, and reshape** them into insights that matter. Even as a beginner, writing just a few lines of code can accomplish what would take hours to do manually in a spreadsheet.
+With Python, you move from being a passive reader of data to an active problem solver. You don't just "look" at nearly 540,000 rows; you **question, filter, and reshape** them into insights that matter. Even as a beginner, writing just a few lines of code can accomplish what would take hours to do manually in a spreadsheet.
 
 ### Your First Step into the Console
 The journey begins with the simplest command: telling the computer to speak back to you.
@@ -83,7 +83,7 @@ When you run a script in a professional environment, seeing **Process finished w
 :::
 
 ::: {.callout-tip .knowledge-check title="Knowledge Check"}
-Why does Google Sheets struggle with a dataset of 539,000 rows, while
+Why does Google Sheets struggle with a dataset of nearly 540,000 rows, while
 Python and Pandas handle it easily?
 
 ::: {.callout-note collapse="true" title="Reveal Answer"}

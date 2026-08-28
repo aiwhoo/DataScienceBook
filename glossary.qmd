@@ -304,7 +304,7 @@ See [What Is Data?](01-what-is-data/what-is-data.qmd).
 
 The **Load** phase is the final stage of ETL where transformed data is saved to a permanent destination, ensuring it is preserved for future analysis or application.
 
-See [ETL in Action: The Load Phase](05-etl/Chapter4-Part5.qmd).
+See [Part 5: The Load Phase](05-etl/Chapter4-Part5.qmd).
 
 ## Trace
 

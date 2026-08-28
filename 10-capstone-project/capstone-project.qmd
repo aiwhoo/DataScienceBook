@@ -33,7 +33,7 @@ Everything downstream depends on this choice, so choose with two rules in mind:
 
 Where do you find data like that? You already know:
 
-*   The **Delaware Open Data Portal** ([https://data.delaware.gov/](https://data.delaware.gov/)) — the source of our 539,000-row traffic crash dataset, plus hundreds of others on health, education, environment, and public safety. [Chapter 2](../02-spreadsheets/spreadsheets.qmd) is where you first downloaded a CSV from it.
+*   The **Delaware Open Data Portal** ([https://data.delaware.gov/](https://data.delaware.gov/)) — the source of our nearly 540,000-row traffic crash dataset, plus hundreds of others on health, education, environment, and public safety. [Chapter 2](../02-spreadsheets/spreadsheets.qmd) is where you first downloaded a CSV from it.
 *   **Kaggle** ([https://www.kaggle.com/datasets](https://www.kaggle.com/datasets)) — thousands of datasets on nearly any topic imaginable, from Spotify tracks to Pokémon stats.
 *   A **public API** — if you want live or very current data (weather, air quality, space launches), [Chapter 6](../06-apis-data-sources/apis-data-sources.qmd) taught you how to request it, read the JSON, and check the terms of service before you do.
 
@@ -73,7 +73,7 @@ Then do the important part yourself: for each of the three, ask *"what would I m
 
 You've done this twice before, in two different tools:
 
-*   [Chapter 4](../04-python-pandas/Chapter3-Part1.qmd) taught you to load a CSV into **pandas** with `read_csv()`, inspect it with `head()` and `info()`, and filter and group it — the skills that tamed 539,000 crash records without a single spinning wheel of doom.
+*   [Chapter 4](../04-python-pandas/Chapter3-Part1.qmd) taught you to load a CSV into **pandas** with `read_csv()`, inspect it with `head()` and `info()`, and filter and group it — the skills that tamed nearly 540,000 crash records without a single spinning wheel of doom.
 *   [Chapter 5](../05-etl/Chapter4-Part1.qmd) taught you the full **ETL** pipeline: extracting raw data, then transforming it — handling missing values, fixing formats, normalization, encoding — into something analysis-ready.
 
 For a smaller dataset, Google Sheets ([Chapter 2](../02-spreadsheets/spreadsheets.qmd)) is a legitimate choice too. Use the tool that fits your data's size.
