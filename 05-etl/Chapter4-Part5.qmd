@@ -61,22 +61,9 @@ To save your work professionally, follow these three steps:
 aggregated_df.to_csv("aggregated_daily_activity.csv", index=False)
 ```
 
-```{=html}
-<div id="status-box" style="padding: 15px; border: 1px solid #ddd; background: #fdfdfd; border-radius: 8px; font-family: sans-serif;">
-  <strong>System Status:</strong> <span id="status-msg">Waiting for export...</span>
-</div>
-
-<script>
-(() => {
-  const statusMsg = document.getElementById('status-msg');
-  // Simulating the file write operation
-  setTimeout(() => {
-    statusMsg.innerText = "Success: 'aggregated_daily_activity.csv' generated in local directory.";
-    statusMsg.style.color = "#2e7d32";
-    console.log("Pandas .to_csv() executed with index=False.");
-  }, 1000);
-})();
-</script>
+**Output:**
+```
+Success: 'aggregated_daily_activity.csv' generated in local directory.
 ```
 
 ::: {.callout-tip}
@@ -85,6 +72,16 @@ The `index=False` argument is a small but critical detail. Without it, Pandas ad
 :::
 
 ---
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+What does `index=False` do in `aggregated_df.to_csv("file.csv", index=False)`, and why does it matter?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+It tells pandas not to write the DataFrame's row-number index as an extra
+column in the CSV. Without it, the exported file gets a meaningless extra
+column that can confuse other programs or people reading the file.
+:::
+:::
 
 ## The Full Journey: ETL from Start to Finish
 

@@ -64,24 +64,20 @@ steps_norm = (alice_steps - steps_min) / (steps_max - steps_min)
 print(f"Normalized Steps: {steps_norm}")
 ```
 
-```{=html}
-<div id="norm-output" style="padding: 15px; background-color: #f8f9fa; border-left: 5px solid #28a745; font-family: monospace;">
-  <strong>Console Output:</strong> <span id="norm-result"></span>
-</div>
-<script>
-(() => {
-  const stepsMin = 0;
-  const stepsMax = 15000;
-  const aliceSteps = 10500;
-  const normalized = (aliceSteps - stepsMin) / (stepsMax - stepsMin);
-  document.getElementById('norm-result').innerText = "Normalized Steps: " + normalized;
-})();
-</script>
+**Output:**
+```
+Normalized Steps: 0.7
 ```
 
 ::: {.callout-tip}
 ### Instructor Insight: Outlier Visibility
 Once you normalize data, outliers become immediately visible. If Diana's heart rate of 108 maps to **1.0**, while the average sits at **0.2**, you instantly see the peak in her activity without needing to know the technical range of heart rates.
+:::
+
+::: {.callout-tip .chatgpt-callout title="🤖 Try With ChatGPT"}
+Describe a column from your own dataset to ChatGPT (its name, minimum, and
+maximum values) and ask: *"Would normalizing this column to a 0-1 range
+make sense here? Why or why not?"*
 :::
 
 ---
@@ -109,15 +105,9 @@ df_sorted = df.sort_values(by=['Name', 'Date', 'Hour'])
 print(df_sorted[['Name', 'Hour', 'steps_norm']].head())
 ```
 
-```{=html}
-<div id="sort-output" style="padding: 15px; background-color: #f8f9fa; border-left: 5px solid #007bff; font-family: monospace;">
-  <strong>Data Discovery:</strong> Alice's steps jumped from 0.06 at 9 AM to 1.00 at 8 PM on July 30.
-</div>
-<script>
-(() => {
-  console.log("Sequential transformation complete: Behavioral pattern detected.");
-})();
-</script>
+**Output:**
+```
+Data Discovery: Alice's steps jumped from 0.06 at 9 AM to 1.00 at 8 PM on July 30.
 ```
 
 ---
@@ -137,20 +127,26 @@ distance = calculate_haversine(lat, lon, school_lat, school_lon)
 print(f"Feature Created: {distance} km from school")
 ```
 
-```{=html}
-<div id="geo-output" style="padding: 15px; background-color: #f8f9fa; border-left: 5px solid #ffc107; font-family: monospace;">
-  <strong>Individual Variation Found:</strong> <br>
-  - Diana: 0.07 km (On Campus) <br>
-  - Charlie: 0.58 km (Off Campus)
-</div>
-<script>
-(() => {
-  console.log("Geospatial Transformation: Abstract coordinates converted to meaningful distance.");
-})();
-</script>
+**Output:**
+```
+Individual Variation Found:
+- Diana: 0.07 km (On Campus)
+- Charlie: 0.58 km (Off Campus)
 ```
 
 ---
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+Alice's heart rate normalizes to 1.0, while the group average normalizes to
+about 0.2. What does that tell you, and what doesn't it tell you?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+It tells you Alice's heart rate reading was the highest in the dataset
+relative to everyone else's range — an outlier on the high end. It doesn't
+tell you her actual heart rate in beats per minute, since normalization
+strips out the original units and scale.
+:::
+:::
 
 ## Summary: Shaping the Story
 

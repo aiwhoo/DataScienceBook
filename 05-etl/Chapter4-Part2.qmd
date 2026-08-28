@@ -94,32 +94,33 @@ df_all = pd.concat(df.values(), ignore_index=True)
 print(df_all.head())
 ```
 
-```{=html}
-<div id="output-display" style="background-color: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
-  <span style="color: #6a9955;"># Simulating Pandas Output...</span><br>
-  Loading 3 worksheets... Done.<br>
-  Unifying 216 records... Done.<br><br>
-  <strong>Output: df_all.head()</strong><br>
-  &nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hour&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Steps&nbsp;&nbsp;HeartRate<br>
-  0&nbsp;2025-07-28&nbsp;&nbsp;09:00&nbsp;Alice&nbsp;&nbsp;&nbsp;&nbsp;1200&nbsp;&nbsp;&nbsp;72<br>
-  1&nbsp;2025-07-28&nbsp;&nbsp;10:00&nbsp;Alice&nbsp;&nbsp;&nbsp;&nbsp;3500&nbsp;&nbsp;&nbsp;85<br>
-  2&nbsp;2025-07-28&nbsp;&nbsp;11:00&nbsp;Alice&nbsp;&nbsp;&nbsp;&nbsp;4200&nbsp;&nbsp;&nbsp;90<br>
-  3&nbsp;2025-07-28&nbsp;&nbsp;09:00&nbsp;Charlie&nbsp;&nbsp;800&nbsp;&nbsp;&nbsp;&nbsp;68<br>
-  4&nbsp;2025-07-28&nbsp;&nbsp;10:00&nbsp;Charlie&nbsp;&nbsp;5600&nbsp;&nbsp;&nbsp;110
-</div>
+**Output:**
+```
+Loading 3 worksheets... Done.
+Unifying 216 records... Done.
 
-<script>
-(() => {
-  console.log("Pandas extraction simulation initialized.");
-  const status = "Success";
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log("Extraction Status: " + status);
-  });
-})();
-</script>
+Output: df_all.head()
+        Date        Hour   Name     Steps  HeartRate
+0  2025-07-28  09:00  Alice     1200  72
+1  2025-07-28  10:00  Alice     3500  85
+2  2025-07-28  11:00  Alice     4200  90
+3  2025-07-28  09:00  Charlie    800  68
+4  2025-07-28  10:00  Charlie   5600  110
 ```
 
 ---
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+Why does the code use `sheet_name=None` when loading the Excel file, and
+`ignore_index=True` when combining the sheets?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+`sheet_name=None` tells pandas to load every sheet in the workbook — not
+just the first one — into a dictionary of DataFrames. `ignore_index=True`
+renumbers the combined rows continuously instead of restarting the row
+index at 0 for each sheet.
+:::
+:::
 
 ## Transformation Roadmap
 

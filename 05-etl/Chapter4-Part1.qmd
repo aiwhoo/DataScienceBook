@@ -91,21 +91,25 @@ df_all = pd.concat(df_dict.values())
 print(df_all.head())
 ```
 
-```{=html}
-<div id="code-output" style="background: #f4f4f4; padding: 10px; border: 1px solid #ddd; font-family: monospace;">
-  Checking data alignment... <br>
-  [OK] 11 columns identified <br>
-  [OK] 3 daily sheets unified
-</div>
-<script>
-(() => {
-  const output = document.getElementById('code-output');
-  console.log("Extraction logic executed: Unified master DataFrame created.");
-})();
-</script>
+**Output:**
+```
+Checking data alignment...
+[OK] 11 columns identified
+[OK] 3 daily sheets unified
 ```
 
 ---
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+A hospital wants to combine patient records from three different clinics,
+each using a different field name for "date of birth." Which stage of ETL
+handles renaming these fields so they match?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+Transform. Extract just pulls the raw data in from each source;
+standardizing field names happens during Transform, before Load.
+:::
+:::
 
 ## Putting It All Together: The ETL Mindset
 

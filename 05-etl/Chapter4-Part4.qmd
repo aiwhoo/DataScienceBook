@@ -58,19 +58,13 @@ df['Gender_code'] = df['Gender'].astype('category').cat.codes
 print(df[['Name', 'Gender', 'Gender_code']].head())
 ```
 
-```{=html}
-<div id="label-output" style="padding: 15px; background-color: #1e1e1e; color: #d4d4d4; border-radius: 5px; font-family: monospace;">
-  <strong>Encoding Verification:</strong> <br>
-  - Alice (Female) -> 0 <br>
-  - Diana (Female) -> 0 <br>
-  - Charlie (Male)  -> 1 <br>
-  <span style="color: #6a9955;">[Status] Encoding consistent across all 216 rows.</span>
-</div>
-<script>
-(() => {
-  console.log("Label Encoding: Human labels successfully mapped to integers.");
-})();
-</script>
+**Output:**
+```
+Encoding Verification:
+- Alice (Female) -> 0
+- Diana (Female) -> 0
+- Charlie (Male)  -> 1
+[Status] Encoding consistent across all 216 rows.
 ```
 
 ---
@@ -94,19 +88,13 @@ df_encoded = pd.get_dummies(df, columns=['ActivityType'])
 print(df_encoded.columns)
 ```
 
-```{=html}
-<div id="oh-output" style="padding: 15px; background-color: #1e1e1e; color: #d4d4d4; border-radius: 5px; font-family: monospace;">
-  <strong>New Feature Columns Created:</strong> <br>
-  - ActivityType_Cycling [0 or 1] <br>
-  - ActivityType_Resting [0 or 1] <br>
-  - ActivityType_Running [0 or 1] <br>
-  <span style="color: #ce9178;">In each row, exactly one column equals 1.</span>
-</div>
-<script>
-(() => {
-  console.log("One-Hot Encoding: Categorical bias eliminated.");
-})();
-</script>
+**Output:**
+```
+New Feature Columns Created:
+- ActivityType_Cycling [0 or 1]
+- ActivityType_Resting [0 or 1]
+- ActivityType_Running [0 or 1]
+In each row, exactly one column equals 1.
 ```
 
 ---
@@ -133,21 +121,27 @@ daily_summary = df.groupby(['Name', 'Date']).agg({'Steps': 'sum'}).reset_index()
 print(daily_summary)
 ```
 
-```{=html}
-<div id="merge-output" style="padding: 15px; background-color: #f8f9fa; border-left: 5px solid #007bff; font-family: monospace;">
-  <strong>Insights Revealed:</strong> <br>
-  - <strong>Alice:</strong> Most Active (Peak: 21,025 steps on July 28) <br>
-  - <strong>Diana:</strong> Rising Trend (7,900 -> 10,877 -> 18,608 steps) <br>
-  - <strong>Charlie:</strong> Lower activity detected (Only 2 days recorded)
-</div>
-<script>
-(() => {
-  console.log("Aggregation: Redundant records collapsed into meaningful summaries.");
-})();
-</script>
+**Output:**
+```
+Insights Revealed:
+- Alice: Most Active (Peak: 21,025 steps on July 28)
+- Diana: Rising Trend (7,900 -> 10,877 -> 18,608 steps)
+- Charlie: Lower activity detected (Only 2 days recorded)
 ```
 
 ---
+
+::: {.callout-tip .knowledge-check title="Knowledge Check"}
+Why is one-hot encoding safer than label encoding for a column like
+`ActivityType` (Cycling, Running, Resting)?
+
+::: {.callout-note collapse="true" title="Reveal Answer"}
+Label encoding assigns arbitrary numbers (e.g., Cycling=0, Resting=1,
+Running=2), which implies a false order or magnitude a model might learn
+from. One-hot encoding creates separate binary columns so no category
+outranks another.
+:::
+:::
 
 ## The ETL Endgame: One Pipeline
 
