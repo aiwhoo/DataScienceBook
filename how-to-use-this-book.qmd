@@ -1,7 +1,8 @@
 ---
-title: "How to Use This Book"
 format: html
 ---
+
+# How to Use This Book {.unnumbered}
 
 This book is more than just reading — it's built for *doing*. As you work through each chapter, you'll notice the same few features showing up again and again. Here's your field guide to each one, so the first time you meet one in Chapter 1, you'll know exactly what to do with it.
 

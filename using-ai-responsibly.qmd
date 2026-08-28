@@ -1,7 +1,8 @@
 ---
-title: "Using AI Responsibly"
 format: html
 ---
+
+# Using AI Responsibly {.unnumbered}
 
 Throughout this book you'll find **Try With ChatGPT** boxes — ready-made prompts for digging deeper into whatever you just learned. They're there for three things: exploring a concept beyond what one chapter can cover, checking whether you actually understood something, and getting unstuck when an error message makes no sense. What they are *not* is a shortcut past the understanding itself. Before you use your first one, read this page. It's short.
 
